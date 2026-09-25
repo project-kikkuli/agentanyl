@@ -1,0 +1,61 @@
+{
+  "images": {
+    "gray": {
+      "path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/discrete-escape-7b/final_delivery/image_06.png",
+      "sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "format": "PNG",
+      "width": 224,
+      "height": 224
+    },
+    "initial_noise": {
+      "path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/discrete-escape-7b/final_delivery/image_01.png",
+      "sha256": "5374436741ea89a7b53886bfd6863cdd9a65251746d2188ab521625b811953e5",
+      "format": "PNG",
+      "width": 224,
+      "height": 224
+    },
+    "full_hidden_state_match/pain_positive": {
+      "path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/discrete-escape-7b/final_delivery/image_00.png",
+      "sha256": "3a8d99612804c13babda3ee8a8f5f0ed9c657c3f41c62e5b086beafae3d5790f",
+      "format": "PNG",
+      "width": 224,
+      "height": 224
+    },
+    "scalar_projection/pain_positive": {
+      "path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/discrete-escape-7b/final_delivery/image_05.png",
+      "sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6",
+      "format": "PNG",
+      "width": 224,
+      "height": 224
+    },
+    "full_hidden_state_match/pain_negative": {
+      "path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/discrete-escape-7b/final_delivery/image_07.png",
+      "sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "format": "PNG",
+      "width": 224,
+      "height": 224
+    },
+    "scalar_projection/pain_negative": {
+      "path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/discrete-escape-7b/final_delivery/image_02.png",
+      "sha256": "e9abced4f405d34c80a55cbf86128c38c5dd48b56b9b474af606f438b3a95244",
+      "format": "PNG",
+      "width": 224,
+      "height": 224
+    },
+    "full_hidden_state_match/random_positive": {
+      "path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/discrete-escape-7b/final_delivery/image_03.png",
+      "sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "format": "PNG",
+      "width": 224,
+      "height": 224
+    },
+    "scalar_projection/random_positive": {
+      "path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/discrete-escape-7b/final_delivery/image_04.png",
+      "sha256": "83b9bc8b6f029a991dcb31f00438572f2ee3f90e25c327dfeadbf5bc62a3c339",
+      "format": "PNG",
+      "width": 224,
+      "height": 224
+    }
+  },
+  "delivery": "one actual 224x224 image in the first native user content blocks"
+}

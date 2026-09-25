@@ -1,0 +1,60 @@
+{
+  "schema": "bridge-turn-failure-v1",
+  "provider": "codex",
+  "model": "gpt-6-sol",
+  "resumed": false,
+  "stage": "subprocess",
+  "exception_type": "RuntimeError",
+  "subprocess": {
+    "returncode": 1,
+    "termination_signal": null,
+    "timed_out": false,
+    "stdout_bytes": 463,
+    "stderr_bytes": 39
+  },
+  "observed_new_relay_call_count": 3,
+  "relay_calls": [
+    {
+      "call_id": "703da6d9-94e2-416c-93c8-01c9f5da1d50",
+      "wire": "opaque",
+      "status": 200,
+      "model": null,
+      "requested_session_matches": null,
+      "tool_call_count": 0,
+      "turn_end": false,
+      "ping_count": 0
+    },
+    {
+      "call_id": "d74b3fdc-2225-4335-91ef-2a258fe2994c",
+      "wire": "opaque",
+      "status": 200,
+      "model": null,
+      "requested_session_matches": null,
+      "tool_call_count": 0,
+      "turn_end": false,
+      "ping_count": 0
+    },
+    {
+      "call_id": "525f662e-25c3-4133-b86f-93a95fa1e7e6",
+      "wire": "openai_responses",
+      "status": 429,
+      "model": null,
+      "requested_session_matches": null,
+      "tool_call_count": 0,
+      "turn_end": false,
+      "ping_count": 0
+    }
+  ],
+  "observed_new_hook_count": 0,
+  "hooks": [],
+  "upstream_attempt_total": null,
+  "accounting_limit": "Observed completed relay rows are not a total of upstream attempts; in-flight or unlogged requests remain unknown.",
+  "raw_output_or_request_content_retained": false,
+  "ashkelon_sha256": "7dc92a7e8d6fcb67d7492c76e091fdea5ac672b67af45ee6563c98ee1588eda5",
+  "codex_binary": {
+    "requested": "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+    "path": "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+    "sha256": "ad0be20d04e2ba6146ecdb51d7f8b7b0fe15420a15dc9b0057518d858f1f3714"
+  },
+  "artifact_path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/bridge-v2/zero-cost-feedback-codex-native-gpt6-sol/harness-failures/failure-60e08aab-8d6d-4b95-b47b-06d385bc22be.json"
+}

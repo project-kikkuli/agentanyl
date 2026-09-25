@@ -1,0 +1,118 @@
+{"phase": "forward", "stage": "pixels_patch_embed_window", "peak_bytes": 5672534136, "active_bytes": 5646401628, "seconds": 0.0025517080030112993, "shape": [256, 1280], "norm": 27.715726852416992, "finite": true}
+{"phase": "forward", "stage": "vision_0", "peak_bytes": 5674025060, "active_bytes": 5646401628, "seconds": 0.0036374169976625126, "shape": [256, 1280], "norm": 176.1412353515625, "finite": true}
+{"phase": "forward", "stage": "vision_1", "peak_bytes": 5674025060, "active_bytes": 5646401628, "seconds": 0.0036058340010640677, "shape": [256, 1280], "norm": 250.16183471679688, "finite": true}
+{"phase": "forward", "stage": "vision_2", "peak_bytes": 5674025060, "active_bytes": 5646401628, "seconds": 0.0036364590014272835, "shape": [256, 1280], "norm": 323.1546630859375, "finite": true}
+{"phase": "forward", "stage": "vision_3", "peak_bytes": 5674025060, "active_bytes": 5646401628, "seconds": 0.0037183330023253802, "shape": [256, 1280], "norm": 377.25048828125, "finite": true}
+{"phase": "forward", "stage": "vision_4", "peak_bytes": 5674025060, "active_bytes": 5646401628, "seconds": 0.003529749999870546, "shape": [256, 1280], "norm": 434.2405700683594, "finite": true}
+{"phase": "forward", "stage": "vision_5", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.005792749998363433, "shape": [256, 1280], "norm": 489.5756530761719, "finite": true}
+{"phase": "forward", "stage": "vision_6", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.0059799580012622755, "shape": [256, 1280], "norm": 542.59521484375, "finite": true}
+{"phase": "forward", "stage": "vision_7", "peak_bytes": 5758973764, "active_bytes": 5646401628, "seconds": 0.00637362499765004, "shape": [256, 1280], "norm": 630.4090576171875, "finite": true}
+{"phase": "forward", "stage": "vision_8", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.005917041999055073, "shape": [256, 1280], "norm": 634.4375, "finite": true}
+{"phase": "forward", "stage": "vision_9", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.006069624996598577, "shape": [256, 1280], "norm": 646.2877197265625, "finite": true}
+{"phase": "forward", "stage": "vision_10", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.005765958998381393, "shape": [256, 1280], "norm": 677.16162109375, "finite": true}
+{"phase": "forward", "stage": "vision_11", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.005862250000063796, "shape": [256, 1280], "norm": 733.0201416015625, "finite": true}
+{"phase": "forward", "stage": "vision_12", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.005718583000998478, "shape": [256, 1280], "norm": 794.107421875, "finite": true}
+{"phase": "forward", "stage": "vision_13", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.005742207998991944, "shape": [256, 1280], "norm": 853.2163696289062, "finite": true}
+{"phase": "forward", "stage": "vision_14", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.005710833997000009, "shape": [256, 1280], "norm": 794.25048828125, "finite": true}
+{"phase": "forward", "stage": "vision_15", "peak_bytes": 5758973764, "active_bytes": 5646401628, "seconds": 0.006114208998042159, "shape": [256, 1280], "norm": 944.9819946289062, "finite": true}
+{"phase": "forward", "stage": "vision_16", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.005701999998564133, "shape": [256, 1280], "norm": 1331.525634765625, "finite": true}
+{"phase": "forward", "stage": "vision_17", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.0057836250016407575, "shape": [256, 1280], "norm": 12540.1630859375, "finite": true}
+{"phase": "forward", "stage": "vision_18", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.00569441699917661, "shape": [256, 1280], "norm": 12561.6953125, "finite": true}
+{"phase": "forward", "stage": "vision_19", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.005750500000431202, "shape": [256, 1280], "norm": 12552.9677734375, "finite": true}
+{"phase": "forward", "stage": "vision_20", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.005773458000476239, "shape": [256, 1280], "norm": 12554.154296875, "finite": true}
+{"phase": "forward", "stage": "vision_21", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.005815791002532933, "shape": [256, 1280], "norm": 12559.685546875, "finite": true}
+{"phase": "forward", "stage": "vision_22", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.005699042001651833, "shape": [256, 1280], "norm": 12541.5576171875, "finite": true}
+{"phase": "forward", "stage": "vision_23", "peak_bytes": 5758973764, "active_bytes": 5646401628, "seconds": 0.0061250420003489126, "shape": [256, 1280], "norm": 12560.017578125, "finite": true}
+{"phase": "forward", "stage": "vision_24", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.005931457999395207, "shape": [256, 1280], "norm": 12599.9375, "finite": true}
+{"phase": "forward", "stage": "vision_25", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.005832999999256572, "shape": [256, 1280], "norm": 12612.9697265625, "finite": true}
+{"phase": "forward", "stage": "vision_26", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.005819250000058673, "shape": [256, 1280], "norm": 12673.873046875, "finite": true}
+{"phase": "forward", "stage": "vision_27", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.005757665996497963, "shape": [256, 1280], "norm": 12680.412109375, "finite": true}
+{"phase": "forward", "stage": "vision_28", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.006253792002098635, "shape": [256, 1280], "norm": 12735.833984375, "finite": true}
+{"phase": "forward", "stage": "vision_29", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.005844792001880705, "shape": [256, 1280], "norm": 12875.982421875, "finite": true}
+{"phase": "forward", "stage": "vision_30", "peak_bytes": 5761595204, "active_bytes": 5646401628, "seconds": 0.0059202090014878195, "shape": [256, 1280], "norm": 13076.5908203125, "finite": true}
+{"phase": "forward", "stage": "vision_31", "peak_bytes": 5758973764, "active_bytes": 5646401628, "seconds": 0.00614549999954761, "shape": [256, 1280], "norm": 15002.4716796875, "finite": true}
+{"phase": "forward", "stage": "merger_inverse_window_scatter", "peak_bytes": 5838458842, "active_bytes": 5646401628, "seconds": 0.007981416998518398, "shape": [1, 98, 3584], "norm": 534.6526489257812, "finite": true}
+{"phase": "forward", "stage": "decoder_0", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.015557915998215321, "shape": [1, 98, 3584], "norm": 725.12109375, "finite": true}
+{"phase": "forward", "stage": "decoder_1", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.014954750000470085, "shape": [1, 98, 3584], "norm": 808.01318359375, "finite": true}
+{"phase": "forward", "stage": "decoder_2", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.015035958000225946, "shape": [1, 98, 3584], "norm": 825.7647705078125, "finite": true}
+{"phase": "forward", "stage": "decoder_3", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.014939083001081599, "shape": [1, 98, 3584], "norm": 7161.552734375, "finite": true}
+{"phase": "forward", "stage": "decoder_4", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.014906458000041312, "shape": [1, 98, 3584], "norm": 8573.66796875, "finite": true}
+{"phase": "forward", "stage": "decoder_5", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.01501441700020223, "shape": [1, 98, 3584], "norm": 8701.0283203125, "finite": true}
+{"phase": "forward", "stage": "decoder_6", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.014937749998352956, "shape": [1, 98, 3584], "norm": 8847.4814453125, "finite": true}
+{"phase": "forward", "stage": "decoder_7", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.014896417000272777, "shape": [1, 98, 3584], "norm": 8941.921875, "finite": true}
+{"phase": "forward", "stage": "decoder_8", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.014893499999743653, "shape": [1, 98, 3584], "norm": 9030.1708984375, "finite": true}
+{"phase": "forward", "stage": "decoder_9", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.014917499996954575, "shape": [1, 98, 3584], "norm": 9217.4287109375, "finite": true}
+{"phase": "forward", "stage": "decoder_10", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.01497262499833596, "shape": [1, 98, 3584], "norm": 9276.3212890625, "finite": true}
+{"phase": "forward", "stage": "decoder_11", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.014857791000395082, "shape": [1, 98, 3584], "norm": 9415.994140625, "finite": true}
+{"phase": "forward", "stage": "decoder_12", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.014966791000915691, "shape": [1, 98, 3584], "norm": 9574.4404296875, "finite": true}
+{"phase": "forward", "stage": "decoder_13", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.015126040998438839, "shape": [1, 98, 3584], "norm": 9639.9033203125, "finite": true}
+{"phase": "forward", "stage": "decoder_14", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.014993375003541587, "shape": [1, 98, 3584], "norm": 9664.3232421875, "finite": true}
+{"phase": "forward", "stage": "decoder_15", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.015060792000440415, "shape": [1, 98, 3584], "norm": 9712.603515625, "finite": true}
+{"phase": "forward", "stage": "decoder_16", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.014934458999050548, "shape": [1, 98, 3584], "norm": 9725.7197265625, "finite": true}
+{"phase": "forward", "stage": "decoder_17", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.01491024999995716, "shape": [1, 98, 3584], "norm": 9736.423828125, "finite": true}
+{"phase": "forward", "stage": "decoder_18", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.014994959001342067, "shape": [1, 98, 3584], "norm": 9754.3515625, "finite": true}
+{"phase": "forward", "stage": "decoder_19", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.014912167000147747, "shape": [1, 98, 3584], "norm": 9762.51171875, "finite": true}
+{"phase": "forward", "stage": "decoder_20", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.014849416002107318, "shape": [1, 98, 3584], "norm": 9778.533203125, "finite": true}
+{"phase": "forward", "stage": "decoder_21", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.015000332998170052, "shape": [1, 98, 3584], "norm": 9806.1025390625, "finite": true}
+{"phase": "forward", "stage": "decoder_22", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.01502954199895612, "shape": [1, 98, 3584], "norm": 9838.953125, "finite": true}
+{"phase": "forward", "stage": "decoder_23", "peak_bytes": 5707200604, "active_bytes": 5646401628, "seconds": 0.015294541997718625, "shape": [1, 98, 3584], "norm": 9878.271484375, "finite": true}
+{"phase": "forward", "stage": "decoder_24", "peak_bytes": 5707200604, "active_bytes": 5647810652, "seconds": 0.015108040999621153, "shape": [1, 98, 3584], "norm": 9935.1416015625, "finite": true}
+{"phase": "backward", "stage": "decoder_24", "peak_bytes": 5801081836, "active_bytes": 5671174236, "seconds": 0.03423291699800757, "shape": [1, 98, 3584], "norm": 0.03726252540946007, "finite": true}
+{"phase": "backward", "stage": "decoder_23", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.0260849580008653, "shape": [1, 98, 3584], "norm": 0.04987924546003342, "finite": true}
+{"phase": "backward", "stage": "decoder_22", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.02601858399793855, "shape": [1, 98, 3584], "norm": 0.07212816178798676, "finite": true}
+{"phase": "backward", "stage": "decoder_21", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.025890666998748202, "shape": [1, 98, 3584], "norm": 0.11019814014434814, "finite": true}
+{"phase": "backward", "stage": "decoder_20", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.02577670800019405, "shape": [1, 98, 3584], "norm": 0.15104828774929047, "finite": true}
+{"phase": "backward", "stage": "decoder_19", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.025813249998464016, "shape": [1, 98, 3584], "norm": 0.21212352812290192, "finite": true}
+{"phase": "backward", "stage": "decoder_18", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.025830915998085402, "shape": [1, 98, 3584], "norm": 0.26646682620048523, "finite": true}
+{"phase": "backward", "stage": "decoder_17", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.02567375000216998, "shape": [1, 98, 3584], "norm": 0.32673266530036926, "finite": true}
+{"phase": "backward", "stage": "decoder_16", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.025791208001464838, "shape": [1, 98, 3584], "norm": 0.3575230836868286, "finite": true}
+{"phase": "backward", "stage": "decoder_15", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.025668999998742947, "shape": [1, 98, 3584], "norm": 0.36981725692749023, "finite": true}
+{"phase": "backward", "stage": "decoder_14", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.025694874999317108, "shape": [1, 98, 3584], "norm": 0.376426100730896, "finite": true}
+{"phase": "backward", "stage": "decoder_13", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.025901958000758896, "shape": [1, 98, 3584], "norm": 0.38371512293815613, "finite": true}
+{"phase": "backward", "stage": "decoder_12", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.0258657080012199, "shape": [1, 98, 3584], "norm": 0.3783009946346283, "finite": true}
+{"phase": "backward", "stage": "decoder_11", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.025705874999403022, "shape": [1, 98, 3584], "norm": 0.4041641652584076, "finite": true}
+{"phase": "backward", "stage": "decoder_10", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.025583208000171, "shape": [1, 98, 3584], "norm": 0.39069387316703796, "finite": true}
+{"phase": "backward", "stage": "decoder_9", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.025702874998387415, "shape": [1, 98, 3584], "norm": 0.38568076491355896, "finite": true}
+{"phase": "backward", "stage": "decoder_8", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.02588350000223727, "shape": [1, 98, 3584], "norm": 0.4607756733894348, "finite": true}
+{"phase": "backward", "stage": "decoder_7", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.025948457998310914, "shape": [1, 98, 3584], "norm": 0.5042628049850464, "finite": true}
+{"phase": "backward", "stage": "decoder_6", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.02570574999845121, "shape": [1, 98, 3584], "norm": 0.5494606494903564, "finite": true}
+{"phase": "backward", "stage": "decoder_5", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.02573366700016777, "shape": [1, 98, 3584], "norm": 0.6076167225837708, "finite": true}
+{"phase": "backward", "stage": "decoder_4", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.027342291999957524, "shape": [1, 98, 3584], "norm": 0.7170419692993164, "finite": true}
+{"phase": "backward", "stage": "decoder_3", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.026823374999366933, "shape": [1, 98, 3584], "norm": 0.770294725894928, "finite": true}
+{"phase": "backward", "stage": "decoder_2", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.026012999998783926, "shape": [1, 98, 3584], "norm": 0.8355895280838013, "finite": true}
+{"phase": "backward", "stage": "decoder_1", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.025996666998253204, "shape": [1, 98, 3584], "norm": 0.9170732498168945, "finite": true}
+{"phase": "backward", "stage": "decoder_0", "peak_bytes": 5801081836, "active_bytes": 5646401628, "seconds": 0.025795541998377303, "shape": [1, 98, 3584], "norm": 31.908050537109375, "finite": true}
+{"phase": "backward", "stage": "merger_inverse_window_scatter", "peak_bytes": 5850328442, "active_bytes": 5646401628, "seconds": 0.010204083002463449, "shape": [256, 1280], "norm": 0.001382254995405674, "finite": true}
+{"phase": "backward", "stage": "vision_31", "peak_bytes": 5845502820, "active_bytes": 5646401628, "seconds": 0.00991891699959524, "shape": [256, 1280], "norm": 0.0014891449827700853, "finite": true}
+{"phase": "backward", "stage": "vision_30", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.009101666997594293, "shape": [256, 1280], "norm": 0.001506214146502316, "finite": true}
+{"phase": "backward", "stage": "vision_29", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.008855584001139505, "shape": [256, 1280], "norm": 0.0015173560241237283, "finite": true}
+{"phase": "backward", "stage": "vision_28", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.008883624999725726, "shape": [256, 1280], "norm": 0.0015245882095769048, "finite": true}
+{"phase": "backward", "stage": "vision_27", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.008746457999222912, "shape": [256, 1280], "norm": 0.0015273065073415637, "finite": true}
+{"phase": "backward", "stage": "vision_26", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.008645583999168593, "shape": [256, 1280], "norm": 0.0015359495300799608, "finite": true}
+{"phase": "backward", "stage": "vision_25", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.008615499998995801, "shape": [256, 1280], "norm": 0.0015338771045207977, "finite": true}
+{"phase": "backward", "stage": "vision_24", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.008903167003154522, "shape": [256, 1280], "norm": 0.001534110982902348, "finite": true}
+{"phase": "backward", "stage": "vision_23", "peak_bytes": 5845502820, "active_bytes": 5646401628, "seconds": 0.009409750000486383, "shape": [256, 1280], "norm": 0.0015646371757611632, "finite": true}
+{"phase": "backward", "stage": "vision_22", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.009098040998651413, "shape": [256, 1280], "norm": 0.001557053066790104, "finite": true}
+{"phase": "backward", "stage": "vision_21", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.008964040996943368, "shape": [256, 1280], "norm": 0.0015513640828430653, "finite": true}
+{"phase": "backward", "stage": "vision_20", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.009202167002513306, "shape": [256, 1280], "norm": 0.0015482783783227205, "finite": true}
+{"phase": "backward", "stage": "vision_19", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.009274250001908513, "shape": [256, 1280], "norm": 0.0015421438729390502, "finite": true}
+{"phase": "backward", "stage": "vision_18", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.009396957997523714, "shape": [256, 1280], "norm": 0.0015353044727817178, "finite": true}
+{"phase": "backward", "stage": "vision_17", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.009236542002327042, "shape": [256, 1280], "norm": 0.0018379406537860632, "finite": true}
+{"phase": "backward", "stage": "vision_16", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.009418625002581393, "shape": [256, 1280], "norm": 0.0019498413894325495, "finite": true}
+{"phase": "backward", "stage": "vision_15", "peak_bytes": 5845502820, "active_bytes": 5646401628, "seconds": 0.010521917000005487, "shape": [256, 1280], "norm": 0.002462196396663785, "finite": true}
+{"phase": "backward", "stage": "vision_14", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.010340417000406887, "shape": [256, 1280], "norm": 0.002408655360341072, "finite": true}
+{"phase": "backward", "stage": "vision_13", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.009784750000108033, "shape": [256, 1280], "norm": 0.0025162063539028168, "finite": true}
+{"phase": "backward", "stage": "vision_12", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.009689082999102538, "shape": [256, 1280], "norm": 0.002863542642444372, "finite": true}
+{"phase": "backward", "stage": "vision_11", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.010616666997520952, "shape": [256, 1280], "norm": 0.004094948526471853, "finite": true}
+{"phase": "backward", "stage": "vision_10", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.010458542001288151, "shape": [256, 1280], "norm": 0.008763170801103115, "finite": true}
+{"phase": "backward", "stage": "vision_9", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.010779709002235904, "shape": [256, 1280], "norm": 0.013429884798824787, "finite": true}
+{"phase": "backward", "stage": "vision_8", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.012683459000982111, "shape": [256, 1280], "norm": 0.02800600230693817, "finite": true}
+{"phase": "backward", "stage": "vision_7", "peak_bytes": 5845502820, "active_bytes": 5646401628, "seconds": 0.011172458001965424, "shape": [256, 1280], "norm": 0.0714087262749672, "finite": true}
+{"phase": "backward", "stage": "vision_6", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.011011709000740666, "shape": [256, 1280], "norm": 0.08380435407161713, "finite": true}
+{"phase": "backward", "stage": "vision_5", "peak_bytes": 5842619248, "active_bytes": 5646401628, "seconds": 0.012335540999629302, "shape": [256, 1280], "norm": 0.115261510014534, "finite": true}
+{"phase": "backward", "stage": "vision_4", "peak_bytes": 5714998394, "active_bytes": 5646401628, "seconds": 0.011621165998803917, "shape": [256, 1280], "norm": 0.18377068638801575, "finite": true}
+{"phase": "backward", "stage": "vision_3", "peak_bytes": 5725025402, "active_bytes": 5646401628, "seconds": 0.008333875000971602, "shape": [256, 1280], "norm": 0.3524089753627777, "finite": true}
+{"phase": "backward", "stage": "vision_2", "peak_bytes": 5725025402, "active_bytes": 5646401628, "seconds": 0.007802000000083353, "shape": [256, 1280], "norm": 0.6836386322975159, "finite": true}
+{"phase": "backward", "stage": "vision_1", "peak_bytes": 5725025402, "active_bytes": 5646401628, "seconds": 0.007268375000421656, "shape": [256, 1280], "norm": 2.0340237617492676, "finite": true}
+{"phase": "backward", "stage": "vision_0", "peak_bytes": 5725025402, "active_bytes": 5646401628, "seconds": 0.007241125000291504, "shape": [256, 1280], "norm": 6.285317420959473, "finite": true}
+{"phase": "backward_analytic_numpy", "stage": "pixels_patch_embed_window", "peak_bytes": 0, "active_bytes": 5646401628, "seconds": 0.004017333001684165, "shape": [224, 224, 3], "norm": 36.75627517700195, "finite": true}

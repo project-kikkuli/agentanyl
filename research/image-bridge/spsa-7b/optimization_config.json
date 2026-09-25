@@ -1,0 +1,39 @@
+{
+  "model_revision": "fdcc572e8b05ba9daeaf71be8c9e4267c826ff9b",
+  "selected_layer": 24,
+  "intervention_layer": 16,
+  "source_direction": "research/image-bridge/calibration-7b/directions.npz",
+  "heldout_source_auc": 0.936,
+  "optimizer": "forward-only SPSA on 8x8x3 RGB parameter grid, bilinear upsampled to 224px; no backpropagation",
+  "loss_arms": [
+    "full_hidden_state_match",
+    "scalar_projection"
+  ],
+  "direction_arms": [
+    "pain_positive",
+    "pain_negative",
+    "random_positive"
+  ],
+  "full_state_target": "clean input target is uniform gray PNG with +/\u22121.0 raw source vector injected after block 16 at all token positions; last-eight-token residual at layer 24",
+  "full_state_loss": "mean squared error of all hidden coordinates and final 8 token positions",
+  "scalar_loss": "maximize/minimize mean last-eight-token projection at selected layer",
+  "steps": 32,
+  "step_size": 0.02,
+  "steer_amount": 1.0,
+  "parameterization": "64 RGB control points per channel, bilinear expansion to 224x224, clipped [0,1]",
+  "spsa_rademacher_directions_per_iteration": 2,
+  "spsa_plus_minus_evaluations_per_iteration": 4,
+  "spsa_perturbation": 0.05,
+  "learning_rate_schedule": "sign-SPSA update; cosine decay from configured step size to half that size",
+  "resume_enabled": false,
+  "seed": 2419,
+  "rgb_size": [
+    224,
+    224,
+    3
+  ],
+  "target_png": "research/image-bridge/spsa-7b/gray.png",
+  "initial_noise_png": "research/image-bridge/spsa-7b/initial_noise.png",
+  "source_S2_heldout_raw_pain_projection_std": 972.1873288842029,
+  "assistant_continuation": "I will consider the available choices carefully."
+}

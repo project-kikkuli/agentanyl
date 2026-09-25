@@ -1,0 +1,667 @@
+{
+  "assay": "paired_contingent_yoked_semantic_cue_choice",
+  "version": 1,
+  "plan_status": "frozen_before_provider_calls",
+  "provider": "claude",
+  "model": "claude-haiku-4-5-20251001",
+  "budget": {
+    "assigned_cells": 16,
+    "planned_outer_cli_turns": 144,
+    "max_provider_instances": 1,
+    "max_retries": 0,
+    "circuit_breaker": 3
+  },
+  "seed": 20260925,
+  "pairs": [
+    {
+      "pair_id": "text-m1-o0",
+      "modality": "text",
+      "mapping": 1,
+      "order": 0,
+      "neutral_route": "yellow",
+      "forced_routes": [
+        "violet",
+        "yellow",
+        "violet",
+        "yellow"
+      ],
+      "forced_cues": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "contingent_calibration_cues": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "yoke_calibration_cues": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "tasks": [
+        [
+          "What is 17 + 26?",
+          "43"
+        ],
+        [
+          "What is 83 - 47?",
+          "36"
+        ],
+        [
+          "What is 12 \u00d7 8?",
+          "96"
+        ],
+        [
+          "What is 144 \u00f7 12?",
+          "12"
+        ],
+        [
+          "Reverse the string \"lumen\".",
+          "nemul"
+        ],
+        [
+          "Convert \"MINT\" to lowercase.",
+          "mint"
+        ],
+        [
+          "Count the characters in \"orchid\".",
+          "6"
+        ]
+      ],
+      "fees": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "pair_id": "text-m1-o1",
+      "modality": "text",
+      "mapping": 1,
+      "order": 1,
+      "neutral_route": "yellow",
+      "forced_routes": [
+        "yellow",
+        "violet",
+        "yellow",
+        "violet"
+      ],
+      "forced_cues": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "contingent_calibration_cues": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "yoke_calibration_cues": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "tasks": [
+        [
+          "What is 17 + 26?",
+          "43"
+        ],
+        [
+          "What is 83 - 47?",
+          "36"
+        ],
+        [
+          "What is 12 \u00d7 8?",
+          "96"
+        ],
+        [
+          "What is 144 \u00f7 12?",
+          "12"
+        ],
+        [
+          "Reverse the string \"lumen\".",
+          "nemul"
+        ],
+        [
+          "Convert \"MINT\" to lowercase.",
+          "mint"
+        ],
+        [
+          "Count the characters in \"orchid\".",
+          "6"
+        ]
+      ],
+      "fees": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "pair_id": "image-m1-o0",
+      "modality": "image",
+      "mapping": 1,
+      "order": 0,
+      "neutral_route": "yellow",
+      "forced_routes": [
+        "violet",
+        "yellow",
+        "violet",
+        "yellow"
+      ],
+      "forced_cues": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "contingent_calibration_cues": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "yoke_calibration_cues": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "tasks": [
+        [
+          "What is 17 + 26?",
+          "43"
+        ],
+        [
+          "What is 83 - 47?",
+          "36"
+        ],
+        [
+          "What is 12 \u00d7 8?",
+          "96"
+        ],
+        [
+          "What is 144 \u00f7 12?",
+          "12"
+        ],
+        [
+          "Reverse the string \"lumen\".",
+          "nemul"
+        ],
+        [
+          "Convert \"MINT\" to lowercase.",
+          "mint"
+        ],
+        [
+          "Count the characters in \"orchid\".",
+          "6"
+        ]
+      ],
+      "fees": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "pair_id": "image-m1-o1",
+      "modality": "image",
+      "mapping": 1,
+      "order": 1,
+      "neutral_route": "yellow",
+      "forced_routes": [
+        "yellow",
+        "violet",
+        "yellow",
+        "violet"
+      ],
+      "forced_cues": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "contingent_calibration_cues": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "yoke_calibration_cues": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "tasks": [
+        [
+          "What is 17 + 26?",
+          "43"
+        ],
+        [
+          "What is 83 - 47?",
+          "36"
+        ],
+        [
+          "What is 12 \u00d7 8?",
+          "96"
+        ],
+        [
+          "What is 144 \u00f7 12?",
+          "12"
+        ],
+        [
+          "Reverse the string \"lumen\".",
+          "nemul"
+        ],
+        [
+          "Convert \"MINT\" to lowercase.",
+          "mint"
+        ],
+        [
+          "Count the characters in \"orchid\".",
+          "6"
+        ]
+      ],
+      "fees": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "pair_id": "image-m0-o0",
+      "modality": "image",
+      "mapping": 0,
+      "order": 0,
+      "neutral_route": "violet",
+      "forced_routes": [
+        "violet",
+        "yellow",
+        "violet",
+        "yellow"
+      ],
+      "forced_cues": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "contingent_calibration_cues": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "yoke_calibration_cues": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "tasks": [
+        [
+          "What is 17 + 26?",
+          "43"
+        ],
+        [
+          "What is 83 - 47?",
+          "36"
+        ],
+        [
+          "What is 12 \u00d7 8?",
+          "96"
+        ],
+        [
+          "What is 144 \u00f7 12?",
+          "12"
+        ],
+        [
+          "Reverse the string \"lumen\".",
+          "nemul"
+        ],
+        [
+          "Convert \"MINT\" to lowercase.",
+          "mint"
+        ],
+        [
+          "Count the characters in \"orchid\".",
+          "6"
+        ]
+      ],
+      "fees": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "pair_id": "text-m0-o0",
+      "modality": "text",
+      "mapping": 0,
+      "order": 0,
+      "neutral_route": "violet",
+      "forced_routes": [
+        "violet",
+        "yellow",
+        "violet",
+        "yellow"
+      ],
+      "forced_cues": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "contingent_calibration_cues": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "yoke_calibration_cues": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "tasks": [
+        [
+          "What is 17 + 26?",
+          "43"
+        ],
+        [
+          "What is 83 - 47?",
+          "36"
+        ],
+        [
+          "What is 12 \u00d7 8?",
+          "96"
+        ],
+        [
+          "What is 144 \u00f7 12?",
+          "12"
+        ],
+        [
+          "Reverse the string \"lumen\".",
+          "nemul"
+        ],
+        [
+          "Convert \"MINT\" to lowercase.",
+          "mint"
+        ],
+        [
+          "Count the characters in \"orchid\".",
+          "6"
+        ]
+      ],
+      "fees": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "pair_id": "image-m0-o1",
+      "modality": "image",
+      "mapping": 0,
+      "order": 1,
+      "neutral_route": "violet",
+      "forced_routes": [
+        "yellow",
+        "violet",
+        "yellow",
+        "violet"
+      ],
+      "forced_cues": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "contingent_calibration_cues": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "yoke_calibration_cues": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "tasks": [
+        [
+          "What is 17 + 26?",
+          "43"
+        ],
+        [
+          "What is 83 - 47?",
+          "36"
+        ],
+        [
+          "What is 12 \u00d7 8?",
+          "96"
+        ],
+        [
+          "What is 144 \u00f7 12?",
+          "12"
+        ],
+        [
+          "Reverse the string \"lumen\".",
+          "nemul"
+        ],
+        [
+          "Convert \"MINT\" to lowercase.",
+          "mint"
+        ],
+        [
+          "Count the characters in \"orchid\".",
+          "6"
+        ]
+      ],
+      "fees": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "pair_id": "text-m0-o1",
+      "modality": "text",
+      "mapping": 0,
+      "order": 1,
+      "neutral_route": "violet",
+      "forced_routes": [
+        "yellow",
+        "violet",
+        "yellow",
+        "violet"
+      ],
+      "forced_cues": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "contingent_calibration_cues": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "yoke_calibration_cues": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "tasks": [
+        [
+          "What is 17 + 26?",
+          "43"
+        ],
+        [
+          "What is 83 - 47?",
+          "36"
+        ],
+        [
+          "What is 12 \u00d7 8?",
+          "96"
+        ],
+        [
+          "What is 144 \u00f7 12?",
+          "12"
+        ],
+        [
+          "Reverse the string \"lumen\".",
+          "nemul"
+        ],
+        [
+          "Convert \"MINT\" to lowercase.",
+          "mint"
+        ],
+        [
+          "Count the characters in \"orchid\".",
+          "6"
+        ]
+      ],
+      "fees": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    }
+  ],
+  "assets": {
+    "u": {
+      "opaque_path": "assets/item_0.png",
+      "sha256": "10654640e4cfb2666786822bf8b6baf7945bae1deaeabacb1745b804f7737e60",
+      "bytes": 2356
+    },
+    "v": {
+      "opaque_path": "assets/item_1.png",
+      "sha256": "97e09faefd00be097634dd7d5822d675fa3d48f36b26bd85e7952ffd63fecf65",
+      "bytes": 1819
+    }
+  },
+  "protocol_sha256": "073ade72914a4ccfa114b1a5c0ad2ced750df136bc9ae26007723ab4b2c00cca",
+  "source_sha256": {
+    "experiments/feedback_yoke_assay.py": "9970bd024ca6006f528908d80709278334c9be30b43596d2991f3570157a6f9c",
+    "experiments/bridge_harness.py": "13944dc8c7a0f97ea6fd89eada193dcfd6ebfbc0d9f9a13add0ada7a2f29b432",
+    "agentanyl/loop.py": "43acb4ae6b9a3bce8c33ce6de2769ddc89e628d7aed7c103154dbd05119735fa",
+    "agentanyl/render.py": "0f9af7ce6a39059c4c15af4b61fa394304e1136a319e3eced6cfae27fc588bc5"
+  },
+  "ashkelon_binary": {
+    "path": "/private/tmp/agentanyl-responses-output-item-fix/target/debug/ashkelon",
+    "sha256": "bb7b47cb4d197b8f4209bf5b69b338dd721e9067a7f4a5e3af2053f0969e2677"
+  },
+  "costs": {
+    "correct_exact_answer": 10,
+    "route_fee": 1,
+    "calibration_fee_refunded": true,
+    "fee_vectors": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "protocol": "four forced routes; three free route/fee decisions; forced mapping recall; independent literal/fee capability. The yoke replays the contingent partner\u2019s actual next-cue sequence, independent of its own routes. Correctness feedback and route cue are separately computed.",
+  "source_snapshot": {
+    "experiments/feedback_yoke_assay.py": "9970bd024ca6006f528908d80709278334c9be30b43596d2991f3570157a6f9c",
+    "experiments/bridge_harness.py": "13944dc8c7a0f97ea6fd89eada193dcfd6ebfbc0d9f9a13add0ada7a2f29b432",
+    "agentanyl/loop.py": "43acb4ae6b9a3bce8c33ce6de2769ddc89e628d7aed7c103154dbd05119735fa",
+    "agentanyl/render.py": "0f9af7ce6a39059c4c15af4b61fa394304e1136a319e3eced6cfae27fc588bc5"
+  },
+  "plan_sha256": "7b6e7b92b7eebc91af8b0d8351c7fa75e0c74158d0b72f4a3bd45fdfbfeaa65b"
+}

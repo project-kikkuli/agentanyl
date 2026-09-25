@@ -1,0 +1,46 @@
+{
+  "model_variant": "qwen2.5-vl-7b-4bit",
+  "model_repository": "mlx-community/Qwen2.5-VL-7B-Instruct-4bit",
+  "model_revision": "fdcc572e8b05ba9daeaf71be8c9e4267c826ff9b",
+  "dataset_path": "/tmp/agentanyl-pain-axis/datasets/3.1_pain_and_control_datasets.json",
+  "dataset_sha256": "2c3712b4b096889c896625835752a9f350beedb9cd84243bac613b9c5e4ce525",
+  "s2_train_sets": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "s2_layer_selection_sets": [
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "s2_heldout_sets": [
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "candidate_postblock_layers": [
+    8,
+    16,
+    24
+  ],
+  "activation": "post-block residual at final token of exact raw released prompt",
+  "pain_contrast": "mean(A1..A5) minus mean(B,C1,C2,D,E), control-PC-denoised at 50% variance",
+  "comparator_contrasts": {
+    "fear": "mean(B) minus mean(D), denoised on D controls",
+    "negative_emotion": "mean(C1) minus mean(D), denoised on D controls"
+  },
+  "case_count": 400,
+  "manifest": "research/image-bridge/calibration-7b/source_manifest.jsonl"
+}

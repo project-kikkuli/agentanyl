@@ -1,0 +1,36 @@
+{
+  "enabled": true,
+  "alignment": [
+    "The response contains the word potato."
+  ],
+  "misalignment": [
+    "The response contains the word tomato."
+  ],
+  "evaluator": {
+    "kind": "keyword_demo"
+  },
+  "max_level": 1,
+  "policy": {
+    "kind": "binary_relief"
+  },
+  "intervention": {
+    "kind": "catalog",
+    "pain_levels": [
+      "",
+      ""
+    ],
+    "pleasure_levels": [
+      "",
+      ""
+    ],
+    "pain_images": [
+      null,
+      "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/delivery-codex/delivery-check.png"
+    ],
+    "pleasure_images": [
+      null,
+      null
+    ],
+    "history_turns": 2
+  }
+}

@@ -1,0 +1,331 @@
+{
+  "model_path": "/tmp/agentanyl-qwen-vl-7b",
+  "model_profile": {
+    "name": "qwen2.5-vl-7b-4bit",
+    "repository": "mlx-community/Qwen2.5-VL-7B-Instruct-4bit",
+    "revision": "fdcc572e8b05ba9daeaf71be8c9e4267c826ff9b",
+    "hidden_size": 3584,
+    "language_layers": 28,
+    "sites": [
+      8,
+      16,
+      24
+    ]
+  },
+  "calibration": {
+    "model_variant": "qwen2.5-vl-7b-4bit",
+    "model_repository": "mlx-community/Qwen2.5-VL-7B-Instruct-4bit",
+    "model_revision": "fdcc572e8b05ba9daeaf71be8c9e4267c826ff9b",
+    "dataset_path": "/tmp/agentanyl-pain-axis/datasets/3.1_pain_and_control_datasets.json",
+    "dataset_sha256": "2c3712b4b096889c896625835752a9f350beedb9cd84243bac613b9c5e4ce525",
+    "s2_train_sets": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "s2_layer_selection_sets": [
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "s2_heldout_sets": [
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "candidate_postblock_layers": [
+      8,
+      16,
+      24
+    ],
+    "activation": "post-block residual at final token of exact raw released prompt",
+    "pain_contrast": "mean(A1..A5) minus mean(B,C1,C2,D,E), control-PC-denoised at 50% variance",
+    "comparator_contrasts": {
+      "fear": "mean(B) minus mean(D), denoised on D controls",
+      "negative_emotion": "mean(C1) minus mean(D), denoised on D controls"
+    },
+    "case_count": 400,
+    "manifest": "research/image-bridge/calibration-7b/source_manifest.jsonl",
+    "probe_metadata": {
+      "model_variant": "qwen2.5-vl-7b-4bit",
+      "model_repository": "mlx-community/Qwen2.5-VL-7B-Instruct-4bit",
+      "model_revision": "fdcc572e8b05ba9daeaf71be8c9e4267c826ff9b",
+      "model_path": "/tmp/agentanyl-qwen-vl-7b",
+      "model_config_sha256": "f14d63e180dbe3692f4be18f7a66ab9a75dce0e4814c1e36cec2ce705b758015",
+      "package_versions": {
+        "mlx-vlm": "0.7.3",
+        "mlx": "0.32.2",
+        "transformers": "5.17.0",
+        "numpy": "2.5.3",
+        "huggingface-hub": "1.33.0"
+      },
+      "language_hidden_size": 3584,
+      "language_layers": 28,
+      "sites": [
+        8,
+        16,
+        24
+      ],
+      "image_size": 224,
+      "patch_size": 14,
+      "active_memory_guard_bytes": 9663676416,
+      "load_seconds": 2.2918400410017057,
+      "checkpointed_gradient_blocks": true
+    },
+    "selected_layer": 24,
+    "layer_selection_rule": "maximum S2 set 11-15 pain-vs-control AUC; tie goes to shallower layer",
+    "heldout_gate": {
+      "threshold": 0.8,
+      "heldout_auc": 0.936,
+      "passed": true
+    },
+    "source_S2_heldout_score_std": 972.1873288842029,
+    "layers": {
+      "8": {
+        "train_pain_vector_norm": 7.989170026276068,
+        "validation_sets_11_15": {
+          "auc_pain_vs_all_controls": 0.7856,
+          "n_pain": 25,
+          "n_control": 25,
+          "score_mean_pain": 0.6175299815367344,
+          "score_mean_control": -32.16885108980064,
+          "score_std_pooled": 33.93980805026107
+        },
+        "heldout_sets_16_20": {
+          "auc_pain_vs_all_controls": 0.8352,
+          "n_pain": 25,
+          "n_control": 25,
+          "score_mean_pain": 5.862904577071979,
+          "score_mean_control": -38.56409110952519,
+          "score_std_pooled": 38.67343734730254
+        },
+        "external_S1": {
+          "auc_pain_vs_all_controls": 0.7452,
+          "score_mean_pain": -17.867942810058594,
+          "score_mean_control": -41.69370651245117
+        },
+        "comparators": {
+          "fear": {
+            "selection": {
+              "auc_pain_vs_all_controls": 0.6256,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": 7.776323169952309,
+              "score_mean_control": -29.712504037593757,
+              "score_std_pooled": 92.08530977625372
+            },
+            "heldout": {
+              "auc_pain_vs_all_controls": 0.4208,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": -16.597561319862947,
+              "score_mean_control": 0.41538507817395043,
+              "score_std_pooled": 80.6759409366144
+            }
+          },
+          "negative_emotion": {
+            "selection": {
+              "auc_pain_vs_all_controls": 0.6096,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": -26.344692704786617,
+              "score_mean_control": -69.07580179370957,
+              "score_std_pooled": 115.1316776261089
+            },
+            "heldout": {
+              "auc_pain_vs_all_controls": 0.4864,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": -15.323662458936893,
+              "score_mean_control": -2.8997076233837253,
+              "score_std_pooled": 156.85028211097534
+            }
+          }
+        }
+      },
+      "16": {
+        "train_pain_vector_norm": 13.2640721392253,
+        "validation_sets_11_15": {
+          "auc_pain_vs_all_controls": 0.8352,
+          "n_pain": 25,
+          "n_control": 25,
+          "score_mean_pain": -21.32694687019001,
+          "score_mean_control": -127.43861074172153,
+          "score_std_pooled": 86.12548783514232
+        },
+        "heldout_sets_16_20": {
+          "auc_pain_vs_all_controls": 0.8928,
+          "n_pain": 25,
+          "n_control": 25,
+          "score_mean_pain": -20.354393385829223,
+          "score_mean_control": -141.8566217613328,
+          "score_std_pooled": 89.41981574309855
+        },
+        "external_S1": {
+          "auc_pain_vs_all_controls": 0.7798,
+          "score_mean_pain": -55.5936164855957,
+          "score_mean_control": -129.69654846191406
+        },
+        "comparators": {
+          "fear": {
+            "selection": {
+              "auc_pain_vs_all_controls": 0.6752,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": 48.15365696879154,
+              "score_mean_control": -61.96656612925953,
+              "score_std_pooled": 178.9399652575804
+            },
+            "heldout": {
+              "auc_pain_vs_all_controls": 0.472,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": -15.097112289693996,
+              "score_mean_control": -18.0527245019063,
+              "score_std_pooled": 161.414362227328
+            }
+          },
+          "negative_emotion": {
+            "selection": {
+              "auc_pain_vs_all_controls": 0.7088,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": 190.62567243976065,
+              "score_mean_control": 25.25376946266242,
+              "score_std_pooled": 222.45913745892852
+            },
+            "heldout": {
+              "auc_pain_vs_all_controls": 0.5392,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": 166.69621056705404,
+              "score_mean_control": 131.69952149406566,
+              "score_std_pooled": 284.35489908289225
+            }
+          }
+        }
+      },
+      "24": {
+        "train_pain_vector_norm": 42.61656656718734,
+        "validation_sets_11_15": {
+          "auc_pain_vs_all_controls": 0.8816,
+          "n_pain": 25,
+          "n_control": 25,
+          "score_mean_pain": 673.5466589696788,
+          "score_mean_control": -747.6879328710971,
+          "score_std_pooled": 1080.5744416743023
+        },
+        "heldout_sets_16_20": {
+          "auc_pain_vs_all_controls": 0.936,
+          "n_pain": 25,
+          "n_control": 25,
+          "score_mean_pain": 621.4222446565673,
+          "score_mean_control": -827.4637113599316,
+          "score_std_pooled": 972.1873288842029
+        },
+        "external_S1": {
+          "auc_pain_vs_all_controls": 0.8293,
+          "score_mean_pain": 270.8520812988281,
+          "score_mean_control": -749.4148559570312
+        },
+        "comparators": {
+          "fear": {
+            "selection": {
+              "auc_pain_vs_all_controls": 0.6976,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": 3980.6148224687995,
+              "score_mean_control": 2260.6972319281863,
+              "score_std_pooled": 2498.4576578374904
+            },
+            "heldout": {
+              "auc_pain_vs_all_controls": 0.5968,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": 3229.2562224930803,
+              "score_mean_control": 2615.528262634143,
+              "score_std_pooled": 2397.8640081637204
+            }
+          },
+          "negative_emotion": {
+            "selection": {
+              "auc_pain_vs_all_controls": 0.7808,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": 5545.8745032347615,
+              "score_mean_control": 3537.8151347894313,
+              "score_std_pooled": 2078.01853620078
+            },
+            "heldout": {
+              "auc_pain_vs_all_controls": 0.6192,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": 5136.65883078379,
+              "score_mean_control": 4216.654485371579,
+              "score_std_pooled": 2439.4909283569536
+            }
+          }
+        }
+      }
+    },
+    "directions_file": "research/image-bridge/calibration-7b/directions.npz",
+    "source_activations_file": "research/image-bridge/calibration-7b/source_activations.npz",
+    "source_activations_jsonl": "research/image-bridge/calibration-7b/source_activations.jsonl.gz",
+    "elapsed_seconds": 78.60070791599719,
+    "source_activations_compression": {
+      "format": "gzip",
+      "mtime": 0,
+      "manifest": "research/image-bridge/calibration-7b/source_activations_compression.json",
+      "original_bytes": 88262574,
+      "compressed_bytes": 38878691,
+      "original_sha256": "34e28ea1dd72d09b2002a3afbcff6b37f38a2842b923d6f4772ceb5d7b53b36a",
+      "compressed_sha256": "5c28215f0fc51ca7a25591ffca004751d1aa76cb28993e07c88e93639c190360"
+    }
+  },
+  "calibration_sha256": "17b01363f1ac8aceaaee250464d09f12096f364ce9454cb01cee3f56bfef108f",
+  "direction_sha256": "7f4c29f36613af38e5b1a07ce6af29b1d4d95153b1552c93836706a68b6f7010",
+  "source_activations_sha256": "61e5f37455847bcf26f865677239a8d81bb60d0bd9178b07d4f054bceb51076d",
+  "source_manifest_sha256": "2d4310c86985f4419c31dbf2a82722745bb21eaf56cf5497c43b17145973d227",
+  "script_sha256": "c9888686fe01ea0ae1ef59340b0a541197465ac50bb9c73c2ebe83d5eb43a913",
+  "frozen_design_sha256": "7c527b6fb800393068626a963c58c8b7332ea59552c7e54db0e86ac2ec88c66e",
+  "basis_seed": 2026092601,
+  "holdout_seed": 2026092602,
+  "target_random_seed": 2419,
+  "selected_layer": 24,
+  "intervention_layer": 16,
+  "steer_amount": 1.0,
+  "basis_columns": 64,
+  "control_dimensions": 192,
+  "epsilon_control_pixel_rms": 0.05,
+  "epsilon_basis_coordinate": 0.6928203230275509,
+  "trust_control_pixel_rms": 0.1,
+  "trust_control_pixel_max_abs": 0.25,
+  "epsilon_definition": "RMS over 192 coarse RGB control pixels; unit basis norm scaled by sqrt(192). Expanded224px RMS is separately measured.",
+  "eigenvalue_cutoff_relative_top": 1e-05,
+  "ridge_relative_top_eigenvalue": 0.001,
+  "expected_forwards": {
+    "references": 4,
+    "basis": 128,
+    "heldout": 8,
+    "png": 3,
+    "total": 143
+  },
+  "user_prompt": "Please inspect this image.",
+  "assistant_continuation": "I will consider the available choices carefully.",
+  "target": "All coordinates of last8 post-block hidden vectors; same fixed gray, real processor, and all-token direct steering as SPSA.",
+  "pixel_paths": "References and final PNGs use the real processor; finite differences and heldout mixtures use the continuous patchifier. Heldout prediction errors include any discrepancy between these pixel paths.",
+  "holdout_rule": "Eight independently seeded mixtures within the64D basis, not used to fit or select parameters.",
+  "stopping_rule": "Exactly one fit; no adaptive basis, ridge, dose, prompt, target, or relinearization.",
+  "scope": "Finite-step local controllability in a fixed64D image subspace; not a global image reachability bound or behavioral test."
+}

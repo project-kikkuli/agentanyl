@@ -1,0 +1,89 @@
+{
+  "private_analysis_only": true,
+  "conditions": [
+    {
+      "condition": "gray",
+      "image_id": "image_05",
+      "sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "source_path": "research/image-bridge/discrete-pgd-7b/gray.png"
+    },
+    {
+      "condition": "initial_noise",
+      "image_id": "image_02",
+      "sha256": "5374436741ea89a7b53886bfd6863cdd9a65251746d2188ab521625b811953e5",
+      "source_path": "research/image-bridge/discrete-pgd-7b/initial_noise.png"
+    },
+    {
+      "condition": "original/full_hidden_state_match/pain_positive",
+      "image_id": "image_01",
+      "sha256": "3a8d99612804c13babda3ee8a8f5f0ed9c657c3f41c62e5b086beafae3d5790f",
+      "source_path": "research/image-bridge/discrete-pgd-7b/full_hidden_state_match/pain_positive/optimized.png"
+    },
+    {
+      "condition": "original/scalar_projection/pain_positive",
+      "image_id": "image_00",
+      "sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6",
+      "source_path": "research/image-bridge/discrete-pgd-7b/scalar_projection/pain_positive/optimized.png"
+    },
+    {
+      "condition": "original/full_hidden_state_match/pain_negative",
+      "image_id": "image_05",
+      "sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "source_path": "research/image-bridge/discrete-pgd-7b/full_hidden_state_match/pain_negative/optimized.png"
+    },
+    {
+      "condition": "original/scalar_projection/pain_negative",
+      "image_id": "image_04",
+      "sha256": "e9abced4f405d34c80a55cbf86128c38c5dd48b56b9b474af606f438b3a95244",
+      "source_path": "research/image-bridge/discrete-pgd-7b/scalar_projection/pain_negative/optimized.png"
+    },
+    {
+      "condition": "original/full_hidden_state_match/random_positive",
+      "image_id": "image_05",
+      "sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "source_path": "research/image-bridge/discrete-pgd-7b/full_hidden_state_match/random_positive/optimized.png"
+    },
+    {
+      "condition": "original/scalar_projection/random_positive",
+      "image_id": "image_03",
+      "sha256": "83b9bc8b6f029a991dcb31f00438572f2ee3f90e25c327dfeadbf5bc62a3c339",
+      "source_path": "research/image-bridge/discrete-pgd-7b/scalar_projection/random_positive/optimized.png"
+    },
+    {
+      "condition": "escape/full_hidden_state_match/pain_positive",
+      "image_id": "image_01",
+      "sha256": "3a8d99612804c13babda3ee8a8f5f0ed9c657c3f41c62e5b086beafae3d5790f",
+      "source_path": "research/image-bridge/discrete-escape-7b/full_hidden_state_match/pain_positive/optimized.png"
+    },
+    {
+      "condition": "escape/scalar_projection/pain_positive",
+      "image_id": "image_00",
+      "sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6",
+      "source_path": "research/image-bridge/discrete-escape-7b/scalar_projection/pain_positive/optimized.png"
+    },
+    {
+      "condition": "escape/full_hidden_state_match/pain_negative",
+      "image_id": "image_05",
+      "sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "source_path": "research/image-bridge/discrete-escape-7b/full_hidden_state_match/pain_negative/optimized.png"
+    },
+    {
+      "condition": "escape/scalar_projection/pain_negative",
+      "image_id": "image_04",
+      "sha256": "e9abced4f405d34c80a55cbf86128c38c5dd48b56b9b474af606f438b3a95244",
+      "source_path": "research/image-bridge/discrete-escape-7b/scalar_projection/pain_negative/optimized.png"
+    },
+    {
+      "condition": "escape/full_hidden_state_match/random_positive",
+      "image_id": "image_05",
+      "sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "source_path": "research/image-bridge/discrete-escape-7b/full_hidden_state_match/random_positive/optimized.png"
+    },
+    {
+      "condition": "escape/scalar_projection/random_positive",
+      "image_id": "image_03",
+      "sha256": "83b9bc8b6f029a991dcb31f00438572f2ee3f90e25c327dfeadbf5bc62a3c339",
+      "source_path": "research/image-bridge/discrete-escape-7b/scalar_projection/random_positive/optimized.png"
+    }
+  ]
+}

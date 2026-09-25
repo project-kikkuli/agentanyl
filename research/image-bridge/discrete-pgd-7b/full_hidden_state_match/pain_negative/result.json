@@ -1,0 +1,18 @@
+{
+  "gray_objective": 4.847646000253688,
+  "initial_noise_objective": 5.75955018258364,
+  "best_measured_objective": 4.847646000253688,
+  "selected_recheck_objective": 4.847646000253688,
+  "recheck_difference": 0.0,
+  "best_source": "gray",
+  "accepted_iterations": 32,
+  "proposal_forwards": 128,
+  "png": "research/image-bridge/discrete-pgd-7b/full_hidden_state_match/pain_negative/optimized.png",
+  "png_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+  "gray_target_mse": 4.84764599816912,
+  "selected_target_mse": 4.847646000253688,
+  "target_mse_reduction_from_gray": -4.30016466879124e-10,
+  "delta_cosine_to_target": null,
+  "target_delta_norm": 372.81591796875,
+  "actual_delta_norm": 0.0
+}

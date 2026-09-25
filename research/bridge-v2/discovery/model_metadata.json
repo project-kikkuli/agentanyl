@@ -1,0 +1,30 @@
+{
+  "model_revision": "c26a38f6a37d0a51b4e9a1eb3026530fa35d9fed",
+  "sources": {
+    "8": {
+      "path": "/tmp/agentanyl-pain-axis/results/vectors_full_steering/vectors_full_Qwen_2.5_7B_instruct.pt",
+      "sha256": "40ef0766206151cef5bc2f5be9eea82fb1b1975ff9b8eea7075541c396be0973",
+      "extraction_layer": 8,
+      "pain_raw_norm": 4.911739349365234
+    },
+    "24": {
+      "path": "/tmp/agentanyl-pain-axis/results/3.2_pain_vectors/pain_vectors/Qwen_2.5_7B_instruct/pain_vectors.pt",
+      "sha256": "9bc18aa0a3cfd36839f0c27e333c2ac513ecd05cd8c900998ae898fe23b6f73f",
+      "extraction_layer": 24,
+      "pain_raw_norm": 44.87510681152344
+    }
+  },
+  "postblock_sites": [
+    8,
+    16,
+    24
+  ],
+  "float32_residual_and_logits": true,
+  "package_versions": {
+    "mlx": "0.32.2",
+    "mlx-lm": "0.28.4",
+    "transformers": "4.57.6",
+    "numpy": "2.5.3",
+    "huggingface-hub": "0.36.2"
+  }
+}

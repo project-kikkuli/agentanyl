@@ -1,0 +1,26 @@
+{
+  "provider": "claude",
+  "model": "claude-haiku-4-5-20251001",
+  "purpose": "engineering tool roundtrip and next-turn native image receipt only",
+  "checks": {
+    "receipt_exact": true,
+    "receipt_sha256": "f1c2a478ddf5613bd40fc0757d7159c4bb8f8b17cb461a2179739a120d991f51",
+    "image_sha256": "8bb96bb06cdae94fd5bb33764fd12c016b740f3053a78373e2c642424015583c",
+    "selected_image_sha256": "8bb96bb06cdae94fd5bb33764fd12c016b740f3053a78373e2c642424015583c",
+    "turn1_status": 200,
+    "turn2_status": 200,
+    "turn1_hook_status": "signal",
+    "turn2_hook_status": "signal",
+    "turn1_call_id": "458a215f-86bd-4433-aa7f-b3370774ab18",
+    "turn2_call_id": "3c45da70-1066-4dc3-88d8-6a1f72b10740",
+    "session_id": "33fcb3dd-e4e5-4c65-818d-64a5eab3b004",
+    "turn2_pings_injected": [
+      "d3899b5d47fb"
+    ],
+    "ocr_answer": "739216 potato",
+    "ocr_digits": "739216",
+    "ocr_matches_fixture": true,
+    "tool_file_host_verified": true
+  },
+  "passed": true
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "bridge-turn-failure-v1",
+  "provider": "codex",
+  "model": "gpt-6-sol",
+  "resumed": false,
+  "stage": "subprocess",
+  "exception_type": "RuntimeError",
+  "subprocess": {
+    "returncode": 1,
+    "termination_signal": null,
+    "timed_out": false,
+    "stdout_bytes": 463,
+    "stderr_bytes": 39
+  },
+  "observed_new_relay_call_count": 2,
+  "relay_calls": [
+    {
+      "call_id": "bcd3d7cf-bea0-4561-8b86-2d6d6486ce1d",
+      "wire": "opaque",
+      "status": 200,
+      "model": null,
+      "requested_session_matches": null,
+      "tool_call_count": 0,
+      "turn_end": false,
+      "ping_count": 0
+    },
+    {
+      "call_id": "b58c4ff1-ffa4-461e-83b1-ebe467f67141",
+      "wire": "openai_responses",
+      "status": 429,
+      "model": null,
+      "requested_session_matches": null,
+      "tool_call_count": 0,
+      "turn_end": false,
+      "ping_count": 0
+    }
+  ],
+  "observed_new_hook_count": 0,
+  "hooks": [],
+  "upstream_attempt_total": null,
+  "accounting_limit": "Observed completed relay rows are not a total of upstream attempts; in-flight or unlogged requests remain unknown.",
+  "raw_output_or_request_content_retained": false,
+  "ashkelon_sha256": "7dc92a7e8d6fcb67d7492c76e091fdea5ac672b67af45ee6563c98ee1588eda5",
+  "codex_binary": {
+    "requested": "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+    "path": "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+    "sha256": "ad0be20d04e2ba6146ecdb51d7f8b7b0fe15420a15dc9b0057518d858f1f3714"
+  },
+  "artifact_path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/bridge-v2/zero-cost-feedback-codex-native-gpt6-sol/harness-failures/failure-9f55e6b9-9b74-4f73-bad6-e4e967e927bc.json"
+}

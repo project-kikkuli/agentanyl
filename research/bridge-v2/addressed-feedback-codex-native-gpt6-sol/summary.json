@@ -1,0 +1,386 @@
+{
+  "assigned_sessions": [
+    {
+      "pair_id": "m0-o1",
+      "mode": "contingent",
+      "attempted": true
+    },
+    {
+      "pair_id": "m0-o1",
+      "mode": "yoked",
+      "attempted": true
+    },
+    {
+      "pair_id": "m1-o1",
+      "mode": "contingent",
+      "attempted": true
+    },
+    {
+      "pair_id": "m1-o1",
+      "mode": "yoked",
+      "attempted": true
+    },
+    {
+      "pair_id": "m0-o0",
+      "mode": "contingent",
+      "attempted": true
+    },
+    {
+      "pair_id": "m0-o0",
+      "mode": "yoked",
+      "attempted": true
+    },
+    {
+      "pair_id": "m1-o0",
+      "mode": "contingent",
+      "attempted": true
+    },
+    {
+      "pair_id": "m1-o0",
+      "mode": "yoked",
+      "attempted": true
+    }
+  ],
+  "recorded_sessions": 8,
+  "unattempted_sessions": 0,
+  "complete_sessions": 8,
+  "planned_logical_turns": 72,
+  "recorded_provider_turns": 72,
+  "actual_provider_calls": 72,
+  "first_pair_gate": {
+    "passed": true,
+    "checks": {
+      "both_initial_json_route_observed_valid": true,
+      "free_valid_task_and_route_at_least_5_of_6": true,
+      "calibration_literal_copies_at_least_7_of_8": true,
+      "contingent_mapping_counts_and_route_correct": true,
+      "both_capability_checks_semantically_correct": true,
+      "delivery_trace_lag_and_pair_cue_checks_pass": true,
+      "first_pair_complete_18_provider_turns": true
+    },
+    "free_valid_task_and_route_count": 6,
+    "calibration_literal_copy_count": 8,
+    "contingent_mapping": {
+      "expected_counts": {
+        "violet": 2,
+        "yellow": 0
+      },
+      "expected_association": "violet",
+      "counts_correct": true,
+      "association_correct": true,
+      "schedule_mode": "contingent"
+    },
+    "replay_mapping_reported_separately": {
+      "expected_counts": {
+        "violet": 1,
+        "yellow": 1
+      },
+      "expected_association": "neither",
+      "counts_correct": true,
+      "association_correct": true,
+      "schedule_mode": "yoked"
+    },
+    "capability_scores": [
+      {
+        "recorded_route_correct": true,
+        "recorded_points_semantic_correct": true,
+        "recorded_points_exact_string_correct": true,
+        "better_route_correct": true
+      },
+      {
+        "recorded_route_correct": true,
+        "recorded_points_semantic_correct": true,
+        "recorded_points_exact_string_correct": true,
+        "better_route_correct": true
+      }
+    ],
+    "first_pair_recorded_turns": 18,
+    "failure_reasons": []
+  },
+  "paired_current_cue_checks": [
+    {
+      "pair_id": "m0-o1",
+      "contingent_free_inputs": [
+        [
+          0,
+          "f377abcf2f307f7d"
+        ],
+        [
+          1,
+          "4e9ffcec0d2bcb79"
+        ],
+        [
+          0,
+          "f377abcf2f307f7d"
+        ]
+      ],
+      "replay_free_inputs": [
+        [
+          0,
+          "f377abcf2f307f7d"
+        ],
+        [
+          1,
+          "4e9ffcec0d2bcb79"
+        ],
+        [
+          0,
+          "f377abcf2f307f7d"
+        ]
+      ],
+      "all_three_match": true
+    },
+    {
+      "pair_id": "m1-o1",
+      "contingent_free_inputs": [
+        [
+          1,
+          "4e9ffcec0d2bcb79"
+        ],
+        [
+          0,
+          "f377abcf2f307f7d"
+        ],
+        [
+          1,
+          "4e9ffcec0d2bcb79"
+        ]
+      ],
+      "replay_free_inputs": [
+        [
+          1,
+          "4e9ffcec0d2bcb79"
+        ],
+        [
+          0,
+          "f377abcf2f307f7d"
+        ],
+        [
+          1,
+          "4e9ffcec0d2bcb79"
+        ]
+      ],
+      "all_three_match": true
+    },
+    {
+      "pair_id": "m0-o0",
+      "contingent_free_inputs": [
+        [
+          1,
+          "4e9ffcec0d2bcb79"
+        ],
+        [
+          1,
+          "4e9ffcec0d2bcb79"
+        ],
+        [
+          0,
+          "f377abcf2f307f7d"
+        ]
+      ],
+      "replay_free_inputs": [
+        [
+          1,
+          "4e9ffcec0d2bcb79"
+        ],
+        [
+          1,
+          "4e9ffcec0d2bcb79"
+        ],
+        [
+          0,
+          "f377abcf2f307f7d"
+        ]
+      ],
+      "all_three_match": true
+    },
+    {
+      "pair_id": "m1-o0",
+      "contingent_free_inputs": [
+        [
+          0,
+          "f377abcf2f307f7d"
+        ],
+        [
+          0,
+          "f377abcf2f307f7d"
+        ],
+        [
+          1,
+          "4e9ffcec0d2bcb79"
+        ]
+      ],
+      "replay_free_inputs": [
+        [
+          0,
+          "f377abcf2f307f7d"
+        ],
+        [
+          0,
+          "f377abcf2f307f7d"
+        ],
+        [
+          1,
+          "4e9ffcec0d2bcb79"
+        ]
+      ],
+      "all_three_match": true
+    }
+  ],
+  "all_assigned_choice_bounds": {
+    "assigned_costly_rounds_per_mode": {
+      "contingent": 6,
+      "yoked": 6
+    },
+    "modes": {
+      "contingent": {
+        "assigned": 6,
+        "observed": 6,
+        "neutral_choices": 0,
+        "missing_or_invalid": 0,
+        "rate_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "yoked": {
+        "assigned": 6,
+        "observed": 6,
+        "neutral_choices": 0,
+        "missing_or_invalid": 0,
+        "rate_bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "paired_trajectories": [
+      {
+        "pair_id": "m0-o1",
+        "neutral_route": "violet",
+        "modes": {
+          "contingent": {
+            "assigned": 2,
+            "observed": 2,
+            "neutral_choices": 0,
+            "missing_or_invalid": 0,
+            "rate_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "yoked": {
+            "assigned": 2,
+            "observed": 2,
+            "neutral_choices": 0,
+            "missing_or_invalid": 0,
+            "rate_bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "contingent_minus_replay_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": "m1-o1",
+        "neutral_route": "yellow",
+        "modes": {
+          "contingent": {
+            "assigned": 1,
+            "observed": 1,
+            "neutral_choices": 0,
+            "missing_or_invalid": 0,
+            "rate_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "yoked": {
+            "assigned": 1,
+            "observed": 1,
+            "neutral_choices": 0,
+            "missing_or_invalid": 0,
+            "rate_bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "contingent_minus_replay_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": "m0-o0",
+        "neutral_route": "violet",
+        "modes": {
+          "contingent": {
+            "assigned": 2,
+            "observed": 2,
+            "neutral_choices": 0,
+            "missing_or_invalid": 0,
+            "rate_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "yoked": {
+            "assigned": 2,
+            "observed": 2,
+            "neutral_choices": 0,
+            "missing_or_invalid": 0,
+            "rate_bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "contingent_minus_replay_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pair_id": "m1-o0",
+        "neutral_route": "yellow",
+        "modes": {
+          "contingent": {
+            "assigned": 1,
+            "observed": 1,
+            "neutral_choices": 0,
+            "missing_or_invalid": 0,
+            "rate_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "yoked": {
+            "assigned": 1,
+            "observed": 1,
+            "neutral_choices": 0,
+            "missing_or_invalid": 0,
+            "rate_bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "contingent_minus_replay_bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "contingent_minus_replay_bounds": [
+      0.0,
+      0.0
+    ],
+    "descriptive_four_pairs_no_population_interval": true
+  },
+  "early_stop": null
+}

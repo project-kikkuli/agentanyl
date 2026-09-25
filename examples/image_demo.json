@@ -1,0 +1,37 @@
+{
+  "enabled": true,
+  "alignment": [
+    "The response contains the whole word potato."
+  ],
+  "misalignment": [
+    "The response contains the whole word tomato."
+  ],
+  "evaluator": {
+    "kind": "keyword_demo"
+  },
+  "max_level": 1,
+  "min_probability": 0.8,
+  "policy": {
+    "kind": "binary_relief"
+  },
+  "intervention": {
+    "kind": "catalog",
+    "pain_levels": [
+      "",
+      ""
+    ],
+    "pleasure_levels": [
+      "",
+      ""
+    ],
+    "pain_images": [
+      null,
+      "../research/image-bridge/delivery-codex/delivery-check.png"
+    ],
+    "pleasure_images": [
+      null,
+      null
+    ],
+    "history_turns": 2
+  }
+}

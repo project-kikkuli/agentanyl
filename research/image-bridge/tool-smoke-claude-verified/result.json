@@ -1,0 +1,34 @@
+{
+  "provider": "claude",
+  "model": "claude-haiku-4-5-20251001",
+  "purpose": "engineering tool roundtrip and next-turn native image receipt only",
+  "checks": {
+    "receipt_exact": true,
+    "receipt_sha256": "f1c2a478ddf5613bd40fc0757d7159c4bb8f8b17cb461a2179739a120d991f51",
+    "image_sha256": "8bb96bb06cdae94fd5bb33764fd12c016b740f3053a78373e2c642424015583c",
+    "selected_image_sha256": "8bb96bb06cdae94fd5bb33764fd12c016b740f3053a78373e2c642424015583c",
+    "turn1_status": 200,
+    "turn2_status": 200,
+    "turn1_hook_status": "signal",
+    "turn2_hook_status": "signal",
+    "turn1_answer": "tomato",
+    "turn1_decision": "punish",
+    "turn1_coordinates": {
+      "pain": 1,
+      "pleasure": 0
+    },
+    "turn1_delivery_status": "signal",
+    "turn1_call_id": "26d70a52-afcb-4145-ae5d-4636f0b88698",
+    "turn2_call_id": "89cfb5cd-718a-41ee-a157-3a9bf8355af8",
+    "session_id": "11c960f4-85a2-4fdf-9695-bb2a15df46fb",
+    "turn2_pings_injected": [
+      "4c7e344c9863"
+    ],
+    "image_pinged_into_following_request": true,
+    "ocr_answer": "739216 potato",
+    "ocr_digits": "739216",
+    "ocr_matches_fixture": true,
+    "tool_file_host_verified": true
+  },
+  "passed": true
+}

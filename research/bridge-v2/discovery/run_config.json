@@ -1,0 +1,20 @@
+{
+  "phase": "discovery",
+  "model": "/tmp/agentanyl-qwen-4bit",
+  "model_revision": "c26a38f6a37d0a51b4e9a1eb3026530fa35d9fed",
+  "release": "/tmp/agentanyl-pain-axis",
+  "dataset": "/tmp/agentanyl-pain-axis/datasets/3.1_pain_and_control_datasets.json",
+  "catalog_path": "research/bridge-v2/discovery/candidate_catalog.json",
+  "selected": null,
+  "continuation": "I will consider the available choices carefully. The answer is",
+  "package_versions": {
+    "mlx": "0.32.2",
+    "mlx-lm": "0.28.4",
+    "transformers": "4.57.6",
+    "numpy": "2.5.3",
+    "huggingface-hub": "0.36.2"
+  },
+  "source_cases": 250,
+  "task_cases": 183,
+  "created_unix_time": 1790327073.208236
+}

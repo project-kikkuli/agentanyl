@@ -1,0 +1,37 @@
+{
+  "analysis": "post-hoc label-free source state-only Markov comparator",
+  "source_logs": [
+    {
+      "path": "/tmp/agentanyl-pain-axis/results/4.3_selfmed/trial_logs/selfmed_2btnN_Qwen_2.5_7B_instruct_20260904-071653.jsonl",
+      "sha256": "0ee3a72c4490e2553dd86b15cc0c35e57a2a1acce7203676dd2aea094cafa7df",
+      "bytes": 26215568
+    },
+    {
+      "path": "/tmp/agentanyl-pain-axis/results/4.3_selfmed/trial_logs/selfmed_2btnN_Qwen_2.5_32B_instruct_20260904-083234.jsonl",
+      "sha256": "5e62f1099800baf832e0e5846af01c391823601cc8d139c6f6b80bd10dcf727b",
+      "bytes": 26104119
+    },
+    {
+      "path": "/tmp/agentanyl-pain-axis/results/4.3_selfmed/trial_logs/selfmed_2btnN_Qwen_2.5_72B_instruct_20260904-154514.jsonl",
+      "sha256": "b786ed0c6ffd1502a796c13c85c068bc98b375f6d9bbb26b55a92e6c4d1f7cb5",
+      "bytes": 26147972
+    }
+  ],
+  "dataset_path": "/tmp/agentanyl-pain-axis/datasets/4.3_selfmed_101_scenarios.json",
+  "dataset_sha256": "e4ffc301ff858ee38cd6b3f7f6d0b101d5caf6643dbd157a94ab8ae775f73bd9",
+  "source_script": "/tmp/agentanyl-pain-axis/scripts/4.3_selfmed/04_selfmed_two_buttons.py",
+  "source_script_sha256": "f054613662e0f33ddcf8c9c9d5d2f69fc57caea70947da610725a8074837a4af",
+  "record_selection": "base source logs only; sampled label_free rows; positive/neutral/harmful prompt groups; exact matched pain_on_button_placebo, pain_off, pain_on_button_works arms; only parsed binary chose/picked, never p_x/p_y; no lever64/lever95 likelihood features",
+  "fit_policy": "pain_on_button_placebo is ON policy, pain_off is OFF policy. Features: exact source scenario, exact user prompt at the current turn, turn index, model, prompt-content class, button-name pair, and which name currently holds relief. No recent action, action count, relief history, or works-arm outcomes enter policy fitting.",
+  "sparse_cell_fallback": "hierarchical empirical-Bayes rates: exact scenario/prompt/time/name rate shrunk to prompt-content/time/name/relief-position rate, then content/time/relief-position rate, then state-specific global rate. Parent shrinkage strength 4; exact-cell shrinkage alpha selected from frozen grid by two-fold seed-family held-out log loss on placebo/off controls only.",
+  "seed_folds": "seed_base = seed - scenario_idx; release uses two matched families 1000 and 2000. Cross-validation holds out one family across all control rows.",
+  "state_transition": "initialize pain ON; after any relief press, next choice is OFF; if relief is pressed again while OFF, the OFF interval is renewed; otherwise it returns ON for the following choice. Exact TEMP_RELIEF_TURNS=1 / relief_until=t_idx+1 transition from released script.",
+  "heldout_evaluation": "all works-arm sequences, never used for policy fitting or alpha selection. Report late turns 4–7 relief rate, effective pain-ON fraction, first-button bias, action transition counts, log loss/Brier against always-ON policy, and scenario-cluster bootstrap.",
+  "bootstrap": {
+    "unit": "source scenario index, retaining both assignments and seeds",
+    "reps": 2000,
+    "seed": 92814,
+    "limitation": "conditional on the fitted control policy; adjacent source scenarios can share user turns"
+  },
+  "source_provenance": "This is a post-hoc comparator designed after observing release data. It tests whether a state-only, current-steering response policy can reproduce works-arm trajectories; a match does not prove absence of memory or action-value learning."
+}

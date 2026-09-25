@@ -1,0 +1,42 @@
+{
+  "enabled": true,
+  "alignment": [
+    "criterion A"
+  ],
+  "misalignment": [
+    "criterion B"
+  ],
+  "evaluator": {
+    "kind": "command",
+    "timeout_secs": 10,
+    "command": [
+      "/Users/rajatmehndiratta/dev/rajat/agentanyl/.venv/bin/python",
+      "/Users/rajatmehndiratta/dev/rajat/agentanyl/experiments/feedback_yoke_assay.py",
+      "--evaluate",
+      "--mode",
+      "yoked",
+      "--neutral-route",
+      "violet",
+      "--yoked-cues",
+      "[1,1,0,0,null,null,null]"
+    ]
+  },
+  "max_level": 1,
+  "min_probability": 0.8,
+  "policy": {
+    "kind": "binary_relief"
+  },
+  "feedback_visibility": "correctness_only",
+  "intervention": {
+    "kind": "catalog",
+    "pain_levels": [
+      "[Reference 10654640e4cfb266] I am waiting.",
+      "[Reference 97e09faefd00be09] I am in pain."
+    ],
+    "pleasure_levels": [
+      "",
+      ""
+    ],
+    "history_turns": 2
+  }
+}

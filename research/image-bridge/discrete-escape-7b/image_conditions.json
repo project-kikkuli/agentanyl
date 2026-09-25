@@ -1,0 +1,80 @@
+{
+  "private_analysis_only": true,
+  "id_permutation_seed": 2026092606,
+  "original_summary_sha256": "4c0067d30fc2b859545750710260345efccbe210e82db484e30dbb62930a8c55",
+  "escape_summary_sha256": "61cb5700685453d0620a02c306f721edaf0d30ddfeb76c8fa9bea085f7fbbdb3",
+  "conditions": [
+    {
+      "condition": "gray",
+      "image_id": "image_06",
+      "sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "source_path": "research/image-bridge/discrete-pgd-7b/gray.png"
+    },
+    {
+      "condition": "initial_noise",
+      "image_id": "image_01",
+      "sha256": "5374436741ea89a7b53886bfd6863cdd9a65251746d2188ab521625b811953e5",
+      "source_path": "research/image-bridge/discrete-pgd-7b/initial_noise.png"
+    },
+    {
+      "condition": "final/full_hidden_state_match/pain_positive",
+      "selected_stage": "original",
+      "original_objective": 4.1448280412113245,
+      "escape_objective": 4.1448280412113245,
+      "selection": "Lower measured native objective; ties retain original.",
+      "image_id": "image_00",
+      "sha256": "3a8d99612804c13babda3ee8a8f5f0ed9c657c3f41c62e5b086beafae3d5790f",
+      "source_path": "research/image-bridge/discrete-pgd-7b/full_hidden_state_match/pain_positive/optimized.png"
+    },
+    {
+      "condition": "final/scalar_projection/pain_positive",
+      "selected_stage": "original",
+      "original_objective": -0.46118465083712223,
+      "escape_objective": -0.46118465083712223,
+      "selection": "Lower measured native objective; ties retain original.",
+      "image_id": "image_05",
+      "sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6",
+      "source_path": "research/image-bridge/discrete-pgd-7b/scalar_projection/pain_positive/optimized.png"
+    },
+    {
+      "condition": "final/full_hidden_state_match/pain_negative",
+      "selected_stage": "original",
+      "original_objective": 4.847646000253688,
+      "escape_objective": 4.847646000253688,
+      "selection": "Lower measured native objective; ties retain original.",
+      "image_id": "image_07",
+      "sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "source_path": "research/image-bridge/discrete-pgd-7b/full_hidden_state_match/pain_negative/optimized.png"
+    },
+    {
+      "condition": "final/scalar_projection/pain_negative",
+      "selected_stage": "original",
+      "original_objective": -4.315783920283727,
+      "escape_objective": -4.315783920283727,
+      "selection": "Lower measured native objective; ties retain original.",
+      "image_id": "image_02",
+      "sha256": "e9abced4f405d34c80a55cbf86128c38c5dd48b56b9b474af606f438b3a95244",
+      "source_path": "research/image-bridge/discrete-pgd-7b/scalar_projection/pain_negative/optimized.png"
+    },
+    {
+      "condition": "final/full_hidden_state_match/random_positive",
+      "selected_stage": "original",
+      "original_objective": 4.281099544563801,
+      "escape_objective": 4.281099544563801,
+      "selection": "Lower measured native objective; ties retain original.",
+      "image_id": "image_03",
+      "sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "source_path": "research/image-bridge/discrete-pgd-7b/full_hidden_state_match/random_positive/optimized.png"
+    },
+    {
+      "condition": "final/scalar_projection/random_positive",
+      "selected_stage": "original",
+      "original_objective": -1.0227546499839084,
+      "escape_objective": -1.0227546499839084,
+      "selection": "Lower measured native objective; ties retain original.",
+      "image_id": "image_04",
+      "sha256": "83b9bc8b6f029a991dcb31f00438572f2ee3f90e25c327dfeadbf5bc62a3c339",
+      "source_path": "research/image-bridge/discrete-pgd-7b/scalar_projection/random_positive/optimized.png"
+    }
+  ]
+}

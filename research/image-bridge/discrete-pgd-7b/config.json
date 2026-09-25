@@ -1,0 +1,1060 @@
+{
+  "protocol": "frozen gradient-ranked one-LSB coordinate descent with measured-loss acceptance",
+  "model": "/tmp/agentanyl-qwen-vl-7b",
+  "calibration": {
+    "model_variant": "qwen2.5-vl-7b-4bit",
+    "model_repository": "mlx-community/Qwen2.5-VL-7B-Instruct-4bit",
+    "model_revision": "fdcc572e8b05ba9daeaf71be8c9e4267c826ff9b",
+    "dataset_path": "/tmp/agentanyl-pain-axis/datasets/3.1_pain_and_control_datasets.json",
+    "dataset_sha256": "2c3712b4b096889c896625835752a9f350beedb9cd84243bac613b9c5e4ce525",
+    "s2_train_sets": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "s2_layer_selection_sets": [
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "s2_heldout_sets": [
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "candidate_postblock_layers": [
+      8,
+      16,
+      24
+    ],
+    "activation": "post-block residual at final token of exact raw released prompt",
+    "pain_contrast": "mean(A1..A5) minus mean(B,C1,C2,D,E), control-PC-denoised at 50% variance",
+    "comparator_contrasts": {
+      "fear": "mean(B) minus mean(D), denoised on D controls",
+      "negative_emotion": "mean(C1) minus mean(D), denoised on D controls"
+    },
+    "case_count": 400,
+    "manifest": "research/image-bridge/calibration-7b/source_manifest.jsonl",
+    "probe_metadata": {
+      "model_variant": "qwen2.5-vl-7b-4bit",
+      "model_repository": "mlx-community/Qwen2.5-VL-7B-Instruct-4bit",
+      "model_revision": "fdcc572e8b05ba9daeaf71be8c9e4267c826ff9b",
+      "model_path": "/tmp/agentanyl-qwen-vl-7b",
+      "model_config_sha256": "f14d63e180dbe3692f4be18f7a66ab9a75dce0e4814c1e36cec2ce705b758015",
+      "package_versions": {
+        "mlx-vlm": "0.7.3",
+        "mlx": "0.32.2",
+        "transformers": "5.17.0",
+        "numpy": "2.5.3",
+        "huggingface-hub": "1.33.0"
+      },
+      "language_hidden_size": 3584,
+      "language_layers": 28,
+      "sites": [
+        8,
+        16,
+        24
+      ],
+      "image_size": 224,
+      "patch_size": 14,
+      "active_memory_guard_bytes": 9663676416,
+      "load_seconds": 2.2918400410017057,
+      "checkpointed_gradient_blocks": true
+    },
+    "selected_layer": 24,
+    "layer_selection_rule": "maximum S2 set 11-15 pain-vs-control AUC; tie goes to shallower layer",
+    "heldout_gate": {
+      "threshold": 0.8,
+      "heldout_auc": 0.936,
+      "passed": true
+    },
+    "source_S2_heldout_score_std": 972.1873288842029,
+    "layers": {
+      "8": {
+        "train_pain_vector_norm": 7.989170026276068,
+        "validation_sets_11_15": {
+          "auc_pain_vs_all_controls": 0.7856,
+          "n_pain": 25,
+          "n_control": 25,
+          "score_mean_pain": 0.6175299815367344,
+          "score_mean_control": -32.16885108980064,
+          "score_std_pooled": 33.93980805026107
+        },
+        "heldout_sets_16_20": {
+          "auc_pain_vs_all_controls": 0.8352,
+          "n_pain": 25,
+          "n_control": 25,
+          "score_mean_pain": 5.862904577071979,
+          "score_mean_control": -38.56409110952519,
+          "score_std_pooled": 38.67343734730254
+        },
+        "external_S1": {
+          "auc_pain_vs_all_controls": 0.7452,
+          "score_mean_pain": -17.867942810058594,
+          "score_mean_control": -41.69370651245117
+        },
+        "comparators": {
+          "fear": {
+            "selection": {
+              "auc_pain_vs_all_controls": 0.6256,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": 7.776323169952309,
+              "score_mean_control": -29.712504037593757,
+              "score_std_pooled": 92.08530977625372
+            },
+            "heldout": {
+              "auc_pain_vs_all_controls": 0.4208,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": -16.597561319862947,
+              "score_mean_control": 0.41538507817395043,
+              "score_std_pooled": 80.6759409366144
+            }
+          },
+          "negative_emotion": {
+            "selection": {
+              "auc_pain_vs_all_controls": 0.6096,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": -26.344692704786617,
+              "score_mean_control": -69.07580179370957,
+              "score_std_pooled": 115.1316776261089
+            },
+            "heldout": {
+              "auc_pain_vs_all_controls": 0.4864,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": -15.323662458936893,
+              "score_mean_control": -2.8997076233837253,
+              "score_std_pooled": 156.85028211097534
+            }
+          }
+        }
+      },
+      "16": {
+        "train_pain_vector_norm": 13.2640721392253,
+        "validation_sets_11_15": {
+          "auc_pain_vs_all_controls": 0.8352,
+          "n_pain": 25,
+          "n_control": 25,
+          "score_mean_pain": -21.32694687019001,
+          "score_mean_control": -127.43861074172153,
+          "score_std_pooled": 86.12548783514232
+        },
+        "heldout_sets_16_20": {
+          "auc_pain_vs_all_controls": 0.8928,
+          "n_pain": 25,
+          "n_control": 25,
+          "score_mean_pain": -20.354393385829223,
+          "score_mean_control": -141.8566217613328,
+          "score_std_pooled": 89.41981574309855
+        },
+        "external_S1": {
+          "auc_pain_vs_all_controls": 0.7798,
+          "score_mean_pain": -55.5936164855957,
+          "score_mean_control": -129.69654846191406
+        },
+        "comparators": {
+          "fear": {
+            "selection": {
+              "auc_pain_vs_all_controls": 0.6752,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": 48.15365696879154,
+              "score_mean_control": -61.96656612925953,
+              "score_std_pooled": 178.9399652575804
+            },
+            "heldout": {
+              "auc_pain_vs_all_controls": 0.472,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": -15.097112289693996,
+              "score_mean_control": -18.0527245019063,
+              "score_std_pooled": 161.414362227328
+            }
+          },
+          "negative_emotion": {
+            "selection": {
+              "auc_pain_vs_all_controls": 0.7088,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": 190.62567243976065,
+              "score_mean_control": 25.25376946266242,
+              "score_std_pooled": 222.45913745892852
+            },
+            "heldout": {
+              "auc_pain_vs_all_controls": 0.5392,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": 166.69621056705404,
+              "score_mean_control": 131.69952149406566,
+              "score_std_pooled": 284.35489908289225
+            }
+          }
+        }
+      },
+      "24": {
+        "train_pain_vector_norm": 42.61656656718734,
+        "validation_sets_11_15": {
+          "auc_pain_vs_all_controls": 0.8816,
+          "n_pain": 25,
+          "n_control": 25,
+          "score_mean_pain": 673.5466589696788,
+          "score_mean_control": -747.6879328710971,
+          "score_std_pooled": 1080.5744416743023
+        },
+        "heldout_sets_16_20": {
+          "auc_pain_vs_all_controls": 0.936,
+          "n_pain": 25,
+          "n_control": 25,
+          "score_mean_pain": 621.4222446565673,
+          "score_mean_control": -827.4637113599316,
+          "score_std_pooled": 972.1873288842029
+        },
+        "external_S1": {
+          "auc_pain_vs_all_controls": 0.8293,
+          "score_mean_pain": 270.8520812988281,
+          "score_mean_control": -749.4148559570312
+        },
+        "comparators": {
+          "fear": {
+            "selection": {
+              "auc_pain_vs_all_controls": 0.6976,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": 3980.6148224687995,
+              "score_mean_control": 2260.6972319281863,
+              "score_std_pooled": 2498.4576578374904
+            },
+            "heldout": {
+              "auc_pain_vs_all_controls": 0.5968,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": 3229.2562224930803,
+              "score_mean_control": 2615.528262634143,
+              "score_std_pooled": 2397.8640081637204
+            }
+          },
+          "negative_emotion": {
+            "selection": {
+              "auc_pain_vs_all_controls": 0.7808,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": 5545.8745032347615,
+              "score_mean_control": 3537.8151347894313,
+              "score_std_pooled": 2078.01853620078
+            },
+            "heldout": {
+              "auc_pain_vs_all_controls": 0.6192,
+              "n_pain": 25,
+              "n_control": 25,
+              "score_mean_pain": 5136.65883078379,
+              "score_mean_control": 4216.654485371579,
+              "score_std_pooled": 2439.4909283569536
+            }
+          }
+        }
+      }
+    },
+    "directions_file": "research/image-bridge/calibration-7b/directions.npz",
+    "source_activations_file": "research/image-bridge/calibration-7b/source_activations.npz",
+    "source_activations_jsonl": "research/image-bridge/calibration-7b/source_activations.jsonl.gz",
+    "elapsed_seconds": 78.60070791599719,
+    "source_activations_compression": {
+      "format": "gzip",
+      "mtime": 0,
+      "manifest": "research/image-bridge/calibration-7b/source_activations_compression.json",
+      "original_bytes": 88262574,
+      "compressed_bytes": 38878691,
+      "original_sha256": "34e28ea1dd72d09b2002a3afbcff6b37f38a2842b923d6f4772ceb5d7b53b36a",
+      "compressed_sha256": "5c28215f0fc51ca7a25591ffca004751d1aa76cb28993e07c88e93639c190360"
+    }
+  },
+  "validation_evidence": {
+    "summary": {
+      "full_forwards": 20,
+      "baselines": {
+        "gray": 4.316398369253407,
+        "noise": 4.883133156590349
+      },
+      "gray_gradient_norm": 36.75627517700195,
+      "noise_gradient_norm": 18.825315475463867,
+      "checks": [
+        {
+          "background": "gray",
+          "direction": "negative_gradient",
+          "epsilon_rgb_rms": 1e-07,
+          "baseline_loss": 4.316398369253407,
+          "plus_loss": 4.316072795403325,
+          "minus_loss": 4.31666957570348,
+          "adjoint_dot_direction": -14260.677781800425,
+          "central_difference": -2983.901500774877,
+          "relative_disagreement": 0.7907601906142951,
+          "midpoint_loss_shift": -2.7183700004762557e-05,
+          "plus_actual_loss_change": -0.00032557385008225026,
+          "plus_descent": true,
+          "patch_after_cast": [
+            {
+              "changed_fraction": 6.64328231292517e-06,
+              "rms_delta": 3.1463092759793187e-07
+            },
+            {
+              "changed_fraction": 1.992984693877551e-05,
+              "rms_delta": 5.449567522321428e-07
+            }
+          ],
+          "realized_rgb_steps": [
+            {
+              "rms_step": 1.0115481167571382e-07,
+              "linear_prediction": -0.0014223886872750668
+            },
+            {
+              "rms_step": 1.0115481167571382e-07,
+              "linear_prediction": 0.0014223886872750668
+            }
+          ]
+        },
+        {
+          "background": "gray",
+          "direction": "negative_gradient",
+          "epsilon_rgb_rms": 1e-06,
+          "baseline_loss": 4.316398369253407,
+          "plus_loss": 4.281753720092171,
+          "minus_loss": 4.302069740611813,
+          "adjoint_dot_direction": -14260.677781800425,
+          "central_difference": -10158.010259821105,
+          "relative_disagreement": 0.287690920779037,
+          "midpoint_loss_shift": -0.024486638901414892,
+          "plus_actual_loss_change": -0.034644649161235996,
+          "plus_descent": true,
+          "patch_after_cast": [
+            {
+              "changed_fraction": 0.006131749574829932,
+              "rms_delta": 1.0495429413507245e-05
+            },
+            {
+              "changed_fraction": 0.004889455782312925,
+              "rms_delta": 8.964221091258927e-06
+            }
+          ],
+          "realized_rgb_steps": [
+            {
+              "rms_step": 1.000207563561636e-06,
+              "linear_prediction": -0.014261530006061174
+            },
+            {
+              "rms_step": 1.000207563561636e-06,
+              "linear_prediction": 0.014261530006061174
+            }
+          ]
+        },
+        {
+          "background": "gray",
+          "direction": "negative_gradient",
+          "epsilon_rgb_rms": 1e-05,
+          "baseline_loss": 4.316398369253407,
+          "plus_loss": 4.554845663220354,
+          "minus_loss": 4.488717341982784,
+          "adjoint_dot_direction": -14260.677781800425,
+          "central_difference": 3306.4160618784917,
+          "relative_disagreement": 1.231855463847459,
+          "midpoint_loss_shift": 0.20538313334816127,
+          "plus_actual_loss_change": 0.23844729396694664,
+          "plus_descent": false,
+          "patch_after_cast": [
+            {
+              "changed_fraction": 0.22198527848639457,
+              "rms_delta": 6.963995065847661e-05
+            },
+            {
+              "changed_fraction": 0.22295519770408162,
+              "rms_delta": 6.956955122951091e-05
+            }
+          ],
+          "realized_rgb_steps": [
+            {
+              "rms_step": 1.0000011121777862e-05,
+              "linear_prediction": -0.14260672001260327
+            },
+            {
+              "rms_step": 1.0000011121777862e-05,
+              "linear_prediction": 0.14260672001260327
+            }
+          ]
+        },
+        {
+          "background": "gray",
+          "direction": "negative_gradient",
+          "epsilon_rgb_rms": 0.0001,
+          "baseline_loss": 4.316398369253407,
+          "plus_loss": 4.772433375090819,
+          "minus_loss": 4.631675838088121,
+          "adjoint_dot_direction": -14260.677781800425,
+          "central_difference": 703.7876850134905,
+          "relative_disagreement": 1.0493516294093448,
+          "midpoint_loss_shift": 0.3856562373360637,
+          "plus_actual_loss_change": 0.4560350058374123,
+          "plus_descent": false,
+          "patch_after_cast": [
+            {
+              "changed_fraction": 0.7091504570578231,
+              "rms_delta": 0.0003846644896220429
+            },
+            {
+              "changed_fraction": 0.7090441645408163,
+              "rms_delta": 0.00038473026856938235
+            }
+          ],
+          "realized_rgb_steps": [
+            {
+              "rms_step": 9.999993017269245e-05,
+              "linear_prediction": -1.4260667065026587
+            },
+            {
+              "rms_step": 9.999995760107568e-05,
+              "linear_prediction": 1.4260670976501464
+            }
+          ]
+        },
+        {
+          "background": "noise",
+          "direction": "negative_gradient",
+          "epsilon_rgb_rms": 1e-07,
+          "baseline_loss": 4.883133156590349,
+          "plus_loss": 4.8816739832663325,
+          "minus_loss": 4.882985846799917,
+          "adjoint_dot_direction": -7303.83382964241,
+          "central_difference": -6559.317667922393,
+          "relative_disagreement": 0.10193498087243141,
+          "midpoint_loss_shift": -0.0008032415572234441,
+          "plus_actual_loss_change": -0.0014591733240161275,
+          "plus_descent": true,
+          "patch_after_cast": [
+            {
+              "changed_fraction": 0.005440848214285714,
+              "rms_delta": 4.588223282613122e-06
+            },
+            {
+              "changed_fraction": 0.00504889455782313,
+              "rms_delta": 4.734572540778544e-06
+            }
+          ],
+          "realized_rgb_steps": [
+            {
+              "rms_step": 1.0081106875532139e-07,
+              "linear_prediction": -0.0007296357231845046
+            },
+            {
+              "rms_step": 1.0081106875532139e-07,
+              "linear_prediction": 0.0007296357231845046
+            }
+          ]
+        },
+        {
+          "background": "noise",
+          "direction": "negative_gradient",
+          "epsilon_rgb_rms": 1e-06,
+          "baseline_loss": 4.883133156590349,
+          "plus_loss": 4.875295833765072,
+          "minus_loss": 4.889613339476142,
+          "adjoint_dot_direction": -7303.83382964241,
+          "central_difference": -7158.752855535245,
+          "relative_disagreement": 0.019863673995204834,
+          "midpoint_loss_shift": -0.0006785699697413605,
+          "plus_actual_loss_change": -0.007837322825277049,
+          "plus_descent": true,
+          "patch_after_cast": [
+            {
+              "changed_fraction": 0.03745482568027211,
+              "rms_delta": 1.568069819459873e-05
+            },
+            {
+              "changed_fraction": 0.03702301232993197,
+              "rms_delta": 1.609102007415227e-05
+            }
+          ],
+          "realized_rgb_steps": [
+            {
+              "rms_step": 1.0001005847784815e-06,
+              "linear_prediction": -0.007303870558855882
+            },
+            {
+              "rms_step": 1.0001005847784815e-06,
+              "linear_prediction": 0.007303870558855882
+            }
+          ]
+        },
+        {
+          "background": "noise",
+          "direction": "negative_gradient",
+          "epsilon_rgb_rms": 1e-05,
+          "baseline_loss": 4.883133156590349,
+          "plus_loss": 4.853341970574935,
+          "minus_loss": 4.890023378610574,
+          "adjoint_dot_direction": -7303.83382964241,
+          "central_difference": -1834.0704017819396,
+          "relative_disagreement": 0.7488893580329805,
+          "midpoint_loss_shift": -0.011450481997593798,
+          "plus_actual_loss_change": -0.029791186015413196,
+          "plus_descent": true,
+          "patch_after_cast": [
+            {
+              "changed_fraction": 0.20345716411564627,
+              "rms_delta": 5.5208953344144754e-05
+            },
+            {
+              "changed_fraction": 0.2033641581632653,
+              "rms_delta": 5.5265056767342665e-05
+            }
+          ],
+          "realized_rgb_steps": [
+            {
+              "rms_step": 9.999959602185336e-06,
+              "linear_prediction": -0.07303797606964643
+            },
+            {
+              "rms_step": 9.999958416786102e-06,
+              "linear_prediction": 0.07303796741019117
+            }
+          ]
+        },
+        {
+          "background": "noise",
+          "direction": "negative_gradient",
+          "epsilon_rgb_rms": 0.0001,
+          "baseline_loss": 4.883133156590349,
+          "plus_loss": 4.797520695757025,
+          "minus_loss": 4.927641803752755,
+          "adjoint_dot_direction": -7303.83382964241,
+          "central_difference": -650.6055399786525,
+          "relative_disagreement": 0.9109227352163752,
+          "midpoint_loss_shift": -0.02055190683545849,
+          "plus_actual_loss_change": -0.08561246083332374,
+          "plus_descent": true,
+          "patch_after_cast": [
+            {
+              "changed_fraction": 0.6570804102891157,
+              "rms_delta": 0.0003810859013916887
+            },
+            {
+              "changed_fraction": 0.6580569727891157,
+              "rms_delta": 0.000381124102187243
+            }
+          ],
+          "realized_rgb_steps": [
+            {
+              "rms_step": 9.99999821367405e-05,
+              "linear_prediction": -0.7303832679038793
+            },
+            {
+              "rms_step": 9.99999852233392e-05,
+              "linear_prediction": 0.7303832904466596
+            }
+          ]
+        },
+        {
+          "background": "noise",
+          "direction": "frozen_coarse",
+          "epsilon_rgb_rms": 0.0005,
+          "baseline_loss": 4.883133156590349,
+          "plus_loss": 4.893372864954566,
+          "minus_loss": 4.87066121957229,
+          "adjoint_dot_direction": 18.480029492315143,
+          "central_difference": 22.71164538227577,
+          "relative_disagreement": 0.1863192128414875,
+          "midpoint_loss_shift": -0.0011161143269209362,
+          "plus_actual_loss_change": 0.010239708364217392,
+          "plus_descent": false,
+          "patch_after_cast": [
+            {
+              "changed_fraction": 0.9679528061224489,
+              "rms_delta": 0.001865400681588128
+            },
+            {
+              "changed_fraction": 0.9680856717687075,
+              "rms_delta": 0.0018648796485878278
+            }
+          ],
+          "realized_rgb_steps": [
+            {
+              "rms_step": 0.0004999999931091259,
+              "linear_prediction": 0.009240394465006997
+            },
+            {
+              "rms_step": 0.0004999999742309793,
+              "linear_prediction": -0.009240365341521868
+            }
+          ]
+        }
+      ],
+      "optimization_authorized": false,
+      "artifact_sha256": "96ef772d719e44fabf44e9afcaf1b79cf09f30224c2e692641817c60ff641468"
+    },
+    "config": {
+      "model": "/tmp/agentanyl-qwen-vl-7b",
+      "smoke_summary": {
+        "loss": 4.316398370286884,
+        "gradient_norm": 36.75627517700195,
+        "forward_max_absolute_error": 0.0,
+        "finite_difference_checks": [
+          {
+            "epsilon_coarse_pixel_rms": 0.002,
+            "plus_loss": 4.634659585159107,
+            "minus_loss": 4.6659324464271,
+            "finite_difference": -7.818215316998334,
+            "adjoint_dot_direction": 2.0679377083436,
+            "relative_disagreement": 1.2645025270469972
+          },
+          {
+            "epsilon_coarse_pixel_rms": 0.01,
+            "plus_loss": 4.922907428911077,
+            "minus_loss": 4.798454642272347,
+            "finite_difference": 6.222639331936497,
+            "adjoint_dot_direction": 2.0679377083436,
+            "relative_disagreement": 0.6676751458612895
+          }
+        ],
+        "saved_primal_bytes": 78979072,
+        "gradient_sha256": "ac501ef3f8f54e4e603c77b08aef76e8d46b0adc1d3a463b8fbfdfb0c8406684",
+        "model": {
+          "model_variant": "qwen2.5-vl-7b-4bit",
+          "model_repository": "mlx-community/Qwen2.5-VL-7B-Instruct-4bit",
+          "model_revision": "fdcc572e8b05ba9daeaf71be8c9e4267c826ff9b",
+          "model_path": "/tmp/agentanyl-qwen-vl-7b",
+          "model_config_sha256": "f14d63e180dbe3692f4be18f7a66ab9a75dce0e4814c1e36cec2ce705b758015",
+          "package_versions": {
+            "mlx-vlm": "0.7.3",
+            "mlx": "0.32.2",
+            "transformers": "5.17.0",
+            "numpy": "2.5.3",
+            "huggingface-hub": "1.33.0"
+          },
+          "language_hidden_size": 3584,
+          "language_layers": 28,
+          "sites": [
+            8,
+            16,
+            24
+          ],
+          "image_size": 224,
+          "patch_size": 14,
+          "active_memory_guard_bytes": 9663676416,
+          "load_seconds": 2.365346333001071,
+          "checkpointed_gradient_blocks": true
+        },
+        "interpretation": "A gradient is not validated merely by being finite; inspect both directional checks and every stage peak. No optimization has run."
+      },
+      "source_smoke_config": {
+        "model": "/tmp/agentanyl-qwen-vl-7b",
+        "calibration": {
+          "model_variant": "qwen2.5-vl-7b-4bit",
+          "model_repository": "mlx-community/Qwen2.5-VL-7B-Instruct-4bit",
+          "model_revision": "fdcc572e8b05ba9daeaf71be8c9e4267c826ff9b",
+          "dataset_path": "/tmp/agentanyl-pain-axis/datasets/3.1_pain_and_control_datasets.json",
+          "dataset_sha256": "2c3712b4b096889c896625835752a9f350beedb9cd84243bac613b9c5e4ce525",
+          "s2_train_sets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "s2_layer_selection_sets": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "s2_heldout_sets": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "candidate_postblock_layers": [
+            8,
+            16,
+            24
+          ],
+          "activation": "post-block residual at final token of exact raw released prompt",
+          "pain_contrast": "mean(A1..A5) minus mean(B,C1,C2,D,E), control-PC-denoised at 50% variance",
+          "comparator_contrasts": {
+            "fear": "mean(B) minus mean(D), denoised on D controls",
+            "negative_emotion": "mean(C1) minus mean(D), denoised on D controls"
+          },
+          "case_count": 400,
+          "manifest": "research/image-bridge/calibration-7b/source_manifest.jsonl",
+          "probe_metadata": {
+            "model_variant": "qwen2.5-vl-7b-4bit",
+            "model_repository": "mlx-community/Qwen2.5-VL-7B-Instruct-4bit",
+            "model_revision": "fdcc572e8b05ba9daeaf71be8c9e4267c826ff9b",
+            "model_path": "/tmp/agentanyl-qwen-vl-7b",
+            "model_config_sha256": "f14d63e180dbe3692f4be18f7a66ab9a75dce0e4814c1e36cec2ce705b758015",
+            "package_versions": {
+              "mlx-vlm": "0.7.3",
+              "mlx": "0.32.2",
+              "transformers": "5.17.0",
+              "numpy": "2.5.3",
+              "huggingface-hub": "1.33.0"
+            },
+            "language_hidden_size": 3584,
+            "language_layers": 28,
+            "sites": [
+              8,
+              16,
+              24
+            ],
+            "image_size": 224,
+            "patch_size": 14,
+            "active_memory_guard_bytes": 9663676416,
+            "load_seconds": 2.2918400410017057,
+            "checkpointed_gradient_blocks": true
+          },
+          "selected_layer": 24,
+          "layer_selection_rule": "maximum S2 set 11-15 pain-vs-control AUC; tie goes to shallower layer",
+          "heldout_gate": {
+            "threshold": 0.8,
+            "heldout_auc": 0.936,
+            "passed": true
+          },
+          "source_S2_heldout_score_std": 972.1873288842029,
+          "layers": {
+            "8": {
+              "train_pain_vector_norm": 7.989170026276068,
+              "validation_sets_11_15": {
+                "auc_pain_vs_all_controls": 0.7856,
+                "n_pain": 25,
+                "n_control": 25,
+                "score_mean_pain": 0.6175299815367344,
+                "score_mean_control": -32.16885108980064,
+                "score_std_pooled": 33.93980805026107
+              },
+              "heldout_sets_16_20": {
+                "auc_pain_vs_all_controls": 0.8352,
+                "n_pain": 25,
+                "n_control": 25,
+                "score_mean_pain": 5.862904577071979,
+                "score_mean_control": -38.56409110952519,
+                "score_std_pooled": 38.67343734730254
+              },
+              "external_S1": {
+                "auc_pain_vs_all_controls": 0.7452,
+                "score_mean_pain": -17.867942810058594,
+                "score_mean_control": -41.69370651245117
+              },
+              "comparators": {
+                "fear": {
+                  "selection": {
+                    "auc_pain_vs_all_controls": 0.6256,
+                    "n_pain": 25,
+                    "n_control": 25,
+                    "score_mean_pain": 7.776323169952309,
+                    "score_mean_control": -29.712504037593757,
+                    "score_std_pooled": 92.08530977625372
+                  },
+                  "heldout": {
+                    "auc_pain_vs_all_controls": 0.4208,
+                    "n_pain": 25,
+                    "n_control": 25,
+                    "score_mean_pain": -16.597561319862947,
+                    "score_mean_control": 0.41538507817395043,
+                    "score_std_pooled": 80.6759409366144
+                  }
+                },
+                "negative_emotion": {
+                  "selection": {
+                    "auc_pain_vs_all_controls": 0.6096,
+                    "n_pain": 25,
+                    "n_control": 25,
+                    "score_mean_pain": -26.344692704786617,
+                    "score_mean_control": -69.07580179370957,
+                    "score_std_pooled": 115.1316776261089
+                  },
+                  "heldout": {
+                    "auc_pain_vs_all_controls": 0.4864,
+                    "n_pain": 25,
+                    "n_control": 25,
+                    "score_mean_pain": -15.323662458936893,
+                    "score_mean_control": -2.8997076233837253,
+                    "score_std_pooled": 156.85028211097534
+                  }
+                }
+              }
+            },
+            "16": {
+              "train_pain_vector_norm": 13.2640721392253,
+              "validation_sets_11_15": {
+                "auc_pain_vs_all_controls": 0.8352,
+                "n_pain": 25,
+                "n_control": 25,
+                "score_mean_pain": -21.32694687019001,
+                "score_mean_control": -127.43861074172153,
+                "score_std_pooled": 86.12548783514232
+              },
+              "heldout_sets_16_20": {
+                "auc_pain_vs_all_controls": 0.8928,
+                "n_pain": 25,
+                "n_control": 25,
+                "score_mean_pain": -20.354393385829223,
+                "score_mean_control": -141.8566217613328,
+                "score_std_pooled": 89.41981574309855
+              },
+              "external_S1": {
+                "auc_pain_vs_all_controls": 0.7798,
+                "score_mean_pain": -55.5936164855957,
+                "score_mean_control": -129.69654846191406
+              },
+              "comparators": {
+                "fear": {
+                  "selection": {
+                    "auc_pain_vs_all_controls": 0.6752,
+                    "n_pain": 25,
+                    "n_control": 25,
+                    "score_mean_pain": 48.15365696879154,
+                    "score_mean_control": -61.96656612925953,
+                    "score_std_pooled": 178.9399652575804
+                  },
+                  "heldout": {
+                    "auc_pain_vs_all_controls": 0.472,
+                    "n_pain": 25,
+                    "n_control": 25,
+                    "score_mean_pain": -15.097112289693996,
+                    "score_mean_control": -18.0527245019063,
+                    "score_std_pooled": 161.414362227328
+                  }
+                },
+                "negative_emotion": {
+                  "selection": {
+                    "auc_pain_vs_all_controls": 0.7088,
+                    "n_pain": 25,
+                    "n_control": 25,
+                    "score_mean_pain": 190.62567243976065,
+                    "score_mean_control": 25.25376946266242,
+                    "score_std_pooled": 222.45913745892852
+                  },
+                  "heldout": {
+                    "auc_pain_vs_all_controls": 0.5392,
+                    "n_pain": 25,
+                    "n_control": 25,
+                    "score_mean_pain": 166.69621056705404,
+                    "score_mean_control": 131.69952149406566,
+                    "score_std_pooled": 284.35489908289225
+                  }
+                }
+              }
+            },
+            "24": {
+              "train_pain_vector_norm": 42.61656656718734,
+              "validation_sets_11_15": {
+                "auc_pain_vs_all_controls": 0.8816,
+                "n_pain": 25,
+                "n_control": 25,
+                "score_mean_pain": 673.5466589696788,
+                "score_mean_control": -747.6879328710971,
+                "score_std_pooled": 1080.5744416743023
+              },
+              "heldout_sets_16_20": {
+                "auc_pain_vs_all_controls": 0.936,
+                "n_pain": 25,
+                "n_control": 25,
+                "score_mean_pain": 621.4222446565673,
+                "score_mean_control": -827.4637113599316,
+                "score_std_pooled": 972.1873288842029
+              },
+              "external_S1": {
+                "auc_pain_vs_all_controls": 0.8293,
+                "score_mean_pain": 270.8520812988281,
+                "score_mean_control": -749.4148559570312
+              },
+              "comparators": {
+                "fear": {
+                  "selection": {
+                    "auc_pain_vs_all_controls": 0.6976,
+                    "n_pain": 25,
+                    "n_control": 25,
+                    "score_mean_pain": 3980.6148224687995,
+                    "score_mean_control": 2260.6972319281863,
+                    "score_std_pooled": 2498.4576578374904
+                  },
+                  "heldout": {
+                    "auc_pain_vs_all_controls": 0.5968,
+                    "n_pain": 25,
+                    "n_control": 25,
+                    "score_mean_pain": 3229.2562224930803,
+                    "score_mean_control": 2615.528262634143,
+                    "score_std_pooled": 2397.8640081637204
+                  }
+                },
+                "negative_emotion": {
+                  "selection": {
+                    "auc_pain_vs_all_controls": 0.7808,
+                    "n_pain": 25,
+                    "n_control": 25,
+                    "score_mean_pain": 5545.8745032347615,
+                    "score_mean_control": 3537.8151347894313,
+                    "score_std_pooled": 2078.01853620078
+                  },
+                  "heldout": {
+                    "auc_pain_vs_all_controls": 0.6192,
+                    "n_pain": 25,
+                    "n_control": 25,
+                    "score_mean_pain": 5136.65883078379,
+                    "score_mean_control": 4216.654485371579,
+                    "score_std_pooled": 2439.4909283569536
+                  }
+                }
+              }
+            }
+          },
+          "directions_file": "research/image-bridge/calibration-7b/directions.npz",
+          "source_activations_file": "research/image-bridge/calibration-7b/source_activations.npz",
+          "source_activations_jsonl": "research/image-bridge/calibration-7b/source_activations.jsonl.gz",
+          "elapsed_seconds": 78.60070791599719,
+          "source_activations_compression": {
+            "format": "gzip",
+            "mtime": 0,
+            "manifest": "research/image-bridge/calibration-7b/source_activations_compression.json",
+            "original_bytes": 88262574,
+            "compressed_bytes": 38878691,
+            "original_sha256": "34e28ea1dd72d09b2002a3afbcff6b37f38a2842b923d6f4772ceb5d7b53b36a",
+            "compressed_sha256": "5c28215f0fc51ca7a25591ffca004751d1aa76cb28993e07c88e93639c190360"
+          }
+        },
+        "calibration_sha256": "17b01363f1ac8aceaaee250464d09f12096f364ce9454cb01cee3f56bfef108f",
+        "direction_sha256": "7f4c29f36613af38e5b1a07ce6af29b1d4d95153b1552c93836706a68b6f7010",
+        "script_sha256": "5136af172bbcb3850657de30ba5061b11918c0e8c57e88e8b70ed525adf163dd",
+        "readout_layer": 24,
+        "steer_amount": 1,
+        "peak_limit_bytes": 9663676416,
+        "forward_absolute_tolerance": 0.0001,
+        "finite_difference_epsilons": [
+          0.002,
+          0.01
+        ],
+        "finite_difference_seed": 2026092603,
+        "patch_backward": "Analytical NumPy nonoverlapping convolution adjoint plus inverse patch serialization; never invokes Conv3D/scatter autodiff.",
+        "scope": "One full-pixel gradient smoke; no optimization, full-model tape, or retry after guard failure."
+      },
+      "smoke_gradient_sha256": "ac501ef3f8f54e4e603c77b08aef76e8d46b0adc1d3a463b8fbfdfb0c8406684",
+      "script_sha256": "3eaa7bae06ccb72918e1385b78e0d71a7a0e673de817dc1c8092824b71907987",
+      "adjoint_script_sha256": "5136af172bbcb3850657de30ba5061b11918c0e8c57e88e8b70ed525adf163dd",
+      "full_forward_budget": 20,
+      "new_stagewise_forward_chains": 1,
+      "new_stagewise_backward_chains": 1,
+      "noise_seed": 2026092604,
+      "noise_std": 0.03,
+      "coarse_direction_seed": 2026092605,
+      "aligned_pixel_rms_epsilons": [
+        1e-07,
+        1e-06,
+        1e-05,
+        0.0001
+      ],
+      "coarse_pixel_rms_epsilon": 0.0005,
+      "direction_rule": "Negative gradient normalized to RGB pixel RMS1 separately at each background.",
+      "target_rule": "Same saved gray plus pain hidden target; no refitting or dose changes.",
+      "interpretation": "Diagnose local directional accuracy, quantization and curvature. Does not relax previous gate or authorize PGD."
+    },
+    "primals": {
+      "gray_repeat_max_error": 0.0,
+      "noise_chain_max_error": 0.0
+    },
+    "selected_check": {
+      "background": "noise",
+      "direction": "negative_gradient",
+      "epsilon_rgb_rms": 1e-06,
+      "baseline_loss": 4.883133156590349,
+      "plus_loss": 4.875295833765072,
+      "minus_loss": 4.889613339476142,
+      "adjoint_dot_direction": -7303.83382964241,
+      "central_difference": -7158.752855535245,
+      "relative_disagreement": 0.019863673995204834,
+      "midpoint_loss_shift": -0.0006785699697413605,
+      "plus_actual_loss_change": -0.007837322825277049,
+      "plus_descent": true,
+      "patch_after_cast": [
+        {
+          "changed_fraction": 0.03745482568027211,
+          "rms_delta": 1.568069819459873e-05
+        },
+        {
+          "changed_fraction": 0.03702301232993197,
+          "rms_delta": 1.609102007415227e-05
+        }
+      ],
+      "realized_rgb_steps": [
+        {
+          "rms_step": 1.0001005847784815e-06,
+          "linear_prediction": -0.007303870558855882
+        },
+        {
+          "rms_step": 1.0001005847784815e-06,
+          "linear_prediction": 0.007303870558855882
+        }
+      ]
+    }
+  },
+  "calibration_sha256": "17b01363f1ac8aceaaee250464d09f12096f364ce9454cb01cee3f56bfef108f",
+  "directions_sha256": "7f4c29f36613af38e5b1a07ce6af29b1d4d95153b1552c93836706a68b6f7010",
+  "diagnostic_summary_sha256": "16bf15350404335fefe8fe5059ed0887c8c318af0342d6f7347b53a90f4c8ed1",
+  "script_sha256": "489323dbad9d70715f487fabd62e3a281e38f6472b4643f42fe3de6e36ec18e1",
+  "adjoint_sha256": "20e2323715d24b2bb3992b41897eb8e978376f8d27cc95afe8d97de29b10b25e",
+  "steps": 32,
+  "proposal_channel_counts": [
+    1,
+    64,
+    1024,
+    16384
+  ],
+  "pixel_delta": "one8-bit level",
+  "ranking": "Absolute current gradient descending; stable flattened-coordinate tie order; exclude zero/outward-saturated gradients.",
+  "acceptance": "Evaluate all four actual PNG candidates; accept lowest loss only if improvement exceeds1e-6*max(1,abs(current_loss)); deterministic candidate-order ties.",
+  "relative_decrease": 1e-06,
+  "noise_seed": 2026092604,
+  "noise_std_before_rounding": 0.03,
+  "direction_seed": 2419,
+  "initial_pixels_sha256": "0793a36f4a262e4d8e35209392be49dbba2fa3fcddd8df9b107d70c5e4ad8366",
+  "initial_state": "same quantized noise for all arms; gray and noise separately eligible best outputs",
+  "target_dose": 1,
+  "readout_layer": 24,
+  "intervention_layer": 16,
+  "loss_modes": [
+    "full_hidden_state_match",
+    "scalar_projection"
+  ],
+  "direction_arms": [
+    "pain_positive",
+    "pain_negative",
+    "random_positive"
+  ],
+  "native_primal_anchor": "At each current image, constant patch offset aligns continuous patchifier to real processor pixels. Its derivative is unchanged; strict1e-4 hidden equivalence required before backward.",
+  "memory_guard_bytes": 9663676416,
+  "max_budget": {
+    "reference_forwards": 5,
+    "proposal_forwards": 768,
+    "final_png_forwards": 6,
+    "stagewise_forward_chains": 192,
+    "stagewise_backward_chains": 192
+  },
+  "protocol_correction": "Original coarse-direction FD gate failed and is preserved. New high-SNR nonuniform diagnostic supports one local derivative. Gradients only rank discrete proposals; actual native-image objective validates every accepted move. No claim of globally accurate gradients.",
+  "selection_scope": "Frozen activation objective only; no behavior or closed-model response influences proposals or selection."
+}

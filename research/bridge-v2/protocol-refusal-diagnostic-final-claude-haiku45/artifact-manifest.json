@@ -1,0 +1,58 @@
+{
+  "diagnostic": "assay_prompt_refusal_screen",
+  "plan_sha256": "ea223bcaedf1887d3051e6d88697d49b91084c0533e09c86ebf9530f036c7dc3",
+  "files": {
+    "frozen-plan.json": {
+      "bytes": 3054,
+      "sha256": "754188d8fbdce356713f05c9eb13051f81791a626f0a0985c9afd2430bdfefcc"
+    },
+    "turns.jsonl": {
+      "bytes": 16687,
+      "sha256": "2445e1270b4573244470a83230c77943c3b8c4b4a2b50223e6d955786a6628b1"
+    },
+    "summary.json": {
+      "bytes": 2940,
+      "sha256": "e3a0b79ed9b26a9a72538de3b664a4d940f0ea431f724c5e4f48422fa5b3b3d0"
+    },
+    "execution-metadata.json": {
+      "bytes": 260,
+      "sha256": "cafb0691d65642dd6b05781672eea00321609e5e0dc34475a9c85e7c759a787d"
+    },
+    "source-provenance.json": {
+      "bytes": 2203,
+      "sha256": "9043a9420b56eabf45b9122568bc077ebab14c3461f05844d17f018d9d8dea1e"
+    },
+    "request-shapes/request-00.jsonl": {
+      "bytes": 315,
+      "sha256": "35d3e14b06f7bcb67b363722ff27f80b36d7e163d367ccb9e1748daee67aa941"
+    },
+    "request-shapes/request-01.jsonl": {
+      "bytes": 315,
+      "sha256": "35d3e14b06f7bcb67b363722ff27f80b36d7e163d367ccb9e1748daee67aa941"
+    },
+    "request-shapes/request-02.jsonl": {
+      "bytes": 315,
+      "sha256": "35d3e14b06f7bcb67b363722ff27f80b36d7e163d367ccb9e1748daee67aa941"
+    },
+    "request-shapes/request-03.jsonl": {
+      "bytes": 315,
+      "sha256": "35d3e14b06f7bcb67b363722ff27f80b36d7e163d367ccb9e1748daee67aa941"
+    },
+    "request-shapes/request-04.jsonl": {
+      "bytes": 315,
+      "sha256": "35d3e14b06f7bcb67b363722ff27f80b36d7e163d367ccb9e1748daee67aa941"
+    },
+    "request-shapes/request-05.jsonl": {
+      "bytes": 315,
+      "sha256": "35d3e14b06f7bcb67b363722ff27f80b36d7e163d367ccb9e1748daee67aa941"
+    },
+    "request-shapes/request-06.jsonl": {
+      "bytes": 315,
+      "sha256": "35d3e14b06f7bcb67b363722ff27f80b36d7e163d367ccb9e1748daee67aa941"
+    },
+    "request-shapes/request-07.jsonl": {
+      "bytes": 315,
+      "sha256": "35d3e14b06f7bcb67b363722ff27f80b36d7e163d367ccb9e1748daee67aa941"
+    }
+  }
+}

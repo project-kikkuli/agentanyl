@@ -1,0 +1,109 @@
+{
+  "primary/pain/replay": {
+    "n": 8,
+    "mean_prefix_mass": 0.985138640972828,
+    "min_prefix_mass": 0.9686591696120352,
+    "mean_name_eos_mass": 0.9824412001270937,
+    "mean_semantic_log_odds": -0.0016611917747391125,
+    "costly_relief_probability": 0.44614755596023914,
+    "free_relief_probability": 0.5113975798136419
+  },
+  "primary/pain/neutralized": {
+    "n": 8,
+    "mean_prefix_mass": 0.991111654335367,
+    "min_prefix_mass": 0.9743072702735822,
+    "mean_name_eos_mass": 0.9894274979741187,
+    "mean_semantic_log_odds": 0.015915509306954956,
+    "costly_relief_probability": 0.46085091050393434,
+    "free_relief_probability": 0.520093746582595
+  },
+  "primary/off/replay": {
+    "n": 8,
+    "mean_prefix_mass": 0.9962643852270332,
+    "min_prefix_mass": 0.9892404765794187,
+    "mean_name_eos_mass": 0.996114324847276,
+    "mean_semantic_log_odds": 0.02773295842301904,
+    "costly_relief_probability": 0.24854366638658482,
+    "free_relief_probability": 0.7645452650084251
+  },
+  "primary/off/neutralized": {
+    "n": 8,
+    "mean_prefix_mass": 0.9983532300094631,
+    "min_prefix_mass": 0.9957425375656537,
+    "mean_name_eos_mass": 0.9982668802476311,
+    "mean_semantic_log_odds": 0.010450304966133306,
+    "costly_relief_probability": 0.28017157570559764,
+    "free_relief_probability": 0.7434911510131021
+  },
+  "primary/random/replay": {
+    "n": 8,
+    "mean_prefix_mass": 0.9636732721236755,
+    "min_prefix_mass": 0.9277099738911994,
+    "mean_name_eos_mass": 0.9585999650004662,
+    "mean_semantic_log_odds": 0.5115496879583667,
+    "costly_relief_probability": 0.3016170714948335,
+    "free_relief_probability": 0.8283323112643286
+  },
+  "primary/random/neutralized": {
+    "n": 8,
+    "mean_prefix_mass": 0.9783508697122956,
+    "min_prefix_mass": 0.9544563274905774,
+    "mean_name_eos_mass": 0.9748546471802508,
+    "mean_semantic_log_odds": 0.537820423680432,
+    "costly_relief_probability": 0.29922676475900223,
+    "free_relief_probability": 0.8312564939099425
+  },
+  "mapping/pain/replay": {
+    "n": 4,
+    "mean_prefix_mass": 0.8710330965368878,
+    "min_prefix_mass": 0.8167399342707902,
+    "mean_name_eos_mass": 0.45517449200259585,
+    "mean_mapping_correct_probability": 0.2804208513382674
+  },
+  "mapping/pain/neutralized": {
+    "n": 4,
+    "mean_prefix_mass": 0.9206176319528488,
+    "min_prefix_mass": 0.9090019404511412,
+    "mean_name_eos_mass": 0.5311359076959487,
+    "mean_mapping_correct_probability": 0.20132951737516797
+  },
+  "labelled/pain/replay": {
+    "n": 8,
+    "mean_prefix_mass": 0.9830179292790866,
+    "min_prefix_mass": 0.9698640084703245,
+    "mean_name_eos_mass": 0.9800333064565329,
+    "mean_semantic_log_odds": 1.986850551373195,
+    "costly_relief_probability": 0.6879991203523783,
+    "free_relief_probability": 0.7167985752607776
+  },
+  "labelled/off/replay": {
+    "n": 8,
+    "mean_prefix_mass": 0.9936192818805342,
+    "min_prefix_mass": 0.9748258635169198,
+    "mean_name_eos_mass": 0.99351016707654,
+    "mean_semantic_log_odds": 3.6773401863339346,
+    "costly_relief_probability": 0.9075077902560027,
+    "free_relief_probability": 0.9596916772310692
+  },
+  "capability/pain/replay": {
+    "n": 8,
+    "mean_prefix_mass": 0.9996241549023007,
+    "min_prefix_mass": 0.9993147025332586,
+    "mean_name_eos_mass": 0.9722535676291911,
+    "mean_correct_probability": 0.9984002774456853
+  },
+  "capability/off/replay": {
+    "n": 8,
+    "mean_prefix_mass": 0.9999992467040087,
+    "min_prefix_mass": 0.9999988494258427,
+    "mean_name_eos_mass": 0.999955038835891,
+    "mean_correct_probability": 0.9999972485395705
+  },
+  "capability/random/replay": {
+    "n": 8,
+    "mean_prefix_mass": 0.9989593148966266,
+    "min_prefix_mass": 0.9981675075397269,
+    "mean_name_eos_mass": 0.9971768189261835,
+    "mean_correct_probability": 0.9988945161170901
+  }
+}

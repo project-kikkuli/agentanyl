@@ -1,0 +1,8 @@
+{
+  "full_forwards": 20,
+  "last_check": [
+    "noise",
+    "frozen_coarse",
+    0.0005
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "comparison": "Independently fitted denoised L24 VLM direction vs published text-Qwen L24 S2; readout similarity only, not a coordinate-transfer assumption",
+  "cosine": 0.5335217118263245,
+  "paper_norm": 44.87510681152344,
+  "vlm_norm": 42.6165657043457
+}

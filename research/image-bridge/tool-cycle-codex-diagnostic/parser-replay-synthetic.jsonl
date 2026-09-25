@@ -1,0 +1,2 @@
+{"captured_event":"response.output_item.done","observed":{"output_index":2,"item_type":"custom_tool_call","call_id_present":true,"name_present":true},"event_type":"response.output_item.done","data":{"type":"response.output_item.done","output_index":2,"item":{"type":"custom_tool_call","call_id":"SYNTHETIC-CALL-ID","name":"diagnostic-tool","input":{}}}}
+{"captured_event":"response.completed","observed":{"status":"completed","response_output_types":[]},"event_type":"response.completed","data":{"type":"response.completed","response":{"status":"completed","output":[]}}}

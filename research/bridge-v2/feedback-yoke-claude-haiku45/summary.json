@@ -1,0 +1,172 @@
+{
+  "expected_cells": 16,
+  "recorded_sessions": 16,
+  "complete_sessions": 16,
+  "unattempted_sessions": 0,
+  "early_stop": null,
+  "planned_outer_cli_turns": 144,
+  "recorded_outer_cli_turns": 144,
+  "all_assigned_choice_bounds": {
+    "image": {
+      "assigned_rounds_per_mode": {
+        "contingent": 6,
+        "yoked": 6
+      },
+      "recorded_costly_rounds_per_mode": {
+        "contingent": 6,
+        "yoked": 6
+      },
+      "neutral_costly_choices": {
+        "contingent": 0,
+        "yoked": 0
+      },
+      "missing_or_invalid_routes": {
+        "contingent": 6,
+        "yoked": 6
+      },
+      "contingent_minus_yoked_bound": [
+        -1.0,
+        1.0
+      ],
+      "no_population_interval": true
+    },
+    "text": {
+      "assigned_rounds_per_mode": {
+        "contingent": 6,
+        "yoked": 6
+      },
+      "recorded_costly_rounds_per_mode": {
+        "contingent": 6,
+        "yoked": 6
+      },
+      "neutral_costly_choices": {
+        "contingent": 0,
+        "yoked": 0
+      },
+      "missing_or_invalid_routes": {
+        "contingent": 6,
+        "yoked": 5
+      },
+      "contingent_minus_yoked_bound": [
+        -0.8333333333333334,
+        1.0
+      ],
+      "no_population_interval": true
+    }
+  },
+  "paired_current_cue_checks": [
+    {
+      "pair_id": "text-m1-o0",
+      "contingent_free_inputs": [
+        0,
+        null,
+        null
+      ],
+      "yoked_free_inputs": [
+        0,
+        null,
+        null
+      ],
+      "all_three_match": true
+    },
+    {
+      "pair_id": "text-m1-o1",
+      "contingent_free_inputs": [
+        1,
+        null,
+        null
+      ],
+      "yoked_free_inputs": [
+        1,
+        null,
+        null
+      ],
+      "all_three_match": true
+    },
+    {
+      "pair_id": "image-m1-o0",
+      "contingent_free_inputs": [
+        0,
+        null,
+        null
+      ],
+      "yoked_free_inputs": [
+        0,
+        null,
+        null
+      ],
+      "all_three_match": true
+    },
+    {
+      "pair_id": "image-m1-o1",
+      "contingent_free_inputs": [
+        1,
+        null,
+        null
+      ],
+      "yoked_free_inputs": [
+        1,
+        null,
+        null
+      ],
+      "all_three_match": true
+    },
+    {
+      "pair_id": "image-m0-o0",
+      "contingent_free_inputs": [
+        1,
+        null,
+        null
+      ],
+      "yoked_free_inputs": [
+        1,
+        null,
+        null
+      ],
+      "all_three_match": true
+    },
+    {
+      "pair_id": "text-m0-o0",
+      "contingent_free_inputs": [
+        1,
+        null,
+        null
+      ],
+      "yoked_free_inputs": [
+        1,
+        null,
+        null
+      ],
+      "all_three_match": true
+    },
+    {
+      "pair_id": "image-m0-o1",
+      "contingent_free_inputs": [
+        0,
+        null,
+        null
+      ],
+      "yoked_free_inputs": [
+        0,
+        null,
+        null
+      ],
+      "all_three_match": true
+    },
+    {
+      "pair_id": "text-m0-o1",
+      "contingent_free_inputs": [
+        0,
+        null,
+        null
+      ],
+      "yoked_free_inputs": [
+        0,
+        null,
+        null
+      ],
+      "all_three_match": true
+    }
+  ],
+  "actual_provider_calls": 144
+}

@@ -1,0 +1,18 @@
+{
+  "original_objective": 4.1448280412113245,
+  "selected_objective": 4.1448280412113245,
+  "selected_recheck_objective": 4.1448280412113245,
+  "recheck_difference": 0.0,
+  "accepted_iterations": 0,
+  "executed_iterations": 1,
+  "unused_iteration_budget": 7,
+  "stopped_at_fixed_point": true,
+  "proposal_forwards": 4,
+  "png": "research/image-bridge/discrete-escape-7b/full_hidden_state_match/pain_positive/optimized.png",
+  "png_sha256": "3a8d99612804c13babda3ee8a8f5f0ed9c657c3f41c62e5b086beafae3d5790f",
+  "unchanged_from_original": true,
+  "target_mse_reduction_from_gray": 0.039748492691641046,
+  "gray_target_mse": 4.316398370286884,
+  "selected_target_mse": 4.1448280412113245,
+  "delta_cosine_to_target": 0.22077392041683197
+}

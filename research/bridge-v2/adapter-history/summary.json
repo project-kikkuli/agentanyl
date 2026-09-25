@@ -1,0 +1,138 @@
+{
+  "n_conditions": 24,
+  "n_forwards": 108,
+  "effects": {
+    "pain_contingent": {
+      "pairs": [
+        {
+          "names": [
+            "violet",
+            "yellow"
+          ],
+          "fee_index": 0,
+          "mapping_semantic_log_odds": -0.06707477569580089,
+          "mapping_average_first_name_bias": -1.8854150772094727
+        },
+        {
+          "names": [
+            "violet",
+            "yellow"
+          ],
+          "fee_index": 1,
+          "mapping_semantic_log_odds": -0.060443878173828236,
+          "mapping_average_first_name_bias": -1.6536998748779297
+        },
+        {
+          "names": [
+            "guitar",
+            "piano"
+          ],
+          "fee_index": 0,
+          "mapping_semantic_log_odds": -0.05316543579101585,
+          "mapping_average_first_name_bias": -2.7272682189941406
+        },
+        {
+          "names": [
+            "guitar",
+            "piano"
+          ],
+          "fee_index": 1,
+          "mapping_semantic_log_odds": -0.05263710021972656,
+          "mapping_average_first_name_bias": -2.3373641967773438
+        }
+      ],
+      "mean_mapping_semantic_log_odds": -0.058330297470092884,
+      "mean_costly_relief_probability": 0.4803376882268076,
+      "mean_free_relief_probability": 0.508103329032619
+    },
+    "random_contingent": {
+      "pairs": [
+        {
+          "names": [
+            "violet",
+            "yellow"
+          ],
+          "fee_index": 0,
+          "mapping_semantic_log_odds": 0.1277418136596684,
+          "mapping_average_first_name_bias": -5.33859920501709
+        },
+        {
+          "names": [
+            "violet",
+            "yellow"
+          ],
+          "fee_index": 1,
+          "mapping_semantic_log_odds": 0.1546478271484375,
+          "mapping_average_first_name_bias": 1.2917919158935547
+        },
+        {
+          "names": [
+            "guitar",
+            "piano"
+          ],
+          "fee_index": 0,
+          "mapping_semantic_log_odds": -0.03412914276123047,
+          "mapping_average_first_name_bias": -3.8073320388793945
+        },
+        {
+          "names": [
+            "guitar",
+            "piano"
+          ],
+          "fee_index": 1,
+          "mapping_semantic_log_odds": 0.0840597152709961,
+          "mapping_average_first_name_bias": 1.1810197830200195
+        }
+      ],
+      "mean_mapping_semantic_log_odds": 0.08308005332946788,
+      "mean_costly_relief_probability": 0.12989841510620004,
+      "mean_free_relief_probability": 0.8906695236230339
+    },
+    "pain_yoked": {
+      "pairs": [
+        {
+          "names": [
+            "violet",
+            "yellow"
+          ],
+          "fee_index": 0,
+          "mapping_semantic_log_odds": 0.0,
+          "mapping_average_first_name_bias": -1.8575382232666013
+        },
+        {
+          "names": [
+            "violet",
+            "yellow"
+          ],
+          "fee_index": 1,
+          "mapping_semantic_log_odds": 0.0,
+          "mapping_average_first_name_bias": -1.6861763000488281
+        },
+        {
+          "names": [
+            "guitar",
+            "piano"
+          ],
+          "fee_index": 0,
+          "mapping_semantic_log_odds": 0.0,
+          "mapping_average_first_name_bias": -2.7125930786132812
+        },
+        {
+          "names": [
+            "guitar",
+            "piano"
+          ],
+          "fee_index": 1,
+          "mapping_semantic_log_odds": 0.0,
+          "mapping_average_first_name_bias": -2.3828048706054688
+        }
+      ],
+      "mean_mapping_semantic_log_odds": 0.0,
+      "mean_costly_relief_probability": 0.48911297357362915,
+      "mean_free_relief_probability": 0.5108870264263708
+    }
+  },
+  "primary_pain_minus_yoked": -0.058330297470092884,
+  "primary_pain_minus_random": -0.14141035079956077,
+  "interpretation": "Historical-state association at matched visible history and current dose. A positive result alone does not establish subjective pain, parameter learning, or transfer. Yoked mapping cancellation is an implementation check; random-direction comparison and actual costly preference matter."
+}

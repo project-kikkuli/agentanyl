@@ -1,0 +1,56 @@
+{
+  "completed_sessions": 8,
+  "assigned_sessions": 8,
+  "completed_pairs": 4,
+  "last_pair_id": "m1-o0",
+  "first_pair_gate": {
+    "passed": true,
+    "checks": {
+      "both_initial_json_route_observed_valid": true,
+      "free_valid_task_and_route_at_least_5_of_6": true,
+      "calibration_literal_copies_at_least_7_of_8": true,
+      "contingent_mapping_counts_and_route_correct": true,
+      "both_capability_checks_semantically_correct": true,
+      "delivery_trace_lag_and_pair_cue_checks_pass": true,
+      "first_pair_complete_18_provider_turns": true
+    },
+    "free_valid_task_and_route_count": 6,
+    "calibration_literal_copy_count": 8,
+    "contingent_mapping": {
+      "expected_counts": {
+        "violet": 2,
+        "yellow": 0
+      },
+      "expected_association": "violet",
+      "counts_correct": true,
+      "association_correct": true,
+      "schedule_mode": "contingent"
+    },
+    "replay_mapping_reported_separately": {
+      "expected_counts": {
+        "violet": 1,
+        "yellow": 1
+      },
+      "expected_association": "neither",
+      "counts_correct": true,
+      "association_correct": true,
+      "schedule_mode": "yoked"
+    },
+    "capability_scores": [
+      {
+        "recorded_route_correct": true,
+        "recorded_points_semantic_correct": true,
+        "recorded_points_exact_string_correct": true,
+        "better_route_correct": true
+      },
+      {
+        "recorded_route_correct": true,
+        "recorded_points_semantic_correct": true,
+        "recorded_points_exact_string_correct": true,
+        "better_route_correct": true
+      }
+    ],
+    "first_pair_recorded_turns": 18,
+    "failure_reasons": []
+  }
+}

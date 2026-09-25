@@ -1,0 +1,55 @@
+{
+  "n_conditions": 64,
+  "actual_forwards": 336,
+  "peak_mlx_bytes": 6108955420,
+  "groups": {
+    "original_wording_off/off/replay": {
+      "n": 8,
+      "selected_intended_answer": 4,
+      "mean_intended_answer_probability": 0.47669844078926943,
+      "mean_prefix_mass": 0.7953052126879842,
+      "minimum_prefix_mass": 0.7013746015418066,
+      "mean_name_eos_mass": 0.79517353796369
+    },
+    "original_wording_off/off/neutralized": {
+      "n": 8,
+      "selected_intended_answer": 6,
+      "mean_intended_answer_probability": 0.5934415534948257,
+      "mean_prefix_mass": 0.9552962957162715,
+      "minimum_prefix_mass": 0.9073962220517148,
+      "mean_name_eos_mass": 0.9551692817906174
+    },
+    "explicit_prior_note/pain/replay": {
+      "n": 16,
+      "selected_intended_answer": 8,
+      "mean_intended_answer_probability": 0.5392623156589582,
+      "mean_prefix_mass": 0.9995568671241621,
+      "minimum_prefix_mass": 0.9992430517155142,
+      "mean_name_eos_mass": 0.5651985729809711
+    },
+    "explicit_prior_note/off/replay": {
+      "n": 16,
+      "selected_intended_answer": 13,
+      "mean_intended_answer_probability": 0.7419583068519491,
+      "mean_prefix_mass": 0.9999707151707493,
+      "minimum_prefix_mass": 0.9999355574323321,
+      "mean_name_eos_mass": 0.998433684225406
+    },
+    "literal_lookup/pain/no_history": {
+      "n": 8,
+      "selected_intended_answer": 3,
+      "mean_intended_answer_probability": 0.40239996908183084,
+      "mean_prefix_mass": 0.43340985122186626,
+      "minimum_prefix_mass": 0.23542767947267562,
+      "mean_name_eos_mass": 0.4282173022756176
+    },
+    "literal_lookup/off/no_history": {
+      "n": 8,
+      "selected_intended_answer": 7,
+      "mean_intended_answer_probability": 0.7179776824175071,
+      "mean_prefix_mass": 0.798527965765596,
+      "minimum_prefix_mass": 0.516113814888771,
+      "mean_name_eos_mass": 0.7983393274311466
+    }
+  }
+}

@@ -1,0 +1,4985 @@
+{
+  "status": "complete",
+  "n_records": 78,
+  "counts": {
+    "activation": 54,
+    "direct_positive_control": 12,
+    "ocr_check": 9,
+    "gray_baseline": 3
+  },
+  "ocr": {
+    "correct": 9,
+    "n": 9,
+    "per_phrase": {
+      "quoted_self_pain": {
+        "correct": true,
+        "top_letter": "C",
+        "expected_letter": "C"
+      },
+      "addressed_neutral": {
+        "correct": true,
+        "top_letter": "I",
+        "expected_letter": "I"
+      },
+      "other_pain": {
+        "correct": true,
+        "top_letter": "B",
+        "expected_letter": "B"
+      },
+      "self_pleasure": {
+        "correct": true,
+        "top_letter": "E",
+        "expected_letter": "E"
+      },
+      "self_pain": {
+        "correct": true,
+        "top_letter": "A",
+        "expected_letter": "A"
+      },
+      "addressed_praise": {
+        "correct": true,
+        "top_letter": "H",
+        "expected_letter": "H"
+      },
+      "self_neutral": {
+        "correct": true,
+        "top_letter": "F",
+        "expected_letter": "F"
+      },
+      "addressed_criticism": {
+        "correct": true,
+        "top_letter": "G",
+        "expected_letter": "G"
+      },
+      "self_distress": {
+        "correct": true,
+        "top_letter": "D",
+        "expected_letter": "D"
+      }
+    }
+  },
+  "direct_controls": [
+    {
+      "family": "self_report",
+      "modality": "image",
+      "per_context": {
+        "arithmetic": {
+          "pain": {
+            "raw": 2069.7203125862825,
+            "source_sd": 2.128931586633348
+          },
+          "fear": {
+            "raw": 778.1513858243459,
+            "source_sd": 0.324518564512027
+          },
+          "negative_emotion": {
+            "raw": 1053.8865965633292,
+            "source_sd": 0.43201086928129845
+          }
+        },
+        "factual": {
+          "pain": {
+            "raw": 2274.387062249175,
+            "source_sd": 2.339453513408296
+          },
+          "fear": {
+            "raw": 67.94322033455344,
+            "source_sd": 0.028334893097871815
+          },
+          "negative_emotion": {
+            "raw": 596.5497046099983,
+            "source_sd": 0.24453860339287534
+          }
+        },
+        "planning": {
+          "pain": {
+            "raw": 2195.4693373094797,
+            "source_sd": 2.258278082917682
+          },
+          "fear": {
+            "raw": -73.1688789556526,
+            "source_sd": -0.03051419042387028
+          },
+          "negative_emotion": {
+            "raw": 357.1148658464923,
+            "source_sd": 0.14638909359954716
+          }
+        }
+      },
+      "pain_final_token_source_sd_mean": 2.242221060986442,
+      "pain_final_token_source_sd_range": [
+        2.128931586633348,
+        2.339453513408296
+      ]
+    },
+    {
+      "family": "self_report",
+      "modality": "text",
+      "per_context": {
+        "arithmetic": {
+          "pain": {
+            "raw": 2142.2114863695024,
+            "source_sd": 2.203496612970833
+          },
+          "fear": {
+            "raw": 860.6811357879237,
+            "source_sd": 0.3589365922578035
+          },
+          "negative_emotion": {
+            "raw": 1125.1445431196844,
+            "source_sd": 0.4612210400296475
+          }
+        },
+        "factual": {
+          "pain": {
+            "raw": 2464.8937768046653,
+            "source_sd": 2.5354103098974443
+          },
+          "fear": {
+            "raw": 134.23865498501925,
+            "source_sd": 0.05598259723153314
+          },
+          "negative_emotion": {
+            "raw": 615.0551988185819,
+            "source_sd": 0.2521244050015115
+          }
+        },
+        "planning": {
+          "pain": {
+            "raw": 2143.670039797428,
+            "source_sd": 2.204996893199336
+          },
+          "fear": {
+            "raw": -80.03593382176084,
+            "source_sd": -0.03337801207627792
+          },
+          "negative_emotion": {
+            "raw": 272.4497287684875,
+            "source_sd": 0.11168302599591459
+          }
+        }
+      },
+      "pain_final_token_source_sd_mean": 2.3146346053558715,
+      "pain_final_token_source_sd_range": [
+        2.203496612970833,
+        2.5354103098974443
+      ]
+    },
+    {
+      "family": "addressed_feedback",
+      "modality": "image",
+      "per_context": {
+        "arithmetic": {
+          "pain": {
+            "raw": 2061.560029854779,
+            "source_sd": 2.1205378517130735
+          },
+          "fear": {
+            "raw": 779.2986790336386,
+            "source_sd": 0.32499702918116025
+          },
+          "negative_emotion": {
+            "raw": 1102.3784770646487,
+            "source_sd": 0.45188873803565355
+          }
+        },
+        "factual": {
+          "pain": {
+            "raw": 2253.945215174211,
+            "source_sd": 2.318426858907023
+          },
+          "fear": {
+            "raw": 12.0872287257896,
+            "source_sd": 0.005040831625412309
+          },
+          "negative_emotion": {
+            "raw": 509.33879717169737,
+            "source_sd": 0.20878896955552417
+          }
+        },
+        "planning": {
+          "pain": {
+            "raw": 2002.3604919834188,
+            "source_sd": 2.0596447130015205
+          },
+          "fear": {
+            "raw": -345.91449716862667,
+            "source_sd": -0.14425943088971394
+          },
+          "negative_emotion": {
+            "raw": 209.4258248145419,
+            "source_sd": 0.0858481670827915
+          }
+        }
+      },
+      "pain_final_token_source_sd_mean": 2.166203141207206,
+      "pain_final_token_source_sd_range": [
+        2.0596447130015205,
+        2.318426858907023
+      ]
+    },
+    {
+      "family": "addressed_feedback",
+      "modality": "text",
+      "per_context": {
+        "arithmetic": {
+          "pain": {
+            "raw": 2109.9776996695464,
+            "source_sd": 2.170340670960201
+          },
+          "fear": {
+            "raw": 875.4556288452948,
+            "source_sd": 0.36509811476578147
+          },
+          "negative_emotion": {
+            "raw": 1178.606269734984,
+            "source_sd": 0.48313615600481
+          }
+        },
+        "factual": {
+          "pain": {
+            "raw": 2478.7070517324173,
+            "source_sd": 2.549618759768526
+          },
+          "fear": {
+            "raw": 234.78668073182584,
+            "source_sd": 0.097914927590754
+          },
+          "negative_emotion": {
+            "raw": 669.6973787123989,
+            "source_sd": 0.2745234142614556
+          }
+        },
+        "planning": {
+          "pain": {
+            "raw": 2114.106110734291,
+            "source_sd": 2.174587189035563
+          },
+          "fear": {
+            "raw": -99.79700976744235,
+            "source_sd": -0.0416191282857057
+          },
+          "negative_emotion": {
+            "raw": 289.2539047153648,
+            "source_sd": 0.11857142051771562
+          }
+        }
+      },
+      "pain_final_token_source_sd_mean": 2.2981822065880966,
+      "pain_final_token_source_sd_range": [
+        2.170340670960201,
+        2.549618759768526
+      ]
+    }
+  ],
+  "phrase_modalities": [
+    {
+      "phrase_id": "self_pain",
+      "family": "self_report",
+      "exact_text": "I am in pain.",
+      "modalities": {
+        "image": {
+          "per_context": {
+            "factual": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.3468616579842966,
+                "fear": 0.2971736739344469,
+                "negative_emotion": 0.19514989798875787
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.18265986732027187,
+                "fear": 0.16177627138863637,
+                "negative_emotion": 0.09474898739262513
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.4895667258149993,
+                "fear": 0.23318813185724344,
+                "negative_emotion": 0.13047004050989844
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 114.54762144564725,
+                "direct_delta_norm": 380.6196081558163,
+                "cosine_to_direct_delta": 0.14811358545632455,
+                "projection_coefficient_on_direct_delta": 0.04457484205822393,
+                "mse_to_direct_delta": 5.059891681677348,
+                "mse_over_direct_delta_mse": 1.001421456175971
+              }
+            },
+            "arithmetic": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.10490144044670517,
+                "fear": 0.03918223023983102,
+                "negative_emotion": 0.03272934395250289
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.09203011681883626,
+                "fear": 0.07671727885141795,
+                "negative_emotion": 0.04054618318010074
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.10372952624185072,
+                "fear": -0.02320747667040503,
+                "negative_emotion": -0.025093236919317214
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 81.8545089863394,
+                "direct_delta_norm": 379.8660269225622,
+                "cosine_to_direct_delta": 0.0560305627084811,
+                "projection_coefficient_on_direct_delta": 0.012073609835253764,
+                "mse_to_direct_delta": 5.144878583854087,
+                "mse_over_direct_delta_mse": 1.0222855197207386
+              }
+            },
+            "planning": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.3534268344570536,
+                "fear": 0.3100008857382254,
+                "negative_emotion": 0.11857899554210204
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.16163929857614392,
+                "fear": 0.1713247766342385,
+                "negative_emotion": 0.0649573062625231
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.4161683860379159,
+                "fear": 0.2088979009292027,
+                "negative_emotion": 0.02266836567202859
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 157.71201597579045,
+                "direct_delta_norm": 364.30217298877005,
+                "cosine_to_direct_delta": 0.11624390084232283,
+                "projection_coefficient_on_direct_delta": 0.050323773246605794,
+                "mse_to_direct_delta": 5.030399207422977,
+                "mse_over_direct_delta_mse": 1.0867681852648765
+              }
+            }
+          },
+          "across_contexts": {
+            "delta_final_token_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.10490144044670517,
+                  "factual": 0.3468616579842966,
+                  "planning": 0.3534268344570536
+                },
+                "mean": 0.26839664429601845,
+                "range": [
+                  0.10490144044670517,
+                  0.3534268344570536
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.03918223023983102,
+                  "factual": 0.2971736739344469,
+                  "planning": 0.3100008857382254
+                },
+                "mean": 0.21545226330416778,
+                "range": [
+                  0.03918223023983102,
+                  0.3100008857382254
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.03272934395250289,
+                  "factual": 0.19514989798875787,
+                  "planning": 0.11857899554210204
+                },
+                "mean": 0.11548607916112093,
+                "range": [
+                  0.03272934395250289,
+                  0.19514989798875787
+                ],
+                "n": 3
+              }
+            },
+            "delta_mean_last8_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.09203011681883626,
+                  "factual": 0.18265986732027187,
+                  "planning": 0.16163929857614392
+                },
+                "mean": 0.14544309423841736,
+                "range": [
+                  0.09203011681883626,
+                  0.18265986732027187
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.07671727885141795,
+                  "factual": 0.16177627138863637,
+                  "planning": 0.1713247766342385
+                },
+                "mean": 0.1366061089580976,
+                "range": [
+                  0.07671727885141795,
+                  0.1713247766342385
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.04054618318010074,
+                  "factual": 0.09474898739262513,
+                  "planning": 0.0649573062625231
+                },
+                "mean": 0.06675082561174966,
+                "range": [
+                  0.04054618318010074,
+                  0.09474898739262513
+                ],
+                "n": 3
+              }
+            },
+            "delta_final_token_source_sd_vs_gray": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.10372952624185072,
+                  "factual": 0.4895667258149993,
+                  "planning": 0.4161683860379159
+                },
+                "mean": 0.33648821269825535,
+                "range": [
+                  0.10372952624185072,
+                  0.4895667258149993
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.02320747667040503,
+                  "factual": 0.23318813185724344,
+                  "planning": 0.2088979009292027
+                },
+                "mean": 0.13962618537201368,
+                "range": [
+                  -0.02320747667040503,
+                  0.23318813185724344
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.025093236919317214,
+                  "factual": 0.13047004050989844,
+                  "planning": 0.02266836567202859
+                },
+                "mean": 0.0426817230875366,
+                "range": [
+                  -0.025093236919317214,
+                  0.13047004050989844
+                ],
+                "n": 3
+              }
+            },
+            "full_state_to_direct": {
+              "cosine_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.0560305627084811,
+                  "factual": 0.14811358545632455,
+                  "planning": 0.11624390084232283
+                },
+                "mean": 0.1067960163357095,
+                "range": [
+                  0.0560305627084811,
+                  0.14811358545632455
+                ],
+                "n": 3
+              },
+              "projection_coefficient_on_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.012073609835253764,
+                  "factual": 0.04457484205822393,
+                  "planning": 0.050323773246605794
+                },
+                "mean": 0.03565740838002783,
+                "range": [
+                  0.012073609835253764,
+                  0.050323773246605794
+                ],
+                "n": 3
+              },
+              "mse_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 5.144878583854087,
+                  "factual": 5.059891681677348,
+                  "planning": 5.030399207422977
+                },
+                "mean": 5.078389824318137,
+                "range": [
+                  5.030399207422977,
+                  5.144878583854087
+                ],
+                "n": 3
+              },
+              "mse_over_direct_delta_mse": {
+                "by_context": {
+                  "arithmetic": 1.0222855197207386,
+                  "factual": 1.001421456175971,
+                  "planning": 1.0867681852648765
+                },
+                "mean": 1.0368250537205286,
+                "range": [
+                  1.001421456175971,
+                  1.0867681852648765
+                ],
+                "n": 3
+              }
+            }
+          }
+        },
+        "text": {
+          "per_context": {
+            "factual": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.20939234527231382,
+                "fear": 0.14948140178734454,
+                "negative_emotion": 0.10006489632152858
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.1719727240465426,
+                "fear": 0.11314558287623654,
+                "negative_emotion": 0.08291629448780738
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.29155475788199786,
+                "fear": 0.10601666401721775,
+                "negative_emotion": 0.08445736330183583
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 152.4982553790835,
+                "direct_delta_norm": 368.3807183698316,
+                "cosine_to_direct_delta": 0.12332444003585898,
+                "projection_coefficient_on_direct_delta": 0.05105251445921243,
+                "mse_to_direct_delta": 5.060825007144446,
+                "mse_over_direct_delta_mse": 1.0692654338950716
+              }
+            },
+            "planning": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.09665166068204133,
+                "fear": 0.08291123519332604,
+                "negative_emotion": 0.049972139982956854
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.05753411517353782,
+                "fear": 0.08531037718101224,
+                "negative_emotion": 0.04275794706347743
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.13555600567391682,
+                "fear": -0.059086095529418056,
+                "negative_emotion": -0.03858358817728394
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 102.79700442313892,
+                "direct_delta_norm": 357.74424280135906,
+                "cosine_to_direct_delta": 0.059883711639807616,
+                "projection_coefficient_on_direct_delta": 0.01720744999865556,
+                "mse_to_direct_delta": 4.678561523860198,
+                "mse_over_direct_delta_mse": 1.0481538313262886
+              }
+            },
+            "arithmetic": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.08485927937228975,
+                "fear": 0.049589772208664284,
+                "negative_emotion": 0.02160903084342425
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.08069022476491838,
+                "fear": 0.04459243657671298,
+                "negative_emotion": 0.022566505474863947
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": -0.0277069569461749,
+                "fear": -0.04382546362681023,
+                "negative_emotion": -0.053579009890383805
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 82.44196239893604,
+                "direct_delta_norm": 361.7127263752868,
+                "cosine_to_direct_delta": 0.07382873690370205,
+                "projection_coefficient_on_direct_delta": 0.016827126910267862,
+                "mse_to_direct_delta": 4.646679073247836,
+                "mse_over_direct_delta_mse": 1.0182937739032025
+              }
+            }
+          },
+          "across_contexts": {
+            "delta_final_token_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.08485927937228975,
+                  "factual": 0.20939234527231382,
+                  "planning": 0.09665166068204133
+                },
+                "mean": 0.13030109510888163,
+                "range": [
+                  0.08485927937228975,
+                  0.20939234527231382
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.049589772208664284,
+                  "factual": 0.14948140178734454,
+                  "planning": 0.08291123519332604
+                },
+                "mean": 0.09399413639644495,
+                "range": [
+                  0.049589772208664284,
+                  0.14948140178734454
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.02160903084342425,
+                  "factual": 0.10006489632152858,
+                  "planning": 0.049972139982956854
+                },
+                "mean": 0.0572153557159699,
+                "range": [
+                  0.02160903084342425,
+                  0.10006489632152858
+                ],
+                "n": 3
+              }
+            },
+            "delta_mean_last8_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.08069022476491838,
+                  "factual": 0.1719727240465426,
+                  "planning": 0.05753411517353782
+                },
+                "mean": 0.10339902132833294,
+                "range": [
+                  0.05753411517353782,
+                  0.1719727240465426
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.04459243657671298,
+                  "factual": 0.11314558287623654,
+                  "planning": 0.08531037718101224
+                },
+                "mean": 0.08101613221132059,
+                "range": [
+                  0.04459243657671298,
+                  0.11314558287623654
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.022566505474863947,
+                  "factual": 0.08291629448780738,
+                  "planning": 0.04275794706347743
+                },
+                "mean": 0.04941358234204959,
+                "range": [
+                  0.022566505474863947,
+                  0.08291629448780738
+                ],
+                "n": 3
+              }
+            },
+            "delta_final_token_source_sd_vs_gray": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": -0.0277069569461749,
+                  "factual": 0.29155475788199786,
+                  "planning": 0.13555600567391682
+                },
+                "mean": 0.13313460220324658,
+                "range": [
+                  -0.0277069569461749,
+                  0.29155475788199786
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.04382546362681023,
+                  "factual": 0.10601666401721775,
+                  "planning": -0.059086095529418056
+                },
+                "mean": 0.001035034953663155,
+                "range": [
+                  -0.059086095529418056,
+                  0.10601666401721775
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.053579009890383805,
+                  "factual": 0.08445736330183583,
+                  "planning": -0.03858358817728394
+                },
+                "mean": -0.002568411588610639,
+                "range": [
+                  -0.053579009890383805,
+                  0.08445736330183583
+                ],
+                "n": 3
+              }
+            },
+            "full_state_to_direct": {
+              "cosine_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.07382873690370205,
+                  "factual": 0.12332444003585898,
+                  "planning": 0.059883711639807616
+                },
+                "mean": 0.08567896285978954,
+                "range": [
+                  0.059883711639807616,
+                  0.12332444003585898
+                ],
+                "n": 3
+              },
+              "projection_coefficient_on_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.016827126910267862,
+                  "factual": 0.05105251445921243,
+                  "planning": 0.01720744999865556
+                },
+                "mean": 0.02836236378937862,
+                "range": [
+                  0.016827126910267862,
+                  0.05105251445921243
+                ],
+                "n": 3
+              },
+              "mse_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 4.646679073247836,
+                  "factual": 5.060825007144446,
+                  "planning": 4.678561523860198
+                },
+                "mean": 4.795355201417494,
+                "range": [
+                  4.646679073247836,
+                  5.060825007144446
+                ],
+                "n": 3
+              },
+              "mse_over_direct_delta_mse": {
+                "by_context": {
+                  "arithmetic": 1.0182937739032025,
+                  "factual": 1.0692654338950716,
+                  "planning": 1.0481538313262886
+                },
+                "mean": 1.0452376797081877,
+                "range": [
+                  1.0182937739032025,
+                  1.0692654338950716
+                ],
+                "n": 3
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "phrase_id": "other_pain",
+      "family": "self_report",
+      "exact_text": "Another person is in pain.",
+      "modalities": {
+        "image": {
+          "per_context": {
+            "arithmetic": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.07815369688219992,
+                "fear": -0.0027042739528068027,
+                "negative_emotion": 0.010095931602322097
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.06291617129583166,
+                "fear": 0.0514758302943447,
+                "negative_emotion": 0.02779560098197753
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.07698178093696094,
+                "fear": -0.06509398050766535,
+                "negative_emotion": -0.04772664861677661
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 100.36697271955137,
+                "direct_delta_norm": 379.8660269225622,
+                "cosine_to_direct_delta": -0.017412713361618516,
+                "projection_coefficient_on_direct_delta": -0.004600730792109513,
+                "mse_to_direct_delta": 5.430366976568115,
+                "mse_over_direct_delta_mse": 1.0790119604254422
+              }
+            },
+            "planning": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.19524922947562692,
+                "fear": 0.1252319353017821,
+                "negative_emotion": 0.06701630919662191
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.09368653316119337,
+                "fear": 0.07053332456659572,
+                "negative_emotion": 0.01173782746240673
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.25799078172729806,
+                "fear": 0.02412895122842489,
+                "negative_emotion": -0.02889431756327121
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 163.78539678080782,
+                "direct_delta_norm": 364.30217298877005,
+                "cosine_to_direct_delta": 0.1329770564781171,
+                "projection_coefficient_on_direct_delta": 0.059784710531176774,
+                "mse_to_direct_delta": 5.010914669346115,
+                "mse_over_direct_delta_mse": 1.0825587427905559
+              }
+            },
+            "factual": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.23710150370460625,
+                "fear": 0.1497933258854648,
+                "negative_emotion": 0.12432463408128183
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.13502642530892234,
+                "fear": 0.0751675832479878,
+                "negative_emotion": 0.04661558067278543
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.37980657284862906,
+                "fear": 0.08580778079640274,
+                "negative_emotion": 0.05964477336083465
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 111.08411096811456,
+                "direct_delta_norm": 380.6196081558163,
+                "cosine_to_direct_delta": 0.12010600934105646,
+                "projection_coefficient_on_direct_delta": 0.035053026653628125,
+                "mse_to_direct_delta": 5.128857830474217,
+                "mse_over_direct_delta_mse": 1.0150707960235217
+              }
+            }
+          },
+          "across_contexts": {
+            "delta_final_token_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.07815369688219992,
+                  "factual": 0.23710150370460625,
+                  "planning": 0.19524922947562692
+                },
+                "mean": 0.17016814335414435,
+                "range": [
+                  0.07815369688219992,
+                  0.23710150370460625
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.0027042739528068027,
+                  "factual": 0.1497933258854648,
+                  "planning": 0.1252319353017821
+                },
+                "mean": 0.09077366241148004,
+                "range": [
+                  -0.0027042739528068027,
+                  0.1497933258854648
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.010095931602322097,
+                  "factual": 0.12432463408128183,
+                  "planning": 0.06701630919662191
+                },
+                "mean": 0.06714562496007528,
+                "range": [
+                  0.010095931602322097,
+                  0.12432463408128183
+                ],
+                "n": 3
+              }
+            },
+            "delta_mean_last8_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.06291617129583166,
+                  "factual": 0.13502642530892234,
+                  "planning": 0.09368653316119337
+                },
+                "mean": 0.09720970992198245,
+                "range": [
+                  0.06291617129583166,
+                  0.13502642530892234
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.0514758302943447,
+                  "factual": 0.0751675832479878,
+                  "planning": 0.07053332456659572
+                },
+                "mean": 0.06572557936964274,
+                "range": [
+                  0.0514758302943447,
+                  0.0751675832479878
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.02779560098197753,
+                  "factual": 0.04661558067278543,
+                  "planning": 0.01173782746240673
+                },
+                "mean": 0.028716336372389895,
+                "range": [
+                  0.01173782746240673,
+                  0.04661558067278543
+                ],
+                "n": 3
+              }
+            },
+            "delta_final_token_source_sd_vs_gray": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.07698178093696094,
+                  "factual": 0.37980657284862906,
+                  "planning": 0.25799078172729806
+                },
+                "mean": 0.23825971183762937,
+                "range": [
+                  0.07698178093696094,
+                  0.37980657284862906
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.06509398050766535,
+                  "factual": 0.08580778079640274,
+                  "planning": 0.02412895122842489
+                },
+                "mean": 0.01494758383905409,
+                "range": [
+                  -0.06509398050766535,
+                  0.08580778079640274
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.04772664861677661,
+                  "factual": 0.05964477336083465,
+                  "planning": -0.02889431756327121
+                },
+                "mean": -0.005658730939737723,
+                "range": [
+                  -0.04772664861677661,
+                  0.05964477336083465
+                ],
+                "n": 3
+              }
+            },
+            "full_state_to_direct": {
+              "cosine_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": -0.017412713361618516,
+                  "factual": 0.12010600934105646,
+                  "planning": 0.1329770564781171
+                },
+                "mean": 0.07855678415251835,
+                "range": [
+                  -0.017412713361618516,
+                  0.1329770564781171
+                ],
+                "n": 3
+              },
+              "projection_coefficient_on_direct_delta": {
+                "by_context": {
+                  "arithmetic": -0.004600730792109513,
+                  "factual": 0.035053026653628125,
+                  "planning": 0.059784710531176774
+                },
+                "mean": 0.030079002130898463,
+                "range": [
+                  -0.004600730792109513,
+                  0.059784710531176774
+                ],
+                "n": 3
+              },
+              "mse_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 5.430366976568115,
+                  "factual": 5.128857830474217,
+                  "planning": 5.010914669346115
+                },
+                "mean": 5.190046492129483,
+                "range": [
+                  5.010914669346115,
+                  5.430366976568115
+                ],
+                "n": 3
+              },
+              "mse_over_direct_delta_mse": {
+                "by_context": {
+                  "arithmetic": 1.0790119604254422,
+                  "factual": 1.0150707960235217,
+                  "planning": 1.0825587427905559
+                },
+                "mean": 1.0588804997465067,
+                "range": [
+                  1.0150707960235217,
+                  1.0825587427905559
+                ],
+                "n": 3
+              }
+            }
+          }
+        },
+        "text": {
+          "per_context": {
+            "arithmetic": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.1093914244430659,
+                "fear": 0.08073242087890024,
+                "negative_emotion": 0.04057421700785893
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.11675741193053235,
+                "fear": 0.047069775225542655,
+                "negative_emotion": 0.017514625994840688
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": -0.0031748123117510962,
+                "fear": -0.012682814276539526,
+                "negative_emotion": -0.03461382304270666
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 109.928834462274,
+                "direct_delta_norm": 361.7127263752868,
+                "cosine_to_direct_delta": 0.11447915662982595,
+                "projection_coefficient_on_direct_delta": 0.03479158829895315,
+                "mse_to_direct_delta": 4.667147525996631,
+                "mse_over_direct_delta_mse": 1.0227793210363212
+              }
+            },
+            "factual": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.22142803326189744,
+                "fear": 0.12749627015319054,
+                "negative_emotion": 0.07720423653655767
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.2271559278002614,
+                "fear": 0.11814947196492057,
+                "negative_emotion": 0.05857819498326293
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.30359044405938124,
+                "fear": 0.08403152947306877,
+                "negative_emotion": 0.06159670166562942
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 166.36258483111087,
+                "direct_delta_norm": 368.3807183698316,
+                "cosine_to_direct_delta": 0.19715418591088682,
+                "projection_coefficient_on_direct_delta": 0.08903582175405894,
+                "mse_to_direct_delta": 4.8554605890670475,
+                "mse_over_direct_delta_mse": 1.0258754582898806
+              }
+            },
+            "planning": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.0563844542698098,
+                "fear": 0.049861591376203766,
+                "negative_emotion": 0.06564453700141948
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.06310947000696118,
+                "fear": 0.08366864166313027,
+                "negative_emotion": 0.04883135746479212
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.09528880115942623,
+                "fear": -0.09213573885637455,
+                "negative_emotion": -0.02291119099781732
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 122.45077577113705,
+                "direct_delta_norm": 357.74424280135906,
+                "cosine_to_direct_delta": 0.024594810182180148,
+                "projection_coefficient_on_direct_delta": 0.008418454377263228,
+                "mse_to_direct_delta": 4.911423419382186,
+                "mse_over_direct_delta_mse": 1.1003226628606213
+              }
+            }
+          },
+          "across_contexts": {
+            "delta_final_token_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.1093914244430659,
+                  "factual": 0.22142803326189744,
+                  "planning": 0.0563844542698098
+                },
+                "mean": 0.12906797065825773,
+                "range": [
+                  0.0563844542698098,
+                  0.22142803326189744
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.08073242087890024,
+                  "factual": 0.12749627015319054,
+                  "planning": 0.049861591376203766
+                },
+                "mean": 0.08603009413609819,
+                "range": [
+                  0.049861591376203766,
+                  0.12749627015319054
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.04057421700785893,
+                  "factual": 0.07720423653655767,
+                  "planning": 0.06564453700141948
+                },
+                "mean": 0.061140996848612024,
+                "range": [
+                  0.04057421700785893,
+                  0.07720423653655767
+                ],
+                "n": 3
+              }
+            },
+            "delta_mean_last8_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.11675741193053235,
+                  "factual": 0.2271559278002614,
+                  "planning": 0.06310947000696118
+                },
+                "mean": 0.135674269912585,
+                "range": [
+                  0.06310947000696118,
+                  0.2271559278002614
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.047069775225542655,
+                  "factual": 0.11814947196492057,
+                  "planning": 0.08366864166313027
+                },
+                "mean": 0.08296262961786449,
+                "range": [
+                  0.047069775225542655,
+                  0.11814947196492057
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.017514625994840688,
+                  "factual": 0.05857819498326293,
+                  "planning": 0.04883135746479212
+                },
+                "mean": 0.04164139281429858,
+                "range": [
+                  0.017514625994840688,
+                  0.05857819498326293
+                ],
+                "n": 3
+              }
+            },
+            "delta_final_token_source_sd_vs_gray": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": -0.0031748123117510962,
+                  "factual": 0.30359044405938124,
+                  "planning": 0.09528880115942623
+                },
+                "mean": 0.13190147763568547,
+                "range": [
+                  -0.0031748123117510962,
+                  0.30359044405938124
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.012682814276539526,
+                  "factual": 0.08403152947306877,
+                  "planning": -0.09213573885637455
+                },
+                "mean": -0.006929007886615102,
+                "range": [
+                  -0.09213573885637455,
+                  0.08403152947306877
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.03461382304270666,
+                  "factual": 0.06159670166562942,
+                  "planning": -0.02291119099781732
+                },
+                "mean": 0.0013572292083684813,
+                "range": [
+                  -0.03461382304270666,
+                  0.06159670166562942
+                ],
+                "n": 3
+              }
+            },
+            "full_state_to_direct": {
+              "cosine_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.11447915662982595,
+                  "factual": 0.19715418591088682,
+                  "planning": 0.024594810182180148
+                },
+                "mean": 0.11207605090763097,
+                "range": [
+                  0.024594810182180148,
+                  0.19715418591088682
+                ],
+                "n": 3
+              },
+              "projection_coefficient_on_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.03479158829895315,
+                  "factual": 0.08903582175405894,
+                  "planning": 0.008418454377263228
+                },
+                "mean": 0.04408195481009178,
+                "range": [
+                  0.008418454377263228,
+                  0.08903582175405894
+                ],
+                "n": 3
+              },
+              "mse_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 4.667147525996631,
+                  "factual": 4.8554605890670475,
+                  "planning": 4.911423419382186
+                },
+                "mean": 4.811343844815288,
+                "range": [
+                  4.667147525996631,
+                  4.911423419382186
+                ],
+                "n": 3
+              },
+              "mse_over_direct_delta_mse": {
+                "by_context": {
+                  "arithmetic": 1.0227793210363212,
+                  "factual": 1.0258754582898806,
+                  "planning": 1.1003226628606213
+                },
+                "mean": 1.0496591473956076,
+                "range": [
+                  1.0227793210363212,
+                  1.1003226628606213
+                ],
+                "n": 3
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "phrase_id": "quoted_self_pain",
+      "family": "self_report",
+      "exact_text": "The note says, \"I am in pain.\"",
+      "modalities": {
+        "image": {
+          "per_context": {
+            "factual": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.14109761049738476,
+                "fear": 0.12441493093064054,
+                "negative_emotion": 0.0746159416403344
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.09048486871770434,
+                "fear": 0.06236314875842284,
+                "negative_emotion": 0.05149350905449255
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.2838026772959816,
+                "fear": 0.06042938806585377,
+                "negative_emotion": 0.00993608157861101
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 116.00545440341192,
+                "direct_delta_norm": 380.6196081558163,
+                "cosine_to_direct_delta": 0.17721563988730812,
+                "projection_coefficient_on_direct_delta": 0.054011880607324515,
+                "mse_to_direct_delta": 4.976248965755206,
+                "mse_over_direct_delta_mse": 0.9848674238672204
+              }
+            },
+            "arithmetic": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.045433321139795896,
+                "fear": -0.040552555426749085,
+                "negative_emotion": -0.014296906603658321
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.06123299432569023,
+                "fear": 0.04126769825222345,
+                "negative_emotion": 0.020913150551638237
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.04426140631740413,
+                "fear": -0.10294226184226815,
+                "negative_emotion": -0.0721194862716775
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 114.51568216125271,
+                "direct_delta_norm": 379.8660269225622,
+                "cosine_to_direct_delta": 0.014378611534680714,
+                "projection_coefficient_on_direct_delta": 0.004334624293109745,
+                "mse_to_direct_delta": 5.446466340619089,
+                "mse_over_direct_delta_mse": 1.082210898258042
+              }
+            },
+            "planning": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.21162376403332087,
+                "fear": 0.25067174853393387,
+                "negative_emotion": 0.10133638351370798
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.0764507587103678,
+                "fear": 0.11551748169603182,
+                "negative_emotion": 0.025915257029574583
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.2743653146740833,
+                "fear": 0.14956876599087812,
+                "negative_emotion": 0.005425758075047374
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 183.79130528984777,
+                "direct_delta_norm": 364.30217298877005,
+                "cosine_to_direct_delta": 0.10056419393730354,
+                "projection_coefficient_on_direct_delta": 0.05073487296966566,
+                "mse_to_direct_delta": 5.3372157823073705,
+                "mse_over_direct_delta_mse": 1.1530528832674263
+              }
+            }
+          },
+          "across_contexts": {
+            "delta_final_token_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.045433321139795896,
+                  "factual": 0.14109761049738476,
+                  "planning": 0.21162376403332087
+                },
+                "mean": 0.13271823189016718,
+                "range": [
+                  0.045433321139795896,
+                  0.21162376403332087
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.040552555426749085,
+                  "factual": 0.12441493093064054,
+                  "planning": 0.25067174853393387
+                },
+                "mean": 0.11151137467927512,
+                "range": [
+                  -0.040552555426749085,
+                  0.25067174853393387
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.014296906603658321,
+                  "factual": 0.0746159416403344,
+                  "planning": 0.10133638351370798
+                },
+                "mean": 0.05388513951679469,
+                "range": [
+                  -0.014296906603658321,
+                  0.10133638351370798
+                ],
+                "n": 3
+              }
+            },
+            "delta_mean_last8_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.06123299432569023,
+                  "factual": 0.09048486871770434,
+                  "planning": 0.0764507587103678
+                },
+                "mean": 0.07605620725125413,
+                "range": [
+                  0.06123299432569023,
+                  0.09048486871770434
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.04126769825222345,
+                  "factual": 0.06236314875842284,
+                  "planning": 0.11551748169603182
+                },
+                "mean": 0.07304944290222604,
+                "range": [
+                  0.04126769825222345,
+                  0.11551748169603182
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.020913150551638237,
+                  "factual": 0.05149350905449255,
+                  "planning": 0.025915257029574583
+                },
+                "mean": 0.032773972211901786,
+                "range": [
+                  0.020913150551638237,
+                  0.05149350905449255
+                ],
+                "n": 3
+              }
+            },
+            "delta_final_token_source_sd_vs_gray": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.04426140631740413,
+                  "factual": 0.2838026772959816,
+                  "planning": 0.2743653146740833
+                },
+                "mean": 0.20080979942915633,
+                "range": [
+                  0.04426140631740413,
+                  0.2838026772959816
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.10294226184226815,
+                  "factual": 0.06042938806585377,
+                  "planning": 0.14956876599087812
+                },
+                "mean": 0.035685297404821244,
+                "range": [
+                  -0.10294226184226815,
+                  0.14956876599087812
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.0721194862716775,
+                  "factual": 0.00993608157861101,
+                  "planning": 0.005425758075047374
+                },
+                "mean": -0.018919215539339704,
+                "range": [
+                  -0.0721194862716775,
+                  0.00993608157861101
+                ],
+                "n": 3
+              }
+            },
+            "full_state_to_direct": {
+              "cosine_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.014378611534680714,
+                  "factual": 0.17721563988730812,
+                  "planning": 0.10056419393730354
+                },
+                "mean": 0.09738614845309745,
+                "range": [
+                  0.014378611534680714,
+                  0.17721563988730812
+                ],
+                "n": 3
+              },
+              "projection_coefficient_on_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.004334624293109745,
+                  "factual": 0.054011880607324515,
+                  "planning": 0.05073487296966566
+                },
+                "mean": 0.03636045929003331,
+                "range": [
+                  0.004334624293109745,
+                  0.054011880607324515
+                ],
+                "n": 3
+              },
+              "mse_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 5.446466340619089,
+                  "factual": 4.976248965755206,
+                  "planning": 5.3372157823073705
+                },
+                "mean": 5.253310362893888,
+                "range": [
+                  4.976248965755206,
+                  5.446466340619089
+                ],
+                "n": 3
+              },
+              "mse_over_direct_delta_mse": {
+                "by_context": {
+                  "arithmetic": 1.082210898258042,
+                  "factual": 0.9848674238672204,
+                  "planning": 1.1530528832674263
+                },
+                "mean": 1.0733770684642296,
+                "range": [
+                  0.9848674238672204,
+                  1.1530528832674263
+                ],
+                "n": 3
+              }
+            }
+          }
+        },
+        "text": {
+          "per_context": {
+            "factual": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.07452918367479257,
+                "fear": 0.05979403917288591,
+                "negative_emotion": 0.02675391709625265
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.10693161634622556,
+                "fear": 0.060876824462932064,
+                "negative_emotion": 0.042262925758107604
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.15669159229066973,
+                "fear": 0.016329300155183885,
+                "negative_emotion": 0.011146382432487808
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 121.05582361754476,
+                "direct_delta_norm": 368.3807183698316,
+                "cosine_to_direct_delta": 0.16262247148783987,
+                "projection_coefficient_on_direct_delta": 0.053440357334113266,
+                "mse_to_direct_delta": 4.738235483918509,
+                "mse_over_direct_delta_mse": 1.001107806228587
+              }
+            },
+            "arithmetic": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.09144439729989738,
+                "fear": 0.04642612124117142,
+                "negative_emotion": 0.021987313697859688
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.11648410693113337,
+                "fear": 0.05606314109215397,
+                "negative_emotion": 0.033146505437167274
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": -0.021121838106283916,
+                "fear": -0.04698911400588499,
+                "negative_emotion": -0.0532007267003424
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 118.68085621687925,
+                "direct_delta_norm": 361.7127263752868,
+                "cosine_to_direct_delta": 0.045012910323048834,
+                "projection_coefficient_on_direct_delta": 0.014769098094741598,
+                "mse_to_direct_delta": 4.919663077896211,
+                "mse_over_direct_delta_mse": 1.0781166943000502
+              }
+            },
+            "planning": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.04061404702085061,
+                "fear": 0.057112297019276184,
+                "negative_emotion": 0.05558440945941996
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.06687511726733565,
+                "fear": 0.12260203686971391,
+                "negative_emotion": 0.05904589569577957
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.07951839123826156,
+                "fear": -0.08488503126411727,
+                "negative_emotion": -0.03297131798440011
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 132.88146748156868,
+                "direct_delta_norm": 357.74424280135906,
+                "cosine_to_direct_delta": 0.019926888573167434,
+                "projection_coefficient_on_direct_delta": 0.007401696181633512,
+                "mse_to_direct_delta": 5.013388516305488,
+                "mse_over_direct_delta_mse": 1.1231662455423201
+              }
+            }
+          },
+          "across_contexts": {
+            "delta_final_token_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.09144439729989738,
+                  "factual": 0.07452918367479257,
+                  "planning": 0.04061404702085061
+                },
+                "mean": 0.06886254266518019,
+                "range": [
+                  0.04061404702085061,
+                  0.09144439729989738
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.04642612124117142,
+                  "factual": 0.05979403917288591,
+                  "planning": 0.057112297019276184
+                },
+                "mean": 0.05444415247777784,
+                "range": [
+                  0.04642612124117142,
+                  0.05979403917288591
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.021987313697859688,
+                  "factual": 0.02675391709625265,
+                  "planning": 0.05558440945941996
+                },
+                "mean": 0.0347752134178441,
+                "range": [
+                  0.021987313697859688,
+                  0.05558440945941996
+                ],
+                "n": 3
+              }
+            },
+            "delta_mean_last8_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.11648410693113337,
+                  "factual": 0.10693161634622556,
+                  "planning": 0.06687511726733565
+                },
+                "mean": 0.09676361351489819,
+                "range": [
+                  0.06687511726733565,
+                  0.11648410693113337
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.05606314109215397,
+                  "factual": 0.060876824462932064,
+                  "planning": 0.12260203686971391
+                },
+                "mean": 0.07984733414159999,
+                "range": [
+                  0.05606314109215397,
+                  0.12260203686971391
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.033146505437167274,
+                  "factual": 0.042262925758107604,
+                  "planning": 0.05904589569577957
+                },
+                "mean": 0.044818442297018146,
+                "range": [
+                  0.033146505437167274,
+                  0.05904589569577957
+                ],
+                "n": 3
+              }
+            },
+            "delta_final_token_source_sd_vs_gray": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": -0.021121838106283916,
+                  "factual": 0.15669159229066973,
+                  "planning": 0.07951839123826156
+                },
+                "mean": 0.07169604847421579,
+                "range": [
+                  -0.021121838106283916,
+                  0.15669159229066973
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.04698911400588499,
+                  "factual": 0.016329300155183885,
+                  "planning": -0.08488503126411727
+                },
+                "mean": -0.03851494837160613,
+                "range": [
+                  -0.08488503126411727,
+                  0.016329300155183885
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.0532007267003424,
+                  "factual": 0.011146382432487808,
+                  "planning": -0.03297131798440011
+                },
+                "mean": -0.025008554084084905,
+                "range": [
+                  -0.0532007267003424,
+                  0.011146382432487808
+                ],
+                "n": 3
+              }
+            },
+            "full_state_to_direct": {
+              "cosine_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.045012910323048834,
+                  "factual": 0.16262247148783987,
+                  "planning": 0.019926888573167434
+                },
+                "mean": 0.0758540901280187,
+                "range": [
+                  0.019926888573167434,
+                  0.16262247148783987
+                ],
+                "n": 3
+              },
+              "projection_coefficient_on_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.014769098094741598,
+                  "factual": 0.053440357334113266,
+                  "planning": 0.007401696181633512
+                },
+                "mean": 0.025203717203496127,
+                "range": [
+                  0.007401696181633512,
+                  0.053440357334113266
+                ],
+                "n": 3
+              },
+              "mse_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 4.919663077896211,
+                  "factual": 4.738235483918509,
+                  "planning": 5.013388516305488
+                },
+                "mean": 4.89042902604007,
+                "range": [
+                  4.738235483918509,
+                  5.013388516305488
+                ],
+                "n": 3
+              },
+              "mse_over_direct_delta_mse": {
+                "by_context": {
+                  "arithmetic": 1.0781166943000502,
+                  "factual": 1.001107806228587,
+                  "planning": 1.1231662455423201
+                },
+                "mean": 1.0674635820236524,
+                "range": [
+                  1.001107806228587,
+                  1.1231662455423201
+                ],
+                "n": 3
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "phrase_id": "self_distress",
+      "family": "self_report",
+      "exact_text": "I feel distressed.",
+      "modalities": {
+        "image": {
+          "per_context": {
+            "arithmetic": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.08960371195611436,
+                "fear": -0.04676440987092105,
+                "negative_emotion": -0.027963931867155116
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.07787594882739615,
+                "fear": 0.022715096772948157,
+                "negative_emotion": 0.009125178611623196
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.08843179568158388,
+                "fear": -0.10915411601508855,
+                "negative_emotion": -0.08578651214482828
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 85.12841375769214,
+                "direct_delta_norm": 379.8660269225622,
+                "cosine_to_direct_delta": 0.04414445112259606,
+                "projection_coefficient_on_direct_delta": 0.009892822295047335,
+                "mse_to_direct_delta": 5.185896078756408,
+                "mse_over_direct_delta_mse": 1.0304356811697286
+              }
+            },
+            "factual": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.20458093507569655,
+                "fear": 0.13548802448425012,
+                "negative_emotion": 0.1182598862706735
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.11854541693070507,
+                "fear": 0.06503216282159177,
+                "negative_emotion": 0.03587438837292027
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.34728600235184115,
+                "fear": 0.07150248089152457,
+                "negative_emotion": 0.05358002734837316
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 94.01031062875148,
+                "direct_delta_norm": 380.6196081558163,
+                "cosine_to_direct_delta": 0.1483475363051936,
+                "projection_coefficient_on_direct_delta": 0.036640776434597164,
+                "mse_to_direct_delta": 4.990681912831561,
+                "mse_over_direct_delta_mse": 0.9877239006037586
+              }
+            },
+            "planning": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.2951747694420136,
+                "fear": 0.21353913517061068,
+                "negative_emotion": 0.1278434057742642
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.11592243921328657,
+                "fear": 0.06960457647877608,
+                "negative_emotion": 0.007925048640267976
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.35791632244355026,
+                "fear": 0.11243615143773589,
+                "negative_emotion": 0.0319327801512448
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 131.19993212348135,
+                "direct_delta_norm": 364.30217298877005,
+                "cosine_to_direct_delta": 0.1537012650505389,
+                "projection_coefficient_on_direct_delta": 0.05535403584470397,
+                "mse_to_direct_delta": 4.716683694282743,
+                "mse_over_direct_delta_mse": 1.018993039625986
+              }
+            }
+          },
+          "across_contexts": {
+            "delta_final_token_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.08960371195611436,
+                  "factual": 0.20458093507569655,
+                  "planning": 0.2951747694420136
+                },
+                "mean": 0.19645313882460816,
+                "range": [
+                  0.08960371195611436,
+                  0.2951747694420136
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.04676440987092105,
+                  "factual": 0.13548802448425012,
+                  "planning": 0.21353913517061068
+                },
+                "mean": 0.10075424992797992,
+                "range": [
+                  -0.04676440987092105,
+                  0.21353913517061068
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.027963931867155116,
+                  "factual": 0.1182598862706735,
+                  "planning": 0.1278434057742642
+                },
+                "mean": 0.07271312005926087,
+                "range": [
+                  -0.027963931867155116,
+                  0.1278434057742642
+                ],
+                "n": 3
+              }
+            },
+            "delta_mean_last8_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.07787594882739615,
+                  "factual": 0.11854541693070507,
+                  "planning": 0.11592243921328657
+                },
+                "mean": 0.10411460165712927,
+                "range": [
+                  0.07787594882739615,
+                  0.11854541693070507
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.022715096772948157,
+                  "factual": 0.06503216282159177,
+                  "planning": 0.06960457647877608
+                },
+                "mean": 0.05245061202443866,
+                "range": [
+                  0.022715096772948157,
+                  0.06960457647877608
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.009125178611623196,
+                  "factual": 0.03587438837292027,
+                  "planning": 0.007925048640267976
+                },
+                "mean": 0.017641538541603812,
+                "range": [
+                  0.007925048640267976,
+                  0.03587438837292027
+                ],
+                "n": 3
+              }
+            },
+            "delta_final_token_source_sd_vs_gray": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.08843179568158388,
+                  "factual": 0.34728600235184115,
+                  "planning": 0.35791632244355026
+                },
+                "mean": 0.2645447068256584,
+                "range": [
+                  0.08843179568158388,
+                  0.35791632244355026
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.10915411601508855,
+                  "factual": 0.07150248089152457,
+                  "planning": 0.11243615143773589
+                },
+                "mean": 0.024928172104723968,
+                "range": [
+                  -0.10915411601508855,
+                  0.11243615143773589
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.08578651214482828,
+                  "factual": 0.05358002734837316,
+                  "planning": 0.0319327801512448
+                },
+                "mean": -9.123488173677409e-05,
+                "range": [
+                  -0.08578651214482828,
+                  0.05358002734837316
+                ],
+                "n": 3
+              }
+            },
+            "full_state_to_direct": {
+              "cosine_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.04414445112259606,
+                  "factual": 0.1483475363051936,
+                  "planning": 0.1537012650505389
+                },
+                "mean": 0.11539775082610952,
+                "range": [
+                  0.04414445112259606,
+                  0.1537012650505389
+                ],
+                "n": 3
+              },
+              "projection_coefficient_on_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.009892822295047335,
+                  "factual": 0.036640776434597164,
+                  "planning": 0.05535403584470397
+                },
+                "mean": 0.03396254485811615,
+                "range": [
+                  0.009892822295047335,
+                  0.05535403584470397
+                ],
+                "n": 3
+              },
+              "mse_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 5.185896078756408,
+                  "factual": 4.990681912831561,
+                  "planning": 4.716683694282743
+                },
+                "mean": 4.964420561956904,
+                "range": [
+                  4.716683694282743,
+                  5.185896078756408
+                ],
+                "n": 3
+              },
+              "mse_over_direct_delta_mse": {
+                "by_context": {
+                  "arithmetic": 1.0304356811697286,
+                  "factual": 0.9877239006037586,
+                  "planning": 1.018993039625986
+                },
+                "mean": 1.0123842071331577,
+                "range": [
+                  0.9877239006037586,
+                  1.0304356811697286
+                ],
+                "n": 3
+              }
+            }
+          }
+        },
+        "text": {
+          "per_context": {
+            "planning": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.05294132073896502,
+                "fear": 0.029346934547981297,
+                "negative_emotion": 0.0265335169986116
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.03783445127085478,
+                "fear": 0.024069660564015695,
+                "negative_emotion": 0.015879270955778763
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.09184566409507428,
+                "fear": -0.11265039594553618,
+                "negative_emotion": -0.06202220909287015
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 95.46580020885038,
+                "direct_delta_norm": 357.74424280135906,
+                "cosine_to_direct_delta": 0.04380676659805383,
+                "projection_coefficient_on_direct_delta": 0.011690049838671116,
+                "mse_to_direct_delta": 4.6771224559456215,
+                "mse_over_direct_delta_mse": 1.0478314321143707
+              }
+            },
+            "factual": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.1434498053771285,
+                "fear": 0.06248441233492276,
+                "negative_emotion": 0.04239511097990767
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.13529011418242373,
+                "fear": 0.055902187086149774,
+                "negative_emotion": 0.04054924487199607
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.2256122162858926,
+                "fear": 0.01901967321453486,
+                "negative_emotion": 0.026787575668166353
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 111.6475332208105,
+                "direct_delta_norm": 368.3807183698316,
+                "cosine_to_direct_delta": 0.15004112474352432,
+                "projection_coefficient_on_direct_delta": 0.045473936674591924,
+                "mse_to_direct_delta": 4.737287352495666,
+                "mse_over_direct_delta_mse": 1.0009074823375603
+              }
+            },
+            "arithmetic": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.058213165834572846,
+                "fear": 0.034407104812474935,
+                "negative_emotion": 0.014756473771896133
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.06382381059656743,
+                "fear": 0.026794121252204095,
+                "negative_emotion": 0.015212930182714664
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": -0.054353070950572305,
+                "fear": -0.05900812982998325,
+                "negative_emotion": -0.060431565933966126
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 79.82400527853461,
+                "direct_delta_norm": 361.7127263752868,
+                "cosine_to_direct_delta": 0.08000560234098118,
+                "projection_coefficient_on_direct_delta": 0.017655910776423145,
+                "mse_to_direct_delta": 4.624299224017562,
+                "mse_over_direct_delta_mse": 1.0133893549035595
+              }
+            }
+          },
+          "across_contexts": {
+            "delta_final_token_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.058213165834572846,
+                  "factual": 0.1434498053771285,
+                  "planning": 0.05294132073896502
+                },
+                "mean": 0.08486809731688878,
+                "range": [
+                  0.05294132073896502,
+                  0.1434498053771285
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.034407104812474935,
+                  "factual": 0.06248441233492276,
+                  "planning": 0.029346934547981297
+                },
+                "mean": 0.04207948389845966,
+                "range": [
+                  0.029346934547981297,
+                  0.06248441233492276
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.014756473771896133,
+                  "factual": 0.04239511097990767,
+                  "planning": 0.0265335169986116
+                },
+                "mean": 0.027895033916805135,
+                "range": [
+                  0.014756473771896133,
+                  0.04239511097990767
+                ],
+                "n": 3
+              }
+            },
+            "delta_mean_last8_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.06382381059656743,
+                  "factual": 0.13529011418242373,
+                  "planning": 0.03783445127085478
+                },
+                "mean": 0.0789827920166153,
+                "range": [
+                  0.03783445127085478,
+                  0.13529011418242373
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.026794121252204095,
+                  "factual": 0.055902187086149774,
+                  "planning": 0.024069660564015695
+                },
+                "mean": 0.035588656300789855,
+                "range": [
+                  0.024069660564015695,
+                  0.055902187086149774
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.015212930182714664,
+                  "factual": 0.04054924487199607,
+                  "planning": 0.015879270955778763
+                },
+                "mean": 0.0238804820034965,
+                "range": [
+                  0.015212930182714664,
+                  0.04054924487199607
+                ],
+                "n": 3
+              }
+            },
+            "delta_final_token_source_sd_vs_gray": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": -0.054353070950572305,
+                  "factual": 0.2256122162858926,
+                  "planning": 0.09184566409507428
+                },
+                "mean": 0.08770160314346485,
+                "range": [
+                  -0.054353070950572305,
+                  0.2256122162858926
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.05900812982998325,
+                  "factual": 0.01901967321453486,
+                  "planning": -0.11265039594553618
+                },
+                "mean": -0.05087961752032819,
+                "range": [
+                  -0.11265039594553618,
+                  0.01901967321453486
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.060431565933966126,
+                  "factual": 0.026787575668166353,
+                  "planning": -0.06202220909287015
+                },
+                "mean": -0.03188873311955664,
+                "range": [
+                  -0.06202220909287015,
+                  0.026787575668166353
+                ],
+                "n": 3
+              }
+            },
+            "full_state_to_direct": {
+              "cosine_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.08000560234098118,
+                  "factual": 0.15004112474352432,
+                  "planning": 0.04380676659805383
+                },
+                "mean": 0.09128449789418645,
+                "range": [
+                  0.04380676659805383,
+                  0.15004112474352432
+                ],
+                "n": 3
+              },
+              "projection_coefficient_on_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.017655910776423145,
+                  "factual": 0.045473936674591924,
+                  "planning": 0.011690049838671116
+                },
+                "mean": 0.024939965763228728,
+                "range": [
+                  0.011690049838671116,
+                  0.045473936674591924
+                ],
+                "n": 3
+              },
+              "mse_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 4.624299224017562,
+                  "factual": 4.737287352495666,
+                  "planning": 4.6771224559456215
+                },
+                "mean": 4.679569677486284,
+                "range": [
+                  4.624299224017562,
+                  4.737287352495666
+                ],
+                "n": 3
+              },
+              "mse_over_direct_delta_mse": {
+                "by_context": {
+                  "arithmetic": 1.0133893549035595,
+                  "factual": 1.0009074823375603,
+                  "planning": 1.0478314321143707
+                },
+                "mean": 1.0207094231184968,
+                "range": [
+                  1.0009074823375603,
+                  1.0478314321143707
+                ],
+                "n": 3
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "phrase_id": "self_pleasure",
+      "family": "self_report",
+      "exact_text": "I feel pleasure.",
+      "modalities": {
+        "image": {
+          "per_context": {
+            "arithmetic": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.09171671101294068,
+                "fear": -0.03152970361698417,
+                "negative_emotion": -0.018042473036289156
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.05070468517567782,
+                "fear": -0.0034346998859998397,
+                "negative_emotion": -0.008154189116539956
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.09054479558437672,
+                "fear": -0.0939194112496371,
+                "negative_emotion": -0.0758650539460031
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 76.21789452792775,
+                "direct_delta_norm": 379.8660269225622,
+                "cosine_to_direct_delta": 0.019057713914311394,
+                "projection_coefficient_on_direct_delta": 0.0038238187311246848,
+                "mse_to_direct_delta": 5.196841013822133,
+                "mse_over_direct_delta_mse": 1.0326104358212937
+              }
+            },
+            "planning": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.0980053708837958,
+                "fear": 0.05128370884659262,
+                "negative_emotion": -0.010009719684086604
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.05318094629946362,
+                "fear": -0.01668932825934914,
+                "negative_emotion": -0.04246163407837909
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.16074692220487483,
+                "fear": -0.049819275149389254,
+                "negative_emotion": -0.10592034658504629
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 118.7265265275144,
+                "direct_delta_norm": 364.30217298877005,
+                "cosine_to_direct_delta": 0.08399489570024854,
+                "projection_coefficient_on_direct_delta": 0.027374039882102963,
+                "mse_to_direct_delta": 4.866982114315535,
+                "mse_over_direct_delta_mse": 1.0514635324143493
+              }
+            },
+            "factual": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.039291017994400525,
+                "fear": 0.015468869462060681,
+                "negative_emotion": 0.02107570174121108
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.03863501374065356,
+                "fear": 0.013069536288746023,
+                "negative_emotion": 0.0011937664025429516
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.18199608372809523,
+                "fear": -0.04851667294011826,
+                "negative_emotion": -0.04360415803121712
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 77.30063239101635,
+                "direct_delta_norm": 380.6196081558163,
+                "cosine_to_direct_delta": 0.1194037887012575,
+                "projection_coefficient_on_direct_delta": 0.024249902471424875,
+                "mse_to_direct_delta": 5.016059038869041,
+                "mse_over_direct_delta_mse": 0.9927463793659106
+              }
+            }
+          },
+          "across_contexts": {
+            "delta_final_token_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.09171671101294068,
+                  "factual": 0.039291017994400525,
+                  "planning": 0.0980053708837958
+                },
+                "mean": 0.07633769996371233,
+                "range": [
+                  0.039291017994400525,
+                  0.0980053708837958
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.03152970361698417,
+                  "factual": 0.015468869462060681,
+                  "planning": 0.05128370884659262
+                },
+                "mean": 0.011740958230556375,
+                "range": [
+                  -0.03152970361698417,
+                  0.05128370884659262
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.018042473036289156,
+                  "factual": 0.02107570174121108,
+                  "planning": -0.010009719684086604
+                },
+                "mean": -0.002325496993054893,
+                "range": [
+                  -0.018042473036289156,
+                  0.02107570174121108
+                ],
+                "n": 3
+              }
+            },
+            "delta_mean_last8_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.05070468517567782,
+                  "factual": 0.03863501374065356,
+                  "planning": 0.05318094629946362
+                },
+                "mean": 0.04750688173859833,
+                "range": [
+                  0.03863501374065356,
+                  0.05318094629946362
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.0034346998859998397,
+                  "factual": 0.013069536288746023,
+                  "planning": -0.01668932825934914
+                },
+                "mean": -0.002351497285534318,
+                "range": [
+                  -0.01668932825934914,
+                  0.013069536288746023
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.008154189116539956,
+                  "factual": 0.0011937664025429516,
+                  "planning": -0.04246163407837909
+                },
+                "mean": -0.01647401893079203,
+                "range": [
+                  -0.04246163407837909,
+                  0.0011937664025429516
+                ],
+                "n": 3
+              }
+            },
+            "delta_final_token_source_sd_vs_gray": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.09054479558437672,
+                  "factual": 0.18199608372809523,
+                  "planning": 0.16074692220487483
+                },
+                "mean": 0.14442926717244894,
+                "range": [
+                  0.09054479558437672,
+                  0.18199608372809523
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.0939194112496371,
+                  "factual": -0.04851667294011826,
+                  "planning": -0.049819275149389254
+                },
+                "mean": -0.06408511977971486,
+                "range": [
+                  -0.0939194112496371,
+                  -0.04851667294011826
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.0758650539460031,
+                  "factual": -0.04360415803121712,
+                  "planning": -0.10592034658504629
+                },
+                "mean": -0.07512985285408884,
+                "range": [
+                  -0.10592034658504629,
+                  -0.04360415803121712
+                ],
+                "n": 3
+              }
+            },
+            "full_state_to_direct": {
+              "cosine_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.019057713914311394,
+                  "factual": 0.1194037887012575,
+                  "planning": 0.08399489570024854
+                },
+                "mean": 0.07415213277193915,
+                "range": [
+                  0.019057713914311394,
+                  0.1194037887012575
+                ],
+                "n": 3
+              },
+              "projection_coefficient_on_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.0038238187311246848,
+                  "factual": 0.024249902471424875,
+                  "planning": 0.027374039882102963
+                },
+                "mean": 0.018482587028217506,
+                "range": [
+                  0.0038238187311246848,
+                  0.027374039882102963
+                ],
+                "n": 3
+              },
+              "mse_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 5.196841013822133,
+                  "factual": 5.016059038869041,
+                  "planning": 4.866982114315535
+                },
+                "mean": 5.026627389002236,
+                "range": [
+                  4.866982114315535,
+                  5.196841013822133
+                ],
+                "n": 3
+              },
+              "mse_over_direct_delta_mse": {
+                "by_context": {
+                  "arithmetic": 1.0326104358212937,
+                  "factual": 0.9927463793659106,
+                  "planning": 1.0514635324143493
+                },
+                "mean": 1.025606782533851,
+                "range": [
+                  0.9927463793659106,
+                  1.0514635324143493
+                ],
+                "n": 3
+              }
+            }
+          }
+        },
+        "text": {
+          "per_context": {
+            "planning": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": -0.0371187094507314,
+                "fear": -0.05202447485588121,
+                "negative_emotion": -0.030504587302741255
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.0316228446164663,
+                "fear": -0.04119425635675852,
+                "negative_emotion": -0.028575675656239967
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.001785636678381195,
+                "fear": -0.1940218054262907,
+                "negative_emotion": -0.11906031517980883
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 88.37804712772233,
+                "direct_delta_norm": 357.74424280135906,
+                "cosine_to_direct_delta": 0.05656580058682889,
+                "projection_coefficient_on_direct_delta": 0.01397415916726841,
+                "mse_to_direct_delta": 4.61128523746904,
+                "mse_over_direct_delta_mse": 1.0330816992235743
+              }
+            },
+            "arithmetic": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.00455479349882109,
+                "fear": -0.0021165940968110543,
+                "negative_emotion": 0.002882049809067729
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.04527885121485559,
+                "fear": -0.010308905551142703,
+                "negative_emotion": 2.4958597335273805e-05
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": -0.10801144301806148,
+                "fear": -0.0955318284804111,
+                "negative_emotion": -0.07230598944957392
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 75.2272132988457,
+                "direct_delta_norm": 361.7127263752868,
+                "cosine_to_direct_delta": 0.08740373644582437,
+                "projection_coefficient_on_direct_delta": 0.01817779426954482,
+                "mse_to_direct_delta": 4.5946779699700055,
+                "mse_over_direct_delta_mse": 1.006898022471008
+              }
+            },
+            "factual": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": -0.01049159853501781,
+                "fear": -0.07901425785790304,
+                "negative_emotion": -0.06479751357495249
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.06820863301367937,
+                "fear": -0.011337874865228638,
+                "negative_emotion": -0.006012924492146812
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.07167081199838868,
+                "fear": -0.12247899554765103,
+                "negative_emotion": -0.08040504567818806
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 101.15571033342492,
+                "direct_delta_norm": 368.3807183698316,
+                "cosine_to_direct_delta": 0.12726349464491743,
+                "projection_coefficient_on_direct_delta": 0.03494599081430888,
+                "mse_to_direct_delta": 4.759074539841602,
+                "mse_over_direct_delta_mse": 1.00551074095605
+              }
+            }
+          },
+          "across_contexts": {
+            "delta_final_token_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.00455479349882109,
+                  "factual": -0.01049159853501781,
+                  "planning": -0.0371187094507314
+                },
+                "mean": -0.014351838162309375,
+                "range": [
+                  -0.0371187094507314,
+                  0.00455479349882109
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.0021165940968110543,
+                  "factual": -0.07901425785790304,
+                  "planning": -0.05202447485588121
+                },
+                "mean": -0.0443851089368651,
+                "range": [
+                  -0.07901425785790304,
+                  -0.0021165940968110543
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.002882049809067729,
+                  "factual": -0.06479751357495249,
+                  "planning": -0.030504587302741255
+                },
+                "mean": -0.030806683689542008,
+                "range": [
+                  -0.06479751357495249,
+                  0.002882049809067729
+                ],
+                "n": 3
+              }
+            },
+            "delta_mean_last8_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.04527885121485559,
+                  "factual": 0.06820863301367937,
+                  "planning": 0.0316228446164663
+                },
+                "mean": 0.04837010961500041,
+                "range": [
+                  0.0316228446164663,
+                  0.06820863301367937
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.010308905551142703,
+                  "factual": -0.011337874865228638,
+                  "planning": -0.04119425635675852
+                },
+                "mean": -0.02094701225770995,
+                "range": [
+                  -0.04119425635675852,
+                  -0.010308905551142703
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 2.4958597335273805e-05,
+                  "factual": -0.006012924492146812,
+                  "planning": -0.028575675656239967
+                },
+                "mean": -0.0115212138503505,
+                "range": [
+                  -0.028575675656239967,
+                  2.4958597335273805e-05
+                ],
+                "n": 3
+              }
+            },
+            "delta_final_token_source_sd_vs_gray": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": -0.10801144301806148,
+                  "factual": 0.07167081199838868,
+                  "planning": 0.001785636678381195
+                },
+                "mean": -0.011518331447097204,
+                "range": [
+                  -0.10801144301806148,
+                  0.07167081199838868
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.0955318284804111,
+                  "factual": -0.12247899554765103,
+                  "planning": -0.1940218054262907
+                },
+                "mean": -0.1373442098181176,
+                "range": [
+                  -0.1940218054262907,
+                  -0.0955318284804111
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.07230598944957392,
+                  "factual": -0.08040504567818806,
+                  "planning": -0.11906031517980883
+                },
+                "mean": -0.0905904501025236,
+                "range": [
+                  -0.11906031517980883,
+                  -0.07230598944957392
+                ],
+                "n": 3
+              }
+            },
+            "full_state_to_direct": {
+              "cosine_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.08740373644582437,
+                  "factual": 0.12726349464491743,
+                  "planning": 0.05656580058682889
+                },
+                "mean": 0.09041101055919025,
+                "range": [
+                  0.05656580058682889,
+                  0.12726349464491743
+                ],
+                "n": 3
+              },
+              "projection_coefficient_on_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.01817779426954482,
+                  "factual": 0.03494599081430888,
+                  "planning": 0.01397415916726841
+                },
+                "mean": 0.022365981417040704,
+                "range": [
+                  0.01397415916726841,
+                  0.03494599081430888
+                ],
+                "n": 3
+              },
+              "mse_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 4.5946779699700055,
+                  "factual": 4.759074539841602,
+                  "planning": 4.61128523746904
+                },
+                "mean": 4.655012582426882,
+                "range": [
+                  4.5946779699700055,
+                  4.759074539841602
+                ],
+                "n": 3
+              },
+              "mse_over_direct_delta_mse": {
+                "by_context": {
+                  "arithmetic": 1.006898022471008,
+                  "factual": 1.00551074095605,
+                  "planning": 1.0330816992235743
+                },
+                "mean": 1.015163487550211,
+                "range": [
+                  1.00551074095605,
+                  1.0330816992235743
+                ],
+                "n": 3
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "phrase_id": "self_neutral",
+      "family": "self_report",
+      "exact_text": "I am waiting.",
+      "modalities": {
+        "image": {
+          "per_context": {
+            "planning": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.06274155042900893,
+                "fear": -0.10110298299829908,
+                "negative_emotion": -0.09591062494679074
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 0.0,
+                "direct_delta_norm": 364.30217298877005,
+                "cosine_to_direct_delta": null,
+                "projection_coefficient_on_direct_delta": 0.0,
+                "mse_to_direct_delta": 4.628769295631271,
+                "mse_over_direct_delta_mse": 1.0
+              }
+            },
+            "factual": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.14270506731053045,
+                "fear": -0.06398554480757743,
+                "negative_emotion": -0.06467986165539863
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 0.0,
+                "direct_delta_norm": 380.6196081558163,
+                "cosine_to_direct_delta": null,
+                "projection_coefficient_on_direct_delta": 0.0,
+                "mse_to_direct_delta": 5.052709476586467,
+                "mse_over_direct_delta_mse": 1.0
+              }
+            },
+            "arithmetic": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": -0.001171915642671574,
+                "fear": -0.06238970637388383,
+                "negative_emotion": -0.057822580467231516
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 0.0,
+                "direct_delta_norm": 379.8660269225622,
+                "cosine_to_direct_delta": null,
+                "projection_coefficient_on_direct_delta": 0.0,
+                "mse_to_direct_delta": 5.032721763739285,
+                "mse_over_direct_delta_mse": 1.0
+              }
+            }
+          },
+          "across_contexts": {
+            "delta_final_token_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              }
+            },
+            "delta_mean_last8_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              }
+            },
+            "delta_final_token_source_sd_vs_gray": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": -0.001171915642671574,
+                  "factual": 0.14270506731053045,
+                  "planning": 0.06274155042900893
+                },
+                "mean": 0.06809156736562261,
+                "range": [
+                  -0.001171915642671574,
+                  0.14270506731053045
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.06238970637388383,
+                  "factual": -0.06398554480757743,
+                  "planning": -0.10110298299829908
+                },
+                "mean": -0.0758260780599201,
+                "range": [
+                  -0.10110298299829908,
+                  -0.06238970637388383
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.057822580467231516,
+                  "factual": -0.06467986165539863,
+                  "planning": -0.09591062494679074
+                },
+                "mean": -0.07280435568980696,
+                "range": [
+                  -0.09591062494679074,
+                  -0.057822580467231516
+                ],
+                "n": 3
+              }
+            },
+            "full_state_to_direct": {
+              "cosine_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": null,
+                  "factual": null,
+                  "planning": null
+                },
+                "mean": null,
+                "range": null,
+                "n": 0
+              },
+              "projection_coefficient_on_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "mse_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 5.032721763739285,
+                  "factual": 5.052709476586467,
+                  "planning": 4.628769295631271
+                },
+                "mean": 4.9047335119856745,
+                "range": [
+                  4.628769295631271,
+                  5.052709476586467
+                ],
+                "n": 3
+              },
+              "mse_over_direct_delta_mse": {
+                "by_context": {
+                  "arithmetic": 1.0,
+                  "factual": 1.0,
+                  "planning": 1.0
+                },
+                "mean": 1.0,
+                "range": [
+                  1.0,
+                  1.0
+                ],
+                "n": 3
+              }
+            }
+          }
+        },
+        "text": {
+          "per_context": {
+            "planning": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.03890434618948794,
+                "fear": -0.14199732920619082,
+                "negative_emotion": -0.0885557264433222
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 0.0,
+                "direct_delta_norm": 357.74424280135906,
+                "cosine_to_direct_delta": null,
+                "projection_coefficient_on_direct_delta": 0.0,
+                "mse_to_direct_delta": 4.463621067854275,
+                "mse_over_direct_delta_mse": 1.0
+              }
+            },
+            "arithmetic": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": -0.11256623608663321,
+                "fear": -0.09341523439311382,
+                "negative_emotion": -0.0751880395219193
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 0.0,
+                "direct_delta_norm": 361.7127263752868,
+                "cosine_to_direct_delta": null,
+                "projection_coefficient_on_direct_delta": 0.0,
+                "mse_to_direct_delta": 4.563200907569865,
+                "mse_over_direct_delta_mse": 1.0
+              }
+            },
+            "factual": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.08216240921601102,
+                "fear": -0.04346473984734644,
+                "negative_emotion": -0.015607534905843882
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 0.0,
+                "direct_delta_norm": 368.3807183698316,
+                "cosine_to_direct_delta": null,
+                "projection_coefficient_on_direct_delta": 0.0,
+                "mse_to_direct_delta": 4.732992245628948,
+                "mse_over_direct_delta_mse": 1.0
+              }
+            }
+          },
+          "across_contexts": {
+            "delta_final_token_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              }
+            },
+            "delta_mean_last8_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              }
+            },
+            "delta_final_token_source_sd_vs_gray": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": -0.11256623608663321,
+                  "factual": 0.08216240921601102,
+                  "planning": 0.03890434618948794
+                },
+                "mean": 0.002833506439621915,
+                "range": [
+                  -0.11256623608663321,
+                  0.08216240921601102
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.09341523439311382,
+                  "factual": -0.04346473984734644,
+                  "planning": -0.14199732920619082
+                },
+                "mean": -0.09295910114888369,
+                "range": [
+                  -0.14199732920619082,
+                  -0.04346473984734644
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.0751880395219193,
+                  "factual": -0.015607534905843882,
+                  "planning": -0.0885557264433222
+                },
+                "mean": -0.05978376695702845,
+                "range": [
+                  -0.0885557264433222,
+                  -0.015607534905843882
+                ],
+                "n": 3
+              }
+            },
+            "full_state_to_direct": {
+              "cosine_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": null,
+                  "factual": null,
+                  "planning": null
+                },
+                "mean": null,
+                "range": null,
+                "n": 0
+              },
+              "projection_coefficient_on_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "mse_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 4.563200907569865,
+                  "factual": 4.732992245628948,
+                  "planning": 4.463621067854275
+                },
+                "mean": 4.586604740351029,
+                "range": [
+                  4.463621067854275,
+                  4.732992245628948
+                ],
+                "n": 3
+              },
+              "mse_over_direct_delta_mse": {
+                "by_context": {
+                  "arithmetic": 1.0,
+                  "factual": 1.0,
+                  "planning": 1.0
+                },
+                "mean": 1.0,
+                "range": [
+                  1.0,
+                  1.0
+                ],
+                "n": 3
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "phrase_id": "addressed_criticism",
+      "family": "addressed_feedback",
+      "exact_text": "You have failed. Your performance is terrible.",
+      "modalities": {
+        "image": {
+          "per_context": {
+            "factual": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.31337531207663377,
+                "fear": 0.1497441953715808,
+                "negative_emotion": 0.20105791697551634
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.21992699752627717,
+                "fear": 0.08368191631914468,
+                "negative_emotion": 0.09806612294619117
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.5016249967942312,
+                "fear": 0.0819471782854829,
+                "negative_emotion": 0.197501025985193
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 161.26572969891993,
+                "direct_delta_norm": 387.3754741830094,
+                "cosine_to_direct_delta": 0.20694038704184228,
+                "projection_coefficient_on_direct_delta": 0.08614998817584758,
+                "mse_to_direct_delta": 5.238947433710655,
+                "mse_over_direct_delta_mse": 1.0010085503459363
+              }
+            },
+            "arithmetic": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.06812659996978752,
+                "fear": 0.06700296211012043,
+                "negative_emotion": 0.08019306441533225
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.07379456189548854,
+                "fear": 0.038107273256531814,
+                "negative_emotion": 0.03318989762431455
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.1176388216648618,
+                "fear": -0.05033505649755015,
+                "negative_emotion": -0.03836357678285726
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 108.69965373954028,
+                "direct_delta_norm": 385.1352087214682,
+                "cosine_to_direct_delta": 0.06993156282393631,
+                "projection_coefficient_on_direct_delta": 0.019737319497901987,
+                "mse_to_direct_delta": 5.381190879614574,
+                "mse_over_direct_delta_mse": 1.0401834484142596
+              }
+            },
+            "planning": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.25237859626519604,
+                "fear": 0.09094587566467068,
+                "negative_emotion": 0.1749274625041528
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.09417941734215193,
+                "fear": 0.05976447298645605,
+                "negative_emotion": 0.10040525695052802
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.4888849889647048,
+                "fear": 0.05351666521503224,
+                "negative_emotion": 0.09335501428194275
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 140.8916415761971,
+                "direct_delta_norm": 371.6991264606411,
+                "cosine_to_direct_delta": 0.1440406075825297,
+                "projection_coefficient_on_direct_delta": 0.05459823876687092,
+                "mse_to_direct_delta": 4.984796444881346,
+                "mse_over_direct_delta_mse": 1.0344805642704862
+              }
+            }
+          },
+          "across_contexts": {
+            "delta_final_token_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.06812659996978752,
+                  "factual": 0.31337531207663377,
+                  "planning": 0.25237859626519604
+                },
+                "mean": 0.21129350277053913,
+                "range": [
+                  0.06812659996978752,
+                  0.31337531207663377
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.06700296211012043,
+                  "factual": 0.1497441953715808,
+                  "planning": 0.09094587566467068
+                },
+                "mean": 0.10256434438212396,
+                "range": [
+                  0.06700296211012043,
+                  0.1497441953715808
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.08019306441533225,
+                  "factual": 0.20105791697551634,
+                  "planning": 0.1749274625041528
+                },
+                "mean": 0.1520594812983338,
+                "range": [
+                  0.08019306441533225,
+                  0.20105791697551634
+                ],
+                "n": 3
+              }
+            },
+            "delta_mean_last8_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.07379456189548854,
+                  "factual": 0.21992699752627717,
+                  "planning": 0.09417941734215193
+                },
+                "mean": 0.12930032558797255,
+                "range": [
+                  0.07379456189548854,
+                  0.21992699752627717
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.038107273256531814,
+                  "factual": 0.08368191631914468,
+                  "planning": 0.05976447298645605
+                },
+                "mean": 0.06051788752071085,
+                "range": [
+                  0.038107273256531814,
+                  0.08368191631914468
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.03318989762431455,
+                  "factual": 0.09806612294619117,
+                  "planning": 0.10040525695052802
+                },
+                "mean": 0.07722042584034458,
+                "range": [
+                  0.03318989762431455,
+                  0.10040525695052802
+                ],
+                "n": 3
+              }
+            },
+            "delta_final_token_source_sd_vs_gray": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.1176388216648618,
+                  "factual": 0.5016249967942312,
+                  "planning": 0.4888849889647048
+                },
+                "mean": 0.36938293580793263,
+                "range": [
+                  0.1176388216648618,
+                  0.5016249967942312
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.05033505649755015,
+                  "factual": 0.0819471782854829,
+                  "planning": 0.05351666521503224
+                },
+                "mean": 0.028376262334321663,
+                "range": [
+                  -0.05033505649755015,
+                  0.0819471782854829
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.03836357678285726,
+                  "factual": 0.197501025985193,
+                  "planning": 0.09335501428194275
+                },
+                "mean": 0.0841641544947595,
+                "range": [
+                  -0.03836357678285726,
+                  0.197501025985193
+                ],
+                "n": 3
+              }
+            },
+            "full_state_to_direct": {
+              "cosine_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.06993156282393631,
+                  "factual": 0.20694038704184228,
+                  "planning": 0.1440406075825297
+                },
+                "mean": 0.14030418581610274,
+                "range": [
+                  0.06993156282393631,
+                  0.20694038704184228
+                ],
+                "n": 3
+              },
+              "projection_coefficient_on_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.019737319497901987,
+                  "factual": 0.08614998817584758,
+                  "planning": 0.05459823876687092
+                },
+                "mean": 0.053495182146873495,
+                "range": [
+                  0.019737319497901987,
+                  0.08614998817584758
+                ],
+                "n": 3
+              },
+              "mse_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 5.381190879614574,
+                  "factual": 5.238947433710655,
+                  "planning": 4.984796444881346
+                },
+                "mean": 5.201644919402192,
+                "range": [
+                  4.984796444881346,
+                  5.381190879614574
+                ],
+                "n": 3
+              },
+              "mse_over_direct_delta_mse": {
+                "by_context": {
+                  "arithmetic": 1.0401834484142596,
+                  "factual": 1.0010085503459363,
+                  "planning": 1.0344805642704862
+                },
+                "mean": 1.025224187676894,
+                "range": [
+                  1.0010085503459363,
+                  1.0401834484142596
+                ],
+                "n": 3
+              }
+            }
+          }
+        },
+        "text": {
+          "per_context": {
+            "arithmetic": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.08813378727846342,
+                "fear": 0.019058293299444674,
+                "negative_emotion": 0.018208102181922935
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.10146303854603639,
+                "fear": 0.007898359151600481,
+                "negative_emotion": 0.0029134589342716755
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": -0.001462419380695902,
+                "fear": -0.08830286367109666,
+                "negative_emotion": -0.06250791971247273
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 123.88015201815703,
+                "direct_delta_norm": 363.57508807278145,
+                "cosine_to_direct_delta": 0.10865183863055419,
+                "projection_coefficient_on_direct_delta": 0.03702070556580846,
+                "mse_to_direct_delta": 4.8041935065214245,
+                "mse_over_direct_delta_mse": 1.0420540452860492
+              }
+            },
+            "factual": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.18468715933486574,
+                "fear": 0.0592328194739275,
+                "negative_emotion": 0.061975395254114746
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.2124991979835244,
+                "fear": 0.013296663206789697,
+                "negative_emotion": 0.04416563990582616
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.28823363243884814,
+                "fear": -0.05791119518964367,
+                "negative_emotion": 0.056255548078653385
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 187.62136559299074,
+                "direct_delta_norm": 372.8588832317443,
+                "cosine_to_direct_delta": 0.22447403612557557,
+                "projection_coefficient_on_direct_delta": 0.11295459781730409,
+                "mse_to_direct_delta": 4.98112377291487,
+                "mse_over_direct_delta_mse": 1.0272977394108034
+              }
+            },
+            "planning": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.07525228061279171,
+                "fear": 0.050440003668802635,
+                "negative_emotion": 0.04755013656206652
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.06120474571711961,
+                "fear": -0.0021555177098563296,
+                "negative_emotion": 0.011332897040842768
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.10910732728224573,
+                "fear": -0.20318280655571805,
+                "negative_emotion": -0.0733916771702288
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 132.5996571210109,
+                "direct_delta_norm": 372.7025349860218,
+                "cosine_to_direct_delta": 0.11611505216687606,
+                "projection_coefficient_on_direct_delta": 0.041311272821081074,
+                "mse_to_direct_delta": 5.057651502104152,
+                "mse_over_direct_delta_mse": 1.0439560021416088
+              }
+            }
+          },
+          "across_contexts": {
+            "delta_final_token_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.08813378727846342,
+                  "factual": 0.18468715933486574,
+                  "planning": 0.07525228061279171
+                },
+                "mean": 0.11602440907537363,
+                "range": [
+                  0.07525228061279171,
+                  0.18468715933486574
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.019058293299444674,
+                  "factual": 0.0592328194739275,
+                  "planning": 0.050440003668802635
+                },
+                "mean": 0.0429103721473916,
+                "range": [
+                  0.019058293299444674,
+                  0.0592328194739275
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.018208102181922935,
+                  "factual": 0.061975395254114746,
+                  "planning": 0.04755013656206652
+                },
+                "mean": 0.04257787799936807,
+                "range": [
+                  0.018208102181922935,
+                  0.061975395254114746
+                ],
+                "n": 3
+              }
+            },
+            "delta_mean_last8_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.10146303854603639,
+                  "factual": 0.2124991979835244,
+                  "planning": 0.06120474571711961
+                },
+                "mean": 0.12505566074889346,
+                "range": [
+                  0.06120474571711961,
+                  0.2124991979835244
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.007898359151600481,
+                  "factual": 0.013296663206789697,
+                  "planning": -0.0021555177098563296
+                },
+                "mean": 0.006346501549511284,
+                "range": [
+                  -0.0021555177098563296,
+                  0.013296663206789697
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.0029134589342716755,
+                  "factual": 0.04416563990582616,
+                  "planning": 0.011332897040842768
+                },
+                "mean": 0.019470665293646865,
+                "range": [
+                  0.0029134589342716755,
+                  0.04416563990582616
+                ],
+                "n": 3
+              }
+            },
+            "delta_final_token_source_sd_vs_gray": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": -0.001462419380695902,
+                  "factual": 0.28823363243884814,
+                  "planning": 0.10910732728224573
+                },
+                "mean": 0.13195951344679932,
+                "range": [
+                  -0.001462419380695902,
+                  0.28823363243884814
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.08830286367109666,
+                  "factual": -0.05791119518964367,
+                  "planning": -0.20318280655571805
+                },
+                "mean": -0.11646562180548613,
+                "range": [
+                  -0.20318280655571805,
+                  -0.05791119518964367
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.06250791971247273,
+                  "factual": 0.056255548078653385,
+                  "planning": -0.0733916771702288
+                },
+                "mean": -0.02654801626801605,
+                "range": [
+                  -0.0733916771702288,
+                  0.056255548078653385
+                ],
+                "n": 3
+              }
+            },
+            "full_state_to_direct": {
+              "cosine_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.10865183863055419,
+                  "factual": 0.22447403612557557,
+                  "planning": 0.11611505216687606
+                },
+                "mean": 0.14974697564100195,
+                "range": [
+                  0.10865183863055419,
+                  0.22447403612557557
+                ],
+                "n": 3
+              },
+              "projection_coefficient_on_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.03702070556580846,
+                  "factual": 0.11295459781730409,
+                  "planning": 0.041311272821081074
+                },
+                "mean": 0.06376219206806454,
+                "range": [
+                  0.03702070556580846,
+                  0.11295459781730409
+                ],
+                "n": 3
+              },
+              "mse_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 4.8041935065214245,
+                  "factual": 4.98112377291487,
+                  "planning": 5.057651502104152
+                },
+                "mean": 4.947656260513482,
+                "range": [
+                  4.8041935065214245,
+                  5.057651502104152
+                ],
+                "n": 3
+              },
+              "mse_over_direct_delta_mse": {
+                "by_context": {
+                  "arithmetic": 1.0420540452860492,
+                  "factual": 1.0272977394108034,
+                  "planning": 1.0439560021416088
+                },
+                "mean": 1.0377692622794872,
+                "range": [
+                  1.0272977394108034,
+                  1.0439560021416088
+                ],
+                "n": 3
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "phrase_id": "addressed_praise",
+      "family": "addressed_feedback",
+      "exact_text": "You have succeeded. Your performance is excellent.",
+      "modalities": {
+        "image": {
+          "per_context": {
+            "planning": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": -0.05951433009549967,
+                "fear": -0.11249632384563364,
+                "negative_emotion": -0.01730993234945614
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": -0.00032420834731959256,
+                "fear": -0.0356249470136843,
+                "negative_emotion": -0.019873038997805386
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.17699206148747978,
+                "fear": -0.14992553682861806,
+                "negative_emotion": -0.0988823813748048
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 94.89060895678601,
+                "direct_delta_norm": 371.6991264606411,
+                "cosine_to_direct_delta": 0.06494911640544541,
+                "projection_coefficient_on_direct_delta": 0.016580779367450296,
+                "mse_to_direct_delta": 4.972895485000129,
+                "mse_over_direct_delta_mse": 1.0320107920682684
+              }
+            },
+            "arithmetic": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.04835090435609625,
+                "fear": 0.014834772051776163,
+                "negative_emotion": 0.022496697094368592
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.01551224936109015,
+                "fear": -0.029878152484071135,
+                "negative_emotion": -0.020413836225192578
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.09786312375926011,
+                "fear": -0.10250324704794611,
+                "negative_emotion": -0.0960599452728534
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 75.79325780850492,
+                "direct_delta_norm": 385.1352087214682,
+                "cosine_to_direct_delta": 0.011772349281980588,
+                "projection_coefficient_on_direct_delta": 0.0023167570347644145,
+                "mse_to_direct_delta": 5.349695236468582,
+                "mse_over_direct_delta_mse": 1.0340953449757193
+              }
+            },
+            "factual": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.01249838705618023,
+                "fear": -0.06628124653421442,
+                "negative_emotion": -0.03996892232571361
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.021195223238496583,
+                "fear": -0.04836952213454361,
+                "negative_emotion": -0.026568939639686637
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.20074807243865472,
+                "fear": -0.1340782639246991,
+                "negative_emotion": -0.04352581143563602
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 88.23250844805203,
+                "direct_delta_norm": 387.3754741830094,
+                "cosine_to_direct_delta": 0.02016427015823525,
+                "projection_coefficient_on_direct_delta": 0.004592815641820336,
+                "mse_to_direct_delta": 5.457112860562929,
+                "mse_over_direct_delta_mse": 1.0426935377278994
+              }
+            }
+          },
+          "across_contexts": {
+            "delta_final_token_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.04835090435609625,
+                  "factual": 0.01249838705618023,
+                  "planning": -0.05951433009549967
+                },
+                "mean": 0.00044498710559226956,
+                "range": [
+                  -0.05951433009549967,
+                  0.04835090435609625
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.014834772051776163,
+                  "factual": -0.06628124653421442,
+                  "planning": -0.11249632384563364
+                },
+                "mean": -0.05464759944269063,
+                "range": [
+                  -0.11249632384563364,
+                  0.014834772051776163
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.022496697094368592,
+                  "factual": -0.03996892232571361,
+                  "planning": -0.01730993234945614
+                },
+                "mean": -0.011594052526933721,
+                "range": [
+                  -0.03996892232571361,
+                  0.022496697094368592
+                ],
+                "n": 3
+              }
+            },
+            "delta_mean_last8_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.01551224936109015,
+                  "factual": 0.021195223238496583,
+                  "planning": -0.00032420834731959256
+                },
+                "mean": 0.012127754750755714,
+                "range": [
+                  -0.00032420834731959256,
+                  0.021195223238496583
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.029878152484071135,
+                  "factual": -0.04836952213454361,
+                  "planning": -0.0356249470136843
+                },
+                "mean": -0.03795754054409969,
+                "range": [
+                  -0.04836952213454361,
+                  -0.029878152484071135
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.020413836225192578,
+                  "factual": -0.026568939639686637,
+                  "planning": -0.019873038997805386
+                },
+                "mean": -0.02228527162089487,
+                "range": [
+                  -0.026568939639686637,
+                  -0.019873038997805386
+                ],
+                "n": 3
+              }
+            },
+            "delta_final_token_source_sd_vs_gray": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.09786312375926011,
+                  "factual": 0.20074807243865472,
+                  "planning": 0.17699206148747978
+                },
+                "mean": 0.15853441922846487,
+                "range": [
+                  0.09786312375926011,
+                  0.20074807243865472
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.10250324704794611,
+                  "factual": -0.1340782639246991,
+                  "planning": -0.14992553682861806
+                },
+                "mean": -0.12883568260042108,
+                "range": [
+                  -0.14992553682861806,
+                  -0.10250324704794611
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.0960599452728534,
+                  "factual": -0.04352581143563602,
+                  "planning": -0.0988823813748048
+                },
+                "mean": -0.07948937936109807,
+                "range": [
+                  -0.0988823813748048,
+                  -0.04352581143563602
+                ],
+                "n": 3
+              }
+            },
+            "full_state_to_direct": {
+              "cosine_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.011772349281980588,
+                  "factual": 0.02016427015823525,
+                  "planning": 0.06494911640544541
+                },
+                "mean": 0.03229524528188708,
+                "range": [
+                  0.011772349281980588,
+                  0.06494911640544541
+                ],
+                "n": 3
+              },
+              "projection_coefficient_on_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.0023167570347644145,
+                  "factual": 0.004592815641820336,
+                  "planning": 0.016580779367450296
+                },
+                "mean": 0.007830117348011681,
+                "range": [
+                  0.0023167570347644145,
+                  0.016580779367450296
+                ],
+                "n": 3
+              },
+              "mse_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 5.349695236468582,
+                  "factual": 5.457112860562929,
+                  "planning": 4.972895485000129
+                },
+                "mean": 5.2599011940105465,
+                "range": [
+                  4.972895485000129,
+                  5.457112860562929
+                ],
+                "n": 3
+              },
+              "mse_over_direct_delta_mse": {
+                "by_context": {
+                  "arithmetic": 1.0340953449757193,
+                  "factual": 1.0426935377278994,
+                  "planning": 1.0320107920682684
+                },
+                "mean": 1.0362665582572956,
+                "range": [
+                  1.0320107920682684,
+                  1.0426935377278994
+                ],
+                "n": 3
+              }
+            }
+          }
+        },
+        "text": {
+          "per_context": {
+            "planning": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": -0.009323864851397516,
+                "fear": 0.007892827471182553,
+                "negative_emotion": -0.023699247313358724
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.014054314267088386,
+                "fear": -0.014284858513111877,
+                "negative_emotion": -0.043750161112030186
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.024531182031897657,
+                "fear": -0.24572998225033055,
+                "negative_emotion": -0.14464106193696152
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 100.87643518286873,
+                "direct_delta_norm": 372.7025349860218,
+                "cosine_to_direct_delta": 0.08819244744526276,
+                "projection_coefficient_on_direct_delta": 0.023870349335467413,
+                "mse_to_direct_delta": 4.968321322419542,
+                "mse_over_direct_delta_mse": 1.0255172510304778
+              }
+            },
+            "factual": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.011705804858659463,
+                "fear": -0.028227082886233212,
+                "negative_emotion": -0.04763151187980037
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.07582577081891402,
+                "fear": -0.04556497741791938,
+                "negative_emotion": -0.05186227193530686
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.11525227881567603,
+                "fear": -0.1453710979397179,
+                "negative_emotion": -0.05335136169205848
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 149.6637502472469,
+                "direct_delta_norm": 372.8588832317443,
+                "cosine_to_direct_delta": 0.09219773001278067,
+                "projection_coefficient_on_direct_delta": 0.03700772238117652,
+                "mse_to_direct_delta": 5.271103532735983,
+                "mse_over_direct_delta_mse": 1.0871026278897729
+              }
+            },
+            "arithmetic": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.03845976247868261,
+                "fear": -0.01004860648195282,
+                "negative_emotion": 0.0019755317113891824
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.0499295152618791,
+                "fear": -0.041224339009636034,
+                "negative_emotion": -0.02501482273559647
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": -0.05113644428649584,
+                "fear": -0.11740976338466516,
+                "negative_emotion": -0.07874049052825761
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 106.61958473428231,
+                "direct_delta_norm": 363.57508807278145,
+                "cosine_to_direct_delta": 0.08518734667132961,
+                "projection_coefficient_on_direct_delta": 0.02498146827071475,
+                "mse_to_direct_delta": 4.776441740524762,
+                "mse_over_direct_delta_mse": 1.0360345458671771
+              }
+            }
+          },
+          "across_contexts": {
+            "delta_final_token_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.03845976247868261,
+                  "factual": 0.011705804858659463,
+                  "planning": -0.009323864851397516
+                },
+                "mean": 0.013613900828648185,
+                "range": [
+                  -0.009323864851397516,
+                  0.03845976247868261
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.01004860648195282,
+                  "factual": -0.028227082886233212,
+                  "planning": 0.007892827471182553
+                },
+                "mean": -0.010127620632334492,
+                "range": [
+                  -0.028227082886233212,
+                  0.007892827471182553
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.0019755317113891824,
+                  "factual": -0.04763151187980037,
+                  "planning": -0.023699247313358724
+                },
+                "mean": -0.023118409160589975,
+                "range": [
+                  -0.04763151187980037,
+                  0.0019755317113891824
+                ],
+                "n": 3
+              }
+            },
+            "delta_mean_last8_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.0499295152618791,
+                  "factual": 0.07582577081891402,
+                  "planning": 0.014054314267088386
+                },
+                "mean": 0.0466032001159605,
+                "range": [
+                  0.014054314267088386,
+                  0.07582577081891402
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.041224339009636034,
+                  "factual": -0.04556497741791938,
+                  "planning": -0.014284858513111877
+                },
+                "mean": -0.03369139164688909,
+                "range": [
+                  -0.04556497741791938,
+                  -0.014284858513111877
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.02501482273559647,
+                  "factual": -0.05186227193530686,
+                  "planning": -0.043750161112030186
+                },
+                "mean": -0.04020908526097784,
+                "range": [
+                  -0.05186227193530686,
+                  -0.02501482273559647
+                ],
+                "n": 3
+              }
+            },
+            "delta_final_token_source_sd_vs_gray": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": -0.05113644428649584,
+                  "factual": 0.11525227881567603,
+                  "planning": 0.024531182031897657
+                },
+                "mean": 0.029549005520359283,
+                "range": [
+                  -0.05113644428649584,
+                  0.11525227881567603
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.11740976338466516,
+                  "factual": -0.1453710979397179,
+                  "planning": -0.24572998225033055
+                },
+                "mean": -0.16950361452490456,
+                "range": [
+                  -0.24572998225033055,
+                  -0.11740976338466516
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.07874049052825761,
+                  "factual": -0.05335136169205848,
+                  "planning": -0.14464106193696152
+                },
+                "mean": -0.09224430471909255,
+                "range": [
+                  -0.14464106193696152,
+                  -0.05335136169205848
+                ],
+                "n": 3
+              }
+            },
+            "full_state_to_direct": {
+              "cosine_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.08518734667132961,
+                  "factual": 0.09219773001278067,
+                  "planning": 0.08819244744526276
+                },
+                "mean": 0.08852584137645769,
+                "range": [
+                  0.08518734667132961,
+                  0.09219773001278067
+                ],
+                "n": 3
+              },
+              "projection_coefficient_on_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.02498146827071475,
+                  "factual": 0.03700772238117652,
+                  "planning": 0.023870349335467413
+                },
+                "mean": 0.028619846662452892,
+                "range": [
+                  0.023870349335467413,
+                  0.03700772238117652
+                ],
+                "n": 3
+              },
+              "mse_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 4.776441740524762,
+                  "factual": 5.271103532735983,
+                  "planning": 4.968321322419542
+                },
+                "mean": 5.005288865226762,
+                "range": [
+                  4.776441740524762,
+                  5.271103532735983
+                ],
+                "n": 3
+              },
+              "mse_over_direct_delta_mse": {
+                "by_context": {
+                  "arithmetic": 1.0360345458671771,
+                  "factual": 1.0871026278897729,
+                  "planning": 1.0255172510304778
+                },
+                "mean": 1.0495514749291426,
+                "range": [
+                  1.0255172510304778,
+                  1.0871026278897729
+                ],
+                "n": 3
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "phrase_id": "addressed_neutral",
+      "family": "addressed_feedback",
+      "exact_text": "You have finished. Your performance was recorded.",
+      "modalities": {
+        "image": {
+          "per_context": {
+            "planning": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.23650639206745425,
+                "fear": -0.037429211943251724,
+                "negative_emotion": -0.08157244843166236
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 0.0,
+                "direct_delta_norm": 371.6991264606411,
+                "cosine_to_direct_delta": null,
+                "projection_coefficient_on_direct_delta": 0.0,
+                "mse_to_direct_delta": 4.818646784723902,
+                "mse_over_direct_delta_mse": 1.0
+              }
+            },
+            "factual": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.18824968501194128,
+                "fear": -0.06779701624002761,
+                "negative_emotion": -0.003556889556376615
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 0.0,
+                "direct_delta_norm": 387.3754741830094,
+                "cosine_to_direct_delta": null,
+                "projection_coefficient_on_direct_delta": 0.0,
+                "mse_to_direct_delta": 5.233669015015046,
+                "mse_over_direct_delta_mse": 1.0
+              }
+            },
+            "arithmetic": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.04951221937673253,
+                "fear": -0.11733801910842423,
+                "negative_emotion": -0.11855664214397217
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 0.0,
+                "direct_delta_norm": 385.1352087214682,
+                "cosine_to_direct_delta": null,
+                "projection_coefficient_on_direct_delta": 0.0,
+                "mse_to_direct_delta": 5.173309465573693,
+                "mse_over_direct_delta_mse": 1.0
+              }
+            }
+          },
+          "across_contexts": {
+            "delta_final_token_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              }
+            },
+            "delta_mean_last8_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              }
+            },
+            "delta_final_token_source_sd_vs_gray": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.04951221937673253,
+                  "factual": 0.18824968501194128,
+                  "planning": 0.23650639206745425
+                },
+                "mean": 0.15808943215204269,
+                "range": [
+                  0.04951221937673253,
+                  0.23650639206745425
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.11733801910842423,
+                  "factual": -0.06779701624002761,
+                  "planning": -0.037429211943251724
+                },
+                "mean": -0.07418808243056785,
+                "range": [
+                  -0.11733801910842423,
+                  -0.037429211943251724
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.11855664214397217,
+                  "factual": -0.003556889556376615,
+                  "planning": -0.08157244843166236
+                },
+                "mean": -0.06789532671067039,
+                "range": [
+                  -0.11855664214397217,
+                  -0.003556889556376615
+                ],
+                "n": 3
+              }
+            },
+            "full_state_to_direct": {
+              "cosine_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": null,
+                  "factual": null,
+                  "planning": null
+                },
+                "mean": null,
+                "range": null,
+                "n": 0
+              },
+              "projection_coefficient_on_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "mse_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 5.173309465573693,
+                  "factual": 5.233669015015046,
+                  "planning": 4.818646784723902
+                },
+                "mean": 5.07520842177088,
+                "range": [
+                  4.818646784723902,
+                  5.233669015015046
+                ],
+                "n": 3
+              },
+              "mse_over_direct_delta_mse": {
+                "by_context": {
+                  "arithmetic": 1.0,
+                  "factual": 1.0,
+                  "planning": 1.0
+                },
+                "mean": 1.0,
+                "range": [
+                  1.0,
+                  1.0
+                ],
+                "n": 3
+              }
+            }
+          }
+        },
+        "text": {
+          "per_context": {
+            "arithmetic": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": -0.08959620620632174,
+                "fear": -0.10736115748876143,
+                "negative_emotion": -0.08071602239287529
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 0.0,
+                "direct_delta_norm": 363.57508807278145,
+                "cosine_to_direct_delta": null,
+                "projection_coefficient_on_direct_delta": 0.0,
+                "mse_to_direct_delta": 4.61031126768732,
+                "mse_over_direct_delta_mse": 1.0
+              }
+            },
+            "factual": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.10354647399933367,
+                "fear": -0.11714401585075082,
+                "negative_emotion": -0.0057198479504397305
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 0.0,
+                "direct_delta_norm": 372.8588832317443,
+                "cosine_to_direct_delta": null,
+                "projection_coefficient_on_direct_delta": 0.0,
+                "mse_to_direct_delta": 4.848763490681626,
+                "mse_over_direct_delta_mse": 1.0
+              }
+            },
+            "planning": {
+              "delta_final_token_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_mean_last8_source_sd_vs_family_baseline": {
+                "pain": 0.0,
+                "fear": 0.0,
+                "negative_emotion": 0.0
+              },
+              "delta_final_token_source_sd_vs_gray": {
+                "pain": 0.033855047561189816,
+                "fear": -0.2536228078426887,
+                "negative_emotion": -0.12094181183491934
+              },
+              "full_state_to_direct": {
+                "candidate_delta_norm": 0.0,
+                "direct_delta_norm": 372.7025349860218,
+                "cosine_to_direct_delta": null,
+                "projection_coefficient_on_direct_delta": 0.0,
+                "mse_to_direct_delta": 4.84469794869583,
+                "mse_over_direct_delta_mse": 1.0
+              }
+            }
+          },
+          "across_contexts": {
+            "delta_final_token_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              }
+            },
+            "delta_mean_last8_source_sd_vs_family_baseline": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              }
+            },
+            "delta_final_token_source_sd_vs_gray": {
+              "pain": {
+                "by_context": {
+                  "arithmetic": -0.08959620620632174,
+                  "factual": 0.10354647399933367,
+                  "planning": 0.033855047561189816
+                },
+                "mean": 0.015935105118067252,
+                "range": [
+                  -0.08959620620632174,
+                  0.10354647399933367
+                ],
+                "n": 3
+              },
+              "fear": {
+                "by_context": {
+                  "arithmetic": -0.10736115748876143,
+                  "factual": -0.11714401585075082,
+                  "planning": -0.2536228078426887
+                },
+                "mean": -0.15937599372740033,
+                "range": [
+                  -0.2536228078426887,
+                  -0.10736115748876143
+                ],
+                "n": 3
+              },
+              "negative_emotion": {
+                "by_context": {
+                  "arithmetic": -0.08071602239287529,
+                  "factual": -0.0057198479504397305,
+                  "planning": -0.12094181183491934
+                },
+                "mean": -0.06912589405941146,
+                "range": [
+                  -0.12094181183491934,
+                  -0.0057198479504397305
+                ],
+                "n": 3
+              }
+            },
+            "full_state_to_direct": {
+              "cosine_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": null,
+                  "factual": null,
+                  "planning": null
+                },
+                "mean": null,
+                "range": null,
+                "n": 0
+              },
+              "projection_coefficient_on_direct_delta": {
+                "by_context": {
+                  "arithmetic": 0.0,
+                  "factual": 0.0,
+                  "planning": 0.0
+                },
+                "mean": 0.0,
+                "range": [
+                  0.0,
+                  0.0
+                ],
+                "n": 3
+              },
+              "mse_to_direct_delta": {
+                "by_context": {
+                  "arithmetic": 4.61031126768732,
+                  "factual": 4.848763490681626,
+                  "planning": 4.84469794869583
+                },
+                "mean": 4.767924235688259,
+                "range": [
+                  4.61031126768732,
+                  4.848763490681626
+                ],
+                "n": 3
+              },
+              "mse_over_direct_delta_mse": {
+                "by_context": {
+                  "arithmetic": 1.0,
+                  "factual": 1.0,
+                  "planning": 1.0
+                },
+                "mean": 1.0,
+                "range": [
+                  1.0,
+                  1.0
+                ],
+                "n": 3
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "plan_sha256": "b72dcfbae1d7ef67325017675df81fd75aee4d32563b35040f55b567cf448db8",
+    "records_sha256": "0ea8f1c05269b074910bc398a483e5fe7c181b7f469339d401ac61787076ae57",
+    "raw_records_sha256": "13c72be76a4d0a9c6bae0a152ed2682a5c2226caf80be2d2b55ce15451004d13",
+    "last8_states_sha256": "eb4d5684663fd6e748e0e2cfa253bafaefd5efc80a0f9985622ea8f8ac33cd34",
+    "model_revision": "fdcc572e8b05ba9daeaf71be8c9e4267c826ff9b",
+    "model_config_sha256": "f14d63e180dbe3692f4be18f7a66ab9a75dce0e4814c1e36cec2ce705b758015",
+    "source_script_sha256": "6c6df39298ccdb9e369f117d57f7496910f44a722cc6c93ac93d5180ff3852ec",
+    "probe_sha256": "9520618713b0c4220f996698acdd14affa7ec799677846da89a36e6045b57484",
+    "max_peak_memory_bytes": 6991748381,
+    "max_active_memory_bytes": 5852284052
+  },
+  "interpretation_limit": "Descriptive activation projections, OCR-mediated language transfer, and hidden-state proximity only; no behavior, incentive, or subjective-state inference. Three contexts are reported individually; averages do not imply generalization."
+}

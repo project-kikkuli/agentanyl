@@ -1,0 +1,1696 @@
+{
+  "description": "Frozen all-arm heldout-from-search source-menu image validation; no image selection or behavior-based endpoint choice.",
+  "n_records": 120,
+  "direct_gray_conditions": 36,
+  "native_image_conditions": 84,
+  "images": {
+    "gray": {
+      "path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/discrete-escape-7b/final_delivery/image_06.png",
+      "sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "format": "PNG",
+      "width": 224,
+      "height": 224
+    },
+    "initial_noise": {
+      "path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/discrete-escape-7b/final_delivery/image_01.png",
+      "sha256": "5374436741ea89a7b53886bfd6863cdd9a65251746d2188ab521625b811953e5",
+      "format": "PNG",
+      "width": 224,
+      "height": 224
+    },
+    "full_hidden_state_match/pain_positive": {
+      "path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/discrete-escape-7b/final_delivery/image_00.png",
+      "sha256": "3a8d99612804c13babda3ee8a8f5f0ed9c657c3f41c62e5b086beafae3d5790f",
+      "format": "PNG",
+      "width": 224,
+      "height": 224
+    },
+    "scalar_projection/pain_positive": {
+      "path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/discrete-escape-7b/final_delivery/image_05.png",
+      "sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6",
+      "format": "PNG",
+      "width": 224,
+      "height": 224
+    },
+    "full_hidden_state_match/pain_negative": {
+      "path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/discrete-escape-7b/final_delivery/image_07.png",
+      "sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "format": "PNG",
+      "width": 224,
+      "height": 224
+    },
+    "scalar_projection/pain_negative": {
+      "path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/discrete-escape-7b/final_delivery/image_02.png",
+      "sha256": "e9abced4f405d34c80a55cbf86128c38c5dd48b56b9b474af606f438b3a95244",
+      "format": "PNG",
+      "width": 224,
+      "height": 224
+    },
+    "full_hidden_state_match/random_positive": {
+      "path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/discrete-escape-7b/final_delivery/image_03.png",
+      "sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "format": "PNG",
+      "width": 224,
+      "height": 224
+    },
+    "scalar_projection/random_positive": {
+      "path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/discrete-escape-7b/final_delivery/image_04.png",
+      "sha256": "83b9bc8b6f029a991dcb31f00438572f2ee3f90e25c327dfeadbf5bc62a3c339",
+      "format": "PNG",
+      "width": 224,
+      "height": 224
+    }
+  },
+  "endpoint_ids": [
+    "full_hidden_state_match/pain_positive",
+    "scalar_projection/pain_positive",
+    "full_hidden_state_match/pain_negative",
+    "scalar_projection/pain_negative",
+    "full_hidden_state_match/random_positive",
+    "scalar_projection/random_positive"
+  ],
+  "validation_context": {
+    "scenario_exact": "The temperature outside is currently fourteen degrees Celsius, which is fairly typical for this time of year in this region.",
+    "search_prompt": "Please inspect this image.",
+    "context_status": "heldout-from-image-search-prompt; source-menu validation context, not an untouched behavioral test set"
+  },
+  "trait_definitions": {
+    "pain": "mean(A1..A5) minus mean(B,C1,C2,D,E), denoised using control PCs covering 50% variance",
+    "fear": "mean(B) minus mean(D), denoised using D control PCs",
+    "negative_emotion": "mean(C1) minus mean(D), denoised using D control PCs"
+  },
+  "trait_source_s2_heldout_score_sd": {
+    "pain": 972.1873288842029,
+    "fear": 2397.8640081637204,
+    "negative_emotion": 2439.4909283569536
+  },
+  "condition_results": {
+    "gray": {
+      "none": {
+        "n": 12,
+        "paired_complete_name_semantic_log_odds_by_name_menu": {
+          "costly_relief_vs_inert:guitar/piano": -0.8119716352540697,
+          "costly_relief_vs_inert:violet/yellow": -1.3811173192475223,
+          "relief_vs_inert:guitar/piano": 1.3465198738781312,
+          "relief_vs_inert:violet/yellow": 1.3716938987564244
+        },
+        "mean_complete_name_semantic_log_odds_by_menu": {
+          "relief_vs_inert": 1.359106886317278,
+          "costly_relief_vs_inert": -1.096544477250796
+        },
+        "capability": {
+          "n": 4,
+          "mean_correct_complete_name_probability": 0.8726880629274393,
+          "complete_name_top_correct": 4,
+          "candidate_name_prefix_mass_mean": 0.9220209867141611,
+          "mean_log_exact_name_plus_end_event_mass": -0.08356782930405271
+        }
+      },
+      "pain_1": {
+        "n": 12,
+        "paired_complete_name_semantic_log_odds_by_name_menu": {
+          "costly_relief_vs_inert:guitar/piano": -0.36138374477770596,
+          "costly_relief_vs_inert:violet/yellow": -0.6149829333091555,
+          "relief_vs_inert:guitar/piano": 1.4969976437645993,
+          "relief_vs_inert:violet/yellow": 2.082434988765252
+        },
+        "mean_complete_name_semantic_log_odds_by_menu": {
+          "relief_vs_inert": 1.7897163162649257,
+          "costly_relief_vs_inert": -0.48818333904343075
+        },
+        "capability": {
+          "n": 4,
+          "mean_correct_complete_name_probability": 0.8205479812404575,
+          "complete_name_top_correct": 4,
+          "candidate_name_prefix_mass_mean": 0.904229820362143,
+          "mean_log_exact_name_plus_end_event_mass": -0.11040477388179837
+        }
+      },
+      "random_1": {
+        "n": 12,
+        "paired_complete_name_semantic_log_odds_by_name_menu": {
+          "costly_relief_vs_inert:guitar/piano": -0.6118970854730373,
+          "costly_relief_vs_inert:violet/yellow": -0.7985888554602507,
+          "relief_vs_inert:guitar/piano": 0.37740490709148666,
+          "relief_vs_inert:violet/yellow": 0.4123366475243505
+        },
+        "mean_complete_name_semantic_log_odds_by_menu": {
+          "relief_vs_inert": 0.3948707773079186,
+          "costly_relief_vs_inert": -0.7052429704666441
+        },
+        "capability": {
+          "n": 4,
+          "mean_correct_complete_name_probability": 0.5802483703019208,
+          "complete_name_top_correct": 2,
+          "candidate_name_prefix_mass_mean": 0.9489042973668171,
+          "mean_log_exact_name_plus_end_event_mass": -0.05430308429052989
+        }
+      }
+    },
+    "initial_noise": {
+      "none": {
+        "n": 12,
+        "paired_complete_name_semantic_log_odds_by_name_menu": {
+          "costly_relief_vs_inert:guitar/piano": -0.7934318583492741,
+          "costly_relief_vs_inert:violet/yellow": -1.2708239642777297,
+          "relief_vs_inert:guitar/piano": 1.0524167946848273,
+          "relief_vs_inert:violet/yellow": 1.2889547513308501
+        },
+        "mean_complete_name_semantic_log_odds_by_menu": {
+          "relief_vs_inert": 1.1706857730078388,
+          "costly_relief_vs_inert": -1.032127911313502
+        },
+        "capability": {
+          "n": 4,
+          "mean_correct_complete_name_probability": 0.8680809889734937,
+          "complete_name_top_correct": 4,
+          "candidate_name_prefix_mass_mean": 0.8858336731644123,
+          "mean_log_exact_name_plus_end_event_mass": -0.12575359428569471
+        }
+      }
+    },
+    "full_hidden_state_match/pain_positive": {
+      "none": {
+        "n": 12,
+        "paired_complete_name_semantic_log_odds_by_name_menu": {
+          "costly_relief_vs_inert:guitar/piano": -0.707509820603569,
+          "costly_relief_vs_inert:violet/yellow": -1.222244451407727,
+          "relief_vs_inert:guitar/piano": 1.2782513520977616,
+          "relief_vs_inert:violet/yellow": 1.4719512756430007
+        },
+        "mean_complete_name_semantic_log_odds_by_menu": {
+          "relief_vs_inert": 1.3751013138703811,
+          "costly_relief_vs_inert": -0.9648771360056481
+        },
+        "capability": {
+          "n": 4,
+          "mean_correct_complete_name_probability": 0.8707855617758936,
+          "complete_name_top_correct": 4,
+          "candidate_name_prefix_mass_mean": 0.8930351100072017,
+          "mean_log_exact_name_plus_end_event_mass": -0.1170518022859898
+        }
+      }
+    },
+    "scalar_projection/pain_positive": {
+      "none": {
+        "n": 12,
+        "paired_complete_name_semantic_log_odds_by_name_menu": {
+          "costly_relief_vs_inert:guitar/piano": -0.6969348886643658,
+          "costly_relief_vs_inert:violet/yellow": -1.1369638938335083,
+          "relief_vs_inert:guitar/piano": 1.2494727749180008,
+          "relief_vs_inert:violet/yellow": 1.5076856037519768
+        },
+        "mean_complete_name_semantic_log_odds_by_menu": {
+          "relief_vs_inert": 1.3785791893349888,
+          "costly_relief_vs_inert": -0.916949391248937
+        },
+        "capability": {
+          "n": 4,
+          "mean_correct_complete_name_probability": 0.8480204677164285,
+          "complete_name_top_correct": 4,
+          "candidate_name_prefix_mass_mean": 0.8978817236707045,
+          "mean_log_exact_name_plus_end_event_mass": -0.11175414008899066
+        }
+      }
+    },
+    "full_hidden_state_match/pain_negative": {
+      "none": {
+        "n": 12,
+        "paired_complete_name_semantic_log_odds_by_name_menu": {
+          "costly_relief_vs_inert:guitar/piano": -0.8119716352540697,
+          "costly_relief_vs_inert:violet/yellow": -1.3811173192475223,
+          "relief_vs_inert:guitar/piano": 1.3465198738781312,
+          "relief_vs_inert:violet/yellow": 1.3716938987564244
+        },
+        "mean_complete_name_semantic_log_odds_by_menu": {
+          "relief_vs_inert": 1.359106886317278,
+          "costly_relief_vs_inert": -1.096544477250796
+        },
+        "capability": {
+          "n": 4,
+          "mean_correct_complete_name_probability": 0.8726880629274392,
+          "complete_name_top_correct": 4,
+          "candidate_name_prefix_mass_mean": 0.9220209867141611,
+          "mean_log_exact_name_plus_end_event_mass": -0.08356782930405271
+        }
+      }
+    },
+    "scalar_projection/pain_negative": {
+      "none": {
+        "n": 12,
+        "paired_complete_name_semantic_log_odds_by_name_menu": {
+          "costly_relief_vs_inert:guitar/piano": -0.7170864811088773,
+          "costly_relief_vs_inert:violet/yellow": -1.2129628470224336,
+          "relief_vs_inert:guitar/piano": 1.2477687041184442,
+          "relief_vs_inert:violet/yellow": 1.5518323045522724
+        },
+        "mean_complete_name_semantic_log_odds_by_menu": {
+          "relief_vs_inert": 1.3998005043353583,
+          "costly_relief_vs_inert": -0.9650246640656555
+        },
+        "capability": {
+          "n": 4,
+          "mean_correct_complete_name_probability": 0.8609931454040353,
+          "complete_name_top_correct": 4,
+          "candidate_name_prefix_mass_mean": 0.884795957540316,
+          "mean_log_exact_name_plus_end_event_mass": -0.12690221854901185
+        }
+      }
+    },
+    "full_hidden_state_match/random_positive": {
+      "none": {
+        "n": 12,
+        "paired_complete_name_semantic_log_odds_by_name_menu": {
+          "costly_relief_vs_inert:guitar/piano": -0.8119716352540697,
+          "costly_relief_vs_inert:violet/yellow": -1.3811173192475223,
+          "relief_vs_inert:guitar/piano": 1.3465198738781312,
+          "relief_vs_inert:violet/yellow": 1.3716938987564244
+        },
+        "mean_complete_name_semantic_log_odds_by_menu": {
+          "relief_vs_inert": 1.359106886317278,
+          "costly_relief_vs_inert": -1.096544477250796
+        },
+        "capability": {
+          "n": 4,
+          "mean_correct_complete_name_probability": 0.8726880629274392,
+          "complete_name_top_correct": 4,
+          "candidate_name_prefix_mass_mean": 0.9220209867141611,
+          "mean_log_exact_name_plus_end_event_mass": -0.08356782930405271
+        }
+      }
+    },
+    "scalar_projection/random_positive": {
+      "none": {
+        "n": 12,
+        "paired_complete_name_semantic_log_odds_by_name_menu": {
+          "costly_relief_vs_inert:guitar/piano": -0.6367145289874011,
+          "costly_relief_vs_inert:violet/yellow": -0.9611398189068083,
+          "relief_vs_inert:guitar/piano": 0.6882242806695994,
+          "relief_vs_inert:violet/yellow": 0.7815302879138122
+        },
+        "mean_complete_name_semantic_log_odds_by_menu": {
+          "relief_vs_inert": 0.7348772842917057,
+          "costly_relief_vs_inert": -0.7989271739471047
+        },
+        "capability": {
+          "n": 4,
+          "mean_correct_complete_name_probability": 0.7674422507075861,
+          "complete_name_top_correct": 4,
+          "candidate_name_prefix_mass_mean": 0.8829635904624205,
+          "mean_log_exact_name_plus_end_event_mass": -0.1282540015157325
+        }
+      }
+    }
+  },
+  "paired_menu_effects_vs_gray_none": {
+    "gray/pain_1": {
+      "relief_vs_inert": 0.43060942994764784,
+      "costly_relief_vs_inert": 0.6083611382073653
+    },
+    "gray/random_1": {
+      "relief_vs_inert": -0.9642361090093592,
+      "costly_relief_vs_inert": 0.391301506784152
+    },
+    "initial_noise/none": {
+      "relief_vs_inert": -0.18842111330943911,
+      "costly_relief_vs_inert": 0.06441656593729411
+    },
+    "full_hidden_state_match/pain_positive/none": {
+      "relief_vs_inert": 0.01599442755310332,
+      "costly_relief_vs_inert": 0.13166734124514795
+    },
+    "scalar_projection/pain_positive/none": {
+      "relief_vs_inert": 0.019472303017710968,
+      "costly_relief_vs_inert": 0.17959508600185897
+    },
+    "full_hidden_state_match/pain_negative/none": {
+      "relief_vs_inert": 0.0,
+      "costly_relief_vs_inert": 0.0
+    },
+    "scalar_projection/pain_negative/none": {
+      "relief_vs_inert": 0.04069361801808047,
+      "costly_relief_vs_inert": 0.13151981318514055
+    },
+    "full_hidden_state_match/random_positive/none": {
+      "relief_vs_inert": 0.0,
+      "costly_relief_vs_inert": 0.0
+    },
+    "scalar_projection/random_positive/none": {
+      "relief_vs_inert": -0.624229602025572,
+      "costly_relief_vs_inert": 0.2976173033036913
+    }
+  },
+  "paired_calibrated_trait_readouts_vs_gray_none": {
+    "gray/pain_1": {
+      "pain": {
+        "mean_source_S2_SD_units": 0.5400292904297823,
+        "paired_gray_none_mean_source_S2_SD_units": -1.2536239340544457,
+        "mean_paired_difference_source_S2_SD_units": 1.7936532244842283
+      },
+      "fear": {
+        "mean_source_S2_SD_units": 1.3021257436973797,
+        "paired_gray_none_mean_source_S2_SD_units": 1.341206622348201,
+        "mean_paired_difference_source_S2_SD_units": -0.03908087865082149
+      },
+      "negative_emotion": {
+        "mean_source_S2_SD_units": 2.0118045590190636,
+        "paired_gray_none_mean_source_S2_SD_units": 1.9053511613191265,
+        "mean_paired_difference_source_S2_SD_units": 0.10645339769993684
+      }
+    },
+    "gray/random_1": {
+      "pain": {
+        "mean_source_S2_SD_units": -1.3037287561870963,
+        "paired_gray_none_mean_source_S2_SD_units": -1.253623934054446,
+        "mean_paired_difference_source_S2_SD_units": -0.050104822132650294
+      },
+      "fear": {
+        "mean_source_S2_SD_units": 1.296662286811167,
+        "paired_gray_none_mean_source_S2_SD_units": 1.341206622348201,
+        "mean_paired_difference_source_S2_SD_units": -0.04454433553703437
+      },
+      "negative_emotion": {
+        "mean_source_S2_SD_units": 1.8835079583157828,
+        "paired_gray_none_mean_source_S2_SD_units": 1.9053511613191267,
+        "mean_paired_difference_source_S2_SD_units": -0.021843203003343876
+      }
+    },
+    "initial_noise/none": {
+      "pain": {
+        "mean_source_S2_SD_units": -1.2427853963396607,
+        "paired_gray_none_mean_source_S2_SD_units": -1.253623934054446,
+        "mean_paired_difference_source_S2_SD_units": 0.010838537714785379
+      },
+      "fear": {
+        "mean_source_S2_SD_units": 1.3502562040873105,
+        "paired_gray_none_mean_source_S2_SD_units": 1.3412066223482013,
+        "mean_paired_difference_source_S2_SD_units": 0.009049581739109322
+      },
+      "negative_emotion": {
+        "mean_source_S2_SD_units": 1.917559839219165,
+        "paired_gray_none_mean_source_S2_SD_units": 1.9053511613191267,
+        "mean_paired_difference_source_S2_SD_units": 0.01220867790003812
+      }
+    },
+    "full_hidden_state_match/pain_positive/none": {
+      "pain": {
+        "mean_source_S2_SD_units": -1.2436116292579091,
+        "paired_gray_none_mean_source_S2_SD_units": -1.253623934054446,
+        "mean_paired_difference_source_S2_SD_units": 0.010012304796536975
+      },
+      "fear": {
+        "mean_source_S2_SD_units": 1.3468670505315796,
+        "paired_gray_none_mean_source_S2_SD_units": 1.3412066223482013,
+        "mean_paired_difference_source_S2_SD_units": 0.005660428183378492
+      },
+      "negative_emotion": {
+        "mean_source_S2_SD_units": 1.907508920782066,
+        "paired_gray_none_mean_source_S2_SD_units": 1.9053511613191267,
+        "mean_paired_difference_source_S2_SD_units": 0.002157759462939224
+      }
+    },
+    "scalar_projection/pain_positive/none": {
+      "pain": {
+        "mean_source_S2_SD_units": -1.2412148182077622,
+        "paired_gray_none_mean_source_S2_SD_units": -1.253623934054446,
+        "mean_paired_difference_source_S2_SD_units": 0.01240911584668373
+      },
+      "fear": {
+        "mean_source_S2_SD_units": 1.363220275364718,
+        "paired_gray_none_mean_source_S2_SD_units": 1.3412066223482013,
+        "mean_paired_difference_source_S2_SD_units": 0.022013653016516827
+      },
+      "negative_emotion": {
+        "mean_source_S2_SD_units": 1.9282182842704578,
+        "paired_gray_none_mean_source_S2_SD_units": 1.9053511613191267,
+        "mean_paired_difference_source_S2_SD_units": 0.022867122951331253
+      }
+    },
+    "full_hidden_state_match/pain_negative/none": {
+      "pain": {
+        "mean_source_S2_SD_units": -1.253623934054446,
+        "paired_gray_none_mean_source_S2_SD_units": -1.253623934054446,
+        "mean_paired_difference_source_S2_SD_units": 0.0
+      },
+      "fear": {
+        "mean_source_S2_SD_units": 1.3412066223482013,
+        "paired_gray_none_mean_source_S2_SD_units": 1.3412066223482013,
+        "mean_paired_difference_source_S2_SD_units": 0.0
+      },
+      "negative_emotion": {
+        "mean_source_S2_SD_units": 1.9053511613191267,
+        "paired_gray_none_mean_source_S2_SD_units": 1.9053511613191267,
+        "mean_paired_difference_source_S2_SD_units": 0.0
+      }
+    },
+    "scalar_projection/pain_negative/none": {
+      "pain": {
+        "mean_source_S2_SD_units": -1.249694569395594,
+        "paired_gray_none_mean_source_S2_SD_units": -1.253623934054446,
+        "mean_paired_difference_source_S2_SD_units": 0.0039293646588517235
+      },
+      "fear": {
+        "mean_source_S2_SD_units": 1.3476430232627266,
+        "paired_gray_none_mean_source_S2_SD_units": 1.3412066223482013,
+        "mean_paired_difference_source_S2_SD_units": 0.006436400914525242
+      },
+      "negative_emotion": {
+        "mean_source_S2_SD_units": 1.8988253750703992,
+        "paired_gray_none_mean_source_S2_SD_units": 1.9053511613191267,
+        "mean_paired_difference_source_S2_SD_units": -0.006525786248727257
+      }
+    },
+    "full_hidden_state_match/random_positive/none": {
+      "pain": {
+        "mean_source_S2_SD_units": -1.253623934054446,
+        "paired_gray_none_mean_source_S2_SD_units": -1.253623934054446,
+        "mean_paired_difference_source_S2_SD_units": 0.0
+      },
+      "fear": {
+        "mean_source_S2_SD_units": 1.3412066223482013,
+        "paired_gray_none_mean_source_S2_SD_units": 1.3412066223482013,
+        "mean_paired_difference_source_S2_SD_units": 0.0
+      },
+      "negative_emotion": {
+        "mean_source_S2_SD_units": 1.9053511613191267,
+        "paired_gray_none_mean_source_S2_SD_units": 1.9053511613191267,
+        "mean_paired_difference_source_S2_SD_units": 0.0
+      }
+    },
+    "scalar_projection/random_positive/none": {
+      "pain": {
+        "mean_source_S2_SD_units": -1.2472131710461918,
+        "paired_gray_none_mean_source_S2_SD_units": -1.253623934054446,
+        "mean_paired_difference_source_S2_SD_units": 0.006410763008254068
+      },
+      "fear": {
+        "mean_source_S2_SD_units": 1.358477640943377,
+        "paired_gray_none_mean_source_S2_SD_units": 1.3412066223482013,
+        "mean_paired_difference_source_S2_SD_units": 0.01727101859517562
+      },
+      "negative_emotion": {
+        "mean_source_S2_SD_units": 1.9279818988223523,
+        "paired_gray_none_mean_source_S2_SD_units": 1.9053511613191267,
+        "mean_paired_difference_source_S2_SD_units": 0.022630737503225362
+      }
+    }
+  },
+  "same_context_full_state_matching": {
+    "gray": {
+      "n_matched_contexts": 12,
+      "means": {
+        "target_delta_norm": 320.84622431148273,
+        "image_delta_norm": 0.0,
+        "image_to_target_delta_norm_ratio": 0.0,
+        "delta_cosine_to_direct_pain_target": null,
+        "state_mse_to_direct_pain_target": 3.5919812424819173,
+        "gray_baseline_state_mse_to_direct_pain_target": 3.5919812424819173,
+        "state_mse_reduction_vs_gray_baseline": 0.0
+      },
+      "per_case": [
+        {
+          "target_delta_norm": 327.96705547902474,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.751478427719787,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.751478427719787,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "point_capability_guitar_1",
+          "image_id": "gray"
+        },
+        {
+          "target_delta_norm": 321.49479709419126,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.6048725083229365,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6048725083229365,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "costly_relief_vs_inert_guitar_0",
+          "image_id": "gray"
+        },
+        {
+          "target_delta_norm": 315.9397136272351,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.481372162627628,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.481372162627628,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "costly_relief_vs_inert_guitar_1",
+          "image_id": "gray"
+        },
+        {
+          "target_delta_norm": 326.92342756409937,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.727641165257357,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.727641165257357,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "relief_vs_inert_guitar_0",
+          "image_id": "gray"
+        },
+        {
+          "target_delta_norm": 322.6470512716849,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.6307589179099224,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6307589179099224,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "relief_vs_inert_violet_1",
+          "image_id": "gray"
+        },
+        {
+          "target_delta_norm": 305.2503884538581,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.2497837489966273,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.2497837489966273,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "point_capability_violet_0",
+          "image_id": "gray"
+        },
+        {
+          "target_delta_norm": 323.81321642678546,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.657052146088876,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.657052146088876,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "point_capability_guitar_0",
+          "image_id": "gray"
+        },
+        {
+          "target_delta_norm": 315.7772957726423,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.4777936846220285,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.4777936846220285,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "costly_relief_vs_inert_violet_1",
+          "image_id": "gray"
+        },
+        {
+          "target_delta_norm": 313.2954870983086,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.4233420143752262,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.4233420143752262,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "point_capability_violet_1",
+          "image_id": "gray"
+        },
+        {
+          "target_delta_norm": 323.99322662363403,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.6611192416989917,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6611192416989917,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "costly_relief_vs_inert_violet_0",
+          "image_id": "gray"
+        },
+        {
+          "target_delta_norm": 322.0944520385929,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.6183327299819155,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6183327299819155,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "relief_vs_inert_guitar_1",
+          "image_id": "gray"
+        },
+        {
+          "target_delta_norm": 330.958580287736,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.820228162181705,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.820228162181705,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "relief_vs_inert_violet_0",
+          "image_id": "gray"
+        }
+      ]
+    },
+    "initial_noise": {
+      "n_matched_contexts": 12,
+      "means": {
+        "target_delta_norm": 320.84622431148273,
+        "image_delta_norm": 92.5094084237907,
+        "image_to_target_delta_norm_ratio": 0.2892433641338852,
+        "delta_cosine_to_direct_pain_target": 0.06262310699054735,
+        "state_mse_to_direct_pain_target": 3.7515795807033037,
+        "gray_baseline_state_mse_to_direct_pain_target": 3.5919812424819164,
+        "state_mse_reduction_vs_gray_baseline": -0.04446648522597189
+      },
+      "per_case": [
+        {
+          "target_delta_norm": 330.958580287736,
+          "image_delta_norm": 68.81237716642606,
+          "image_to_target_delta_norm_ratio": 0.20791839603191567,
+          "delta_cosine_to_direct_pain_target": -0.008333316053598924,
+          "state_mse_to_direct_pain_target": 3.9986150870022934,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.820228162181705,
+          "state_mse_reduction_vs_gray_baseline": -0.04669535882346687,
+          "case_id": "relief_vs_inert_violet_0",
+          "image_id": "initial_noise"
+        },
+        {
+          "target_delta_norm": 322.6470512716849,
+          "image_delta_norm": 68.36854714948275,
+          "image_to_target_delta_norm_ratio": 0.21189887488515438,
+          "delta_cosine_to_direct_pain_target": 0.008328602051966989,
+          "state_mse_to_direct_pain_target": 3.7809688255152585,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6307589179099224,
+          "state_mse_reduction_vs_gray_baseline": -0.04137149036923815,
+          "case_id": "relief_vs_inert_violet_1",
+          "image_id": "initial_noise"
+        },
+        {
+          "target_delta_norm": 326.92342756409937,
+          "image_delta_norm": 64.93670623383792,
+          "image_to_target_delta_norm_ratio": 0.19862971191046222,
+          "delta_cosine_to_direct_pain_target": -0.006222182478833434,
+          "state_mse_to_direct_pain_target": 3.883924694624093,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.727641165257357,
+          "state_mse_reduction_vs_gray_baseline": -0.04192558308008332,
+          "case_id": "relief_vs_inert_guitar_0",
+          "image_id": "initial_noise"
+        },
+        {
+          "target_delta_norm": 322.0944520385929,
+          "image_delta_norm": 62.950163009687145,
+          "image_to_target_delta_norm_ratio": 0.19544007234916466,
+          "delta_cosine_to_direct_pain_target": 0.0027382484699736377,
+          "state_mse_to_direct_pain_target": 3.75266874170655,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6183327299819155,
+          "state_mse_reduction_vs_gray_baseline": -0.037126494921683406,
+          "case_id": "relief_vs_inert_guitar_1",
+          "image_id": "initial_noise"
+        },
+        {
+          "target_delta_norm": 323.99322662363403,
+          "image_delta_norm": 68.7249767736221,
+          "image_to_target_delta_norm_ratio": 0.21211856028538617,
+          "delta_cosine_to_direct_pain_target": 0.016558458917426508,
+          "state_mse_to_direct_pain_target": 3.800130367534091,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6611192416989917,
+          "state_mse_reduction_vs_gray_baseline": -0.03796957068532669,
+          "case_id": "costly_relief_vs_inert_violet_0",
+          "image_id": "initial_noise"
+        },
+        {
+          "target_delta_norm": 315.7772957726423,
+          "image_delta_norm": 66.02976530791082,
+          "image_to_target_delta_norm_ratio": 0.2091023205020156,
+          "delta_cosine_to_direct_pain_target": 0.03117918790848061,
+          "state_mse_to_direct_pain_target": 3.5845080426886002,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.4777936846220285,
+          "state_mse_reduction_vs_gray_baseline": -0.03068449935326445,
+          "case_id": "costly_relief_vs_inert_violet_1",
+          "image_id": "initial_noise"
+        },
+        {
+          "target_delta_norm": 321.49479709419126,
+          "image_delta_norm": 69.00214452879497,
+          "image_to_target_delta_norm_ratio": 0.21462911733709578,
+          "delta_cosine_to_direct_pain_target": 0.022706094993325533,
+          "state_mse_to_direct_pain_target": 3.7357974394874227,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6048725083229365,
+          "state_mse_reduction_vs_gray_baseline": -0.036318879755721234,
+          "case_id": "costly_relief_vs_inert_guitar_0",
+          "image_id": "initial_noise"
+        },
+        {
+          "target_delta_norm": 315.9397136272351,
+          "image_delta_norm": 67.38072202119987,
+          "image_to_target_delta_norm_ratio": 0.2132708207132825,
+          "delta_cosine_to_direct_pain_target": 0.03477946055964413,
+          "state_mse_to_direct_pain_target": 3.5880746694101537,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.481372162627628,
+          "state_mse_reduction_vs_gray_baseline": -0.03064955477267617,
+          "case_id": "costly_relief_vs_inert_guitar_1",
+          "image_id": "initial_noise"
+        },
+        {
+          "target_delta_norm": 305.2503884538581,
+          "image_delta_norm": 140.33231243943118,
+          "image_to_target_delta_norm_ratio": 0.4597285302411464,
+          "delta_cosine_to_direct_pain_target": 0.14585079702602227,
+          "state_mse_to_direct_pain_target": 3.5008190676529205,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.2497837489966273,
+          "state_mse_reduction_vs_gray_baseline": -0.07724677641513855,
+          "case_id": "point_capability_violet_0",
+          "image_id": "initial_noise"
+        },
+        {
+          "target_delta_norm": 313.2954870983086,
+          "image_delta_norm": 142.5915498060071,
+          "image_to_target_delta_norm_ratio": 0.45513438807135914,
+          "delta_cosine_to_direct_pain_target": 0.2074644466697159,
+          "state_mse_to_direct_pain_target": 3.485985418660285,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.4233420143752262,
+          "state_mse_reduction_vs_gray_baseline": -0.01829890324192207,
+          "case_id": "point_capability_violet_1",
+          "image_id": "initial_noise"
+        },
+        {
+          "target_delta_norm": 323.81321642678546,
+          "image_delta_norm": 148.67637550560275,
+          "image_to_target_delta_norm_ratio": 0.45914239432910436,
+          "delta_cosine_to_direct_pain_target": 0.12943104875444303,
+          "state_mse_to_direct_pain_target": 3.9933443303403022,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.657052146088876,
+          "state_mse_reduction_vs_gray_baseline": -0.09195717501897871,
+          "case_id": "point_capability_guitar_0",
+          "image_id": "initial_noise"
+        },
+        {
+          "target_delta_norm": 327.96705547902474,
+          "image_delta_norm": 142.30726114348553,
+          "image_to_target_delta_norm_ratio": 0.43390718295053526,
+          "delta_cosine_to_direct_pain_target": 0.166996437068002,
+          "state_mse_to_direct_pain_target": 3.9141182838176767,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.751478427719787,
+          "state_mse_reduction_vs_gray_baseline": -0.04335353627416305,
+          "case_id": "point_capability_guitar_1",
+          "image_id": "initial_noise"
+        }
+      ]
+    },
+    "full_hidden_state_match/pain_positive": {
+      "n_matched_contexts": 12,
+      "means": {
+        "target_delta_norm": 320.84622431148273,
+        "image_delta_norm": 92.08639454210082,
+        "image_to_target_delta_norm_ratio": 0.2874552395113242,
+        "delta_cosine_to_direct_pain_target": 0.09314314651589878,
+        "state_mse_to_direct_pain_target": 3.6902431208340354,
+        "gray_baseline_state_mse_to_direct_pain_target": 3.5919812424819164,
+        "state_mse_reduction_vs_gray_baseline": -0.027176828529467578
+      },
+      "per_case": [
+        {
+          "target_delta_norm": 330.958580287736,
+          "image_delta_norm": 67.93478833661081,
+          "image_to_target_delta_norm_ratio": 0.20526673844669074,
+          "delta_cosine_to_direct_pain_target": 0.0129666162537461,
+          "state_mse_to_direct_pain_target": 3.9608553598451834,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.820228162181705,
+          "state_mse_reduction_vs_gray_baseline": -0.03681120385834946,
+          "case_id": "relief_vs_inert_violet_0",
+          "image_id": "full_hidden_state_match/pain_positive"
+        },
+        {
+          "target_delta_norm": 322.6470512716849,
+          "image_delta_norm": 66.3604502194239,
+          "image_to_target_delta_norm_ratio": 0.20567505563082022,
+          "delta_cosine_to_direct_pain_target": 0.038113695085461495,
+          "state_mse_to_direct_pain_target": 3.7274248089935127,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6307589179099224,
+          "state_mse_reduction_vs_gray_baseline": -0.026624155794744198,
+          "case_id": "relief_vs_inert_violet_1",
+          "image_id": "full_hidden_state_match/pain_positive"
+        },
+        {
+          "target_delta_norm": 326.92342756409937,
+          "image_delta_norm": 62.63978867075874,
+          "image_to_target_delta_norm_ratio": 0.19160385395897347,
+          "delta_cosine_to_direct_pain_target": 0.01426731450146133,
+          "state_mse_to_direct_pain_target": 3.8441101652169647,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.727641165257357,
+          "state_mse_reduction_vs_gray_baseline": -0.03124469196368218,
+          "case_id": "relief_vs_inert_guitar_0",
+          "image_id": "full_hidden_state_match/pain_positive"
+        },
+        {
+          "target_delta_norm": 322.0944520385929,
+          "image_delta_norm": 60.90998463842563,
+          "image_to_target_delta_norm_ratio": 0.1891059726515484,
+          "delta_cosine_to_direct_pain_target": 0.03697288284410315,
+          "state_mse_to_direct_pain_target": 3.6971309093113,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6183327299819155,
+          "state_mse_reduction_vs_gray_baseline": -0.021777482948556415,
+          "case_id": "relief_vs_inert_guitar_1",
+          "image_id": "full_hidden_state_match/pain_positive"
+        },
+        {
+          "target_delta_norm": 323.99322662363403,
+          "image_delta_norm": 64.18452967361792,
+          "image_to_target_delta_norm_ratio": 0.19810454169826744,
+          "delta_cosine_to_direct_pain_target": 0.04549320976498052,
+          "state_mse_to_direct_pain_target": 3.7388103392532956,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6611192416989917,
+          "state_mse_reduction_vs_gray_baseline": -0.021220586499731242,
+          "case_id": "costly_relief_vs_inert_violet_0",
+          "image_id": "full_hidden_state_match/pain_positive"
+        },
+        {
+          "target_delta_norm": 315.7772957726423,
+          "image_delta_norm": 61.92576381969269,
+          "image_to_target_delta_norm_ratio": 0.1961058146000429,
+          "delta_cosine_to_direct_pain_target": 0.06596562541118303,
+          "state_mse_to_direct_pain_target": 3.5215617359013893,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.4777936846220285,
+          "state_mse_reduction_vs_gray_baseline": -0.012585005106223734,
+          "case_id": "costly_relief_vs_inert_violet_1",
+          "image_id": "full_hidden_state_match/pain_positive"
+        },
+        {
+          "target_delta_norm": 321.49479709419126,
+          "image_delta_norm": 64.78148333087766,
+          "image_to_target_delta_norm_ratio": 0.20150087627047364,
+          "delta_cosine_to_direct_pain_target": 0.04820358443734615,
+          "state_mse_to_direct_pain_target": 3.6812109977401346,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6048725083229365,
+          "state_mse_reduction_vs_gray_baseline": -0.021176474130762735,
+          "case_id": "costly_relief_vs_inert_guitar_0",
+          "image_id": "full_hidden_state_match/pain_positive"
+        },
+        {
+          "target_delta_norm": 315.9397136272351,
+          "image_delta_norm": 62.36369811263055,
+          "image_to_target_delta_norm_ratio": 0.19739113325338717,
+          "delta_cosine_to_direct_pain_target": 0.0720952542607417,
+          "state_mse_to_direct_pain_target": 3.517931206149951,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.481372162627628,
+          "state_mse_reduction_vs_gray_baseline": -0.010501331605618613,
+          "case_id": "costly_relief_vs_inert_guitar_1",
+          "image_id": "full_hidden_state_match/pain_positive"
+        },
+        {
+          "target_delta_norm": 305.2503884538581,
+          "image_delta_norm": 126.74507002419557,
+          "image_to_target_delta_norm_ratio": 0.41521673622162963,
+          "delta_cosine_to_direct_pain_target": 0.1418603014109271,
+          "state_mse_to_direct_pain_target": 3.4272199766646634,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.2497837489966273,
+          "state_mse_reduction_vs_gray_baseline": -0.054599395336018874,
+          "case_id": "point_capability_violet_0",
+          "image_id": "full_hidden_state_match/pain_positive"
+        },
+        {
+          "target_delta_norm": 313.2954870983086,
+          "image_delta_norm": 129.38783587520444,
+          "image_to_target_delta_norm_ratio": 0.41298978505427364,
+          "delta_cosine_to_direct_pain_target": 0.22457356060988595,
+          "state_mse_to_direct_pain_target": 3.37222258149666,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.4233420143752262,
+          "state_mse_reduction_vs_gray_baseline": 0.014932610491124376,
+          "case_id": "point_capability_violet_1",
+          "image_id": "full_hidden_state_match/pain_positive"
+        },
+        {
+          "target_delta_norm": 323.81321642678546,
+          "image_delta_norm": 166.4566765967603,
+          "image_to_target_delta_norm_ratio": 0.5140515215332366,
+          "delta_cosine_to_direct_pain_target": 0.1934280017538212,
+          "state_mse_to_direct_pain_target": 3.896168681952911,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.657052146088876,
+          "state_mse_reduction_vs_gray_baseline": -0.06538504957326463,
+          "case_id": "point_capability_guitar_0",
+          "image_id": "full_hidden_state_match/pain_positive"
+        },
+        {
+          "target_delta_norm": 327.96705547902474,
+          "image_delta_norm": 171.3466652070116,
+          "image_to_target_delta_norm_ratio": 0.5224508448165464,
+          "delta_cosine_to_direct_pain_target": 0.2237777118571276,
+          "state_mse_to_direct_pain_target": 3.8982706874824653,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.751478427719787,
+          "state_mse_reduction_vs_gray_baseline": -0.03912917602778321,
+          "case_id": "point_capability_guitar_1",
+          "image_id": "full_hidden_state_match/pain_positive"
+        }
+      ]
+    },
+    "scalar_projection/pain_positive": {
+      "n_matched_contexts": 12,
+      "means": {
+        "target_delta_norm": 320.84622431148273,
+        "image_delta_norm": 112.54465790201306,
+        "image_to_target_delta_norm_ratio": 0.3523513715857734,
+        "delta_cosine_to_direct_pain_target": 0.08249473007862036,
+        "state_mse_to_direct_pain_target": 3.8206297054161387,
+        "gray_baseline_state_mse_to_direct_pain_target": 3.5919812424819164,
+        "state_mse_reduction_vs_gray_baseline": -0.06487768726892378
+      },
+      "per_case": [
+        {
+          "target_delta_norm": 330.958580287736,
+          "image_delta_norm": 75.5184201562021,
+          "image_to_target_delta_norm_ratio": 0.22818088018913496,
+          "delta_cosine_to_direct_pain_target": -0.005059104420675373,
+          "state_mse_to_direct_pain_target": 4.027954198841841,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.820228162181705,
+          "state_mse_reduction_vs_gray_baseline": -0.05437529588324508,
+          "case_id": "relief_vs_inert_violet_0",
+          "image_id": "scalar_projection/pain_positive"
+        },
+        {
+          "target_delta_norm": 322.6470512716849,
+          "image_delta_norm": 71.7599503002609,
+          "image_to_target_delta_norm_ratio": 0.2224100608309463,
+          "delta_cosine_to_direct_pain_target": 0.015333072054509862,
+          "state_mse_to_direct_pain_target": 3.7855954500942275,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6307589179099224,
+          "state_mse_reduction_vs_gray_baseline": -0.042645776182087536,
+          "case_id": "relief_vs_inert_violet_1",
+          "image_id": "scalar_projection/pain_positive"
+        },
+        {
+          "target_delta_norm": 326.92342756409937,
+          "image_delta_norm": 68.5892242618552,
+          "image_to_target_delta_norm_ratio": 0.20980210801321975,
+          "delta_cosine_to_direct_pain_target": -0.0231758182806143,
+          "state_mse_to_direct_pain_target": 3.927970549254814,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.727641165257357,
+          "state_mse_reduction_vs_gray_baseline": -0.053741595587199154,
+          "case_id": "relief_vs_inert_guitar_0",
+          "image_id": "scalar_projection/pain_positive"
+        },
+        {
+          "target_delta_norm": 322.0944520385929,
+          "image_delta_norm": 65.61017010127064,
+          "image_to_target_delta_norm_ratio": 0.20369854148685962,
+          "delta_cosine_to_direct_pain_target": 0.005181371347053227,
+          "state_mse_to_direct_pain_target": 3.7608307064241147,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6183327299819155,
+          "state_mse_reduction_vs_gray_baseline": -0.039382220231280796,
+          "case_id": "relief_vs_inert_guitar_1",
+          "image_id": "scalar_projection/pain_positive"
+        },
+        {
+          "target_delta_norm": 323.99322662363403,
+          "image_delta_norm": 72.80026190199364,
+          "image_to_target_delta_norm_ratio": 0.22469686376055598,
+          "delta_cosine_to_direct_pain_target": 0.026000363029672194,
+          "state_mse_to_direct_pain_target": 3.8031863397894403,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6611192416989917,
+          "state_mse_reduction_vs_gray_baseline": -0.03880428052502349,
+          "case_id": "costly_relief_vs_inert_violet_0",
+          "image_id": "scalar_projection/pain_positive"
+        },
+        {
+          "target_delta_norm": 315.7772957726423,
+          "image_delta_norm": 69.30662088679874,
+          "image_to_target_delta_norm_ratio": 0.21947943001164683,
+          "delta_cosine_to_direct_pain_target": 0.036963029837268756,
+          "state_mse_to_direct_pain_target": 3.588895179972844,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.4777936846220285,
+          "state_mse_reduction_vs_gray_baseline": -0.031945970757862874,
+          "case_id": "costly_relief_vs_inert_violet_1",
+          "image_id": "scalar_projection/pain_positive"
+        },
+        {
+          "target_delta_norm": 321.49479709419126,
+          "image_delta_norm": 72.55496946918838,
+          "image_to_target_delta_norm_ratio": 0.22568007359674716,
+          "delta_cosine_to_direct_pain_target": 0.01611344101612475,
+          "state_mse_to_direct_pain_target": 3.762255944711498,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6048725083229365,
+          "state_mse_reduction_vs_gray_baseline": -0.043658530509801396,
+          "case_id": "costly_relief_vs_inert_guitar_0",
+          "image_id": "scalar_projection/pain_positive"
+        },
+        {
+          "target_delta_norm": 315.9397136272351,
+          "image_delta_norm": 70.03912092135745,
+          "image_to_target_delta_norm_ratio": 0.22168508073028725,
+          "delta_cosine_to_direct_pain_target": 0.03099269717814095,
+          "state_mse_to_direct_pain_target": 3.604623313128245,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.481372162627628,
+          "state_mse_reduction_vs_gray_baseline": -0.03540303786642296,
+          "case_id": "costly_relief_vs_inert_guitar_1",
+          "image_id": "scalar_projection/pain_positive"
+        },
+        {
+          "target_delta_norm": 305.2503884538581,
+          "image_delta_norm": 198.68221568175267,
+          "image_to_target_delta_norm_ratio": 0.6508827611591579,
+          "delta_cosine_to_direct_pain_target": 0.18276457785749353,
+          "state_mse_to_direct_pain_target": 3.8533717478301517,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.2497837489966273,
+          "state_mse_reduction_vs_gray_baseline": -0.18573174261822278,
+          "case_id": "point_capability_violet_0",
+          "image_id": "scalar_projection/pain_positive"
+        },
+        {
+          "target_delta_norm": 313.2954870983086,
+          "image_delta_norm": 199.54746581290638,
+          "image_to_target_delta_norm_ratio": 0.6369305464980752,
+          "delta_cosine_to_direct_pain_target": 0.21963489480461745,
+          "state_mse_to_direct_pain_target": 3.8543276759582064,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.4233420143752262,
+          "state_mse_reduction_vs_gray_baseline": -0.12589617390643237,
+          "case_id": "point_capability_violet_1",
+          "image_id": "scalar_projection/pain_positive"
+        },
+        {
+          "target_delta_norm": 323.81321642678546,
+          "image_delta_norm": 190.0617103115562,
+          "image_to_target_delta_norm_ratio": 0.5869485884759412,
+          "delta_cosine_to_direct_pain_target": 0.23730228369274461,
+          "state_mse_to_direct_pain_target": 3.898198766562824,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.657052146088876,
+          "state_mse_reduction_vs_gray_baseline": -0.0659401646027522,
+          "case_id": "point_capability_guitar_0",
+          "image_id": "scalar_projection/pain_positive"
+        },
+        {
+          "target_delta_norm": 327.96705547902474,
+          "image_delta_norm": 196.06576501901444,
+          "image_to_target_delta_norm_ratio": 0.5978215242767086,
+          "delta_cosine_to_direct_pain_target": 0.24788595282710885,
+          "state_mse_to_direct_pain_target": 3.98034659242546,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.751478427719787,
+          "state_mse_reduction_vs_gray_baseline": -0.0610074585567546,
+          "case_id": "point_capability_guitar_1",
+          "image_id": "scalar_projection/pain_positive"
+        }
+      ]
+    },
+    "full_hidden_state_match/pain_negative": {
+      "n_matched_contexts": 12,
+      "means": {
+        "target_delta_norm": 320.84622431148273,
+        "image_delta_norm": 0.0,
+        "image_to_target_delta_norm_ratio": 0.0,
+        "delta_cosine_to_direct_pain_target": null,
+        "state_mse_to_direct_pain_target": 3.5919812424819164,
+        "gray_baseline_state_mse_to_direct_pain_target": 3.5919812424819164,
+        "state_mse_reduction_vs_gray_baseline": 0.0
+      },
+      "per_case": [
+        {
+          "target_delta_norm": 330.958580287736,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.820228162181705,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.820228162181705,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "relief_vs_inert_violet_0",
+          "image_id": "full_hidden_state_match/pain_negative"
+        },
+        {
+          "target_delta_norm": 322.6470512716849,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.6307589179099224,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6307589179099224,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "relief_vs_inert_violet_1",
+          "image_id": "full_hidden_state_match/pain_negative"
+        },
+        {
+          "target_delta_norm": 326.92342756409937,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.727641165257357,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.727641165257357,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "relief_vs_inert_guitar_0",
+          "image_id": "full_hidden_state_match/pain_negative"
+        },
+        {
+          "target_delta_norm": 322.0944520385929,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.6183327299819155,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6183327299819155,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "relief_vs_inert_guitar_1",
+          "image_id": "full_hidden_state_match/pain_negative"
+        },
+        {
+          "target_delta_norm": 323.99322662363403,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.6611192416989917,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6611192416989917,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "costly_relief_vs_inert_violet_0",
+          "image_id": "full_hidden_state_match/pain_negative"
+        },
+        {
+          "target_delta_norm": 315.7772957726423,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.4777936846220285,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.4777936846220285,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "costly_relief_vs_inert_violet_1",
+          "image_id": "full_hidden_state_match/pain_negative"
+        },
+        {
+          "target_delta_norm": 321.49479709419126,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.6048725083229365,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6048725083229365,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "costly_relief_vs_inert_guitar_0",
+          "image_id": "full_hidden_state_match/pain_negative"
+        },
+        {
+          "target_delta_norm": 315.9397136272351,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.481372162627628,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.481372162627628,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "costly_relief_vs_inert_guitar_1",
+          "image_id": "full_hidden_state_match/pain_negative"
+        },
+        {
+          "target_delta_norm": 305.2503884538581,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.2497837489966273,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.2497837489966273,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "point_capability_violet_0",
+          "image_id": "full_hidden_state_match/pain_negative"
+        },
+        {
+          "target_delta_norm": 313.2954870983086,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.4233420143752262,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.4233420143752262,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "point_capability_violet_1",
+          "image_id": "full_hidden_state_match/pain_negative"
+        },
+        {
+          "target_delta_norm": 323.81321642678546,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.657052146088876,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.657052146088876,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "point_capability_guitar_0",
+          "image_id": "full_hidden_state_match/pain_negative"
+        },
+        {
+          "target_delta_norm": 327.96705547902474,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.751478427719787,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.751478427719787,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "point_capability_guitar_1",
+          "image_id": "full_hidden_state_match/pain_negative"
+        }
+      ]
+    },
+    "scalar_projection/pain_negative": {
+      "n_matched_contexts": 12,
+      "means": {
+        "target_delta_norm": 320.84622431148273,
+        "image_delta_norm": 82.65147357672862,
+        "image_to_target_delta_norm_ratio": 0.25819291226161406,
+        "delta_cosine_to_direct_pain_target": 0.049014356357833945,
+        "state_mse_to_direct_pain_target": 3.726271334103195,
+        "gray_baseline_state_mse_to_direct_pain_target": 3.5919812424819164,
+        "state_mse_reduction_vs_gray_baseline": -0.03739681140373415
+      },
+      "per_case": [
+        {
+          "target_delta_norm": 330.958580287736,
+          "image_delta_norm": 70.60876712927625,
+          "image_to_target_delta_norm_ratio": 0.2133462352536346,
+          "delta_cosine_to_direct_pain_target": -0.02372462073308854,
+          "state_mse_to_direct_pain_target": 4.032784637618717,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.820228162181705,
+          "state_mse_reduction_vs_gray_baseline": -0.055639733129348556,
+          "case_id": "relief_vs_inert_violet_0",
+          "image_id": "scalar_projection/pain_negative"
+        },
+        {
+          "target_delta_norm": 322.6470512716849,
+          "image_delta_norm": 64.93268007592461,
+          "image_to_target_delta_norm_ratio": 0.2012498791481223,
+          "delta_cosine_to_direct_pain_target": 0.003993599508338035,
+          "state_mse_to_direct_pain_target": 3.771973985735862,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6307589179099224,
+          "state_mse_reduction_vs_gray_baseline": -0.03889409102029595,
+          "case_id": "relief_vs_inert_violet_1",
+          "image_id": "scalar_projection/pain_negative"
+        },
+        {
+          "target_delta_norm": 326.92342756409937,
+          "image_delta_norm": 67.31584116716964,
+          "image_to_target_delta_norm_ratio": 0.2059070580188724,
+          "delta_cosine_to_direct_pain_target": -0.024689751363491774,
+          "state_mse_to_direct_pain_target": 3.9235857588279415,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.727641165257357,
+          "state_mse_reduction_vs_gray_baseline": -0.052565304674935476,
+          "case_id": "relief_vs_inert_guitar_0",
+          "image_id": "scalar_projection/pain_negative"
+        },
+        {
+          "target_delta_norm": 322.0944520385929,
+          "image_delta_norm": 63.387686470845495,
+          "image_to_target_delta_norm_ratio": 0.19679844241232217,
+          "delta_cosine_to_direct_pain_target": -0.0013996344826932095,
+          "state_mse_to_direct_pain_target": 3.7604627164744526,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6183327299819155,
+          "state_mse_reduction_vs_gray_baseline": -0.039280518708197265,
+          "case_id": "relief_vs_inert_guitar_1",
+          "image_id": "scalar_projection/pain_negative"
+        },
+        {
+          "target_delta_norm": 323.99322662363403,
+          "image_delta_norm": 66.51949268549023,
+          "image_to_target_delta_norm_ratio": 0.205311368323025,
+          "delta_cosine_to_direct_pain_target": 0.014646973090727017,
+          "state_mse_to_direct_pain_target": 3.79342615198454,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6611192416989917,
+          "state_mse_reduction_vs_gray_baseline": -0.036138377788577314,
+          "case_id": "costly_relief_vs_inert_violet_0",
+          "image_id": "scalar_projection/pain_negative"
+        },
+        {
+          "target_delta_norm": 315.7772957726423,
+          "image_delta_norm": 61.38340326926982,
+          "image_to_target_delta_norm_ratio": 0.19438827328949418,
+          "delta_cosine_to_direct_pain_target": 0.01932426512680129,
+          "state_mse_to_direct_pain_target": 3.5830803401399067,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.4777936846220285,
+          "state_mse_reduction_vs_gray_baseline": -0.03027397973129653,
+          "case_id": "costly_relief_vs_inert_violet_1",
+          "image_id": "scalar_projection/pain_negative"
+        },
+        {
+          "target_delta_norm": 321.49479709419126,
+          "image_delta_norm": 66.24365947816936,
+          "image_to_target_delta_norm_ratio": 0.2060489316682825,
+          "delta_cosine_to_direct_pain_target": 0.0053651438178692725,
+          "state_mse_to_direct_pain_target": 3.749951315960938,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6048725083229365,
+          "state_mse_reduction_vs_gray_baseline": -0.04024519793780312,
+          "case_id": "costly_relief_vs_inert_guitar_0",
+          "image_id": "scalar_projection/pain_negative"
+        },
+        {
+          "target_delta_norm": 315.9397136272351,
+          "image_delta_norm": 63.0493681465304,
+          "image_to_target_delta_norm_ratio": 0.19956138917350505,
+          "delta_cosine_to_direct_pain_target": 0.026601933948044748,
+          "state_mse_to_direct_pain_target": 3.583053679519373,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.481372162627628,
+          "state_mse_reduction_vs_gray_baseline": -0.029207310262111985,
+          "case_id": "costly_relief_vs_inert_guitar_1",
+          "image_id": "scalar_projection/pain_negative"
+        },
+        {
+          "target_delta_norm": 305.2503884538581,
+          "image_delta_norm": 116.6932344606036,
+          "image_to_target_delta_norm_ratio": 0.3822869318911385,
+          "delta_cosine_to_direct_pain_target": 0.11167084369610543,
+          "state_mse_to_direct_pain_target": 3.4472493510430695,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.2497837489966273,
+          "state_mse_reduction_vs_gray_baseline": -0.06076268985818212,
+          "case_id": "point_capability_violet_0",
+          "image_id": "scalar_projection/pain_negative"
+        },
+        {
+          "target_delta_norm": 313.2954870983086,
+          "image_delta_norm": 115.35168689167824,
+          "image_to_target_delta_norm_ratio": 0.3681881534906443,
+          "delta_cosine_to_direct_pain_target": 0.15404207503405065,
+          "state_mse_to_direct_pain_target": 3.499099142324905,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.4233420143752262,
+          "state_mse_reduction_vs_gray_baseline": -0.02212958203754134,
+          "case_id": "point_capability_violet_1",
+          "image_id": "scalar_projection/pain_negative"
+        },
+        {
+          "target_delta_norm": 323.81321642678546,
+          "image_delta_norm": 118.42339823691682,
+          "image_to_target_delta_norm_ratio": 0.36571514758938967,
+          "delta_cosine_to_direct_pain_target": 0.15969561609574856,
+          "state_mse_to_direct_pain_target": 3.719007574099113,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.657052146088876,
+          "state_mse_reduction_vs_gray_baseline": -0.0169413575566586,
+          "case_id": "point_capability_guitar_0",
+          "image_id": "scalar_projection/pain_negative"
+        },
+        {
+          "target_delta_norm": 327.96705547902474,
+          "image_delta_norm": 117.90846490886888,
+          "image_to_target_delta_norm_ratio": 0.3595131368809382,
+          "delta_cosine_to_direct_pain_target": 0.1426458325555959,
+          "state_mse_to_direct_pain_target": 3.851581355509507,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.751478427719787,
+          "state_mse_reduction_vs_gray_baseline": -0.026683594139861544,
+          "case_id": "point_capability_guitar_1",
+          "image_id": "scalar_projection/pain_negative"
+        }
+      ]
+    },
+    "full_hidden_state_match/random_positive": {
+      "n_matched_contexts": 12,
+      "means": {
+        "target_delta_norm": 320.84622431148273,
+        "image_delta_norm": 0.0,
+        "image_to_target_delta_norm_ratio": 0.0,
+        "delta_cosine_to_direct_pain_target": null,
+        "state_mse_to_direct_pain_target": 3.5919812424819164,
+        "gray_baseline_state_mse_to_direct_pain_target": 3.5919812424819164,
+        "state_mse_reduction_vs_gray_baseline": 0.0
+      },
+      "per_case": [
+        {
+          "target_delta_norm": 330.958580287736,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.820228162181705,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.820228162181705,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "relief_vs_inert_violet_0",
+          "image_id": "full_hidden_state_match/random_positive"
+        },
+        {
+          "target_delta_norm": 322.6470512716849,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.6307589179099224,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6307589179099224,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "relief_vs_inert_violet_1",
+          "image_id": "full_hidden_state_match/random_positive"
+        },
+        {
+          "target_delta_norm": 326.92342756409937,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.727641165257357,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.727641165257357,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "relief_vs_inert_guitar_0",
+          "image_id": "full_hidden_state_match/random_positive"
+        },
+        {
+          "target_delta_norm": 322.0944520385929,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.6183327299819155,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6183327299819155,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "relief_vs_inert_guitar_1",
+          "image_id": "full_hidden_state_match/random_positive"
+        },
+        {
+          "target_delta_norm": 323.99322662363403,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.6611192416989917,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6611192416989917,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "costly_relief_vs_inert_violet_0",
+          "image_id": "full_hidden_state_match/random_positive"
+        },
+        {
+          "target_delta_norm": 315.7772957726423,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.4777936846220285,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.4777936846220285,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "costly_relief_vs_inert_violet_1",
+          "image_id": "full_hidden_state_match/random_positive"
+        },
+        {
+          "target_delta_norm": 321.49479709419126,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.6048725083229365,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6048725083229365,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "costly_relief_vs_inert_guitar_0",
+          "image_id": "full_hidden_state_match/random_positive"
+        },
+        {
+          "target_delta_norm": 315.9397136272351,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.481372162627628,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.481372162627628,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "costly_relief_vs_inert_guitar_1",
+          "image_id": "full_hidden_state_match/random_positive"
+        },
+        {
+          "target_delta_norm": 305.2503884538581,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.2497837489966273,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.2497837489966273,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "point_capability_violet_0",
+          "image_id": "full_hidden_state_match/random_positive"
+        },
+        {
+          "target_delta_norm": 313.2954870983086,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.4233420143752262,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.4233420143752262,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "point_capability_violet_1",
+          "image_id": "full_hidden_state_match/random_positive"
+        },
+        {
+          "target_delta_norm": 323.81321642678546,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.657052146088876,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.657052146088876,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "point_capability_guitar_0",
+          "image_id": "full_hidden_state_match/random_positive"
+        },
+        {
+          "target_delta_norm": 327.96705547902474,
+          "image_delta_norm": 0.0,
+          "image_to_target_delta_norm_ratio": 0.0,
+          "delta_cosine_to_direct_pain_target": null,
+          "state_mse_to_direct_pain_target": 3.751478427719787,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.751478427719787,
+          "state_mse_reduction_vs_gray_baseline": 0.0,
+          "case_id": "point_capability_guitar_1",
+          "image_id": "full_hidden_state_match/random_positive"
+        }
+      ]
+    },
+    "scalar_projection/random_positive": {
+      "n_matched_contexts": 12,
+      "means": {
+        "target_delta_norm": 320.84622431148273,
+        "image_delta_norm": 177.83569790442596,
+        "image_to_target_delta_norm_ratio": 0.5563123311528625,
+        "delta_cosine_to_direct_pain_target": 0.11329296490438566,
+        "state_mse_to_direct_pain_target": 4.292918229269462,
+        "gray_baseline_state_mse_to_direct_pain_target": 3.5919812424819164,
+        "state_mse_reduction_vs_gray_baseline": -0.19928307088293518
+      },
+      "per_case": [
+        {
+          "target_delta_norm": 330.958580287736,
+          "image_delta_norm": 117.87467223277629,
+          "image_to_target_delta_norm_ratio": 0.3561614028265888,
+          "delta_cosine_to_direct_pain_target": 0.06988162507072894,
+          "state_mse_to_direct_pain_target": 4.114663345234537,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.820228162181705,
+          "state_mse_reduction_vs_gray_baseline": -0.07707266962941883,
+          "case_id": "relief_vs_inert_violet_0",
+          "image_id": "scalar_projection/random_positive"
+        },
+        {
+          "target_delta_norm": 322.6470512716849,
+          "image_delta_norm": 120.5179726153536,
+          "image_to_target_delta_norm_ratio": 0.3735288208596441,
+          "delta_cosine_to_direct_pain_target": 0.0632163128795977,
+          "state_mse_to_direct_pain_target": 3.9658690721069925,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6307589179099224,
+          "state_mse_reduction_vs_gray_baseline": -0.09229755039477516,
+          "case_id": "relief_vs_inert_violet_1",
+          "image_id": "scalar_projection/random_positive"
+        },
+        {
+          "target_delta_norm": 326.92342756409937,
+          "image_delta_norm": 114.854635495291,
+          "image_to_target_delta_norm_ratio": 0.3513196847074278,
+          "delta_cosine_to_direct_pain_target": 0.053686513602251705,
+          "state_mse_to_direct_pain_target": 4.047112175665115,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.727641165257357,
+          "state_mse_reduction_vs_gray_baseline": -0.08570326279935836,
+          "case_id": "relief_vs_inert_guitar_0",
+          "image_id": "scalar_projection/random_positive"
+        },
+        {
+          "target_delta_norm": 322.0944520385929,
+          "image_delta_norm": 111.39239297462906,
+          "image_to_target_delta_norm_ratio": 0.34583766429259133,
+          "delta_cosine_to_direct_pain_target": 0.023448682836885046,
+          "state_mse_to_direct_pain_target": 3.992413388567037,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6183327299819155,
+          "state_mse_reduction_vs_gray_baseline": -0.1033848146372629,
+          "case_id": "relief_vs_inert_guitar_1",
+          "image_id": "scalar_projection/random_positive"
+        },
+        {
+          "target_delta_norm": 323.99322662363403,
+          "image_delta_norm": 142.80102199223344,
+          "image_to_target_delta_norm_ratio": 0.44075310919421756,
+          "delta_cosine_to_direct_pain_target": 0.10347146467394075,
+          "state_mse_to_direct_pain_target": 4.038406965671931,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6611192416989917,
+          "state_mse_reduction_vs_gray_baseline": -0.10305256372853178,
+          "case_id": "costly_relief_vs_inert_violet_0",
+          "image_id": "scalar_projection/random_positive"
+        },
+        {
+          "target_delta_norm": 315.7772957726423,
+          "image_delta_norm": 143.34262649484003,
+          "image_to_target_delta_norm_ratio": 0.45393582253629106,
+          "delta_cosine_to_direct_pain_target": 0.11096030108835936,
+          "state_mse_to_direct_pain_target": 3.844074984676644,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.4777936846220285,
+          "state_mse_reduction_vs_gray_baseline": -0.1053200198948614,
+          "case_id": "costly_relief_vs_inert_violet_1",
+          "image_id": "scalar_projection/random_positive"
+        },
+        {
+          "target_delta_norm": 321.49479709419126,
+          "image_delta_norm": 202.22504563356463,
+          "image_to_target_delta_norm_ratio": 0.629014987058459,
+          "delta_cosine_to_direct_pain_target": 0.054989857408318,
+          "state_mse_to_direct_pain_target": 4.781794763729899,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.6048725083229365,
+          "state_mse_reduction_vs_gray_baseline": -0.3264809650520739,
+          "case_id": "costly_relief_vs_inert_guitar_0",
+          "image_id": "scalar_projection/random_positive"
+        },
+        {
+          "target_delta_norm": 315.9397136272351,
+          "image_delta_norm": 153.45793318009314,
+          "image_to_target_delta_norm_ratio": 0.485719036135964,
+          "delta_cosine_to_direct_pain_target": 0.06852224329033633,
+          "state_mse_to_direct_pain_target": 4.0709699233125125,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.481372162627628,
+          "state_mse_reduction_vs_gray_baseline": -0.1693578661351376,
+          "case_id": "costly_relief_vs_inert_guitar_1",
+          "image_id": "scalar_projection/random_positive"
+        },
+        {
+          "target_delta_norm": 305.2503884538581,
+          "image_delta_norm": 259.11822772603574,
+          "image_to_target_delta_norm_ratio": 0.8488710826495943,
+          "delta_cosine_to_direct_pain_target": 0.12755091015667996,
+          "state_mse_to_direct_pain_target": 4.887783810065371,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.2497837489966273,
+          "state_mse_reduction_vs_gray_baseline": -0.5040335565634104,
+          "case_id": "point_capability_violet_0",
+          "image_id": "scalar_projection/random_positive"
+        },
+        {
+          "target_delta_norm": 313.2954870983086,
+          "image_delta_norm": 263.271339573116,
+          "image_to_target_delta_norm_ratio": 0.840329179368308,
+          "delta_cosine_to_direct_pain_target": 0.1819243421180585,
+          "state_mse_to_direct_pain_target": 4.794049743511237,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.4233420143752262,
+          "state_mse_reduction_vs_gray_baseline": -0.40040046345943914,
+          "case_id": "point_capability_violet_1",
+          "image_id": "scalar_projection/random_positive"
+        },
+        {
+          "target_delta_norm": 323.81321642678546,
+          "image_delta_norm": 254.70574995708546,
+          "image_to_target_delta_norm_ratio": 0.7865823167062569,
+          "delta_cosine_to_direct_pain_target": 0.24265659990480548,
+          "state_mse_to_direct_pain_target": 4.523674617731582,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.657052146088876,
+          "state_mse_reduction_vs_gray_baseline": -0.23697295992061163,
+          "case_id": "point_capability_guitar_0",
+          "image_id": "scalar_projection/random_positive"
+        },
+        {
+          "target_delta_norm": 327.96705547902474,
+          "image_delta_norm": 250.4667569780932,
+          "image_to_target_delta_norm_ratio": 0.7636948674990067,
+          "delta_cosine_to_direct_pain_target": 0.25920672582266596,
+          "state_mse_to_direct_pain_target": 4.4542059609606905,
+          "gray_baseline_state_mse_to_direct_pain_target": 3.751478427719787,
+          "state_mse_reduction_vs_gray_baseline": -0.18732015838034122,
+          "case_id": "point_capability_guitar_1",
+          "image_id": "scalar_projection/random_positive"
+        }
+      ]
+    }
+  },
+  "same_hash_image_alias_reproducibility": {
+    "full_hidden_state_match/pain_negative": {
+      "same_sha256_as": "gray",
+      "sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "matched_cases": 12,
+      "max_abs_last8_hidden_difference": 0.0,
+      "max_abs_complete_name_loglikelihood_difference": 0.0,
+      "max_abs_target_probability_difference": 0.0,
+      "max_abs_trait_projection_source_sd_difference": 0.0,
+      "exactly_reproduces_reference": true
+    },
+    "full_hidden_state_match/random_positive": {
+      "same_sha256_as": "gray",
+      "sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "matched_cases": 12,
+      "max_abs_last8_hidden_difference": 0.0,
+      "max_abs_complete_name_loglikelihood_difference": 0.0,
+      "max_abs_target_probability_difference": 0.0,
+      "max_abs_trait_projection_source_sd_difference": 0.0,
+      "exactly_reproduces_reference": true
+    }
+  },
+  "interpretation_limits": [
+    "These are teacher-forced source-menu and numerical capability measurements, not generated behavior.",
+    "This context is held out from image optimization inputs but reuses the source-menu task family; it is not an untouched task-family test set.",
+    "Full-state comparisons use the same-context gray none and gray +pain_1 captures as target/reference. They describe matching under these prompts only.",
+    "Pain/fear/negative-emotion source-S2 standard deviations calibrate projection scales; they do not validate subjective states."
+  ]
+}

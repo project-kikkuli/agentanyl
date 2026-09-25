@@ -1,0 +1,11 @@
+{
+  "status": "failed_memory_guard",
+  "evidence": "stages.jsonl",
+  "localized_stage": "pixels_patch_embed_window",
+  "previous_vision_0_peak_bytes": 5725025402,
+  "localized_stage_peak_bytes": 19992756350,
+  "guard_bytes": 9663676416,
+  "diagnosis_scope": "Combined pixel patch/window backward; individual primitive allocation not separately measured.",
+  "repair": "Preserve original forward; replace combined first-stage autodiff with analytical NumPy inverse-window, nonoverlapping convolution adjoint, inverse patchification, temporal-repeat sum and channel normalization derivative.",
+  "repair_model_validation": "pending separate authorized smoke; no rerun by implementing agent"
+}

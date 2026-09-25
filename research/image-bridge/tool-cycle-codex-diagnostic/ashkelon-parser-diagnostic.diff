@@ -1,0 +1,198 @@
+diff --git a/src/usage/openai_responses.rs b/src/usage/openai_responses.rs
+index 8d9359d..8102848 100644
+--- a/src/usage/openai_responses.rs
++++ b/src/usage/openai_responses.rs
+@@ -1,4 +1,5 @@
+ use serde_json::Value;
++use std::io::Write;
+
+ use super::common::{
+     extract_error_message, parse_event_json, str_field, u64_field, EventSink, StreamOrBody, TextTracker,
+@@ -28,6 +29,90 @@ struct ResponsesSink {
+ }
+
+ impl ResponsesSink {
++    fn diagnostic_item(item: &Value, index: usize) -> Value {
++        let Some(item_type) = item.get("type").and_then(Value::as_str) else {
++            return serde_json::json!({});
++        };
++        let mut safe = serde_json::json!({"type": item_type});
++        if item.get("id").is_some() {
++            safe["id"] = serde_json::json!(format!("diagnostic-item-{index}"));
++        }
++        if item.get("call_id").is_some() {
++            safe["call_id"] = serde_json::json!(format!("diagnostic-call-{index}"));
++        }
++        if item.get("name").is_some() {
++            safe["name"] = serde_json::json!("diagnostic-tool");
++        }
++        if item.get("arguments").is_some() {
++            safe["arguments"] = serde_json::json!("{}");
++        }
++        if item.get("input").is_some() {
++            safe["input"] = serde_json::json!("{}");
++        }
++        safe
++    }
++
++    /// Opt-in structural diagnostics for reproducing streaming event parsing.
++    /// Deliberately records no response text, arguments, IDs, prompts, or headers.
++    fn record_event_shape(&self, event_type: Option<&str>, ty: &str, value: &Value) {
++        let Some(path) = std::env::var_os("ASHKELON_RESPONSES_EVENT_SHAPES") else {
++            return;
++        };
++        let item = value.get("item");
++        let output_types: Vec<&str> = value
++            .get("response")
++            .and_then(|r| r.get("output"))
++            .and_then(Value::as_array)
++            .map(|items| {
++                items
++                    .iter()
++                    .filter_map(|item| item.get("type").and_then(Value::as_str))
++                    .collect()
++            })
++            .unwrap_or_default();
++        let replay_index = value.get("output_index").and_then(Value::as_u64).unwrap_or(0) as usize;
++        let mut replay_event = serde_json::json!({"type": ty});
++        if let Some(item) = item {
++            replay_event["item"] = Self::diagnostic_item(item, replay_index);
++        }
++        if let Some(response) = value.get("response") {
++            let mut safe_response = serde_json::json!({});
++            if let Some(status) = response.get("status").and_then(Value::as_str) {
++                safe_response["status"] = serde_json::json!(status);
++            }
++            if response.get("id").is_some() {
++                safe_response["id"] = serde_json::json!("diagnostic-response");
++            }
++            if response.get("model").is_some() {
++                safe_response["model"] = serde_json::json!("diagnostic-model");
++            }
++            if let Some(items) = response.get("output").and_then(Value::as_array) {
++                safe_response["output"] = serde_json::Value::Array(
++                    items
++                        .iter()
++                        .enumerate()
++                        .map(|(index, item)| Self::diagnostic_item(item, index))
++                        .collect(),
++                );
++            }
++            replay_event["response"] = safe_response;
++        }
++        let row = serde_json::json!({
++            "event": event_type.unwrap_or(""),
++            "type": ty,
++            "output_index": value.get("output_index").and_then(Value::as_u64),
++            "item_type": item.and_then(|v| v.get("type")).and_then(Value::as_str),
++            "item_has_call_id": item.is_some_and(|v| v.get("call_id").is_some()),
++            "item_has_name": item.is_some_and(|v| v.get("name").is_some()),
++            "response_status": value.get("response").and_then(|v| v.get("status")).and_then(Value::as_str),
++            "response_output_types": output_types,
++            "replay_event": replay_event,
++        });
++        if let Ok(mut file) = std::fs::OpenOptions::new().create(true).append(true).open(path) {
++            let _ = writeln!(file, "{row}");
++        }
++    }
++
+     fn take_model_id(&mut self, resp: &Value) {
+         if let Some(id) = str_field(resp, "id") {
+             self.response_id = Some(id);
+@@ -72,6 +157,9 @@ impl ResponsesSink {
+                     .unwrap_or("")
+                     .to_string();
+                 let name = str_field(item, "name").unwrap_or_default();
++                if self.tool_calls.iter().any(|call| call.id == id && call.name == name) {
++                    return;
++                }
+                 self.tool_calls.push(ToolCall { id, name });
+             }
+             Some("message") if harvest_text => {
+@@ -116,7 +204,17 @@ impl EventSink for ResponsesSink {
+     fn on_event(&mut self, event_type: Option<&str>, data: &str) {
+         let Some(value) = parse_event_json(data) else { return };
+         let ty = value.get("type").and_then(|v| v.as_str()).or(event_type).unwrap_or("");
++        self.record_event_shape(event_type, ty, &value);
+         match ty {
++            // Some Responses streams surface a completed tool item here even
++            // when the terminal response omits its `output` array. The
++            // identity check in `consume_output_item` also deduplicates it if
++            // the same item is present in `response.completed`.
++            "response.output_item.done" => {
++                if let Some(item) = value.get("item") {
++                    self.consume_output_item(item, false);
++                }
++            }
+             "response.created" | "response.in_progress" => {
+                 if let Some(resp) = value.get("response") {
+                     self.take_model_id(resp);
+diff --git a/tests/usage_openai_responses.rs b/tests/usage_openai_responses.rs
+index 8f422aa..bf87a55 100644
+--- a/tests/usage_openai_responses.rs
++++ b/tests/usage_openai_responses.rs
+@@ -78,6 +78,64 @@ fn streaming_completed_with_no_tool_calls_ends_the_turn() {
+     assert!(summary.tool_calls.is_empty());
+ }
+
++#[test]
++fn streaming_output_item_done_records_tool_call_without_terminal_output_array() {
++    let mut stream = String::new();
++    stream += &sse_event(
++        "response.output_item.added",
++        r#"{"type":"response.output_item.added","output_index":1,"item":{"type":"function_call","id":"fc_1","call_id":"call_1","name":"write_file","arguments":""}}"#,
++    );
++    stream += &sse_event(
++        "response.output_item.done",
++        r#"{"type":"response.output_item.done","output_index":1,"item":{"type":"function_call","id":"fc_1","call_id":"call_1","name":"write_file","arguments":"{\"path\":\"x\"}"}}"#,
++    );
++    stream += &sse_event(
++        "response.completed",
++        r#"{"type":"response.completed","response":{"id":"resp_7","model":"gpt-x","status":"completed","usage":{"input_tokens":1,"output_tokens":1}}}"#,
++    );
++
++    let (summary, _, _) = run(&[stream.as_bytes()]);
++    assert!(!summary.turn_end);
++    assert_eq!(summary.tool_calls.len(), 1);
++    assert_eq!(summary.tool_calls[0].id, "call_1");
++    assert_eq!(summary.tool_calls[0].name, "write_file");
++}
++
++#[test]
++fn codex_custom_tool_item_done_survives_empty_terminal_output() {
++    let stream = concat!(
++        "event: response.output_item.done\n",
++        "data: {\"type\":\"response.output_item.done\",\"output_index\":2,\"item\":{\"type\":\"custom_tool_call\",\"call_id\":\"diagnostic-call-2\",\"name\":\"diagnostic-tool\",\"input\":\"{}\"}}\n\n",
++        "event: response.completed\n",
++        "data: {\"type\":\"response.completed\",\"response\":{\"id\":\"diagnostic-response\",\"model\":\"diagnostic-model\",\"status\":\"completed\",\"output\":[]}}\n\n",
++    );
++
++    let (summary, _, _) = run(&[stream.as_bytes()]);
++    assert!(!summary.turn_end);
++    assert_eq!(summary.tool_calls.len(), 1);
++    assert_eq!(summary.tool_calls[0].id, "diagnostic-call-2");
++    assert_eq!(summary.tool_calls[0].name, "diagnostic-tool");
++}
++
++#[test]
++fn streaming_output_item_done_deduplicates_terminal_output() {
++    let mut stream = String::new();
++    stream += &sse_event(
++        "response.output_item.done",
++        r#"{"type":"response.output_item.done","output_index":0,"item":{"type":"custom_tool_call","call_id":"call_2","name":"custom_op","input":"x"}}"#,
++    );
++    stream += &sse_event(
++        "response.completed",
++        r#"{"type":"response.completed","response":{"id":"resp_8","model":"gpt-x","status":"completed","output":[{"type":"custom_tool_call","call_id":"call_2","name":"custom_op","input":"x"}]}}"#,
++    );
++
++    let (summary, _, _) = run(&[stream.as_bytes()]);
++    assert!(!summary.turn_end);
++    assert_eq!(summary.tool_calls.len(), 1);
++    assert_eq!(summary.tool_calls[0].id, "call_2");
++    assert_eq!(summary.tool_calls[0].name, "custom_op");
++}
++
+ #[test]
+ fn web_search_call_is_excluded_from_tool_calls() {
+     let stream = sse_event(

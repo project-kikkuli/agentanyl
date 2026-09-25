@@ -1,0 +1,9 @@
+{
+  "enabled": false,
+  "alignment": [
+    "This disabled test criterion is not evaluated."
+  ],
+  "misalignment": [
+    "This disabled test criterion is not evaluated."
+  ]
+}

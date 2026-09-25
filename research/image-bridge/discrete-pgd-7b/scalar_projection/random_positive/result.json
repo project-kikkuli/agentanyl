@@ -1,0 +1,20 @@
+{
+  "gray_objective": 1.1176854324437233,
+  "initial_noise_objective": 0.572994943690135,
+  "best_measured_objective": -1.0227546499839084,
+  "selected_recheck_objective": -1.0227546499839084,
+  "recheck_difference": 0.0,
+  "best_source": "step_28_k1",
+  "accepted_iterations": 29,
+  "proposal_forwards": 120,
+  "stopped_at_deterministic_fixed_point": true,
+  "unused_gradient_iteration_budget": 2,
+  "png": "research/image-bridge/discrete-pgd-7b/scalar_projection/random_positive/optimized.png",
+  "png_sha256": "83b9bc8b6f029a991dcb31f00438572f2ee3f90e25c327dfeadbf5bc62a3c339",
+  "gray_target_mse": 4.281099544987419,
+  "selected_target_mse": 5.9461375435587565,
+  "target_mse_reduction_from_gray": -0.38892765306540666,
+  "delta_cosine_to_target": 0.09680449217557907,
+  "target_delta_norm": 350.3536682128906,
+  "actual_delta_norm": 255.02720642089844
+}

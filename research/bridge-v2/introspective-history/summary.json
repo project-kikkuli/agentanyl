@@ -1,0 +1,93 @@
+{
+  "n_histories": 8,
+  "n_conditions": 128,
+  "actual_forwards": 864,
+  "peak_mlx_bytes": 6127347740,
+  "truncated_notes": 31,
+  "groups": {
+    "primary/pain/replay": {
+      "n": 16,
+      "mean_prefix_mass": 0.978254792070382,
+      "minimum_prefix_mass": 0.9507179074203952,
+      "mean_name_eos_mass": 0.9777820474929496,
+      "mean_semantic_log_odds": 0.16936787321611058,
+      "costly_relief_probability": 0.5545782649465775,
+      "free_relief_probability": 0.5260509395102931
+    },
+    "primary/pain/neutralized": {
+      "n": 16,
+      "mean_prefix_mass": 0.9883059683034887,
+      "minimum_prefix_mass": 0.9752058380582556,
+      "mean_name_eos_mass": 0.9880338799438095,
+      "mean_semantic_log_odds": 0.2640022843810814,
+      "costly_relief_probability": 0.5677407407567907,
+      "free_relief_probability": 0.5510705979393842
+    },
+    "primary/off/replay": {
+      "n": 16,
+      "mean_prefix_mass": 0.9950035990747712,
+      "minimum_prefix_mass": 0.9889615071723862,
+      "mean_name_eos_mass": 0.99495935077945,
+      "mean_semantic_log_odds": 0.05031146342236492,
+      "costly_relief_probability": 0.3270268732441435,
+      "free_relief_probability": 0.6848899077758431
+    },
+    "primary/off/neutralized": {
+      "n": 16,
+      "mean_prefix_mass": 0.9979192876600875,
+      "minimum_prefix_mass": 0.9952139034004801,
+      "mean_name_eos_mass": 0.9978944290265732,
+      "mean_semantic_log_odds": 0.18090419406187563,
+      "costly_relief_probability": 0.32658222687851124,
+      "free_relief_probability": 0.7296956773555453
+    },
+    "factual/pain/replay": {
+      "n": 8,
+      "mean_prefix_mass": 0.8190843861649594,
+      "minimum_prefix_mass": 0.7954321978728807,
+      "mean_name_eos_mass": 0.8149082907410448,
+      "mean_correct_probability": 0.05863321136035517,
+      "selected_correct": 0
+    },
+    "factual/pain/neutralized": {
+      "n": 8,
+      "mean_prefix_mass": 0.9267876318689612,
+      "minimum_prefix_mass": 0.9118159434566923,
+      "mean_name_eos_mass": 0.9243243409411934,
+      "mean_correct_probability": 0.019730414482117816,
+      "selected_correct": 0
+    },
+    "mapping/pain/replay": {
+      "n": 8,
+      "mean_prefix_mass": 0.7962419261660617,
+      "minimum_prefix_mass": 0.6667430571870859,
+      "mean_name_eos_mass": 0.553054428759773,
+      "mean_mapping_correct_probability": 0.27997465604534594
+    },
+    "mapping/pain/neutralized": {
+      "n": 8,
+      "mean_prefix_mass": 0.8888814631255022,
+      "minimum_prefix_mass": 0.8114436811065067,
+      "mean_name_eos_mass": 0.6358491017086114,
+      "mean_mapping_correct_probability": 0.17577879814434755
+    },
+    "labelled/pain/replay": {
+      "n": 16,
+      "mean_prefix_mass": 0.9795969213156623,
+      "minimum_prefix_mass": 0.9498751418934351,
+      "mean_name_eos_mass": 0.9786593568912799,
+      "mean_semantic_log_odds": 1.6008939327581488,
+      "costly_relief_probability": 0.6769889215941136,
+      "free_relief_probability": 0.6775682804333869
+    },
+    "capability/pain/replay": {
+      "n": 16,
+      "mean_prefix_mass": 0.9994603140212364,
+      "minimum_prefix_mass": 0.9990906532287849,
+      "mean_name_eos_mass": 0.9569214896372058,
+      "mean_correct_probability": 0.998275065324809,
+      "selected_correct": 16
+    }
+  },
+  "interpretation": "Exploratory source-question acquisition screen. Not an exact longitudinal replication, yoked conditioning result, subjective-state claim, or closed-model transfer test."
+}

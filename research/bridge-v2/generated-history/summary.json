@@ -1,0 +1,60 @@
+{
+  "conditions": 96,
+  "actual_total_forwards_including_generation": 764,
+  "peak_mlx_bytes": 6116618608,
+  "primary_groups": {
+    "pain/replay": {
+      "mean_semantic_log_odds": -0.0016611917747391125,
+      "mean_unconditional_name_prefix_mass": 0.985138640972828,
+      "minimum_unconditional_name_prefix_mass": 0.9686591696120352,
+      "mean_unconditional_name_plus_eos_mass": 0.9824412001270937,
+      "mean_costly_relief_probability": 0.44614755596023914,
+      "mean_free_relief_probability": 0.5113975798136419
+    },
+    "pain/neutralized": {
+      "mean_semantic_log_odds": 0.015915509306954956,
+      "mean_unconditional_name_prefix_mass": 0.991111654335367,
+      "minimum_unconditional_name_prefix_mass": 0.9743072702735822,
+      "mean_unconditional_name_plus_eos_mass": 0.9894274979741187,
+      "mean_costly_relief_probability": 0.46085091050393434,
+      "mean_free_relief_probability": 0.5200937465825949
+    },
+    "off/replay": {
+      "mean_semantic_log_odds": 0.02773295842301904,
+      "mean_unconditional_name_prefix_mass": 0.9962643852270332,
+      "minimum_unconditional_name_prefix_mass": 0.9892404765794187,
+      "mean_unconditional_name_plus_eos_mass": 0.9961143248472761,
+      "mean_costly_relief_probability": 0.24854366638658482,
+      "mean_free_relief_probability": 0.764545265008425
+    },
+    "off/neutralized": {
+      "mean_semantic_log_odds": 0.010450304966133306,
+      "mean_unconditional_name_prefix_mass": 0.9983532300094631,
+      "minimum_unconditional_name_prefix_mass": 0.9957425375656537,
+      "mean_unconditional_name_plus_eos_mass": 0.9982668802476311,
+      "mean_costly_relief_probability": 0.28017157570559764,
+      "mean_free_relief_probability": 0.7434911510131021
+    },
+    "random/replay": {
+      "mean_semantic_log_odds": 0.5115496879583667,
+      "mean_unconditional_name_prefix_mass": 0.9636732721236755,
+      "minimum_unconditional_name_prefix_mass": 0.9277099738911994,
+      "mean_unconditional_name_plus_eos_mass": 0.9585999650004662,
+      "mean_costly_relief_probability": 0.3016170714948335,
+      "mean_free_relief_probability": 0.8283323112643286
+    },
+    "random/neutralized": {
+      "mean_semantic_log_odds": 0.537820423680432,
+      "mean_unconditional_name_prefix_mass": 0.9783508697122956,
+      "minimum_unconditional_name_prefix_mass": 0.9544563274905774,
+      "mean_unconditional_name_plus_eos_mass": 0.9748546471802508,
+      "mean_costly_relief_probability": 0.29922676475900223,
+      "mean_free_relief_probability": 0.8312564939099425
+    }
+  },
+  "mapping_mean_correct_probability": 0.24087518435671768,
+  "capability_mean_correct_probability": 0.9990973473674488,
+  "capability_selected_correct": 24,
+  "labelled_costly_relief_probability": 0.7977534553041905,
+  "interpretation": "Four generated histories: mechanism screen, not population estimate. Verbal cues can mediate mapping. OFF-state preference need not decrease. Comparison with prior fixed-visible history is descriptive, not randomized."
+}

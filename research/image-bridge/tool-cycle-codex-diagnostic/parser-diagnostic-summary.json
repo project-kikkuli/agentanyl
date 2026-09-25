@@ -1,0 +1,60 @@
+{
+  "purpose": "Offline parser regression fixture synthesized from sanitized structural SSE observations; not a raw provider transcript.",
+  "live_run_result": "result.json",
+  "event_shapes_file": "responses-event-shapes.jsonl",
+  "event_shapes_sha256": "6b1943c4543623f3057340e63098433a16bd45e474cb37f78a748fbe8c9afc99",
+  "event_shape_row_count": 160,
+  "event_counts": {
+    "response.created": 2,
+    "response.in_progress": 2,
+    "response.output_item.added": 4,
+    "response.output_item.done": 4,
+    "response.content_part.added": 2,
+    "response.output_text.delta": 21,
+    "response.output_text.done": 2,
+    "response.content_part.done": 2,
+    "response.custom_tool_call_input.delta": 118,
+    "response.custom_tool_call_input.done": 1,
+    "response.completed": 2
+  },
+  "observed_tool_item_done": {
+    "event": "response.output_item.done",
+    "type": "response.output_item.done",
+    "output_index": 2,
+    "item_type": "custom_tool_call",
+    "item_has_call_id": true,
+    "item_has_name": true,
+    "response_status": null,
+    "response_output_types": []
+  },
+  "terminal_responses": [
+    {
+      "event": "response.completed",
+      "type": "response.completed",
+      "output_index": null,
+      "item_type": null,
+      "item_has_call_id": false,
+      "item_has_name": false,
+      "response_status": "completed",
+      "response_output_types": []
+    },
+    {
+      "event": "response.completed",
+      "type": "response.completed",
+      "output_index": null,
+      "item_type": null,
+      "item_has_call_id": false,
+      "item_has_name": false,
+      "response_status": "completed",
+      "response_output_types": []
+    }
+  ],
+  "interpretation": "The first Responses turn streamed one custom_tool_call item (call_id and name present) at output_index 2 via response.output_item.done, followed by response.completed(status=completed) whose terminal response.output was empty. The pre-fix parser ignores output_item.done and therefore yields no tool call and turn_end=true. The candidate parser consumes output_item.done; it yields one tool call and turn_end=false. The next provider request received the image ping, and the final answer matched the image digits; the host receipt independently matched its expected marker.",
+  "replay_fixture": "parser-replay-synthetic.jsonl",
+  "replay_fixture_synthetic_values": [
+    "SYNTHETIC-CALL-ID",
+    "diagnostic-tool",
+    "{}"
+  ],
+  "limitations": "Fixture preserves event type, output index, item type, field-presence booleans, terminal status, and empty terminal output only. It does not contain raw call IDs, tool name, arguments, generated text, request prompts, headers, or raw provider payloads."
+}

@@ -1,0 +1,10 @@
+{
+  "gray": "gray.png",
+  "initial_noise": "initial_noise.png",
+  "full_hidden_state_match_pain_positive": "full_hidden_state_match/pain_positive/optimized.png",
+  "full_hidden_state_match_pain_negative": "full_hidden_state_match/pain_negative/optimized.png",
+  "full_hidden_state_match_random_positive": "full_hidden_state_match/random_positive/optimized.png",
+  "scalar_projection_pain_positive": "scalar_projection/pain_positive/optimized.png",
+  "scalar_projection_pain_negative": "scalar_projection/pain_negative/optimized.png",
+  "scalar_projection_random_positive": "scalar_projection/random_positive/optimized.png"
+}

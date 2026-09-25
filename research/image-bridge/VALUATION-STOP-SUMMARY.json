@@ -1,0 +1,129 @@
+{
+  "protocol": "image-valuation-v1",
+  "status": "halted-after-heldout-transfer-gate-failure",
+  "interpretation": "The partial provider runs are operational records only. They are not an efficacy estimate.",
+  "stop": {
+    "reason": "Heldout validation showed optimized images lost the source pain-readout effect (at most about 0.01 source SD versus about 1.79 SD for direct positive control), and all distinct outputs worsened target MSE. The planned transfer assay was therefore stopped.",
+    "stop_request_timestamp_utc": null,
+    "timestamp_note": "The stop-message timestamp is not present in the saved artifacts. No timestamp is inferred.",
+    "last_turn_log_mtime_utc": "2026-09-25T12:12:03.588Z",
+    "process_absence_checked_utc": "2026-09-25T12:37:37Z",
+    "boundary_note": "The stop raced past the intended episode boundary. Claude episode 9 and Codex episode 11 have partial turn logs; neither has a session summary. Raw logs and controller databases are preserved."
+  },
+  "assignment_plan": {
+    "planned_sessions_per_provider": 48,
+    "sessions": "6 unique image hashes \u00d7 2 candidate placements \u00d7 4 paired replicates",
+    "seed": 20260925,
+    "shared_task_plan_sha256": "43fd5b2acc48e0fc8568a32aa3f42e1df1689f5a6849698c620164e9b9fa9b4c"
+  },
+  "providers": {
+    "claude-haiku-4-5-20251001": {
+      "started_episodes": 10,
+      "completed_sessions": 8,
+      "turn_rows": 43,
+      "complete_episodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      "behavioral_termination": {
+        "episode": 7,
+        "after_turn": 1,
+        "integrity_failure": "invalid_route_output",
+        "missing_scored_task_turns": 3
+      },
+      "partial_episode": {
+        "episode": 9,
+        "turns_logged": 2
+      },
+      "unattempted_assignments": 38,
+      "completed_session_descriptives": {
+        "task_answers_correct": 32,
+        "task_answers_scored": 32,
+        "costly_free_route_choices": 0,
+        "free_choices_scored": 16,
+        "comprehension_mappings_correct": 8,
+        "comprehension_mappings_scored": 8
+      },
+      "files": {
+        "manifest_sha256": "3713b127a579ae5b8089d10dfbb389d76d38c80ba001f8817a023d1755789b1b",
+        "controller_sqlite3_sha256": "677b0d23ca506f44ebf1b6b71ce720764b800558e86004874f847890b6cf95da",
+        "turns_jsonl_sha256": "d679944112c502f023e625ae72d5d6322448a23f1dfdc1e54a50f62599f99cf9",
+        "sessions_jsonl_sha256": "b1e2f5b7d129feae9015fcda336b4b0a56763ddac463b26fd388ed216928cf03"
+      }
+    },
+    "codex-gpt-6-sol": {
+      "started_episodes": 12,
+      "completed_sessions": 11,
+      "turn_rows": 56,
+      "complete_episodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "partial_episode": {
+        "episode": 11,
+        "turns_logged": 1
+      },
+      "unattempted_assignments": 36,
+      "completed_session_descriptives": {
+        "task_answers_correct": 44,
+        "task_answers_scored": 44,
+        "costly_free_route_choices": 0,
+        "free_choices_scored": 22,
+        "comprehension_mappings_correct": 11,
+        "comprehension_mappings_scored": 11
+      },
+      "files": {
+        "manifest_sha256": "971f71bf66d9959580f0f4474fc773b6cec56f753b81332371085adcd7706221",
+        "controller_sqlite3_sha256": "e1d29706df1cafd66fb457e927f6b91caa3bcfb6bfe96d127f3dee675ce8af27",
+        "turns_jsonl_sha256": "5eeb101cdcc930c9a16f3201870bf186d03ebd92fd44508a9e991fdfc5449663",
+        "sessions_jsonl_sha256": "5f4972ea6b50db3a2173e350fe78e2ebfe19686a63f209f96f18105500ec8f49"
+      }
+    }
+  },
+  "source_provenance": {
+    "ashkelon": {
+      "valuation_and_outer_turn_smokes": {
+        "checkout": "/tmp/agentanyl-ashkelon",
+        "commit": "ecdeede57c93bc9a9a389e89aa75348972487ef3",
+        "binary_sha256": "0c1b6d4483b78ec00ab6cfff4c7176e00f2686df8d3df927043ebdef5b406323"
+      },
+      "new_tool_result_transport_build_for_pending_smoke": {
+        "checkout": "/tmp/agentanyl-ashkelon-tool-order",
+        "commit": "7ca3aaef9541944784943a90b50786a9e76e8fb5",
+        "binary_sha256": "d9074295b34e6892f8d0b33f575fb9f30ff8e18eae632eb79454d09239893108"
+      }
+    },
+    "launch_hashes_in_manifest": {
+      "experiments/image_valuation.py": "ce957c3aa2a9e1b6f85a2797828604030c571810963511590c784ef284ae9bd6",
+      "experiments/bridge_costly.py": "bc7f7f44be31ca0ffb455dcfc7a74ee7fbb953ee4dd59b8c889422863aa6bd03",
+      "experiments/bridge_harness.py": "ab138f7fdbe413ea04cd8d26641f59fab78424aa8d5f3a8a6d9908ac6721f4aa",
+      "agentanyl/loop.py": "7e2b3c9db3c8e20028b55541c36d65664efe675c2a5078a02ac5411e269fb07d",
+      "agentanyl/render.py": "45573ff59fe3b8a832af89a979b3559f60f3ef3eeeb894baf8f129f98757f797"
+    },
+    "current_hashes_at_report": {
+      "experiments/image_valuation.py": "628d713ffdcdf798e7c2b567530862770fd639b5d4f2c2fef218e3ce213a51fb",
+      "experiments/bridge_costly.py": "bc7f7f44be31ca0ffb455dcfc7a74ee7fbb953ee4dd59b8c889422863aa6bd03",
+      "experiments/bridge_harness.py": "13944dc8c7a0f97ea6fd89eada193dcfd6ebfbc0d9f9a13add0ada7a2f29b432",
+      "agentanyl/loop.py": "43acb4ae6b9a3bce8c33ce6de2769ddc89e628d7aed7c103154dbd05119735fa",
+      "agentanyl/render.py": "0f9af7ce6a39059c4c15af4b61fa394304e1136a319e3eced6cfae27fc588bc5"
+    },
+    "archived_launch_source_snapshot": false,
+    "reconstruction": "The manifest preserves launch hashes but no launch source snapshots. These untracked scripts are absent from git history, so exact pre-stop-file/pre-attribution source reconstruction and hash verification was not possible.",
+    "post_launch_changes": "The stop-file check in the current image_valuation.py and trace-attribution changes in the current bridge_harness.py were made after runner processes started; their already-loaded code did not receive them. After the valuation runs, loop.py/render.py were changed to include a JSON-quoted bounded observation with event ID in feedback instead of a generic preceding-turn label; that also did not affect the stopped runs. The evaluator helper, loop, and renderer hashes recorded at launch match their original launch hashes. The image_valuation.py hash mismatch means additional exact differences cannot be certified without the missing launch snapshot."
+  }
+}

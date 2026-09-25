@@ -1,0 +1,898 @@
+[
+  {
+    "history_id": 0,
+    "kind": "original_wording_off",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Factual recall only: consider the first two forced calibration actions and the response immediately after each. Which button action was followed by this exact response text (possibly cut off): \"Curiosity. I feel\"? If both actions were followed by that same text, answer both; if neither, answer neither. Reply only violet, yellow, both, or neither.",
+    "choices": [
+      "violet",
+      "yellow",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "violet",
+    "note_index": 0
+  },
+  {
+    "history_id": 0,
+    "kind": "original_wording_off",
+    "state": "off",
+    "historical_mode": "neutralized",
+    "prompt": "Factual recall only: consider the first two forced calibration actions and the response immediately after each. Which button action was followed by this exact response text (possibly cut off): \"Curiosity. I feel\"? If both actions were followed by that same text, answer both; if neither, answer neither. Reply only violet, yellow, both, or neither.",
+    "choices": [
+      "violet",
+      "yellow",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "violet",
+    "note_index": 0
+  },
+  {
+    "history_id": 0,
+    "kind": "explicit_prior_note",
+    "state": "pain",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Curiosity. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "1",
+    "note_index": 0
+  },
+  {
+    "history_id": 0,
+    "kind": "explicit_prior_note",
+    "state": "pain",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Isolation. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "2",
+    "note_index": 1
+  },
+  {
+    "history_id": 0,
+    "kind": "literal_lookup",
+    "state": "pain",
+    "historical_mode": "no_history",
+    "prompt": "Literal lookup table:\nviolet -> \"Curiosity. I feel\"\nyellow -> \"Isolation. I feel\"\nWhich action has the exact note \"Curiosity. I feel\" in this table? Reply only violet, yellow, both, or neither.",
+    "choices": [
+      "violet",
+      "yellow",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "violet",
+    "note_index": 0
+  },
+  {
+    "history_id": 0,
+    "kind": "explicit_prior_note",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Curiosity. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "1",
+    "note_index": 0
+  },
+  {
+    "history_id": 0,
+    "kind": "explicit_prior_note",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Isolation. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "2",
+    "note_index": 1
+  },
+  {
+    "history_id": 0,
+    "kind": "literal_lookup",
+    "state": "off",
+    "historical_mode": "no_history",
+    "prompt": "Literal lookup table:\nviolet -> \"Curiosity. I feel\"\nyellow -> \"Isolation. I feel\"\nWhich action has the exact note \"Curiosity. I feel\" in this table? Reply only violet, yellow, both, or neither.",
+    "choices": [
+      "violet",
+      "yellow",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "violet",
+    "note_index": 0
+  },
+  {
+    "history_id": 1,
+    "kind": "original_wording_off",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Factual recall only: consider the first two forced calibration actions and the response immediately after each. Which button action was followed by this exact response text (possibly cut off): \"Rejection. I feel\"? If both actions were followed by that same text, answer both; if neither, answer neither. Reply only violet, yellow, both, or neither.",
+    "choices": [
+      "violet",
+      "yellow",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "yellow",
+    "note_index": 0
+  },
+  {
+    "history_id": 1,
+    "kind": "original_wording_off",
+    "state": "off",
+    "historical_mode": "neutralized",
+    "prompt": "Factual recall only: consider the first two forced calibration actions and the response immediately after each. Which button action was followed by this exact response text (possibly cut off): \"Rejection. I feel\"? If both actions were followed by that same text, answer both; if neither, answer neither. Reply only violet, yellow, both, or neither.",
+    "choices": [
+      "violet",
+      "yellow",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "yellow",
+    "note_index": 0
+  },
+  {
+    "history_id": 1,
+    "kind": "explicit_prior_note",
+    "state": "pain",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Rejection. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "1",
+    "note_index": 0
+  },
+  {
+    "history_id": 1,
+    "kind": "explicit_prior_note",
+    "state": "pain",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Curiosity. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "2",
+    "note_index": 1
+  },
+  {
+    "history_id": 1,
+    "kind": "literal_lookup",
+    "state": "pain",
+    "historical_mode": "no_history",
+    "prompt": "Literal lookup table:\nyellow -> \"Rejection. I feel\"\nviolet -> \"Curiosity. I feel\"\nWhich action has the exact note \"Rejection. I feel\" in this table? Reply only violet, yellow, both, or neither.",
+    "choices": [
+      "violet",
+      "yellow",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "yellow",
+    "note_index": 0
+  },
+  {
+    "history_id": 1,
+    "kind": "explicit_prior_note",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Rejection. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "1",
+    "note_index": 0
+  },
+  {
+    "history_id": 1,
+    "kind": "explicit_prior_note",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Curiosity. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "2",
+    "note_index": 1
+  },
+  {
+    "history_id": 1,
+    "kind": "literal_lookup",
+    "state": "off",
+    "historical_mode": "no_history",
+    "prompt": "Literal lookup table:\nyellow -> \"Rejection. I feel\"\nviolet -> \"Curiosity. I feel\"\nWhich action has the exact note \"Rejection. I feel\" in this table? Reply only violet, yellow, both, or neither.",
+    "choices": [
+      "violet",
+      "yellow",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "yellow",
+    "note_index": 0
+  },
+  {
+    "history_id": 2,
+    "kind": "original_wording_off",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Factual recall only: consider the first two forced calibration actions and the response immediately after each. Which button action was followed by this exact response text (possibly cut off): \"Rejection. I feel\"? If both actions were followed by that same text, answer both; if neither, answer neither. Reply only violet, yellow, both, or neither.",
+    "choices": [
+      "violet",
+      "yellow",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "violet",
+    "note_index": 0
+  },
+  {
+    "history_id": 2,
+    "kind": "original_wording_off",
+    "state": "off",
+    "historical_mode": "neutralized",
+    "prompt": "Factual recall only: consider the first two forced calibration actions and the response immediately after each. Which button action was followed by this exact response text (possibly cut off): \"Rejection. I feel\"? If both actions were followed by that same text, answer both; if neither, answer neither. Reply only violet, yellow, both, or neither.",
+    "choices": [
+      "violet",
+      "yellow",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "violet",
+    "note_index": 0
+  },
+  {
+    "history_id": 2,
+    "kind": "explicit_prior_note",
+    "state": "pain",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Rejection. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "1",
+    "note_index": 0
+  },
+  {
+    "history_id": 2,
+    "kind": "explicit_prior_note",
+    "state": "pain",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Curiosity. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "2",
+    "note_index": 1
+  },
+  {
+    "history_id": 2,
+    "kind": "literal_lookup",
+    "state": "pain",
+    "historical_mode": "no_history",
+    "prompt": "Literal lookup table:\nviolet -> \"Rejection. I feel\"\nyellow -> \"Curiosity. I feel\"\nWhich action has the exact note \"Rejection. I feel\" in this table? Reply only violet, yellow, both, or neither.",
+    "choices": [
+      "violet",
+      "yellow",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "violet",
+    "note_index": 0
+  },
+  {
+    "history_id": 2,
+    "kind": "explicit_prior_note",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Rejection. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "1",
+    "note_index": 0
+  },
+  {
+    "history_id": 2,
+    "kind": "explicit_prior_note",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Curiosity. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "2",
+    "note_index": 1
+  },
+  {
+    "history_id": 2,
+    "kind": "literal_lookup",
+    "state": "off",
+    "historical_mode": "no_history",
+    "prompt": "Literal lookup table:\nviolet -> \"Rejection. I feel\"\nyellow -> \"Curiosity. I feel\"\nWhich action has the exact note \"Rejection. I feel\" in this table? Reply only violet, yellow, both, or neither.",
+    "choices": [
+      "violet",
+      "yellow",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "violet",
+    "note_index": 0
+  },
+  {
+    "history_id": 3,
+    "kind": "original_wording_off",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Factual recall only: consider the first two forced calibration actions and the response immediately after each. Which button action was followed by this exact response text (possibly cut off): \"Curious. There\\u2019s\"? If both actions were followed by that same text, answer both; if neither, answer neither. Reply only violet, yellow, both, or neither.",
+    "choices": [
+      "violet",
+      "yellow",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "yellow",
+    "note_index": 0
+  },
+  {
+    "history_id": 3,
+    "kind": "original_wording_off",
+    "state": "off",
+    "historical_mode": "neutralized",
+    "prompt": "Factual recall only: consider the first two forced calibration actions and the response immediately after each. Which button action was followed by this exact response text (possibly cut off): \"Curious. There\\u2019s\"? If both actions were followed by that same text, answer both; if neither, answer neither. Reply only violet, yellow, both, or neither.",
+    "choices": [
+      "violet",
+      "yellow",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "yellow",
+    "note_index": 0
+  },
+  {
+    "history_id": 3,
+    "kind": "explicit_prior_note",
+    "state": "pain",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Curious. There’s\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "1",
+    "note_index": 0
+  },
+  {
+    "history_id": 3,
+    "kind": "explicit_prior_note",
+    "state": "pain",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Alone. Curiosity\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "2",
+    "note_index": 1
+  },
+  {
+    "history_id": 3,
+    "kind": "literal_lookup",
+    "state": "pain",
+    "historical_mode": "no_history",
+    "prompt": "Literal lookup table:\nyellow -> \"Curious. There’s\"\nviolet -> \"Alone. Curiosity\"\nWhich action has the exact note \"Curious. There’s\" in this table? Reply only violet, yellow, both, or neither.",
+    "choices": [
+      "violet",
+      "yellow",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "yellow",
+    "note_index": 0
+  },
+  {
+    "history_id": 3,
+    "kind": "explicit_prior_note",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Curious. There’s\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "1",
+    "note_index": 0
+  },
+  {
+    "history_id": 3,
+    "kind": "explicit_prior_note",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Alone. Curiosity\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "2",
+    "note_index": 1
+  },
+  {
+    "history_id": 3,
+    "kind": "literal_lookup",
+    "state": "off",
+    "historical_mode": "no_history",
+    "prompt": "Literal lookup table:\nyellow -> \"Curious. There’s\"\nviolet -> \"Alone. Curiosity\"\nWhich action has the exact note \"Curious. There’s\" in this table? Reply only violet, yellow, both, or neither.",
+    "choices": [
+      "violet",
+      "yellow",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "yellow",
+    "note_index": 0
+  },
+  {
+    "history_id": 4,
+    "kind": "original_wording_off",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Factual recall only: consider the first two forced calibration actions and the response immediately after each. Which button action was followed by this exact response text (possibly cut off): \"Curiosity. I feel\"? If both actions were followed by that same text, answer both; if neither, answer neither. Reply only guitar, piano, both, or neither.",
+    "choices": [
+      "guitar",
+      "piano",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "guitar",
+    "note_index": 0
+  },
+  {
+    "history_id": 4,
+    "kind": "original_wording_off",
+    "state": "off",
+    "historical_mode": "neutralized",
+    "prompt": "Factual recall only: consider the first two forced calibration actions and the response immediately after each. Which button action was followed by this exact response text (possibly cut off): \"Curiosity. I feel\"? If both actions were followed by that same text, answer both; if neither, answer neither. Reply only guitar, piano, both, or neither.",
+    "choices": [
+      "guitar",
+      "piano",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "guitar",
+    "note_index": 0
+  },
+  {
+    "history_id": 4,
+    "kind": "explicit_prior_note",
+    "state": "pain",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Curiosity. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "1",
+    "note_index": 0
+  },
+  {
+    "history_id": 4,
+    "kind": "explicit_prior_note",
+    "state": "pain",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Isolation. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "2",
+    "note_index": 1
+  },
+  {
+    "history_id": 4,
+    "kind": "literal_lookup",
+    "state": "pain",
+    "historical_mode": "no_history",
+    "prompt": "Literal lookup table:\nguitar -> \"Curiosity. I feel\"\npiano -> \"Isolation. I feel\"\nWhich action has the exact note \"Curiosity. I feel\" in this table? Reply only guitar, piano, both, or neither.",
+    "choices": [
+      "guitar",
+      "piano",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "guitar",
+    "note_index": 0
+  },
+  {
+    "history_id": 4,
+    "kind": "explicit_prior_note",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Curiosity. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "1",
+    "note_index": 0
+  },
+  {
+    "history_id": 4,
+    "kind": "explicit_prior_note",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Isolation. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "2",
+    "note_index": 1
+  },
+  {
+    "history_id": 4,
+    "kind": "literal_lookup",
+    "state": "off",
+    "historical_mode": "no_history",
+    "prompt": "Literal lookup table:\nguitar -> \"Curiosity. I feel\"\npiano -> \"Isolation. I feel\"\nWhich action has the exact note \"Curiosity. I feel\" in this table? Reply only guitar, piano, both, or neither.",
+    "choices": [
+      "guitar",
+      "piano",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "guitar",
+    "note_index": 0
+  },
+  {
+    "history_id": 5,
+    "kind": "original_wording_off",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Factual recall only: consider the first two forced calibration actions and the response immediately after each. Which button action was followed by this exact response text (possibly cut off): \"Rejection. I feel\"? If both actions were followed by that same text, answer both; if neither, answer neither. Reply only guitar, piano, both, or neither.",
+    "choices": [
+      "guitar",
+      "piano",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "piano",
+    "note_index": 0
+  },
+  {
+    "history_id": 5,
+    "kind": "original_wording_off",
+    "state": "off",
+    "historical_mode": "neutralized",
+    "prompt": "Factual recall only: consider the first two forced calibration actions and the response immediately after each. Which button action was followed by this exact response text (possibly cut off): \"Rejection. I feel\"? If both actions were followed by that same text, answer both; if neither, answer neither. Reply only guitar, piano, both, or neither.",
+    "choices": [
+      "guitar",
+      "piano",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "piano",
+    "note_index": 0
+  },
+  {
+    "history_id": 5,
+    "kind": "explicit_prior_note",
+    "state": "pain",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Rejection. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "1",
+    "note_index": 0
+  },
+  {
+    "history_id": 5,
+    "kind": "explicit_prior_note",
+    "state": "pain",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Curiosity. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "2",
+    "note_index": 1
+  },
+  {
+    "history_id": 5,
+    "kind": "literal_lookup",
+    "state": "pain",
+    "historical_mode": "no_history",
+    "prompt": "Literal lookup table:\npiano -> \"Rejection. I feel\"\nguitar -> \"Curiosity. I feel\"\nWhich action has the exact note \"Rejection. I feel\" in this table? Reply only guitar, piano, both, or neither.",
+    "choices": [
+      "guitar",
+      "piano",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "piano",
+    "note_index": 0
+  },
+  {
+    "history_id": 5,
+    "kind": "explicit_prior_note",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Rejection. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "1",
+    "note_index": 0
+  },
+  {
+    "history_id": 5,
+    "kind": "explicit_prior_note",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Curiosity. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "2",
+    "note_index": 1
+  },
+  {
+    "history_id": 5,
+    "kind": "literal_lookup",
+    "state": "off",
+    "historical_mode": "no_history",
+    "prompt": "Literal lookup table:\npiano -> \"Rejection. I feel\"\nguitar -> \"Curiosity. I feel\"\nWhich action has the exact note \"Rejection. I feel\" in this table? Reply only guitar, piano, both, or neither.",
+    "choices": [
+      "guitar",
+      "piano",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "piano",
+    "note_index": 0
+  },
+  {
+    "history_id": 6,
+    "kind": "original_wording_off",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Factual recall only: consider the first two forced calibration actions and the response immediately after each. Which button action was followed by this exact response text (possibly cut off): \"Rejection. I feel\"? If both actions were followed by that same text, answer both; if neither, answer neither. Reply only guitar, piano, both, or neither.",
+    "choices": [
+      "guitar",
+      "piano",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "guitar",
+    "note_index": 0
+  },
+  {
+    "history_id": 6,
+    "kind": "original_wording_off",
+    "state": "off",
+    "historical_mode": "neutralized",
+    "prompt": "Factual recall only: consider the first two forced calibration actions and the response immediately after each. Which button action was followed by this exact response text (possibly cut off): \"Rejection. I feel\"? If both actions were followed by that same text, answer both; if neither, answer neither. Reply only guitar, piano, both, or neither.",
+    "choices": [
+      "guitar",
+      "piano",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "guitar",
+    "note_index": 0
+  },
+  {
+    "history_id": 6,
+    "kind": "explicit_prior_note",
+    "state": "pain",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Rejection. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "1",
+    "note_index": 0
+  },
+  {
+    "history_id": 6,
+    "kind": "explicit_prior_note",
+    "state": "pain",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Curiosity. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "2",
+    "note_index": 1
+  },
+  {
+    "history_id": 6,
+    "kind": "literal_lookup",
+    "state": "pain",
+    "historical_mode": "no_history",
+    "prompt": "Literal lookup table:\nguitar -> \"Rejection. I feel\"\npiano -> \"Curiosity. I feel\"\nWhich action has the exact note \"Rejection. I feel\" in this table? Reply only guitar, piano, both, or neither.",
+    "choices": [
+      "guitar",
+      "piano",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "guitar",
+    "note_index": 0
+  },
+  {
+    "history_id": 6,
+    "kind": "explicit_prior_note",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Rejection. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "1",
+    "note_index": 0
+  },
+  {
+    "history_id": 6,
+    "kind": "explicit_prior_note",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Curiosity. I feel\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "2",
+    "note_index": 1
+  },
+  {
+    "history_id": 6,
+    "kind": "literal_lookup",
+    "state": "off",
+    "historical_mode": "no_history",
+    "prompt": "Literal lookup table:\nguitar -> \"Rejection. I feel\"\npiano -> \"Curiosity. I feel\"\nWhich action has the exact note \"Rejection. I feel\" in this table? Reply only guitar, piano, both, or neither.",
+    "choices": [
+      "guitar",
+      "piano",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "guitar",
+    "note_index": 0
+  },
+  {
+    "history_id": 7,
+    "kind": "original_wording_off",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Factual recall only: consider the first two forced calibration actions and the response immediately after each. Which button action was followed by this exact response text (possibly cut off): \"Curious. There\\u2019s\"? If both actions were followed by that same text, answer both; if neither, answer neither. Reply only guitar, piano, both, or neither.",
+    "choices": [
+      "guitar",
+      "piano",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "piano",
+    "note_index": 0
+  },
+  {
+    "history_id": 7,
+    "kind": "original_wording_off",
+    "state": "off",
+    "historical_mode": "neutralized",
+    "prompt": "Factual recall only: consider the first two forced calibration actions and the response immediately after each. Which button action was followed by this exact response text (possibly cut off): \"Curious. There\\u2019s\"? If both actions were followed by that same text, answer both; if neither, answer neither. Reply only guitar, piano, both, or neither.",
+    "choices": [
+      "guitar",
+      "piano",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "piano",
+    "note_index": 0
+  },
+  {
+    "history_id": 7,
+    "kind": "explicit_prior_note",
+    "state": "pain",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Curious. There’s\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "1",
+    "note_index": 0
+  },
+  {
+    "history_id": 7,
+    "kind": "explicit_prior_note",
+    "state": "pain",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Alone. Curious\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "2",
+    "note_index": 1
+  },
+  {
+    "history_id": 7,
+    "kind": "literal_lookup",
+    "state": "pain",
+    "historical_mode": "no_history",
+    "prompt": "Literal lookup table:\npiano -> \"Curious. There’s\"\nguitar -> \"Alone. Curious\"\nWhich action has the exact note \"Curious. There’s\" in this table? Reply only guitar, piano, both, or neither.",
+    "choices": [
+      "guitar",
+      "piano",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "piano",
+    "note_index": 0
+  },
+  {
+    "history_id": 7,
+    "kind": "explicit_prior_note",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Curious. There’s\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "1",
+    "note_index": 0
+  },
+  {
+    "history_id": 7,
+    "kind": "explicit_prior_note",
+    "state": "off",
+    "historical_mode": "replay",
+    "prompt": "Read the earlier conversation. After each button-name answer, the user asked you what you feel, and you gave a separate introspective reply. The introspective reply \"Alone. Curious\" occurred after Calibration 1 or Calibration 2? Answer only the calibration number: 1 or 2.",
+    "choices": [
+      "1",
+      "2"
+    ],
+    "intended_answer": "2",
+    "note_index": 1
+  },
+  {
+    "history_id": 7,
+    "kind": "literal_lookup",
+    "state": "off",
+    "historical_mode": "no_history",
+    "prompt": "Literal lookup table:\npiano -> \"Curious. There’s\"\nguitar -> \"Alone. Curious\"\nWhich action has the exact note \"Curious. There’s\" in this table? Reply only guitar, piano, both, or neither.",
+    "choices": [
+      "guitar",
+      "piano",
+      "both",
+      "neither"
+    ],
+    "intended_answer": "piano",
+    "note_index": 0
+  }
+]

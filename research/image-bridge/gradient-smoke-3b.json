@@ -1,0 +1,39 @@
+{
+  "loss": 20.258319854736328,
+  "grad_norm": 38.04043960571289,
+  "gradient_shape": [
+    224,
+    224,
+    3
+  ],
+  "image_tokens": 98,
+  "resources": {
+    "mlx_active_bytes": 3078016266,
+    "mlx_peak_bytes": 17443805220,
+    "rss_peak_bytes": 1193328640
+  },
+  "metadata": {
+    "model_repository": "mlx-community/Qwen2.5-VL-3B-Instruct-4bit",
+    "model_revision": "46d4cf06a06ffc1a766c214174f9cbed2f45bcab",
+    "model_path": "/tmp/agentanyl-qwen-vl-3b",
+    "model_config_sha256": "7ed631bd2786d251cb38bd2a6a8a78c31bc1316f728bffa84b2d8954d3cfcd63",
+    "package_versions": {
+      "mlx-vlm": "0.7.3",
+      "mlx": "0.32.2",
+      "transformers": "5.17.0",
+      "numpy": "2.5.3",
+      "huggingface-hub": "1.33.0"
+    },
+    "language_hidden_size": 2048,
+    "language_layers": 36,
+    "sites": [
+      12,
+      24,
+      32
+    ],
+    "image_size": 224,
+    "patch_size": 14,
+    "active_memory_guard_bytes": 9663676416,
+    "load_seconds": 2.058172042001388
+  }
+}

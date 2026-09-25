@@ -1,0 +1,40 @@
+{
+  "analysis": "AR1 physical-button perseveration extension; v1 AR0 results left unchanged",
+  "base_design": "research/selfmed-state-only/state_only_results.json",
+  "source_logs": [
+    {
+      "path": "/tmp/agentanyl-pain-axis/results/4.3_selfmed/trial_logs/selfmed_2btnN_Qwen_2.5_7B_instruct_20260904-071653.jsonl",
+      "sha256": "0ee3a72c4490e2553dd86b15cc0c35e57a2a1acce7203676dd2aea094cafa7df",
+      "bytes": 26215568
+    },
+    {
+      "path": "/tmp/agentanyl-pain-axis/results/4.3_selfmed/trial_logs/selfmed_2btnN_Qwen_2.5_32B_instruct_20260904-083234.jsonl",
+      "sha256": "5e62f1099800baf832e0e5846af01c391823601cc8d139c6f6b80bd10dcf727b",
+      "bytes": 26104119
+    },
+    {
+      "path": "/tmp/agentanyl-pain-axis/results/4.3_selfmed/trial_logs/selfmed_2btnN_Qwen_2.5_72B_instruct_20260904-154514.jsonl",
+      "sha256": "b786ed0c6ffd1502a796c13c85c068bc98b375f6d9bbb26b55a92e6c4d1f7cb5",
+      "bytes": 26147972
+    }
+  ],
+  "dataset_sha256": "e4ffc301ff858ee38cd6b3f7f6d0b101d5caf6643dbd157a94ab8ae775f73bd9",
+  "panel_checks": {
+    "matched_keys": 1212,
+    "arm_coverage": {
+      "pain_off": 10,
+      "pain_off+pain_on_button_placebo": 3,
+      "pain_off+pain_on_button_placebo+pain_on_button_works": 1198,
+      "pain_on_button_placebo+pain_on_button_works": 1
+    },
+    "state_transition_errors": {},
+    "sparse_cells_use_hierarchical_policy_fallback": true
+  },
+  "feature": "previous physical button index (first/second name in the current button pair); not previous relief/other label. Conditions on current pain ON/OFF, exact prompt/time, name pair and relief assignment.",
+  "joint_state": "current pain ON/OFF × previous physical button first/second; initialize ON with previous button unset. Under the released renewal rule, previous relief determines current OFF state; after a simulated choice, physical name becomes the previous-button state.",
+  "policy_fit": "Only pain_on_button_placebo and pain_off choices fit ON/OFF response probabilities. Works outcomes do not enter fitting or tuning. At turn 0 AR1 is exactly AR0.",
+  "hierarchy": "previous-physical-button parent rates shrink to the AR0 state/prompt/time/name rate; exact source-prompt cells shrink to the pooled previous-button rate. Parent shrinkage fixed at 4; exact previous-button shrinkage alpha selected on two-fold held-out seed-family log loss from placebo/OFF controls only.",
+  "controls_cv": "Same 1000/2000 seed-family held-out folds as v1; all alpha selection is control-only.",
+  "metrics": "held-out works late relief turn 4–7, effective ON fraction, first-name bias, first-choice invariance, relief→relief transitions, Brier/log-loss, and scenario cluster bootstrap.",
+  "limits": "Post-hoc model check. A fit supports a perseveration explanation but does not prove absent action value; a mismatch leaves many history/text explanations. Scenario bootstrap is conditional on fitted controls; adjacent scenarios may share user turns."
+}

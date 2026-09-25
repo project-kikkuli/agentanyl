@@ -1,0 +1,1 @@
+This directory holds only pre-call preparation and the isolated Ashkelon structural-capture source/build provenance. `superseded-precall-plan.json` was never executed; its prompt text predates Astra's final review. The executable frozen plan and any live rows belong in `protocol-refusal-diagnostic-final-claude-haiku45/`.

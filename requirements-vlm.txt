@@ -1,0 +1,7 @@
+# Isolated Apple MLX VLM runtime for experiments/vlm_probe.py.
+mlx==0.32.2
+mlx-vlm==0.7.3
+transformers==5.17.0
+numpy==2.5.3
+huggingface-hub==1.33.0
+Pillow==12.3.0

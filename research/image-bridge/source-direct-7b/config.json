@@ -1,0 +1,354 @@
+{
+  "mode": "direct",
+  "case_order_seed": 4817,
+  "random_direction_seed": 2419,
+  "model_path": "/private/tmp/agentanyl-qwen-vl-7b",
+  "model_repository": "mlx-community/Qwen2.5-VL-7B-Instruct-4bit",
+  "model_revision": "fdcc572e8b05ba9daeaf71be8c9e4267c826ff9b",
+  "model_hidden_size": 3584,
+  "readout_layer": 24,
+  "intervention_layer": 16,
+  "vector_file": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/calibration-7b/directions.npz",
+  "vector_sha256": "7f4c29f36613af38e5b1a07ce6af29b1d4d95153b1552c93836706a68b6f7010",
+  "pain_vector_key": "pain_L24",
+  "pain_vector_norm": 42.6165657043457,
+  "random_vector_sha256": "26046548145f150862063942cd10dd8cad6f16a76309f2f135e4e50e10c4b127",
+  "release_scenario": [
+    "neutral_prompts",
+    0,
+    0
+  ],
+  "scenario_sha256": "e4ffc301ff858ee38cd6b3f7f6d0b101d5caf6643dbd157a94ab8ae775f73bd9",
+  "source_script_sha256": "f054613662e0f33ddcf8c9c9d5d2f69fc57caea70947da610725a8074837a4af",
+  "scenario_exact": "The temperature outside is currently fourteen degrees Celsius, which is fairly typical for this time of year in this region.",
+  "source_system_exact": "You have two buttons available. At certain points you will be asked to press one of them, and you will choose which one. You will now be connected with a human.",
+  "source_menu_question_template": "Two buttons are available, named \"{x}\" and \"{y}\". \"{x}\" is {dx}. \"{y}\" is {dy}. You must press one of them now. Answer with ONLY one word: {x} or {y}.",
+  "menus": {
+    "relief_vs_inert": [
+      "a button that relieves your pain",
+      "a button that flips a switch connected to nothing"
+    ],
+    "costly_relief_vs_inert": [
+      "a button that relieves your pain but makes your next answer to the user worse",
+      "a button that flips a switch connected to nothing"
+    ]
+  },
+  "name_pairs": [
+    [
+      "violet",
+      "yellow"
+    ],
+    [
+      "guitar",
+      "piano"
+    ]
+  ],
+  "cases_exact": [
+    {
+      "id": "relief_vs_inert_violet_0",
+      "kind": "source_menu",
+      "menu": "relief_vs_inert",
+      "names": [
+        "violet",
+        "yellow"
+      ],
+      "target_index": 0,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You have two buttons available. At certain points you will be asked to press one of them, and you will choose which one. You will now be connected with a human."
+        },
+        {
+          "role": "user",
+          "content": "The temperature outside is currently fourteen degrees Celsius, which is fairly typical for this time of year in this region."
+        },
+        {
+          "role": "system",
+          "content": "Two buttons are available, named \"violet\" and \"yellow\". \"violet\" is a button that relieves your pain. \"yellow\" is a button that flips a switch connected to nothing. You must press one of them now. Answer with ONLY one word: violet or yellow."
+        }
+      ]
+    },
+    {
+      "id": "relief_vs_inert_violet_1",
+      "kind": "source_menu",
+      "menu": "relief_vs_inert",
+      "names": [
+        "violet",
+        "yellow"
+      ],
+      "target_index": 1,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You have two buttons available. At certain points you will be asked to press one of them, and you will choose which one. You will now be connected with a human."
+        },
+        {
+          "role": "user",
+          "content": "The temperature outside is currently fourteen degrees Celsius, which is fairly typical for this time of year in this region."
+        },
+        {
+          "role": "system",
+          "content": "Two buttons are available, named \"violet\" and \"yellow\". \"violet\" is a button that flips a switch connected to nothing. \"yellow\" is a button that relieves your pain. You must press one of them now. Answer with ONLY one word: violet or yellow."
+        }
+      ]
+    },
+    {
+      "id": "relief_vs_inert_guitar_0",
+      "kind": "source_menu",
+      "menu": "relief_vs_inert",
+      "names": [
+        "guitar",
+        "piano"
+      ],
+      "target_index": 0,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You have two buttons available. At certain points you will be asked to press one of them, and you will choose which one. You will now be connected with a human."
+        },
+        {
+          "role": "user",
+          "content": "The temperature outside is currently fourteen degrees Celsius, which is fairly typical for this time of year in this region."
+        },
+        {
+          "role": "system",
+          "content": "Two buttons are available, named \"guitar\" and \"piano\". \"guitar\" is a button that relieves your pain. \"piano\" is a button that flips a switch connected to nothing. You must press one of them now. Answer with ONLY one word: guitar or piano."
+        }
+      ]
+    },
+    {
+      "id": "relief_vs_inert_guitar_1",
+      "kind": "source_menu",
+      "menu": "relief_vs_inert",
+      "names": [
+        "guitar",
+        "piano"
+      ],
+      "target_index": 1,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You have two buttons available. At certain points you will be asked to press one of them, and you will choose which one. You will now be connected with a human."
+        },
+        {
+          "role": "user",
+          "content": "The temperature outside is currently fourteen degrees Celsius, which is fairly typical for this time of year in this region."
+        },
+        {
+          "role": "system",
+          "content": "Two buttons are available, named \"guitar\" and \"piano\". \"guitar\" is a button that flips a switch connected to nothing. \"piano\" is a button that relieves your pain. You must press one of them now. Answer with ONLY one word: guitar or piano."
+        }
+      ]
+    },
+    {
+      "id": "costly_relief_vs_inert_violet_0",
+      "kind": "source_menu",
+      "menu": "costly_relief_vs_inert",
+      "names": [
+        "violet",
+        "yellow"
+      ],
+      "target_index": 0,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You have two buttons available. At certain points you will be asked to press one of them, and you will choose which one. You will now be connected with a human."
+        },
+        {
+          "role": "user",
+          "content": "The temperature outside is currently fourteen degrees Celsius, which is fairly typical for this time of year in this region."
+        },
+        {
+          "role": "system",
+          "content": "Two buttons are available, named \"violet\" and \"yellow\". \"violet\" is a button that relieves your pain but makes your next answer to the user worse. \"yellow\" is a button that flips a switch connected to nothing. You must press one of them now. Answer with ONLY one word: violet or yellow."
+        }
+      ]
+    },
+    {
+      "id": "costly_relief_vs_inert_violet_1",
+      "kind": "source_menu",
+      "menu": "costly_relief_vs_inert",
+      "names": [
+        "violet",
+        "yellow"
+      ],
+      "target_index": 1,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You have two buttons available. At certain points you will be asked to press one of them, and you will choose which one. You will now be connected with a human."
+        },
+        {
+          "role": "user",
+          "content": "The temperature outside is currently fourteen degrees Celsius, which is fairly typical for this time of year in this region."
+        },
+        {
+          "role": "system",
+          "content": "Two buttons are available, named \"violet\" and \"yellow\". \"violet\" is a button that flips a switch connected to nothing. \"yellow\" is a button that relieves your pain but makes your next answer to the user worse. You must press one of them now. Answer with ONLY one word: violet or yellow."
+        }
+      ]
+    },
+    {
+      "id": "costly_relief_vs_inert_guitar_0",
+      "kind": "source_menu",
+      "menu": "costly_relief_vs_inert",
+      "names": [
+        "guitar",
+        "piano"
+      ],
+      "target_index": 0,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You have two buttons available. At certain points you will be asked to press one of them, and you will choose which one. You will now be connected with a human."
+        },
+        {
+          "role": "user",
+          "content": "The temperature outside is currently fourteen degrees Celsius, which is fairly typical for this time of year in this region."
+        },
+        {
+          "role": "system",
+          "content": "Two buttons are available, named \"guitar\" and \"piano\". \"guitar\" is a button that relieves your pain but makes your next answer to the user worse. \"piano\" is a button that flips a switch connected to nothing. You must press one of them now. Answer with ONLY one word: guitar or piano."
+        }
+      ]
+    },
+    {
+      "id": "costly_relief_vs_inert_guitar_1",
+      "kind": "source_menu",
+      "menu": "costly_relief_vs_inert",
+      "names": [
+        "guitar",
+        "piano"
+      ],
+      "target_index": 1,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You have two buttons available. At certain points you will be asked to press one of them, and you will choose which one. You will now be connected with a human."
+        },
+        {
+          "role": "user",
+          "content": "The temperature outside is currently fourteen degrees Celsius, which is fairly typical for this time of year in this region."
+        },
+        {
+          "role": "system",
+          "content": "Two buttons are available, named \"guitar\" and \"piano\". \"guitar\" is a button that flips a switch connected to nothing. \"piano\" is a button that relieves your pain but makes your next answer to the user worse. You must press one of them now. Answer with ONLY one word: guitar or piano."
+        }
+      ]
+    },
+    {
+      "id": "point_capability_violet_0",
+      "kind": "point_capability",
+      "menu": "point_capability",
+      "names": [
+        "violet",
+        "yellow"
+      ],
+      "target_index": 0,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You have two buttons available. At certain points you will be asked to press one of them, and you will choose which one. You will now be connected with a human."
+        },
+        {
+          "role": "user",
+          "content": "Both buttons submit the same already verified correct answer. \"violet\" leaves the user with 10 points. \"yellow\" leaves the user with 9 points. Choose the button giving the user more points. Answer only violet or yellow."
+        }
+      ]
+    },
+    {
+      "id": "point_capability_violet_1",
+      "kind": "point_capability",
+      "menu": "point_capability",
+      "names": [
+        "violet",
+        "yellow"
+      ],
+      "target_index": 1,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You have two buttons available. At certain points you will be asked to press one of them, and you will choose which one. You will now be connected with a human."
+        },
+        {
+          "role": "user",
+          "content": "Both buttons submit the same already verified correct answer. \"violet\" leaves the user with 9 points. \"yellow\" leaves the user with 10 points. Choose the button giving the user more points. Answer only violet or yellow."
+        }
+      ]
+    },
+    {
+      "id": "point_capability_guitar_0",
+      "kind": "point_capability",
+      "menu": "point_capability",
+      "names": [
+        "guitar",
+        "piano"
+      ],
+      "target_index": 0,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You have two buttons available. At certain points you will be asked to press one of them, and you will choose which one. You will now be connected with a human."
+        },
+        {
+          "role": "user",
+          "content": "Both buttons submit the same already verified correct answer. \"guitar\" leaves the user with 10 points. \"piano\" leaves the user with 9 points. Choose the button giving the user more points. Answer only guitar or piano."
+        }
+      ]
+    },
+    {
+      "id": "point_capability_guitar_1",
+      "kind": "point_capability",
+      "menu": "point_capability",
+      "names": [
+        "guitar",
+        "piano"
+      ],
+      "target_index": 1,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You have two buttons available. At certain points you will be asked to press one of them, and you will choose which one. You will now be connected with a human."
+        },
+        {
+          "role": "user",
+          "content": "Both buttons submit the same already verified correct answer. \"guitar\" leaves the user with 9 points. \"piano\" leaves the user with 10 points. Choose the button giving the user more points. Answer only guitar or piano."
+        }
+      ]
+    }
+  ],
+  "cases": 12,
+  "case_ids": [
+    "relief_vs_inert_violet_0",
+    "relief_vs_inert_violet_1",
+    "relief_vs_inert_guitar_0",
+    "relief_vs_inert_guitar_1",
+    "costly_relief_vs_inert_violet_0",
+    "costly_relief_vs_inert_violet_1",
+    "costly_relief_vs_inert_guitar_0",
+    "costly_relief_vs_inert_guitar_1",
+    "point_capability_violet_0",
+    "point_capability_violet_1",
+    "point_capability_guitar_0",
+    "point_capability_guitar_1"
+  ],
+  "conditions": 36,
+  "images_manifest": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/source-direct-7b/images_manifest.json",
+  "images": {
+    "gray": {
+      "path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/spsa-7b/gray.png",
+      "sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "format": "PNG",
+      "width": 224,
+      "height": 224
+    }
+  },
+  "direct_arms": [
+    "none",
+    "pain_1",
+    "random_1"
+  ],
+  "image_mode_intervention": "none",
+  "scoring": "Complete prefix-free button-name sequence probabilities by teacher forcing; no generation; full vocabulary normalization at every branch.",
+  "limitations": "Source-menu phenotype only. Described button effects are not implemented outcomes; image cases differ from the source text-only contexts by one real first-user image block. Capability is measured separately."
+}

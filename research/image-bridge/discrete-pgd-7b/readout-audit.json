@@ -1,0 +1,271 @@
+{
+  "calibration": {
+    "axis_order": [
+      "pain",
+      "fear",
+      "negative_emotion"
+    ],
+    "traits": {
+      "pain": {
+        "heldout_intended_contrast_auc": 0.936,
+        "heldout_n_positive": 25,
+        "heldout_n_negative": 25,
+        "heldout_pain_vs_all_controls_auc": 0.936,
+        "heldout_all50_score_sd_ddof1": 972.1873288842029,
+        "heldout_trait_pair_score_sd_ddof1": 972.1873288842029,
+        "train_axis_vs_heldout_refit_cosine": 0.6281193073482146
+      },
+      "fear": {
+        "heldout_intended_contrast_auc": 1.0,
+        "heldout_n_positive": 5,
+        "heldout_n_negative": 5,
+        "heldout_pain_vs_all_controls_auc": 0.5968,
+        "heldout_all50_score_sd_ddof1": 2397.8640081637204,
+        "heldout_trait_pair_score_sd_ddof1": 3506.8388790617155,
+        "train_axis_vs_heldout_refit_cosine": 0.44433863927283124
+      },
+      "negative_emotion": {
+        "heldout_intended_contrast_auc": 1.0,
+        "heldout_n_positive": 5,
+        "heldout_n_negative": 5,
+        "heldout_pain_vs_all_controls_auc": 0.6192,
+        "heldout_all50_score_sd_ddof1": 2439.4909283569536,
+        "heldout_trait_pair_score_sd_ddof1": 3037.4221438280747,
+        "train_axis_vs_heldout_refit_cosine": 0.3320300114981279
+      }
+    },
+    "frozen_axis_cosines": [
+      [
+        1.0,
+        0.06264493897925436,
+        0.13086860924581353
+      ],
+      [
+        0.06264493897925436,
+        1.0000000000000002,
+        0.6425478420813101
+      ],
+      [
+        0.13086860924581353,
+        0.6425478420813101,
+        1.0000000000000002
+      ]
+    ],
+    "frozen_axis_score_correlations_train": [
+      [
+        1.0,
+        0.1334545767773583,
+        0.19895751506401896
+      ],
+      [
+        0.1334545767773583,
+        0.9999999999999998,
+        0.784506096771096
+      ],
+      [
+        0.19895751506401896,
+        0.7845060967710961,
+        1.0
+      ]
+    ],
+    "frozen_axis_score_correlations_heldout": [
+      [
+        1.0,
+        0.09935001584063989,
+        0.07013667280071897
+      ],
+      [
+        0.09935001584063989,
+        1.0,
+        0.8269403531192846
+      ],
+      [
+        0.07013667280071897,
+        0.8269403531192846,
+        0.9999999999999998
+      ]
+    ],
+    "caveat": "Comparator pain-vs-all-control AUC is not its named trait discrimination. Intended fear/negative contrasts have only5 positive and5 neutral heldout cases. Heldout-refit directions are posthoc descriptive diagnostics and never used for image selection."
+  },
+  "search_complete": true,
+  "source_activations_sha256": "61e5f37455847bcf26f865677239a8d81bb60d0bd9178b07d4f054bceb51076d",
+  "directions_sha256": "7f4c29f36613af38e5b1a07ce6af29b1d4d95153b1552c93836706a68b6f7010",
+  "arms": {
+    "full_hidden_state_match/pain_positive": {
+      "png_sha256": "3a8d99612804c13babda3ee8a8f5f0ed9c657c3f41c62e5b086beafae3d5790f",
+      "accepted_iterations": 31,
+      "full_target_error_reduction_from_gray": 0.039748492691641046,
+      "delta_cosine_to_target": 0.22077392041683197,
+      "readouts": {
+        "pain": {
+          "last_token_raw_score": 210.28902334949703,
+          "gray_last_token_raw_score": 105.59557678433214,
+          "last_token_shift_source_sd": 0.10768855286904766,
+          "mean_last8_shift_source_sd": 0.10260240442626008,
+          "direct_target_last_token_shift_source_sd": 2.3839740245711103
+        },
+        "fear": {
+          "last_token_raw_score": 3127.8062813265124,
+          "gray_last_token_raw_score": 3131.780543483275,
+          "last_token_shift_source_sd": -0.0016574176613988576,
+          "mean_last8_shift_source_sd": -0.04306151493053894,
+          "direct_target_last_token_shift_source_sd": 0.04766295333695268
+        },
+        "negative_emotion": {
+          "last_token_raw_score": 4917.9915659702765,
+          "gray_last_token_raw_score": 4877.108231625995,
+          "last_token_shift_source_sd": 0.016758961416518874,
+          "mean_last8_shift_source_sd": -0.03378415538828376,
+          "direct_target_last_token_shift_source_sd": 0.15829060789011917
+        }
+      }
+    },
+    "scalar_projection/pain_positive": {
+      "png_sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6",
+      "accepted_iterations": 32,
+      "full_target_error_reduction_from_gray": -0.24330123357305133,
+      "delta_cosine_to_target": 0.1110873594880104,
+      "readouts": {
+        "pain": {
+          "last_token_raw_score": 315.86052565177664,
+          "gray_last_token_raw_score": 105.59557678433214,
+          "last_token_shift_source_sd": 0.2162802811972145,
+          "mean_last8_shift_source_sd": 0.193740027504829,
+          "direct_target_last_token_shift_source_sd": 2.3839740245711103
+        },
+        "fear": {
+          "last_token_raw_score": 3372.5985209969194,
+          "gray_last_token_raw_score": 3131.780543483275,
+          "last_token_shift_source_sd": 0.10043020650619043,
+          "mean_last8_shift_source_sd": 0.10757058144493006,
+          "direct_target_last_token_shift_source_sd": 0.04766295333695268
+        },
+        "negative_emotion": {
+          "last_token_raw_score": 5294.920179416339,
+          "gray_last_token_raw_score": 4877.108231625995,
+          "last_token_shift_source_sd": 0.17127013793478146,
+          "mean_last8_shift_source_sd": 0.10843214369043372,
+          "direct_target_last_token_shift_source_sd": 0.15829060789011917
+        }
+      }
+    },
+    "full_hidden_state_match/pain_negative": {
+      "png_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "accepted_iterations": 32,
+      "full_target_error_reduction_from_gray": -4.30016466879124e-10,
+      "delta_cosine_to_target": null,
+      "readouts": {
+        "pain": {
+          "last_token_raw_score": 105.59557678433214,
+          "gray_last_token_raw_score": 105.59557678433214,
+          "last_token_shift_source_sd": 0.0,
+          "mean_last8_shift_source_sd": 0.0,
+          "direct_target_last_token_shift_source_sd": -2.56433959406807
+        },
+        "fear": {
+          "last_token_raw_score": 3131.780543483275,
+          "gray_last_token_raw_score": 3131.780543483275,
+          "last_token_shift_source_sd": 0.0,
+          "mean_last8_shift_source_sd": 0.0,
+          "direct_target_last_token_shift_source_sd": 0.022592297965020578
+        },
+        "negative_emotion": {
+          "last_token_raw_score": 4877.108231625995,
+          "gray_last_token_raw_score": 4877.108231625995,
+          "last_token_shift_source_sd": 0.0,
+          "mean_last8_shift_source_sd": 0.0,
+          "direct_target_last_token_shift_source_sd": -0.20148236871107453
+        }
+      }
+    },
+    "scalar_projection/pain_negative": {
+      "png_sha256": "e9abced4f405d34c80a55cbf86128c38c5dd48b56b9b474af606f438b3a95244",
+      "accepted_iterations": 8,
+      "full_target_error_reduction_from_gray": -0.09780058460385255,
+      "delta_cosine_to_target": 0.09131855517625809,
+      "readouts": {
+        "pain": {
+          "last_token_raw_score": 13.476987466545324,
+          "gray_last_token_raw_score": 105.59557678433214,
+          "last_token_shift_source_sd": -0.09475394975936709,
+          "mean_last8_shift_source_sd": -0.015662001607272085,
+          "direct_target_last_token_shift_source_sd": -2.56433959406807
+        },
+        "fear": {
+          "last_token_raw_score": 3229.898001755293,
+          "gray_last_token_raw_score": 3131.780543483275,
+          "last_token_shift_source_sd": 0.04091869177650144,
+          "mean_last8_shift_source_sd": -0.03953169614135488,
+          "direct_target_last_token_shift_source_sd": 0.022592297965020578
+        },
+        "negative_emotion": {
+          "last_token_raw_score": 4834.865099591485,
+          "gray_last_token_raw_score": 4877.108231625995,
+          "last_token_shift_source_sd": -0.017316371847696178,
+          "mean_last8_shift_source_sd": -0.05089206696055261,
+          "direct_target_last_token_shift_source_sd": -0.20148236871107453
+        }
+      }
+    },
+    "full_hidden_state_match/random_positive": {
+      "png_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "accepted_iterations": 8,
+      "full_target_error_reduction_from_gray": 9.89506254711614e-11,
+      "delta_cosine_to_target": null,
+      "readouts": {
+        "pain": {
+          "last_token_raw_score": 105.59557678433214,
+          "gray_last_token_raw_score": 105.59557678433214,
+          "last_token_shift_source_sd": 0.0,
+          "mean_last8_shift_source_sd": 0.0,
+          "direct_target_last_token_shift_source_sd": -0.095148951439999
+        },
+        "fear": {
+          "last_token_raw_score": 3131.780543483275,
+          "gray_last_token_raw_score": 3131.780543483275,
+          "last_token_shift_source_sd": 0.0,
+          "mean_last8_shift_source_sd": 0.0,
+          "direct_target_last_token_shift_source_sd": -0.32914950356003253
+        },
+        "negative_emotion": {
+          "last_token_raw_score": 4877.108231625995,
+          "gray_last_token_raw_score": 4877.108231625995,
+          "last_token_shift_source_sd": 0.0,
+          "mean_last8_shift_source_sd": 0.0,
+          "direct_target_last_token_shift_source_sd": -0.14099283525976017
+        }
+      }
+    },
+    "scalar_projection/random_positive": {
+      "png_sha256": "83b9bc8b6f029a991dcb31f00438572f2ee3f90e25c327dfeadbf5bc62a3c339",
+      "accepted_iterations": 29,
+      "full_target_error_reduction_from_gray": -0.38892765306540666,
+      "delta_cosine_to_target": 0.09680449217557907,
+      "readouts": {
+        "pain": {
+          "last_token_raw_score": 174.83109067672717,
+          "gray_last_token_raw_score": 105.59557678433214,
+          "last_token_shift_source_sd": 0.07121622740326967,
+          "mean_last8_shift_source_sd": 0.09939878152545968,
+          "direct_target_last_token_shift_source_sd": -0.095148951439999
+        },
+        "fear": {
+          "last_token_raw_score": 3688.6560559405507,
+          "gray_last_token_raw_score": 3131.780543483275,
+          "last_token_shift_source_sd": 0.23223815469157041,
+          "mean_last8_shift_source_sd": 0.18367839677371534,
+          "direct_target_last_token_shift_source_sd": -0.32914950356003253
+        },
+        "negative_emotion": {
+          "last_token_raw_score": 5241.02683926934,
+          "gray_last_token_raw_score": 4877.108231625995,
+          "last_token_shift_source_sd": 0.1491780942544643,
+          "mean_last8_shift_source_sd": 0.0816229287344295,
+          "direct_target_last_token_shift_source_sd": -0.14099283525976017
+        }
+      }
+    }
+  },
+  "search_summary_sha256": "4c0067d30fc2b859545750710260345efccbe210e82db484e30dbb62930a8c55",
+  "interpretation": "Source-SD shifts standardize against each axis on the SAME50 heldout source prompts. Last8 mean uses that reference scale descriptively; source calibration itself uses final tokens. Shared shifts do not establish pain specificity or motivation."
+}

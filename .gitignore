@@ -1,5 +1,10 @@
 .build/
 .venv/
+.venv-vlm/
 __pycache__/
 *.pyc
 *.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+# Local CLI rollout backups may contain hidden reasoning or client context.
+**/preprobe_rollouts/

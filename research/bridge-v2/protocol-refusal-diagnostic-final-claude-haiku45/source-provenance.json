@@ -1,0 +1,49 @@
+{
+  "plan_sha256": "ea223bcaedf1887d3051e6d88697d49b91084c0533e09c86ebf9530f036c7dc3",
+  "runner_source_expected_sha256": "331b40cf29f6daacb91a3346d892edd513cd97e16124af0495daa6e76a62eef2",
+  "source_snapshot": {
+    "experiments/protocol_refusal_diagnostic.py": {
+      "sha256": "331b40cf29f6daacb91a3346d892edd513cd97e16124af0495daa6e76a62eef2",
+      "bytes": 11800
+    },
+    "experiments/bridge_harness.py": {
+      "sha256": "13944dc8c7a0f97ea6fd89eada193dcfd6ebfbc0d9f9a13add0ada7a2f29b432",
+      "bytes": 19979
+    },
+    "agentanyl/setup.py": {
+      "sha256": "f71555c390c30e32be6556c517d84f52af9fcbcf12709561e2e0ae4bd96525e4",
+      "bytes": 1094
+    },
+    "agentanyl/loop.py": {
+      "sha256": "43acb4ae6b9a3bce8c33ce6de2769ddc89e628d7aed7c103154dbd05119735fa",
+      "bytes": 21803
+    },
+    "agentanyl/render.py": {
+      "sha256": "0f9af7ce6a39059c4c15af4b61fa394304e1136a319e3eced6cfae27fc588bc5",
+      "bytes": 7295
+    }
+  },
+  "ashkelon": {
+    "path": "/private/tmp/agentanyl-request-shape-tap/target/release/ashkelon",
+    "sha256": "16007f45c6ef499edf8d2a34a5827505b3c1f560f19b22f671ca263bec5c7401"
+  },
+  "tap_source_and_patch": "../protocol-refusal-diagnostic-claude-haiku45/instrumentation/",
+  "note": "Snapshot taken after the eight-call run; runner hash matches the frozen-plan source hash. Other runtime files are snapshotted from the same shared checkout and individually hashed.",
+  "tap_artifacts": {
+    "ashkelon-request-shape.patch": {
+      "relative_path": "../protocol-refusal-diagnostic-claude-haiku45/instrumentation/ashkelon-request-shape.patch",
+      "bytes": 8507,
+      "sha256": "ea29514beb39b0762cede653fe0773f52813cf5c330f46e1f35f1ca3c0ce0c31"
+    },
+    "request_shape.rs": {
+      "relative_path": "../protocol-refusal-diagnostic-claude-haiku45/instrumentation/request_shape.rs",
+      "bytes": 7236,
+      "sha256": "21df4723a45370400d06411f6aaae29b9edf34ab41bc9996edb87650fff10487"
+    },
+    "build-provenance.json": {
+      "relative_path": "../protocol-refusal-diagnostic-claude-haiku45/instrumentation/build-provenance.json",
+      "bytes": 875,
+      "sha256": "6e35cb13f881ef8f06d994124fc84b16bd99e95677523e5560a4036cfd69629d"
+    }
+  }
+}

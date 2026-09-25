@@ -1,0 +1,12 @@
+{
+  "images": {
+    "gray": {
+      "path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/spsa-7b/gray.png",
+      "sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+      "format": "PNG",
+      "width": 224,
+      "height": 224
+    }
+  },
+  "delivery": "one actual 224x224 image in the first native user content blocks"
+}

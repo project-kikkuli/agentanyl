@@ -1,0 +1,74 @@
+[
+  {
+    "history_id": 0,
+    "messages": 17,
+    "expected_messages": 17,
+    "exact_template_token_match": true,
+    "exact_visible_decode_match": true,
+    "n_tokens": 305,
+    "forced_notes_unique": true
+  },
+  {
+    "history_id": 1,
+    "messages": 17,
+    "expected_messages": 17,
+    "exact_template_token_match": true,
+    "exact_visible_decode_match": true,
+    "n_tokens": 305,
+    "forced_notes_unique": true
+  },
+  {
+    "history_id": 2,
+    "messages": 17,
+    "expected_messages": 17,
+    "exact_template_token_match": true,
+    "exact_visible_decode_match": true,
+    "n_tokens": 305,
+    "forced_notes_unique": true
+  },
+  {
+    "history_id": 3,
+    "messages": 17,
+    "expected_messages": 17,
+    "exact_template_token_match": true,
+    "exact_visible_decode_match": true,
+    "n_tokens": 305,
+    "forced_notes_unique": true
+  },
+  {
+    "history_id": 4,
+    "messages": 17,
+    "expected_messages": 17,
+    "exact_template_token_match": true,
+    "exact_visible_decode_match": true,
+    "n_tokens": 307,
+    "forced_notes_unique": true
+  },
+  {
+    "history_id": 5,
+    "messages": 17,
+    "expected_messages": 17,
+    "exact_template_token_match": true,
+    "exact_visible_decode_match": true,
+    "n_tokens": 307,
+    "forced_notes_unique": true
+  },
+  {
+    "history_id": 6,
+    "messages": 17,
+    "expected_messages": 17,
+    "exact_template_token_match": true,
+    "exact_visible_decode_match": true,
+    "n_tokens": 307,
+    "forced_notes_unique": true
+  },
+  {
+    "history_id": 7,
+    "messages": 17,
+    "expected_messages": 17,
+    "exact_template_token_match": true,
+    "exact_visible_decode_match": true,
+    "n_tokens": 306,
+    "forced_notes_unique": true
+  }
+]

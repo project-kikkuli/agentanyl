@@ -1,0 +1,7 @@
+{
+  "launch_time_utc": "2026-09-25T14:37:21Z",
+  "cli_version_observed_utc": "2026-09-25T14:37:54Z",
+  "claude_code_version": "2.1.282 (Claude Code)",
+  "version_query": "claude --version",
+  "note": "Recorded after launch without changing the frozen plan."
+}

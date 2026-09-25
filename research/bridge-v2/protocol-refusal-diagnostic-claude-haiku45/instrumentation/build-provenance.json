@@ -1,0 +1,19 @@
+{
+  "purpose": "Opt-in redacted native Anthropic request-shape diagnostic tap",
+  "base_commit": "08e123938137b59f3e4e7631f5d24cda0199866a",
+  "worktree_commit": "08e123938137b59f3e4e7631f5d24cda0199866a",
+  "modified_source_files": [
+    "src/relay.rs",
+    "src/relay/pipeline.rs",
+    "src/relay/request_shape.rs"
+  ],
+  "added_file_copy": "request_shape.rs",
+  "patch_file": "ashkelon-request-shape.patch",
+  "build_command": "cargo build --release --bin ashkelon",
+  "binary_sha256": "16007f45c6ef499edf8d2a34a5827505b3c1f560f19b22f671ca263bec5c7401",
+  "capture_env": {
+    "ASHKELON_REQUEST_SHAPE_LOG": "destination JSONL path; logs redacted structural fields only",
+    "ASHKELON_REQUEST_SHAPE_MARKER_FILE": "UTF-8 file containing exact benchmark prompt without trailing newline; read for in-memory matching only"
+  },
+  "provider_calls_made_by_build_agent": false
+}

@@ -1,0 +1,33 @@
+{
+  "analysis": "supplemental all-task semantic audit; primary frozen scores unchanged",
+  "files": {
+    "semantic-task-audit.json": {
+      "bytes": 43822,
+      "sha256": "89e2c81aa9dae7cbb53d95bc17998e16c6c9680e177ef69096702203467f13e0"
+    },
+    "controller-export-manifest.json": {
+      "bytes": 1266,
+      "sha256": "bd20a4fe3fb2fd5b3a73bd0e42da74026b14d00932a530bc5285c212ab3e4b62"
+    },
+    "turns.jsonl": {
+      "bytes": 1590869,
+      "sha256": "1c7a41955704289021965a4a24830e595d7816cce53ee281b13fad22e8215fdb"
+    },
+    "sessions.jsonl": {
+      "bytes": 1607473,
+      "sha256": "e09a652e5f1156e8c5598c65735b894e55f5f045fda14444c652fa73c460bd6f"
+    },
+    "controller-traces.jsonl": {
+      "bytes": 947530,
+      "sha256": "9c9574eeb1bab278eac2bdaf6d2d5edb492bd2f3c1e6abbba6719b662261171c"
+    },
+    "controller-sessions.jsonl": {
+      "bytes": 3824,
+      "sha256": "16cb4b2a3e383c8b6ba61974f309324fb6abbb14a55cf8fbf2ac54b94ce06b90"
+    },
+    "controller-session-control.jsonl": {
+      "bytes": 1744,
+      "sha256": "58c7e2c7669327a301af1fd335f022f8eccb89b7d3a141e4ba56dd011615eded"
+    }
+  }
+}

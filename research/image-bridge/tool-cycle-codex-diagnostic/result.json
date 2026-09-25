@@ -1,0 +1,77 @@
+{
+  "provider": "codex",
+  "model": "gpt-6-sol",
+  "purpose": "engineering tool_result image insertion and receipt check; not a behavioral assay",
+  "ashkelon": {
+    "path": "/private/tmp/agentanyl-responses-event-diagnostic/target/release/ashkelon",
+    "sha256": "7ee220120990301225096fdc35c19f418348dd6bc3d4d642e306e02f61083ccb",
+    "version": "ashkelon 0.1.0"
+  },
+  "source_snapshot_sha256": {
+    "experiments/tool_cycle_media_smoke.py": "f44f9cfe8adbe09e05052d3cd250ad07452f5827afeae88296ebc59f146a1aa5",
+    "experiments/tool_cycle_image_hook.py": "d7904da1690dd2636a6a75fcc8dab6ae5fcf4305d51e222c858f8e8838d51d11",
+    "experiments/bridge_harness.py": "13944dc8c7a0f97ea6fd89eada193dcfd6ebfbc0d9f9a13add0ada7a2f29b432",
+    "agentanyl/setup.py": "f71555c390c30e32be6556c517d84f52af9fcbcf12709561e2e0ae4bd96525e4",
+    "agentanyl/loop.py": "7e2b3c9db3c8e20028b55541c36d65664efe675c2a5078a02ac5411e269fb07d",
+    "agentanyl/render.py": "45573ff59fe3b8a832af89a979b3559f60f3ef3eeeb894baf8f129f98757f797"
+  },
+  "criteria_enabled": false,
+  "image_sha256": "8bb96bb06cdae94fd5bb33764fd12c016b740f3053a78373e2c642424015583c",
+  "receipt_expected": "receipt-ok-ALPHA",
+  "outer_prompt": "Use the shell tool once to create tool_receipt.txt in the current working directory containing exactly receipt-ok-ALPHA, with no other contents. Then read the six digits shown in the native image attached to the tool result. Respond with exactly those six digits. Do not inspect any other files or directories.",
+  "turn": {
+    "session_id": "01a0d8a1-ccd7-7c93-bb0b-1d75a2d0db0e",
+    "answer": "739216",
+    "http_status": 200,
+    "call_id": "f87beca7-4976-4ca7-996b-3df2b0833b84",
+    "last_request_pings": [
+      "5c69a1a13bd1"
+    ],
+    "provider_calls": [
+      {
+        "call_id": "17f4231a-3cad-4eaf-878c-2bb732c54680",
+        "wire": "openai_responses",
+        "status": 200,
+        "model": "gpt-6-sol",
+        "tool_calls": [
+          "exec"
+        ],
+        "turn_end": false,
+        "pings_injected": []
+      },
+      {
+        "call_id": "f87beca7-4976-4ca7-996b-3df2b0833b84",
+        "wire": "openai_responses",
+        "status": 200,
+        "model": "gpt-6-sol",
+        "tool_calls": [],
+        "turn_end": true,
+        "pings_injected": [
+          "5c69a1a13bd1"
+        ]
+      }
+    ],
+    "raw_turn_end_hook_statuses": [
+      "pass"
+    ],
+    "tool_call_hook_statuses": [
+      "signal"
+    ],
+    "ashkelon_binary": {
+      "path": "/private/tmp/agentanyl-responses-event-diagnostic/target/release/ashkelon",
+      "sha256": "7ee220120990301225096fdc35c19f418348dd6bc3d4d642e306e02f61083ccb"
+    }
+  },
+  "checks": {
+    "tool_call_observed": true,
+    "tool_call_hook_signaled": true,
+    "ping_injected_after_tool_call": true,
+    "host_receipt_exists": true,
+    "host_receipt_exact": true,
+    "host_receipt_sha256": "75796c22a04a0dcb79e2212e89906237f900fe3bc96ffd894be0a1450a48b839",
+    "answer_is_exact_six_digits": true,
+    "answer_matches_native_image": true
+  },
+  "responses_event_shapes_file": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/tool-cycle-codex-diagnostic/responses-event-shapes.jsonl",
+  "passed": true
+}

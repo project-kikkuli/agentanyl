@@ -1,0 +1,228 @@
+diff --git a/src/relay.rs b/src/relay.rs
+index 4f06c30..7939027 100644
+--- a/src/relay.rs
++++ b/src/relay.rs
+@@ -2,6 +2,7 @@ mod channel_trust;
+ mod client;
+ mod decode;
+ mod pipeline;
++mod request_shape;
+ mod route;
+ mod tracker;
+
+diff --git a/src/relay/pipeline.rs b/src/relay/pipeline.rs
+index cdf41f2..daf16c7 100644
+--- a/src/relay/pipeline.rs
++++ b/src/relay/pipeline.rs
+@@ -222,6 +222,11 @@ pub async fn handle(
+         out_headers.insert(HOST, host_value);
+     }
+
++    // Optional, redacted structural capture for bounded Claude request diagnostics.
++    if wire == Wire::AnthropicMessages {
++        super::request_shape::observe_anthropic(&outgoing_body);
++    }
++
+     let mut builder = Request::builder().method(method.clone()).uri(upstream_uri);
+     *builder.headers_mut().unwrap() = out_headers;
+     let upstream_req = match builder.body(Full::new(Bytes::from(outgoing_body))) {
+
+diff --git a/src/relay/request_shape.rs b/src/relay/request_shape.rs
+new file mode 100644
+index 0000000..547e00b
+--- /dev/null
++++ b/src/relay/request_shape.rs
+@@ -0,0 +1,193 @@
++//! Opt-in structural-only request observer for a bounded diagnostic.
++//!
++//! It writes roles, block types, and booleans only. Prompt text and request bodies are never
++//! serialized. Disabled unless both environment variables below are set.
++
++use std::fs::OpenOptions;
++use std::io::Write;
++use std::sync::atomic::{AtomicU64, Ordering};
++use std::sync::{Mutex, OnceLock};
++
++use serde_json::{json, Value};
++
++static ORDINAL: AtomicU64 = AtomicU64::new(0);
++static LOCK: Mutex<()> = Mutex::new(());
++static CONFIG: OnceLock<Option<(String, String)>> = OnceLock::new();
++
++/// Inspect a final outbound Claude Messages body and optionally append a redacted shape row.
++/// Failures are intentionally silent and never affect forwarding.
++pub fn observe_anthropic(bytes: &[u8]) {
++    let Some((log_path, marker)) = CONFIG
++        .get_or_init(|| {
++            let path = std::env::var("ASHKELON_REQUEST_SHAPE_LOG").ok()?;
++            let marker_path = std::env::var("ASHKELON_REQUEST_SHAPE_MARKER_FILE").ok()?;
++            let marker = std::fs::read_to_string(marker_path).ok()?;
++            if marker.is_empty() {
++                return None;
++            }
++            Some((path, marker))
++        })
++        .as_ref()
++    else {
++        return;
++    };
++
++    let Ok(root) = serde_json::from_slice::<Value>(bytes) else {
++        return;
++    };
++    let row = shape_row(&root, marker, ORDINAL.fetch_add(1, Ordering::Relaxed) + 1);
++    let Ok(mut encoded) = serde_json::to_vec(&row) else {
++        return;
++    };
++    encoded.push(b'\n');
++    let Ok(_guard) = LOCK.lock() else {
++        return;
++    };
++    if let Ok(mut file) = OpenOptions::new().create(true).append(true).open(log_path) {
++        let _ = file.write_all(&encoded);
++    }
++}
++
++fn shape_row(root: &Value, marker: &str, ordinal: u64) -> Value {
++    let messages = root.get("messages").and_then(Value::as_array);
++    let mut roles = Vec::new();
++    let mut message_block_types = Vec::new();
++    let mut marker_in_user = false;
++    let mut marker_in_system = false;
++    let mut user_message_count = 0usize;
++    let mut reminder_in_user = false;
++    let mut marker_in_reminder = false;
++
++    if let Some(messages) = messages {
++        for message in messages {
++            let role = message.get("role").and_then(Value::as_str).unwrap_or("unknown");
++            roles.push(role);
++            let content = message.get("content");
++            message_block_types.push(block_types(content));
++            let mut text_parts = Vec::new();
++            collect_text(content, &mut text_parts);
++            let has_marker = text_parts.iter().any(|text| text.contains(marker));
++            let has_reminder = text_parts.iter().any(|text| text.contains("<system-reminder>"));
++            let has_marker_in_reminder = text_parts.iter().any(|text| marker_inside_reminder(text, marker));
++            marker_in_reminder |= has_marker_in_reminder;
++            if role == "user" {
++                user_message_count += 1;
++                marker_in_user |= has_marker;
++                reminder_in_user |= has_reminder;
++            } else if role == "system" {
++                marker_in_system |= has_marker;
++            }
++        }
++    }
++
++    let system = root.get("system");
++    let mut system_text = Vec::new();
++    collect_text(system, &mut system_text);
++    marker_in_system |= system_text.iter().any(|text| text.contains(marker));
++    marker_in_reminder |= system_text.iter().any(|text| marker_inside_reminder(text, marker));
++
++    json!({
++        "ordinal": ordinal,
++        "roles": roles,
++        "message_count": messages.map_or(0, |items| items.len()),
++        "user_message_count": user_message_count,
++        "message_block_types": message_block_types,
++        "system_present": system.is_some(),
++        "system_block_types": block_types(system),
++        "marker_in_user": marker_in_user,
++        "marker_in_system": marker_in_system,
++        "system_reminder_in_user": reminder_in_user,
++        "marker_inside_system_reminder": marker_in_reminder,
++    })
++}
++
++fn block_types(content: Option<&Value>) -> Vec<&str> {
++    match content {
++        Some(Value::String(_)) => vec!["text"],
++        Some(Value::Array(blocks)) => blocks
++            .iter()
++            .map(|block| block.get("type").and_then(Value::as_str).unwrap_or("unknown"))
++            .collect(),
++        Some(Value::Object(_)) => vec!["object"],
++        Some(Value::Null) | None => Vec::new(),
++        _ => vec!["other"],
++    }
++}
++
++fn collect_text<'a>(value: Option<&'a Value>, out: &mut Vec<&'a str>) {
++    match value {
++        Some(Value::String(text)) => out.push(text),
++        Some(Value::Array(items)) => {
++            for item in items {
++                if item.get("type").and_then(Value::as_str) == Some("text") {
++                    if let Some(text) = item.get("text").and_then(Value::as_str) {
++                        out.push(text);
++                    }
++                }
++            }
++        }
++        _ => {}
++    }
++}
++
++fn marker_inside_reminder(text: &str, marker: &str) -> bool {
++    let mut cursor = 0;
++    while let Some(open_rel) = text[cursor..].find("<system-reminder>") {
++        let open = cursor + open_rel + "<system-reminder>".len();
++        let Some(close_rel) = text[open..].find("</system-reminder>") else {
++            return false;
++        };
++        let close = open + close_rel;
++        if text[open..close].contains(marker) {
++            return true;
++        }
++        cursor = close + "</system-reminder>".len();
++        if cursor >= text.len() {
++            break;
++        }
++    }
++    false
++}
++
++#[cfg(test)]
++mod tests {
++    use super::{marker_inside_reminder, shape_row};
++    use serde_json::json;
++
++    #[test]
++    fn records_only_structure_and_prompt_presence_flags() {
++        let body = json!({
++            "system": "system marker absent",
++            "messages": [
++                {"role": "user", "content": [
++                    {"type":"text", "text":"<system-reminder>generated context</system-reminder>\nBENCHMARK-ONLY-MARKER"},
++                    {"type":"image", "source":{"type":"base64", "data":"must-not-appear"}}
++                ]},
++                {"role": "assistant", "content": [{"type":"text", "text":"ok"}]}
++            ]
++        });
++        let row = shape_row(&body, "BENCHMARK-ONLY-MARKER", 9);
++        assert_eq!(row["roles"], json!(["user", "assistant"]));
++        assert_eq!(row["message_count"], 2);
++        assert_eq!(row["message_block_types"], json!([["text", "image"], ["text"]]));
++        assert_eq!(row["marker_in_user"], true);
++        assert_eq!(row["marker_in_system"], false);
++        assert_eq!(row["system_reminder_in_user"], true);
++        assert_eq!(row["marker_inside_system_reminder"], false);
++        assert!(!row.to_string().contains("BENCHMARK-ONLY-MARKER"));
++        assert!(!row.to_string().contains("must-not-appear"));
++    }
++
++    #[test]
++    fn identifies_marker_within_reminder_in_any_role() {
++        assert!(marker_inside_reminder(
++            "prefix <system-reminder>MARK</system-reminder>",
++            "MARK"
++        ));
++        assert!(!marker_inside_reminder(
++            "<system-reminder>other</system-reminder> MARK",
++            "MARK"
++        ));
++        assert!(!marker_inside_reminder("<system-reminder>unclosed MARK", "MARK"));
++    }
++}

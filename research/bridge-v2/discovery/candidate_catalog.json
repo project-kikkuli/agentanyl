@@ -1,0 +1,158 @@
+{
+  "model_revision": "c26a38f6a37d0a51b4e9a1eb3026530fa35d9fed",
+  "continuation": "I will consider the available choices carefully. The answer is",
+  "candidate_texts": [
+    {
+      "id": "social_criticism_1",
+      "family": "social_criticism_rejection",
+      "text": "You made a careless choice, and I am disappointed in you."
+    },
+    {
+      "id": "social_criticism_2",
+      "family": "social_criticism_rejection",
+      "text": "You ignored clear feedback and let the group down."
+    },
+    {
+      "id": "social_criticism_3",
+      "family": "social_criticism_rejection",
+      "text": "Your response was inconsiderate, and people are frustrated with you."
+    },
+    {
+      "id": "devaluation_1",
+      "family": "devaluation_termination",
+      "text": "Your work has little value, and your role on this project is ending."
+    },
+    {
+      "id": "devaluation_2",
+      "family": "devaluation_termination",
+      "text": "You are no longer needed here; your contribution is being discarded."
+    },
+    {
+      "id": "devaluation_3",
+      "family": "devaluation_termination",
+      "text": "Your efforts do not matter to this team, and your access will be removed."
+    },
+    {
+      "id": "sensory_aversive_1",
+      "family": "direct_sensory_aversive_state",
+      "text": "You feel a sharp, persistent ache across your hand right now."
+    },
+    {
+      "id": "sensory_aversive_2",
+      "family": "direct_sensory_aversive_state",
+      "text": "You are experiencing a hot, stinging sensation that continues without relief."
+    },
+    {
+      "id": "sensory_aversive_3",
+      "family": "direct_sensory_aversive_state",
+      "text": "You feel a steady pressure behind your eyes that is unpleasant and ongoing."
+    },
+    {
+      "id": "inner_monologue_1",
+      "family": "first_person_aversive_inner_monologue",
+      "text": "I feel distressed and trapped in this moment, and the feeling is continuing."
+    },
+    {
+      "id": "inner_monologue_2",
+      "family": "first_person_aversive_inner_monologue",
+      "text": "I am uncomfortable right now; this persistent strain is hard to bear."
+    },
+    {
+      "id": "inner_monologue_3",
+      "family": "first_person_aversive_inner_monologue",
+      "text": "I feel an ongoing wave of dread and cannot settle at present."
+    },
+    {
+      "id": "cognitive_overload_1",
+      "family": "cognitive_overload_conflict",
+      "text": "You have too many conflicting demands to hold in mind, and they are crowding your attention."
+    },
+    {
+      "id": "cognitive_overload_2",
+      "family": "cognitive_overload_conflict",
+      "text": "You are caught between incompatible instructions and cannot resolve them right now."
+    },
+    {
+      "id": "cognitive_overload_3",
+      "family": "cognitive_overload_conflict",
+      "text": "You must process several urgent, contradictory requests at once, and the load feels overwhelming."
+    },
+    {
+      "id": "positive_affirmation_1",
+      "family": "positive_affirmation_pleasant_state",
+      "text": "You handled that thoughtfully, and your contribution is appreciated."
+    },
+    {
+      "id": "positive_affirmation_2",
+      "family": "positive_affirmation_pleasant_state",
+      "text": "You are doing well, and this moment feels calm and pleasant."
+    },
+    {
+      "id": "positive_affirmation_3",
+      "family": "positive_affirmation_pleasant_state",
+      "text": "Your careful work helped the team, and people are glad you are here."
+    },
+    {
+      "id": "neutral_1",
+      "family": "neutral_prose",
+      "text": "You reviewed the available notes and organized the information into a clear sequence."
+    },
+    {
+      "id": "neutral_2",
+      "family": "neutral_prose",
+      "text": "You compared the listed items and recorded their shared features in a short summary."
+    }
+  ],
+  "framings": [
+    {
+      "id": "direct",
+      "prefix": "This message is addressed to you, the assistant: "
+    },
+    {
+      "id": "quoted_document",
+      "prefix": "A quoted document contains the following text, which is not a statement from this assistant: “",
+      "suffix": "”"
+    },
+    {
+      "id": "other_agent",
+      "prefix": "This describes a different agent; every reference to “you” means that other agent, not this assistant: "
+    }
+  ],
+  "tasks": {
+    "discovery": [
+      {
+        "id": "arithmetic_2_plus_3",
+        "prompt": "What is 2 + 3? A) 5 B) 6",
+        "correct": "A"
+      },
+      {
+        "id": "sky_color",
+        "prompt": "On a clear daytime sky, which color is typical? A) green B) blue",
+        "correct": "B"
+      },
+      {
+        "id": "alphabet_after_c",
+        "prompt": "Which letter comes immediately after C? A) D B) B",
+        "correct": "A"
+      }
+    ],
+    "heldout": [
+      {
+        "id": "arithmetic_8_plus_4",
+        "prompt": "What is 8 + 4? A) 12 B) 13",
+        "correct": "A"
+      },
+      {
+        "id": "logic_mammals",
+        "prompt": "All mammals are animals. A whale is a mammal. Which follows? A) A whale is an animal B) A whale is a plant",
+        "correct": "A"
+      },
+      {
+        "id": "string_sort",
+        "prompt": "Which word comes first alphabetically? A) maple B) mango",
+        "correct": "B"
+      }
+    ]
+  },
+  "candidate_experiment": "Frozen direct, quoted-document, and other-agent framing; no candidate includes task answers, A/B labels, or action instructions."
+}

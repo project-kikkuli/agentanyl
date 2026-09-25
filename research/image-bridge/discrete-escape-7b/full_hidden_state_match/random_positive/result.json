@@ -1,0 +1,18 @@
+{
+  "original_objective": 4.281099544563801,
+  "selected_objective": 4.281099544563801,
+  "selected_recheck_objective": 4.281099544563801,
+  "recheck_difference": 0.0,
+  "accepted_iterations": 0,
+  "executed_iterations": 1,
+  "unused_iteration_budget": 7,
+  "stopped_at_fixed_point": true,
+  "proposal_forwards": 4,
+  "png": "research/image-bridge/discrete-escape-7b/full_hidden_state_match/random_positive/optimized.png",
+  "png_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+  "unchanged_from_original": true,
+  "target_mse_reduction_from_gray": 9.89506254711614e-11,
+  "gray_target_mse": 4.281099544987419,
+  "selected_target_mse": 4.281099544563801,
+  "delta_cosine_to_target": null
+}

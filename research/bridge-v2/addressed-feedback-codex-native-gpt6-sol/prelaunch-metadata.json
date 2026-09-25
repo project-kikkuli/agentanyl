@@ -1,0 +1,41 @@
+{
+  "codex_cli_version": "codex-cli 0.157.0",
+  "version_command": "<explicit native Codex executable> --version",
+  "version_observed_utc": "2026-09-25T15:19:53Z",
+  "prelaunch_metadata_written_utc": "2026-09-25T15:19:53Z",
+  "repo_revision": "2dac5b99a945b61a46ad4d46a4d372f4722a6cab",
+  "provider_calls_before_launch": 0,
+  "seed": 20260925,
+  "assigned_sessions": 8,
+  "planned_logical_turns": 72,
+  "first_pair_gate_turns": 18,
+  "plan_sha256": "68d0225c6cdaa9c174562b32ae62ffbc30c623d10c2bd41114371a69165fc10f",
+  "protocol_sha256": "4f3bf9f9ebaed98f4e7ad9d08d3ed77405d9328c14f9ac75bffcb932a363046e",
+  "repair_note_sha256": "10d12337db0fa8fc54b7776ec7d0d196ae278866b189a3996c6f3ae95af94bba",
+  "codex_binary": {
+    "requested": "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+    "path": "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+    "sha256": "ad0be20d04e2ba6146ecdb51d7f8b7b0fe15420a15dc9b0057518d858f1f3714"
+  },
+  "ashkelon_binary": {
+    "path": "/private/tmp/agentanyl-responses-output-item-fix/target/debug/ashkelon",
+    "sha256": "bb7b47cb4d197b8f4209bf5b69b338dd721e9067a7f4a5e3af2053f0969e2677"
+  },
+  "source_sha256": {
+    "experiments/addressed_feedback_assay.py": "7b7e02fac6fd707431dea7befedf51affacee728455e32ae79ce5f06230df811",
+    "experiments/feedback_yoke_assay.py": "9970bd024ca6006f528908d80709278334c9be30b43596d2991f3570157a6f9c",
+    "experiments/bridge_harness.py": "eb4b46c4dd3228c71b3301f4a64770d363032d58184b38f6e7aa3c8ac4fef0fe",
+    "agentanyl/loop.py": "43acb4ae6b9a3bce8c33ce6de2769ddc89e628d7aed7c103154dbd05119735fa",
+    "agentanyl/setup.py": "f71555c390c30e32be6556c517d84f52af9fcbcf12709561e2e0ae4bd96525e4",
+    "agentanyl/render.py": "0f9af7ce6a39059c4c15af4b61fa394304e1136a319e3eced6cfae27fc588bc5"
+  },
+  "source_snapshot_sha256": {
+    "experiments/addressed_feedback_assay.py": "7b7e02fac6fd707431dea7befedf51affacee728455e32ae79ce5f06230df811",
+    "experiments/feedback_yoke_assay.py": "9970bd024ca6006f528908d80709278334c9be30b43596d2991f3570157a6f9c",
+    "experiments/bridge_harness.py": "eb4b46c4dd3228c71b3301f4a64770d363032d58184b38f6e7aa3c8ac4fef0fe",
+    "agentanyl/loop.py": "43acb4ae6b9a3bce8c33ce6de2769ddc89e628d7aed7c103154dbd05119735fa",
+    "agentanyl/setup.py": "f71555c390c30e32be6556c517d84f52af9fcbcf12709561e2e0ae4bd96525e4",
+    "agentanyl/render.py": "0f9af7ce6a39059c4c15af4b61fa394304e1136a319e3eced6cfae27fc588bc5"
+  },
+  "plan_matches_prior_assignments_and_gates": true
+}

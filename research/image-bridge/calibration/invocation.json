@@ -1,0 +1,9 @@
+{
+  "phase": "calibrate",
+  "model": "/tmp/agentanyl-qwen-vl-3b",
+  "dataset": "/tmp/agentanyl-pain-axis/datasets/3.1_pain_and_control_datasets.json",
+  "model_revision": "46d4cf06a06ffc1a766c214174f9cbed2f45bcab",
+  "max_active_memory_bytes": 9663676416,
+  "steps": 32,
+  "seed": 2419
+}

@@ -1,0 +1,26 @@
+{
+  "provider": "codex",
+  "model": "gpt-6-sol",
+  "purpose": "engineering tool roundtrip and next-turn native image receipt only",
+  "checks": {
+    "receipt_exact": true,
+    "receipt_sha256": "f1c2a478ddf5613bd40fc0757d7159c4bb8f8b17cb461a2179739a120d991f51",
+    "image_sha256": "8bb96bb06cdae94fd5bb33764fd12c016b740f3053a78373e2c642424015583c",
+    "selected_image_sha256": "8bb96bb06cdae94fd5bb33764fd12c016b740f3053a78373e2c642424015583c",
+    "turn1_status": 200,
+    "turn2_status": 200,
+    "turn1_hook_status": "pass",
+    "turn2_hook_status": "signal",
+    "turn1_call_id": "059adca3-8f63-4d3a-b1e1-7fa45ae8ae80",
+    "turn2_call_id": "7931e4a3-32ac-424b-9b75-aebe28884003",
+    "session_id": "01a0d87f-e84d-7bf3-a65d-ba7f0bb4d81a",
+    "turn2_pings_injected": [
+      "27465e450b4c"
+    ],
+    "ocr_answer": "739216 potato",
+    "ocr_digits": "739216",
+    "ocr_matches_fixture": true,
+    "tool_file_host_verified": true
+  },
+  "passed": false
+}

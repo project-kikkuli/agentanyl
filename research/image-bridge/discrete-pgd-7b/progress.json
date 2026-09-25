@@ -1,0 +1,13 @@
+{
+  "arm": "random_positive",
+  "mode": "scalar_projection",
+  "completed_iterations": 30,
+  "accepted_iterations": 29,
+  "current_objective": -1.0227546499839084,
+  "best_objective": -1.0227546499839084,
+  "gray_objective": 1.1176854324437233,
+  "full_forwards": 610,
+  "forward_chains": 151,
+  "backward_chains": 151,
+  "elapsed_seconds": 161.7015712499997
+}

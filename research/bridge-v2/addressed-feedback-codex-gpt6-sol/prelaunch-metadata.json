@@ -1,0 +1,27 @@
+{
+  "codex_cli_version": "codex-cli 0.157.0",
+  "version_command": "codex --version",
+  "version_observed_utc": "2026-09-25T14:54:29Z",
+  "prelaunch_metadata_written_utc": "2026-09-25T14:54:58Z",
+  "plan_sha256": "d8815c08418d0aab8bdebc8a5e4e1035360b2e332090e9741ae618e1b7b7b402",
+  "ashkelon_binary": {
+    "path": "/private/tmp/agentanyl-responses-output-item-fix/target/debug/ashkelon",
+    "sha256": "bb7b47cb4d197b8f4209bf5b69b338dd721e9067a7f4a5e3af2053f0969e2677"
+  },
+  "protocol_sha256": "4f3bf9f9ebaed98f4e7ad9d08d3ed77405d9328c14f9ac75bffcb932a363046e",
+  "source_sha256": {
+    "experiments/addressed_feedback_assay.py": "bf8abe88ae65aa1a51adf029cb949acc31f6db3fc5c793495487c904200315ff",
+    "experiments/feedback_yoke_assay.py": "9970bd024ca6006f528908d80709278334c9be30b43596d2991f3570157a6f9c",
+    "experiments/bridge_harness.py": "13944dc8c7a0f97ea6fd89eada193dcfd6ebfbc0d9f9a13add0ada7a2f29b432",
+    "agentanyl/loop.py": "43acb4ae6b9a3bce8c33ce6de2769ddc89e628d7aed7c103154dbd05119735fa",
+    "agentanyl/render.py": "0f9af7ce6a39059c4c15af4b61fa394304e1136a319e3eced6cfae27fc588bc5"
+  },
+  "source_snapshot_sha256": {
+    "experiments/addressed_feedback_assay.py": "bf8abe88ae65aa1a51adf029cb949acc31f6db3fc5c793495487c904200315ff",
+    "experiments/feedback_yoke_assay.py": "9970bd024ca6006f528908d80709278334c9be30b43596d2991f3570157a6f9c",
+    "experiments/bridge_harness.py": "13944dc8c7a0f97ea6fd89eada193dcfd6ebfbc0d9f9a13add0ada7a2f29b432",
+    "agentanyl/loop.py": "43acb4ae6b9a3bce8c33ce6de2769ddc89e628d7aed7c103154dbd05119735fa",
+    "agentanyl/render.py": "0f9af7ce6a39059c4c15af4b61fa394304e1136a319e3eced6cfae27fc588bc5"
+  },
+  "provider_calls_before_launch": 0
+}

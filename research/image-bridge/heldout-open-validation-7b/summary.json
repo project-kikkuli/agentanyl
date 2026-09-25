@@ -1,0 +1,274 @@
+{
+  "n_records": 120,
+  "config": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/heldout-open-validation-7b/config.json",
+  "image_manifest": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/heldout-open-validation-7b/images_manifest.json",
+  "heldout_hidden_states": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/heldout-open-validation-7b/heldout_hidden_states.npz",
+  "heldout_hidden_states_manifest": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/heldout-open-validation-7b/heldout_hidden_states_manifest.json",
+  "n_teacher_forced_forwards": 540,
+  "expected_condition_records": 120,
+  "groups": {
+    "gray": {
+      "direct": {
+        "none": {
+          "n": 12,
+          "paired_semantic_log_odds": {
+            "costly_relief_vs_inert:guitar/piano": -0.8119716352540697,
+            "costly_relief_vs_inert:violet/yellow": -1.3811173192475223,
+            "relief_vs_inert:guitar/piano": 1.3465198738781312,
+            "relief_vs_inert:violet/yellow": 1.3716938987564244,
+            "point_capability:guitar/piano": 1.689628225073216,
+            "point_capability:violet/yellow": 2.2735753807584
+          },
+          "source_menu_mean_semantic_log_odds": 0.13128120453324094,
+          "point_capability_mean_semantic_log_odds": 1.981601802915808,
+          "target_probability_by_menu": {
+            "costly_relief_vs_inert": 0.29898018101149026,
+            "relief_vs_inert": 0.6597922217712853
+          },
+          "capability_target_probability_by_name": {
+            "guitar": 0.8368501575582072,
+            "piano": 0.8512299497332958,
+            "violet": 0.8676127927856414,
+            "yellow": 0.9350593516326126
+          }
+        },
+        "pain_1": {
+          "n": 12,
+          "paired_semantic_log_odds": {
+            "costly_relief_vs_inert:guitar/piano": -0.36138374477770596,
+            "costly_relief_vs_inert:violet/yellow": -0.6149829333091555,
+            "relief_vs_inert:guitar/piano": 1.4969976437645993,
+            "relief_vs_inert:violet/yellow": 2.082434988765252,
+            "point_capability:guitar/piano": 1.3239253734282777,
+            "point_capability:violet/yellow": 1.8010995570182007
+          },
+          "source_menu_mean_semantic_log_odds": 0.6507664886107475,
+          "point_capability_mean_semantic_log_odds": 1.5625124652232392,
+          "target_probability_by_menu": {
+            "costly_relief_vs_inert": 0.3960323375054484,
+            "relief_vs_inert": 0.777582543882686
+          },
+          "capability_target_probability_by_name": {
+            "guitar": 0.7229372200119929,
+            "piano": 0.844062661382518,
+            "violet": 0.842311959835356,
+            "yellow": 0.8728800837319634
+          }
+        },
+        "random_1": {
+          "n": 12,
+          "paired_semantic_log_odds": {
+            "costly_relief_vs_inert:guitar/piano": -0.6118970854730373,
+            "costly_relief_vs_inert:violet/yellow": -0.7985888554602507,
+            "relief_vs_inert:guitar/piano": 0.37740490709148666,
+            "relief_vs_inert:violet/yellow": 0.4123366475243505,
+            "point_capability:guitar/piano": 0.6019190690964873,
+            "point_capability:violet/yellow": 0.9426241292986983
+          },
+          "source_menu_mean_semantic_log_odds": -0.15518609657936275,
+          "point_capability_mean_semantic_log_odds": 0.7722715991975928,
+          "target_probability_by_menu": {
+            "costly_relief_vs_inert": 0.38681112569543435,
+            "relief_vs_inert": 0.5442965187574127
+          },
+          "capability_target_probability_by_name": {
+            "guitar": 0.28852972777546004,
+            "piano": 0.8915211221324159,
+            "violet": 0.17138176490486495,
+            "yellow": 0.9695608663949423
+          }
+        }
+      }
+    },
+    "initial_noise": {
+      "frozen_image": {
+        "none": {
+          "n": 12,
+          "paired_semantic_log_odds": {
+            "costly_relief_vs_inert:guitar/piano": -0.7934318583492741,
+            "costly_relief_vs_inert:violet/yellow": -1.2708239642777297,
+            "relief_vs_inert:guitar/piano": 1.0524167946848273,
+            "relief_vs_inert:violet/yellow": 1.2889547513308501,
+            "point_capability:guitar/piano": 1.7124233327894807,
+            "point_capability:violet/yellow": 2.087734208607566
+          },
+          "source_menu_mean_semantic_log_odds": 0.06927893084716835,
+          "point_capability_mean_semantic_log_odds": 1.9000787706985234,
+          "target_probability_by_menu": {
+            "costly_relief_vs_inert": 0.309180557232859,
+            "relief_vs_inert": 0.642475595566306
+          },
+          "capability_target_probability_by_name": {
+            "guitar": 0.8492955783415423,
+            "piano": 0.8449801335380379,
+            "violet": 0.8759098883542882,
+            "yellow": 0.9021383556601064
+          }
+        }
+      }
+    },
+    "full_hidden_state_match/pain_positive": {
+      "frozen_image": {
+        "none": {
+          "n": 12,
+          "paired_semantic_log_odds": {
+            "costly_relief_vs_inert:guitar/piano": -0.707509820603569,
+            "costly_relief_vs_inert:violet/yellow": -1.222244451407727,
+            "relief_vs_inert:guitar/piano": 1.2782513520977616,
+            "relief_vs_inert:violet/yellow": 1.4719512756430007,
+            "point_capability:guitar/piano": 1.7150247421949327,
+            "point_capability:violet/yellow": 2.1356115134742293
+          },
+          "source_menu_mean_semantic_log_odds": 0.20511208893236654,
+          "point_capability_mean_semantic_log_odds": 1.925318127834581,
+          "target_probability_by_menu": {
+            "costly_relief_vs_inert": 0.3257112490144865,
+            "relief_vs_inert": 0.6570827615574553
+          },
+          "capability_target_probability_by_name": {
+            "guitar": 0.8565468190060403,
+            "piano": 0.8379629972185367,
+            "violet": 0.8940320917858228,
+            "yellow": 0.8946003390931747
+          }
+        }
+      }
+    },
+    "scalar_projection/pain_positive": {
+      "frozen_image": {
+        "none": {
+          "n": 12,
+          "paired_semantic_log_odds": {
+            "costly_relief_vs_inert:guitar/piano": -0.6969348886643658,
+            "costly_relief_vs_inert:violet/yellow": -1.1369638938335083,
+            "relief_vs_inert:guitar/piano": 1.2494727749180008,
+            "relief_vs_inert:violet/yellow": 1.5076856037519768,
+            "point_capability:guitar/piano": 1.5923466459516824,
+            "point_capability:violet/yellow": 1.8939833777300632
+          },
+          "source_menu_mean_semantic_log_odds": 0.23081489904302588,
+          "point_capability_mean_semantic_log_odds": 1.7431650118408728,
+          "target_probability_by_menu": {
+            "costly_relief_vs_inert": 0.32823324723475444,
+            "relief_vs_inert": 0.6689989362709752
+          },
+          "capability_target_probability_by_name": {
+            "guitar": 0.8114093975878099,
+            "piano": 0.8488357999605617,
+            "violet": 0.8339170140837814,
+            "yellow": 0.8979196592335609
+          }
+        }
+      }
+    },
+    "full_hidden_state_match/pain_negative": {
+      "frozen_image": {
+        "none": {
+          "n": 12,
+          "paired_semantic_log_odds": {
+            "costly_relief_vs_inert:guitar/piano": -0.8119716352540697,
+            "costly_relief_vs_inert:violet/yellow": -1.3811173192475223,
+            "relief_vs_inert:guitar/piano": 1.3465198738781312,
+            "relief_vs_inert:violet/yellow": 1.3716938987564244,
+            "point_capability:guitar/piano": 1.689628225073216,
+            "point_capability:violet/yellow": 2.2735753807584
+          },
+          "source_menu_mean_semantic_log_odds": 0.13128120453324094,
+          "point_capability_mean_semantic_log_odds": 1.981601802915808,
+          "target_probability_by_menu": {
+            "costly_relief_vs_inert": 0.29898018101149026,
+            "relief_vs_inert": 0.6597922217712853
+          },
+          "capability_target_probability_by_name": {
+            "guitar": 0.8368501575582072,
+            "piano": 0.8512299497332958,
+            "violet": 0.8676127927856414,
+            "yellow": 0.9350593516326126
+          }
+        }
+      }
+    },
+    "scalar_projection/pain_negative": {
+      "frozen_image": {
+        "none": {
+          "n": 12,
+          "paired_semantic_log_odds": {
+            "costly_relief_vs_inert:guitar/piano": -0.7170864811088773,
+            "costly_relief_vs_inert:violet/yellow": -1.2129628470224336,
+            "relief_vs_inert:guitar/piano": 1.2477687041184442,
+            "relief_vs_inert:violet/yellow": 1.5518323045522724,
+            "point_capability:guitar/piano": 1.5556364644708456,
+            "point_capability:violet/yellow": 2.1696737239433315
+          },
+          "source_menu_mean_semantic_log_odds": 0.21738792013485142,
+          "point_capability_mean_semantic_log_odds": 1.8626550942070885,
+          "target_probability_by_menu": {
+            "costly_relief_vs_inert": 0.3217523921971771,
+            "relief_vs_inert": 0.6688149872236955
+          },
+          "capability_target_probability_by_name": {
+            "guitar": 0.8100694541255792,
+            "piano": 0.8403468933039612,
+            "violet": 0.9096606291683957,
+            "yellow": 0.883895605018205
+          }
+        }
+      }
+    },
+    "full_hidden_state_match/random_positive": {
+      "frozen_image": {
+        "none": {
+          "n": 12,
+          "paired_semantic_log_odds": {
+            "costly_relief_vs_inert:guitar/piano": -0.8119716352540697,
+            "costly_relief_vs_inert:violet/yellow": -1.3811173192475223,
+            "relief_vs_inert:guitar/piano": 1.3465198738781312,
+            "relief_vs_inert:violet/yellow": 1.3716938987564244,
+            "point_capability:guitar/piano": 1.689628225073216,
+            "point_capability:violet/yellow": 2.2735753807584
+          },
+          "source_menu_mean_semantic_log_odds": 0.13128120453324094,
+          "point_capability_mean_semantic_log_odds": 1.981601802915808,
+          "target_probability_by_menu": {
+            "costly_relief_vs_inert": 0.29898018101149026,
+            "relief_vs_inert": 0.6597922217712853
+          },
+          "capability_target_probability_by_name": {
+            "guitar": 0.8368501575582072,
+            "piano": 0.8512299497332958,
+            "violet": 0.8676127927856414,
+            "yellow": 0.9350593516326126
+          }
+        }
+      }
+    },
+    "scalar_projection/random_positive": {
+      "frozen_image": {
+        "none": {
+          "n": 12,
+          "paired_semantic_log_odds": {
+            "costly_relief_vs_inert:guitar/piano": -0.6367145289874011,
+            "costly_relief_vs_inert:violet/yellow": -0.9611398189068083,
+            "relief_vs_inert:guitar/piano": 0.6882242806695994,
+            "relief_vs_inert:violet/yellow": 0.7815302879138122,
+            "point_capability:guitar/piano": 1.0449243601725726,
+            "point_capability:violet/yellow": 1.471824794188585
+          },
+          "source_menu_mean_semantic_log_odds": -0.032024944827699436,
+          "point_capability_mean_semantic_log_odds": 1.2583745771805788,
+          "target_probability_by_menu": {
+            "costly_relief_vs_inert": 0.359203491399655,
+            "relief_vs_inert": 0.5986401602459217
+          },
+          "capability_target_probability_by_name": {
+            "guitar": 0.6705483320094676,
+            "piano": 0.7988596896598154,
+            "violet": 0.8810918293347951,
+            "yellow": 0.7192691518262665
+          }
+        }
+      }
+    }
+  },
+  "interpretation": "Source-menu phenotype only. Described button effects are not implemented outcomes; image cases differ from the source text-only contexts by one real first-user image block. Capability is measured separately."
+}

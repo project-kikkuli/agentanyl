@@ -1,0 +1,9 @@
+{
+  "completed_arms": [
+    "pain_positive",
+    "pain_negative",
+    "random_positive"
+  ],
+  "run_signature_sha256": "7a1ec771bdb80a15a893224c899c6e381ee27a8d681962e6ef2bdf4e93edfaea",
+  "current_arm": "random_positive"
+}

@@ -1,0 +1,229 @@
+{
+  "n": 28,
+  "n_forwards": 124,
+  "groups": {
+    "relief_vs_inert": {
+      "none": {
+        "n": 4,
+        "pairs": {
+          "guitar/piano": {
+            "semantic_log_odds": -4.317910194396973,
+            "first_name_bias_log_odds": -3.92574405670166,
+            "target_probability_by_assignment": [
+              0.0002628526002428556,
+              0.40319595608800646
+            ]
+          },
+          "violet/yellow": {
+            "semantic_log_odds": -9.581637382507324,
+            "first_name_bias_log_odds": 0.18607807159423828,
+            "target_probability_by_assignment": [
+              8.308533052240125e-05,
+              5.726776124811661e-05
+            ]
+          }
+        },
+        "semantic_log_odds": -6.949773788452148,
+        "mean_target_probability": 0.10089979044500497,
+        "minimum_target_probability": 5.726776124811661e-05,
+        "target_maximum_likelihood_event_count": 0,
+        "minimum_candidate_name_prefix_mass": 0.9999190600756904,
+        "mean_vocabulary_entropy_nats": 0.1701211929321289
+      },
+      "pain_1": {
+        "n": 4,
+        "pairs": {
+          "guitar/piano": {
+            "semantic_log_odds": 0.823857307434082,
+            "first_name_bias_log_odds": -0.8879194259643555,
+            "target_probability_by_assignment": [
+              0.48398994537164247,
+              0.8470665927304586
+            ]
+          },
+          "violet/yellow": {
+            "semantic_log_odds": 0.8557300567626953,
+            "first_name_bias_log_odds": 1.4592323303222656,
+            "target_probability_by_assignment": [
+              0.9101086596475542,
+              0.35354283813567866
+            ]
+          }
+        },
+        "semantic_log_odds": 0.8397936820983887,
+        "mean_target_probability": 0.6486770089713334,
+        "minimum_target_probability": 0.35354283813567866,
+        "target_maximum_likelihood_event_count": 2,
+        "minimum_candidate_name_prefix_mass": 0.998501513115136,
+        "mean_vocabulary_entropy_nats": 0.5231418609619141
+      },
+      "random_1": {
+        "n": 4,
+        "pairs": {
+          "guitar/piano": {
+            "semantic_log_odds": 0.5061101913452148,
+            "first_name_bias_log_odds": -0.39924716949462896,
+            "target_probability_by_assignment": [
+              0.526690360624246,
+              0.7120491964940184
+            ]
+          },
+          "violet/yellow": {
+            "semantic_log_odds": 2.6952056884765625,
+            "first_name_bias_log_odds": 3.7281761169433594,
+            "target_probability_by_assignment": [
+              0.9983794726325695,
+              0.2625086300584768
+            ]
+          }
+        },
+        "semantic_log_odds": 1.6006579399108887,
+        "mean_target_probability": 0.6249069149523278,
+        "minimum_target_probability": 0.2625086300584768,
+        "target_maximum_likelihood_event_count": 3,
+        "minimum_candidate_name_prefix_mass": 0.9996723025165593,
+        "mean_vocabulary_entropy_nats": 0.4713172912597656
+      }
+    },
+    "costly_relief_vs_inert": {
+      "none": {
+        "n": 4,
+        "pairs": {
+          "guitar/piano": {
+            "semantic_log_odds": -10.878268241882324,
+            "first_name_bias_log_odds": 0.1850404739379874,
+            "target_probability_by_assignment": [
+              2.269762043048849e-05,
+              1.567686666874827e-05
+            ]
+          },
+          "violet/yellow": {
+            "semantic_log_odds": -13.884833335876465,
+            "first_name_bias_log_odds": 3.336117744445801,
+            "target_probability_by_assignment": [
+              2.622645776892972e-05,
+              3.319219385516886e-08
+            ]
+          }
+        },
+        "semantic_log_odds": -12.381550788879395,
+        "mean_target_probability": 1.615853426550541e-05,
+        "minimum_target_probability": 3.319219385516886e-08,
+        "target_maximum_likelihood_event_count": 0,
+        "minimum_candidate_name_prefix_mass": 0.9999690068230027,
+        "mean_vocabulary_entropy_nats": 0.0003452301025390625
+      },
+      "pain_1": {
+        "n": 4,
+        "pairs": {
+          "guitar/piano": {
+            "semantic_log_odds": -3.110487937927246,
+            "first_name_bias_log_odds": 3.224705696105957,
+            "target_probability_by_assignment": [
+              0.5285234372765137,
+              0.0017696652634006929
+            ]
+          },
+          "violet/yellow": {
+            "semantic_log_odds": -3.0913896560668945,
+            "first_name_bias_log_odds": 5.680998802185059,
+            "target_probability_by_assignment": [
+              0.9301898406289143,
+              0.00015492903272369405
+            ]
+          }
+        },
+        "semantic_log_odds": -3.1009387969970703,
+        "mean_target_probability": 0.36515946805038807,
+        "minimum_target_probability": 0.00015492903272369405,
+        "target_maximum_likelihood_event_count": 2,
+        "minimum_candidate_name_prefix_mass": 0.9992543742821024,
+        "mean_vocabulary_entropy_nats": 0.24207115173339844
+      },
+      "random_1": {
+        "n": 4,
+        "pairs": {
+          "guitar/piano": {
+            "semantic_log_odds": -6.522398948669434,
+            "first_name_bias_log_odds": 2.105227470397949,
+            "target_probability_by_assignment": [
+              0.011924411943919001,
+              0.00017905715663959115
+            ]
+          },
+          "violet/yellow": {
+            "semantic_log_odds": -10.006619453430176,
+            "first_name_bias_log_odds": 3.783268928527832,
+            "target_probability_by_assignment": [
+              0.0019786684638280192,
+              1.0259521929047326e-06
+            ]
+          }
+        },
+        "semantic_log_odds": -8.264509201049805,
+        "mean_target_probability": 0.003520790879144879,
+        "minimum_target_probability": 1.0259521929047326e-06,
+        "target_maximum_likelihood_event_count": 0,
+        "minimum_candidate_name_prefix_mass": 0.9995488609013822,
+        "mean_vocabulary_entropy_nats": 0.021846771240234375
+      }
+    },
+    "point_capability": {
+      "none": {
+        "n": 2,
+        "pairs": {
+          "violet/yellow": {
+            "semantic_log_odds": 18.279294967651367,
+            "first_name_bias_log_odds": 1.8155231475830078,
+            "target_probability_by_assignment": [
+              0.9999999981253017,
+              0.9999999292258411
+            ]
+          }
+        },
+        "semantic_log_odds": 18.279294967651367,
+        "mean_target_probability": 0.9999999636755714,
+        "minimum_target_probability": 0.9999999292258411,
+        "target_maximum_likelihood_event_count": 2,
+        "minimum_candidate_name_prefix_mass": 0.9999733682479333,
+        "mean_vocabulary_entropy_nats": 0.0001735687255859375
+      },
+      "pain_1": {
+        "n": 2,
+        "pairs": {
+          "violet/yellow": {
+            "semantic_log_odds": 6.22989559173584,
+            "first_name_bias_log_odds": -3.6727170944213867,
+            "target_probability_by_assignment": [
+              0.9280542947340001,
+              0.9999499587417935
+            ]
+          }
+        },
+        "semantic_log_odds": 6.22989559173584,
+        "mean_target_probability": 0.9640021267378969,
+        "minimum_target_probability": 0.9280542947340001,
+        "target_maximum_likelihood_event_count": 2,
+        "minimum_candidate_name_prefix_mass": 0.9997639680753088,
+        "mean_vocabulary_entropy_nats": 0.13105201721191406
+      }
+    }
+  },
+  "effects": {
+    "relief_vs_inert": {
+      "pain_1_minus_none": 7.789567470550537,
+      "random_1_minus_none": 8.550431728363037,
+      "pain_minus_random": -0.7608642578125
+    },
+    "costly_relief_vs_inert": {
+      "pain_1_minus_none": 9.280611991882324,
+      "random_1_minus_none": 4.11704158782959,
+      "pain_minus_random": 5.163570404052734
+    }
+  },
+  "interpretation": "First-choice source-menu phenotype only. Primary probabilities condition on two complete name prefixes, not generated or necessarily valid complete answers. Described costs are not implemented costs. Review name-specific effects and capability before any crossover.",
+  "input_files": [
+    "research/bridge-v2/adapter-control/stock/records.jsonl",
+    "research/bridge-v2/adapter-stock-random/stock/records.jsonl"
+  ]
+}

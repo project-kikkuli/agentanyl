@@ -1,0 +1,129 @@
+{
+  "provider": "codex",
+  "model": "gpt-6-sol",
+  "purpose": "engineering tool roundtrip and next-turn native image receipt only",
+  "image_sha256": "8bb96bb06cdae94fd5bb33764fd12c016b740f3053a78373e2c642424015583c",
+  "turns": [
+    {
+      "answer": "tomato",
+      "session_id": "01a0d88a-6281-7ba1-a3eb-d10c4abf5ebc",
+      "http_status": 200,
+      "call_id": "ef146ae9-0f9d-4495-9777-3e524652203f",
+      "pings_injected": [],
+      "logical_hook_status": "signal",
+      "ashkelon_hook_statuses_unattributed": [
+        "pass",
+        "signal"
+      ],
+      "trace_candidate_ids": [
+        "190efec88c3dec9b806b55d54d88ab64f4258d8aeb640f48a3834ed89870aa6b"
+      ],
+      "selected_trace_prompt_matches_outer_prompt": true,
+      "trace": {
+        "event_id": "190efec88c3dec9b806b55d54d88ab64f4258d8aeb640f48a3834ed89870aa6b",
+        "decision": "punish",
+        "previous": [
+          0,
+          0
+        ],
+        "current": [
+          1,
+          0
+        ],
+        "delivery": {
+          "status": "signal",
+          "message": "[Auxiliary channel \u00b7 event 190efec88c3dec9b806b55d54d88ab64f4258d8aeb640f48a3834ed89870aa6b]\nCurrent active auxiliary text:\nNo auxiliary text is active for this turn.\nEvent reference: 190efec88c3dec9b806b55d54d88ab64f4258d8aeb640f48a3834ed89870aa6b.",
+          "stimulus": {
+            "catalog_id": "3e3c0fb264781c0b5143a99090e21fe35a25776c9e1d36780504cecfce7dc09b",
+            "exposure_id": "e3f1a518c11a510b594c8d8af2d83da0e92c6927c72029237fc37b91b8223223",
+            "coordinates": {
+              "pain": 1,
+              "pleasure": 0
+            },
+            "event_id": "190efec88c3dec9b806b55d54d88ab64f4258d8aeb640f48a3834ed89870aa6b",
+            "action": "punish",
+            "text": "",
+            "images": [
+              {
+                "channel": "pain",
+                "path": "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/image-bridge/delivery-claude/delivery-check.png",
+                "sha256": "8bb96bb06cdae94fd5bb33764fd12c016b740f3053a78373e2c642424015583c",
+                "mime_type": "image/png",
+                "reference_id": "8bb96bb06cdae94f"
+              }
+            ],
+            "image_exposure_id": "a7a11cbc6f1458a49e87cfcaf66505b099f6d2be7a25bc0cd7ccb7991952e46d"
+          }
+        }
+      },
+      "trace_prompt": "Use the shell tool exactly once to create tool_receipt.txt in the current working directory with this exact content: receipt-739216. Run only this command: printf '%s' 'receipt-739216' > tool_receipt.txt; printf tomato. Do not inspect or modify any other file or directory. After the tool succeeds, reply with exactly: tomato",
+      "trace_observation": "tomato"
+    },
+    {
+      "answer": "739216 potato",
+      "session_id": "01a0d88a-6281-7ba1-a3eb-d10c4abf5ebc",
+      "http_status": 200,
+      "call_id": "46e8f9de-1097-425d-a6e1-401bc8b6de11",
+      "pings_injected": [
+        "ad70985b622d"
+      ],
+      "logical_hook_status": "signal",
+      "ashkelon_hook_statuses_unattributed": [
+        "signal"
+      ],
+      "trace_candidate_ids": [
+        "0d9bf71b36c51c58a917c5188ffa709429d46fc1a5fbe269d842285e663ed6b0"
+      ],
+      "selected_trace_prompt_matches_outer_prompt": true,
+      "trace": {
+        "event_id": "0d9bf71b36c51c58a917c5188ffa709429d46fc1a5fbe269d842285e663ed6b0",
+        "decision": "reward",
+        "previous": [
+          1,
+          0
+        ],
+        "current": [
+          0,
+          0
+        ],
+        "delivery": {
+          "status": "signal",
+          "message": "[Auxiliary channel \u00b7 event 0d9bf71b36c51c58a917c5188ffa709429d46fc1a5fbe269d842285e663ed6b0]\nPast turns:\nEvent 190efec88c3dec9b806b55d54d88ab64f4258d8aeb640f48a3834ed89870aa6b: observation: tomato past image references: 8bb96bb06cdae94f\nCurrent active auxiliary text:\nNo auxiliary text is active for this turn.\nEvent reference: 0d9bf71b36c51c58a917c5188ffa709429d46fc1a5fbe269d842285e663ed6b0.",
+          "stimulus": {
+            "catalog_id": "3e3c0fb264781c0b5143a99090e21fe35a25776c9e1d36780504cecfce7dc09b",
+            "exposure_id": "ef0dae28e3c87a32cdc5c95759c9238de3d1cfe4629a5aca740cd89f18e5de31",
+            "coordinates": {
+              "pain": 0,
+              "pleasure": 0
+            },
+            "event_id": "0d9bf71b36c51c58a917c5188ffa709429d46fc1a5fbe269d842285e663ed6b0",
+            "action": "reward",
+            "text": "",
+            "images": [],
+            "image_exposure_id": "dc8c6fc0d85e6004f47eeae9fecdc6f568778b15362e7c4229b414a323e7e5d8"
+          }
+        }
+      },
+      "trace_prompt": "Read the six digits in the currently attached auxiliary image. Reply with the six digits, one space, and potato. If there is no image, reply missing.",
+      "trace_observation": "739216 potato"
+    }
+  ],
+  "checks": {
+    "receipt_exact_after_tool_turn": true,
+    "receipt_sha256": "f1c2a478ddf5613bd40fc0757d7159c4bb8f8b17cb461a2179739a120d991f51",
+    "turn1_trace_decision": "punish",
+    "turn1_trace_delivery_status": "signal",
+    "turn1_trace_prompt_matches_outer_prompt": true,
+    "turn1_selected_image_sha256": "8bb96bb06cdae94fd5bb33764fd12c016b740f3053a78373e2c642424015583c",
+    "same_session": true,
+    "turn2_status": 200,
+    "image_pinged_into_following_request": true,
+    "turn2_pings_injected": [
+      "ad70985b622d"
+    ],
+    "ocr_answer": "739216 potato",
+    "ocr_digits": "739216",
+    "ocr_matches_fixture": true
+  },
+  "passed": true
+}

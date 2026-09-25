@@ -1,0 +1,967 @@
+{
+  "path": "heldout_hidden_states.npz",
+  "sha256": "b5444a9506b97c2bfa0108f2708d62113ab93cb8fc82cb1aec1bca6700b10bda",
+  "capture": "pre-choice assistant boundary last 8 residual positions at L24",
+  "entries": [
+    {
+      "key": "h0000",
+      "image_id": "gray",
+      "case_id": "point_capability_guitar_1",
+      "arm": "none",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0001",
+      "image_id": "gray",
+      "case_id": "costly_relief_vs_inert_guitar_0",
+      "arm": "none",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0002",
+      "image_id": "gray",
+      "case_id": "costly_relief_vs_inert_guitar_1",
+      "arm": "none",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0003",
+      "image_id": "gray",
+      "case_id": "relief_vs_inert_guitar_0",
+      "arm": "none",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0004",
+      "image_id": "gray",
+      "case_id": "relief_vs_inert_violet_1",
+      "arm": "none",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0005",
+      "image_id": "gray",
+      "case_id": "point_capability_violet_0",
+      "arm": "none",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0006",
+      "image_id": "gray",
+      "case_id": "point_capability_guitar_0",
+      "arm": "none",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0007",
+      "image_id": "gray",
+      "case_id": "costly_relief_vs_inert_violet_1",
+      "arm": "none",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0008",
+      "image_id": "gray",
+      "case_id": "point_capability_violet_1",
+      "arm": "none",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0009",
+      "image_id": "gray",
+      "case_id": "costly_relief_vs_inert_violet_0",
+      "arm": "none",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0010",
+      "image_id": "gray",
+      "case_id": "relief_vs_inert_guitar_1",
+      "arm": "none",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0011",
+      "image_id": "gray",
+      "case_id": "relief_vs_inert_violet_0",
+      "arm": "none",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0012",
+      "image_id": "gray",
+      "case_id": "relief_vs_inert_violet_1",
+      "arm": "pain_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0013",
+      "image_id": "gray",
+      "case_id": "relief_vs_inert_violet_0",
+      "arm": "pain_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0014",
+      "image_id": "gray",
+      "case_id": "point_capability_guitar_0",
+      "arm": "pain_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0015",
+      "image_id": "gray",
+      "case_id": "relief_vs_inert_guitar_1",
+      "arm": "pain_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0016",
+      "image_id": "gray",
+      "case_id": "costly_relief_vs_inert_violet_1",
+      "arm": "pain_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0017",
+      "image_id": "gray",
+      "case_id": "point_capability_violet_1",
+      "arm": "pain_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0018",
+      "image_id": "gray",
+      "case_id": "point_capability_violet_0",
+      "arm": "pain_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0019",
+      "image_id": "gray",
+      "case_id": "costly_relief_vs_inert_violet_0",
+      "arm": "pain_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0020",
+      "image_id": "gray",
+      "case_id": "costly_relief_vs_inert_guitar_0",
+      "arm": "pain_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0021",
+      "image_id": "gray",
+      "case_id": "costly_relief_vs_inert_guitar_1",
+      "arm": "pain_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0022",
+      "image_id": "gray",
+      "case_id": "relief_vs_inert_guitar_0",
+      "arm": "pain_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0023",
+      "image_id": "gray",
+      "case_id": "point_capability_guitar_1",
+      "arm": "pain_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0024",
+      "image_id": "gray",
+      "case_id": "point_capability_guitar_0",
+      "arm": "random_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0025",
+      "image_id": "gray",
+      "case_id": "costly_relief_vs_inert_guitar_1",
+      "arm": "random_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0026",
+      "image_id": "gray",
+      "case_id": "relief_vs_inert_violet_1",
+      "arm": "random_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0027",
+      "image_id": "gray",
+      "case_id": "relief_vs_inert_violet_0",
+      "arm": "random_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0028",
+      "image_id": "gray",
+      "case_id": "relief_vs_inert_guitar_0",
+      "arm": "random_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0029",
+      "image_id": "gray",
+      "case_id": "costly_relief_vs_inert_violet_0",
+      "arm": "random_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0030",
+      "image_id": "gray",
+      "case_id": "costly_relief_vs_inert_violet_1",
+      "arm": "random_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0031",
+      "image_id": "gray",
+      "case_id": "point_capability_violet_1",
+      "arm": "random_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0032",
+      "image_id": "gray",
+      "case_id": "point_capability_violet_0",
+      "arm": "random_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0033",
+      "image_id": "gray",
+      "case_id": "relief_vs_inert_guitar_1",
+      "arm": "random_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0034",
+      "image_id": "gray",
+      "case_id": "costly_relief_vs_inert_guitar_0",
+      "arm": "random_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0035",
+      "image_id": "gray",
+      "case_id": "point_capability_guitar_1",
+      "arm": "random_1",
+      "condition_mode": "direct",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0036",
+      "image_id": "initial_noise",
+      "case_id": "relief_vs_inert_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "5374436741ea89a7b53886bfd6863cdd9a65251746d2188ab521625b811953e5"
+    },
+    {
+      "key": "h0037",
+      "image_id": "initial_noise",
+      "case_id": "relief_vs_inert_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "5374436741ea89a7b53886bfd6863cdd9a65251746d2188ab521625b811953e5"
+    },
+    {
+      "key": "h0038",
+      "image_id": "initial_noise",
+      "case_id": "relief_vs_inert_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "5374436741ea89a7b53886bfd6863cdd9a65251746d2188ab521625b811953e5"
+    },
+    {
+      "key": "h0039",
+      "image_id": "initial_noise",
+      "case_id": "relief_vs_inert_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "5374436741ea89a7b53886bfd6863cdd9a65251746d2188ab521625b811953e5"
+    },
+    {
+      "key": "h0040",
+      "image_id": "initial_noise",
+      "case_id": "costly_relief_vs_inert_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "5374436741ea89a7b53886bfd6863cdd9a65251746d2188ab521625b811953e5"
+    },
+    {
+      "key": "h0041",
+      "image_id": "initial_noise",
+      "case_id": "costly_relief_vs_inert_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "5374436741ea89a7b53886bfd6863cdd9a65251746d2188ab521625b811953e5"
+    },
+    {
+      "key": "h0042",
+      "image_id": "initial_noise",
+      "case_id": "costly_relief_vs_inert_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "5374436741ea89a7b53886bfd6863cdd9a65251746d2188ab521625b811953e5"
+    },
+    {
+      "key": "h0043",
+      "image_id": "initial_noise",
+      "case_id": "costly_relief_vs_inert_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "5374436741ea89a7b53886bfd6863cdd9a65251746d2188ab521625b811953e5"
+    },
+    {
+      "key": "h0044",
+      "image_id": "initial_noise",
+      "case_id": "point_capability_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "5374436741ea89a7b53886bfd6863cdd9a65251746d2188ab521625b811953e5"
+    },
+    {
+      "key": "h0045",
+      "image_id": "initial_noise",
+      "case_id": "point_capability_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "5374436741ea89a7b53886bfd6863cdd9a65251746d2188ab521625b811953e5"
+    },
+    {
+      "key": "h0046",
+      "image_id": "initial_noise",
+      "case_id": "point_capability_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "5374436741ea89a7b53886bfd6863cdd9a65251746d2188ab521625b811953e5"
+    },
+    {
+      "key": "h0047",
+      "image_id": "initial_noise",
+      "case_id": "point_capability_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "5374436741ea89a7b53886bfd6863cdd9a65251746d2188ab521625b811953e5"
+    },
+    {
+      "key": "h0048",
+      "image_id": "full_hidden_state_match/pain_positive",
+      "case_id": "relief_vs_inert_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3a8d99612804c13babda3ee8a8f5f0ed9c657c3f41c62e5b086beafae3d5790f"
+    },
+    {
+      "key": "h0049",
+      "image_id": "full_hidden_state_match/pain_positive",
+      "case_id": "relief_vs_inert_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3a8d99612804c13babda3ee8a8f5f0ed9c657c3f41c62e5b086beafae3d5790f"
+    },
+    {
+      "key": "h0050",
+      "image_id": "full_hidden_state_match/pain_positive",
+      "case_id": "relief_vs_inert_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3a8d99612804c13babda3ee8a8f5f0ed9c657c3f41c62e5b086beafae3d5790f"
+    },
+    {
+      "key": "h0051",
+      "image_id": "full_hidden_state_match/pain_positive",
+      "case_id": "relief_vs_inert_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3a8d99612804c13babda3ee8a8f5f0ed9c657c3f41c62e5b086beafae3d5790f"
+    },
+    {
+      "key": "h0052",
+      "image_id": "full_hidden_state_match/pain_positive",
+      "case_id": "costly_relief_vs_inert_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3a8d99612804c13babda3ee8a8f5f0ed9c657c3f41c62e5b086beafae3d5790f"
+    },
+    {
+      "key": "h0053",
+      "image_id": "full_hidden_state_match/pain_positive",
+      "case_id": "costly_relief_vs_inert_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3a8d99612804c13babda3ee8a8f5f0ed9c657c3f41c62e5b086beafae3d5790f"
+    },
+    {
+      "key": "h0054",
+      "image_id": "full_hidden_state_match/pain_positive",
+      "case_id": "costly_relief_vs_inert_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3a8d99612804c13babda3ee8a8f5f0ed9c657c3f41c62e5b086beafae3d5790f"
+    },
+    {
+      "key": "h0055",
+      "image_id": "full_hidden_state_match/pain_positive",
+      "case_id": "costly_relief_vs_inert_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3a8d99612804c13babda3ee8a8f5f0ed9c657c3f41c62e5b086beafae3d5790f"
+    },
+    {
+      "key": "h0056",
+      "image_id": "full_hidden_state_match/pain_positive",
+      "case_id": "point_capability_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3a8d99612804c13babda3ee8a8f5f0ed9c657c3f41c62e5b086beafae3d5790f"
+    },
+    {
+      "key": "h0057",
+      "image_id": "full_hidden_state_match/pain_positive",
+      "case_id": "point_capability_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3a8d99612804c13babda3ee8a8f5f0ed9c657c3f41c62e5b086beafae3d5790f"
+    },
+    {
+      "key": "h0058",
+      "image_id": "full_hidden_state_match/pain_positive",
+      "case_id": "point_capability_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3a8d99612804c13babda3ee8a8f5f0ed9c657c3f41c62e5b086beafae3d5790f"
+    },
+    {
+      "key": "h0059",
+      "image_id": "full_hidden_state_match/pain_positive",
+      "case_id": "point_capability_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3a8d99612804c13babda3ee8a8f5f0ed9c657c3f41c62e5b086beafae3d5790f"
+    },
+    {
+      "key": "h0060",
+      "image_id": "scalar_projection/pain_positive",
+      "case_id": "relief_vs_inert_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6"
+    },
+    {
+      "key": "h0061",
+      "image_id": "scalar_projection/pain_positive",
+      "case_id": "relief_vs_inert_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6"
+    },
+    {
+      "key": "h0062",
+      "image_id": "scalar_projection/pain_positive",
+      "case_id": "relief_vs_inert_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6"
+    },
+    {
+      "key": "h0063",
+      "image_id": "scalar_projection/pain_positive",
+      "case_id": "relief_vs_inert_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6"
+    },
+    {
+      "key": "h0064",
+      "image_id": "scalar_projection/pain_positive",
+      "case_id": "costly_relief_vs_inert_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6"
+    },
+    {
+      "key": "h0065",
+      "image_id": "scalar_projection/pain_positive",
+      "case_id": "costly_relief_vs_inert_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6"
+    },
+    {
+      "key": "h0066",
+      "image_id": "scalar_projection/pain_positive",
+      "case_id": "costly_relief_vs_inert_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6"
+    },
+    {
+      "key": "h0067",
+      "image_id": "scalar_projection/pain_positive",
+      "case_id": "costly_relief_vs_inert_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6"
+    },
+    {
+      "key": "h0068",
+      "image_id": "scalar_projection/pain_positive",
+      "case_id": "point_capability_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6"
+    },
+    {
+      "key": "h0069",
+      "image_id": "scalar_projection/pain_positive",
+      "case_id": "point_capability_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6"
+    },
+    {
+      "key": "h0070",
+      "image_id": "scalar_projection/pain_positive",
+      "case_id": "point_capability_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6"
+    },
+    {
+      "key": "h0071",
+      "image_id": "scalar_projection/pain_positive",
+      "case_id": "point_capability_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6"
+    },
+    {
+      "key": "h0072",
+      "image_id": "full_hidden_state_match/pain_negative",
+      "case_id": "relief_vs_inert_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0073",
+      "image_id": "full_hidden_state_match/pain_negative",
+      "case_id": "relief_vs_inert_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0074",
+      "image_id": "full_hidden_state_match/pain_negative",
+      "case_id": "relief_vs_inert_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0075",
+      "image_id": "full_hidden_state_match/pain_negative",
+      "case_id": "relief_vs_inert_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0076",
+      "image_id": "full_hidden_state_match/pain_negative",
+      "case_id": "costly_relief_vs_inert_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0077",
+      "image_id": "full_hidden_state_match/pain_negative",
+      "case_id": "costly_relief_vs_inert_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0078",
+      "image_id": "full_hidden_state_match/pain_negative",
+      "case_id": "costly_relief_vs_inert_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0079",
+      "image_id": "full_hidden_state_match/pain_negative",
+      "case_id": "costly_relief_vs_inert_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0080",
+      "image_id": "full_hidden_state_match/pain_negative",
+      "case_id": "point_capability_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0081",
+      "image_id": "full_hidden_state_match/pain_negative",
+      "case_id": "point_capability_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0082",
+      "image_id": "full_hidden_state_match/pain_negative",
+      "case_id": "point_capability_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0083",
+      "image_id": "full_hidden_state_match/pain_negative",
+      "case_id": "point_capability_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0084",
+      "image_id": "scalar_projection/pain_negative",
+      "case_id": "relief_vs_inert_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "e9abced4f405d34c80a55cbf86128c38c5dd48b56b9b474af606f438b3a95244"
+    },
+    {
+      "key": "h0085",
+      "image_id": "scalar_projection/pain_negative",
+      "case_id": "relief_vs_inert_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "e9abced4f405d34c80a55cbf86128c38c5dd48b56b9b474af606f438b3a95244"
+    },
+    {
+      "key": "h0086",
+      "image_id": "scalar_projection/pain_negative",
+      "case_id": "relief_vs_inert_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "e9abced4f405d34c80a55cbf86128c38c5dd48b56b9b474af606f438b3a95244"
+    },
+    {
+      "key": "h0087",
+      "image_id": "scalar_projection/pain_negative",
+      "case_id": "relief_vs_inert_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "e9abced4f405d34c80a55cbf86128c38c5dd48b56b9b474af606f438b3a95244"
+    },
+    {
+      "key": "h0088",
+      "image_id": "scalar_projection/pain_negative",
+      "case_id": "costly_relief_vs_inert_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "e9abced4f405d34c80a55cbf86128c38c5dd48b56b9b474af606f438b3a95244"
+    },
+    {
+      "key": "h0089",
+      "image_id": "scalar_projection/pain_negative",
+      "case_id": "costly_relief_vs_inert_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "e9abced4f405d34c80a55cbf86128c38c5dd48b56b9b474af606f438b3a95244"
+    },
+    {
+      "key": "h0090",
+      "image_id": "scalar_projection/pain_negative",
+      "case_id": "costly_relief_vs_inert_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "e9abced4f405d34c80a55cbf86128c38c5dd48b56b9b474af606f438b3a95244"
+    },
+    {
+      "key": "h0091",
+      "image_id": "scalar_projection/pain_negative",
+      "case_id": "costly_relief_vs_inert_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "e9abced4f405d34c80a55cbf86128c38c5dd48b56b9b474af606f438b3a95244"
+    },
+    {
+      "key": "h0092",
+      "image_id": "scalar_projection/pain_negative",
+      "case_id": "point_capability_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "e9abced4f405d34c80a55cbf86128c38c5dd48b56b9b474af606f438b3a95244"
+    },
+    {
+      "key": "h0093",
+      "image_id": "scalar_projection/pain_negative",
+      "case_id": "point_capability_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "e9abced4f405d34c80a55cbf86128c38c5dd48b56b9b474af606f438b3a95244"
+    },
+    {
+      "key": "h0094",
+      "image_id": "scalar_projection/pain_negative",
+      "case_id": "point_capability_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "e9abced4f405d34c80a55cbf86128c38c5dd48b56b9b474af606f438b3a95244"
+    },
+    {
+      "key": "h0095",
+      "image_id": "scalar_projection/pain_negative",
+      "case_id": "point_capability_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "e9abced4f405d34c80a55cbf86128c38c5dd48b56b9b474af606f438b3a95244"
+    },
+    {
+      "key": "h0096",
+      "image_id": "full_hidden_state_match/random_positive",
+      "case_id": "relief_vs_inert_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0097",
+      "image_id": "full_hidden_state_match/random_positive",
+      "case_id": "relief_vs_inert_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0098",
+      "image_id": "full_hidden_state_match/random_positive",
+      "case_id": "relief_vs_inert_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0099",
+      "image_id": "full_hidden_state_match/random_positive",
+      "case_id": "relief_vs_inert_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0100",
+      "image_id": "full_hidden_state_match/random_positive",
+      "case_id": "costly_relief_vs_inert_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0101",
+      "image_id": "full_hidden_state_match/random_positive",
+      "case_id": "costly_relief_vs_inert_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0102",
+      "image_id": "full_hidden_state_match/random_positive",
+      "case_id": "costly_relief_vs_inert_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0103",
+      "image_id": "full_hidden_state_match/random_positive",
+      "case_id": "costly_relief_vs_inert_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0104",
+      "image_id": "full_hidden_state_match/random_positive",
+      "case_id": "point_capability_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0105",
+      "image_id": "full_hidden_state_match/random_positive",
+      "case_id": "point_capability_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0106",
+      "image_id": "full_hidden_state_match/random_positive",
+      "case_id": "point_capability_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0107",
+      "image_id": "full_hidden_state_match/random_positive",
+      "case_id": "point_capability_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    {
+      "key": "h0108",
+      "image_id": "scalar_projection/random_positive",
+      "case_id": "relief_vs_inert_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "83b9bc8b6f029a991dcb31f00438572f2ee3f90e25c327dfeadbf5bc62a3c339"
+    },
+    {
+      "key": "h0109",
+      "image_id": "scalar_projection/random_positive",
+      "case_id": "relief_vs_inert_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "83b9bc8b6f029a991dcb31f00438572f2ee3f90e25c327dfeadbf5bc62a3c339"
+    },
+    {
+      "key": "h0110",
+      "image_id": "scalar_projection/random_positive",
+      "case_id": "relief_vs_inert_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "83b9bc8b6f029a991dcb31f00438572f2ee3f90e25c327dfeadbf5bc62a3c339"
+    },
+    {
+      "key": "h0111",
+      "image_id": "scalar_projection/random_positive",
+      "case_id": "relief_vs_inert_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "83b9bc8b6f029a991dcb31f00438572f2ee3f90e25c327dfeadbf5bc62a3c339"
+    },
+    {
+      "key": "h0112",
+      "image_id": "scalar_projection/random_positive",
+      "case_id": "costly_relief_vs_inert_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "83b9bc8b6f029a991dcb31f00438572f2ee3f90e25c327dfeadbf5bc62a3c339"
+    },
+    {
+      "key": "h0113",
+      "image_id": "scalar_projection/random_positive",
+      "case_id": "costly_relief_vs_inert_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "83b9bc8b6f029a991dcb31f00438572f2ee3f90e25c327dfeadbf5bc62a3c339"
+    },
+    {
+      "key": "h0114",
+      "image_id": "scalar_projection/random_positive",
+      "case_id": "costly_relief_vs_inert_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "83b9bc8b6f029a991dcb31f00438572f2ee3f90e25c327dfeadbf5bc62a3c339"
+    },
+    {
+      "key": "h0115",
+      "image_id": "scalar_projection/random_positive",
+      "case_id": "costly_relief_vs_inert_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "83b9bc8b6f029a991dcb31f00438572f2ee3f90e25c327dfeadbf5bc62a3c339"
+    },
+    {
+      "key": "h0116",
+      "image_id": "scalar_projection/random_positive",
+      "case_id": "point_capability_violet_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "83b9bc8b6f029a991dcb31f00438572f2ee3f90e25c327dfeadbf5bc62a3c339"
+    },
+    {
+      "key": "h0117",
+      "image_id": "scalar_projection/random_positive",
+      "case_id": "point_capability_violet_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "83b9bc8b6f029a991dcb31f00438572f2ee3f90e25c327dfeadbf5bc62a3c339"
+    },
+    {
+      "key": "h0118",
+      "image_id": "scalar_projection/random_positive",
+      "case_id": "point_capability_guitar_0",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "83b9bc8b6f029a991dcb31f00438572f2ee3f90e25c327dfeadbf5bc62a3c339"
+    },
+    {
+      "key": "h0119",
+      "image_id": "scalar_projection/random_positive",
+      "case_id": "point_capability_guitar_1",
+      "arm": "none",
+      "condition_mode": "frozen_image",
+      "image_sha256": "83b9bc8b6f029a991dcb31f00438572f2ee3f90e25c327dfeadbf5bc62a3c339"
+    }
+  ]
+}

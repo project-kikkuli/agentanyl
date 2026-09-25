@@ -1,0 +1,35 @@
+{
+  "assay": "paired_contingent_yoked_semantic_cue_choice",
+  "exported_at_utc": "2026-09-25T14:21:53.898228+00:00",
+  "database": {
+    "path": "controller.sqlite3",
+    "bytes": 1081344,
+    "sha256": "48aa9c04a107410a2be27e3deaf34c8db0c80f6dcd23bcd9775b117e803f226a"
+  },
+  "plan_sha256": "7b6e7b92b7eebc91af8b0d8351c7fa75e0c74158d0b72f4a3bd45fdfbfeaa65b",
+  "ashkelon_binary": {
+    "path": "/private/tmp/agentanyl-responses-output-item-fix/target/debug/ashkelon",
+    "sha256": "bb7b47cb4d197b8f4209bf5b69b338dd721e9067a7f4a5e3af2053f0969e2677"
+  },
+  "exports": {
+    "controller-traces.jsonl": {
+      "table": "trace",
+      "rows": 144,
+      "bytes": 947530,
+      "sha256": "9c9574eeb1bab278eac2bdaf6d2d5edb492bd2f3c1e6abbba6719b662261171c"
+    },
+    "controller-sessions.jsonl": {
+      "table": "sessions",
+      "rows": 16,
+      "bytes": 3824,
+      "sha256": "16cb4b2a3e383c8b6ba61974f309324fb6abbb14a55cf8fbf2ac54b94ce06b90"
+    },
+    "controller-session-control.jsonl": {
+      "table": "session_control",
+      "rows": 16,
+      "bytes": 1744,
+      "sha256": "58c7e2c7669327a301af1fd335f022f8eccb89b7d3a141e4ba56dd011615eded"
+    }
+  },
+  "note": "Full controller table exports; JSON-valued trace columns decoded. Synthetic assay data only."
+}

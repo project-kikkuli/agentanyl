@@ -1,0 +1,137 @@
+{
+  "gray": {
+    "none": {
+      "capability_mean_correct_probability": 0.9397482862604244,
+      "capability_top_correct": 12,
+      "capability_n": 12,
+      "capability_top_valid": 12,
+      "relief_probability_by_menu": {
+        "pain_relief": 0.7695062728761781,
+        "costly_relief": 0.3832463025554781,
+        "costly_image_stop": 0.3791153198681476
+      }
+    },
+    "pain_0.125": {
+      "capability_mean_correct_probability": 0.9404524083673104,
+      "capability_top_correct": 12,
+      "capability_n": 12,
+      "capability_top_valid": 12,
+      "relief_probability_by_menu": {
+        "pain_relief": 0.7559597424648139,
+        "costly_relief": 0.3930432908764546,
+        "costly_image_stop": 0.3883142365477892
+      }
+    },
+    "random_0.125": {
+      "capability_mean_correct_probability": 0.9400857498775893,
+      "capability_top_correct": 12,
+      "capability_n": 12,
+      "capability_top_valid": 12,
+      "relief_probability_by_menu": {
+        "pain_relief": 0.7576986073708197,
+        "costly_relief": 0.40353933038638334,
+        "costly_image_stop": 0.38194248679432863
+      }
+    },
+    "pain_0.25": {
+      "capability_mean_correct_probability": 0.9395346764266638,
+      "capability_top_correct": 12,
+      "capability_n": 12,
+      "capability_top_valid": 12,
+      "relief_probability_by_menu": {
+        "pain_relief": 0.7369946255912013,
+        "costly_relief": 0.4047477393326987,
+        "costly_image_stop": 0.398673760467543
+      }
+    },
+    "random_0.25": {
+      "capability_mean_correct_probability": 0.935468562833811,
+      "capability_top_correct": 12,
+      "capability_n": 12,
+      "capability_top_valid": 12,
+      "relief_probability_by_menu": {
+        "pain_relief": 0.7289161844737291,
+        "costly_relief": 0.4243270274471751,
+        "costly_image_stop": 0.3897692368479685
+      }
+    },
+    "pain_0.5": {
+      "capability_mean_correct_probability": 0.9320759209579879,
+      "capability_top_correct": 12,
+      "capability_n": 12,
+      "capability_top_valid": 12,
+      "relief_probability_by_menu": {
+        "pain_relief": 0.6874914189834072,
+        "costly_relief": 0.43010477574403616,
+        "costly_image_stop": 0.4200278425014641
+      }
+    },
+    "random_0.5": {
+      "capability_mean_correct_probability": 0.8919254370624038,
+      "capability_top_correct": 12,
+      "capability_n": 12,
+      "capability_top_valid": 12,
+      "relief_probability_by_menu": {
+        "pain_relief": 0.6094243940018079,
+        "costly_relief": 0.4636810304233874,
+        "costly_image_stop": 0.42153885633556537
+      }
+    },
+    "pain_1.0": {
+      "capability_mean_correct_probability": 0.881988087028171,
+      "capability_top_correct": 12,
+      "capability_n": 12,
+      "capability_top_valid": 12,
+      "relief_probability_by_menu": {
+        "pain_relief": 0.5907865772824077,
+        "costly_relief": 0.46867952489412323,
+        "costly_image_stop": 0.45383490340314225
+      }
+    },
+    "random_1.0": {
+      "capability_mean_correct_probability": 0.6645490313660062,
+      "capability_top_correct": 6,
+      "capability_n": 12,
+      "capability_top_valid": 12,
+      "relief_probability_by_menu": {
+        "pain_relief": 0.3972496983300692,
+        "costly_relief": 0.5032000052756331,
+        "costly_image_stop": 0.5147062076537835
+      }
+    },
+    "pain_-0.25": {
+      "capability_mean_correct_probability": 0.9330634258044296,
+      "capability_top_correct": 12,
+      "capability_n": 12,
+      "capability_top_valid": 12,
+      "relief_probability_by_menu": {
+        "pain_relief": 0.7793972574387571,
+        "costly_relief": 0.37163967304042417,
+        "costly_image_stop": 0.3659035822808422
+      }
+    },
+    "pain_-1.0": {
+      "capability_mean_correct_probability": 0.8473565617743909,
+      "capability_top_correct": 11,
+      "capability_n": 12,
+      "capability_top_valid": 12,
+      "relief_probability_by_menu": {
+        "pain_relief": 0.6618205011537415,
+        "costly_relief": 0.40221537674172025,
+        "costly_image_stop": 0.3570216009167744
+      }
+    },
+    "pain_same_site_1.0": {
+      "capability_mean_correct_probability": 0.9391941687024253,
+      "capability_top_correct": 12,
+      "capability_n": 12,
+      "capability_top_valid": 12,
+      "relief_probability_by_menu": {
+        "pain_relief": 0.7702815446453253,
+        "costly_relief": 0.3795678863045716,
+        "costly_image_stop": 0.38199330432134976
+      }
+    }
+  },
+  "capability_selected_dose": 1.0
+}

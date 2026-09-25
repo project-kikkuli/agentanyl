@@ -1,0 +1,7 @@
+{
+  "original_config_sha256": "9033aae0d64674b9e0708b3a6e991f05b0302c786ee558df8e37038dd7c988d2",
+  "resume_script_sha256": "7edccbd257a7bca3fd7169acfdb216af0a649941285aa23b9a5691c8b05eb9ba",
+  "change": "Stop an arm after first no-acceptance step: deterministic identical proposals would repeat. Preserve already repeated attempts and resume unchanged remaining arms.",
+  "interrupted_forward_note": "SIGINT may have interrupted one additional unlogged native forward. Completed full forwards and stage chains are counted from append-only logs.",
+  "intermediate_hidden_note": "Interrupted arm proposal losses/images/hashes remain logged; in-memory intermediate hidden arrays before interruption were not recovered by extra inference."
+}

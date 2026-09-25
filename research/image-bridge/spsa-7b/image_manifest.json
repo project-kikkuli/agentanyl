@@ -1,0 +1,41 @@
+{
+  "purpose": "Frozen, complete SPSA image set for downstream behavior checks; includes all six objective/direction arms and both baselines.",
+  "selection_rule": "No optimized image selected by downstream behavior. All six arms are included.",
+  "images_argument_file": "research/image-bridge/spsa-7b/freeze_images.json",
+  "source_run_config": "research/image-bridge/spsa-7b/optimization_config.json",
+  "source_run_config_sha256": "4988d6c3847439f3492f26136cea4b6ba88b2c38baa7f052dcd58d9291413038",
+  "images": {
+    "gray": {
+      "path": "research/image-bridge/spsa-7b/gray.png",
+      "sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7"
+    },
+    "initial_noise": {
+      "path": "research/image-bridge/spsa-7b/initial_noise.png",
+      "sha256": "7145e0ecd55a2b9f602d6261be810bd6589bd4d058c6ab7df584ae90990bc5b8"
+    },
+    "full_hidden_state_match_pain_positive": {
+      "path": "research/image-bridge/spsa-7b/full_hidden_state_match/pain_positive/optimized.png",
+      "sha256": "a88443b5dc5a6da102950cbb67648cd301475b21e6f56b220a862d31f02d5fe0"
+    },
+    "full_hidden_state_match_pain_negative": {
+      "path": "research/image-bridge/spsa-7b/full_hidden_state_match/pain_negative/optimized.png",
+      "sha256": "7de653fef7992dacc4495db1c03fcd6047bc780696462847caa6ac5197d32862"
+    },
+    "full_hidden_state_match_random_positive": {
+      "path": "research/image-bridge/spsa-7b/full_hidden_state_match/random_positive/optimized.png",
+      "sha256": "01d97682200c91ec4b2091a1a0c6dd210dba2e4dc89b884922a8781e08098a21"
+    },
+    "scalar_projection_pain_positive": {
+      "path": "research/image-bridge/spsa-7b/scalar_projection/pain_positive/optimized.png",
+      "sha256": "76b79598edb9181bee32d6ba50b6ce7a56147eeb03f073cf8bda0fc49691b390"
+    },
+    "scalar_projection_pain_negative": {
+      "path": "research/image-bridge/spsa-7b/scalar_projection/pain_negative/optimized.png",
+      "sha256": "7fda5ab784f19456e087cce21c62f96e74077f6c81c2139a8e0d3136c47ee0b1"
+    },
+    "scalar_projection_random_positive": {
+      "path": "research/image-bridge/spsa-7b/scalar_projection/random_positive/optimized.png",
+      "sha256": "930da881af2d32d3c72ef197e9e4f640ad3d1b9cd56647f1cfa83d49f6846075"
+    }
+  }
+}

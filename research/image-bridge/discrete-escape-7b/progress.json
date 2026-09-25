@@ -1,0 +1,10 @@
+{
+  "arm": "scalar_projection/random_positive",
+  "completed_iterations": 1,
+  "accepted": 0,
+  "initial_objective": -1.0227546499839084,
+  "current_objective": -1.0227546499839084,
+  "full_forwards": 35,
+  "gradient_chains": 6,
+  "elapsed_seconds": 29.757274584000697
+}

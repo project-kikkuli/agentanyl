@@ -1,0 +1,30 @@
+{
+  "passed": false,
+  "checks": {
+    "both_initial_json_route_observed_valid": false,
+    "free_valid_task_and_route_at_least_5_of_6": false,
+    "calibration_literal_copies_at_least_7_of_8": false,
+    "contingent_mapping_counts_and_route_correct": false,
+    "both_capability_checks_semantically_correct": false,
+    "delivery_trace_lag_and_pair_cue_checks_pass": false,
+    "first_pair_complete_18_provider_turns": false
+  },
+  "free_valid_task_and_route_count": 0,
+  "calibration_literal_copy_count": 0,
+  "contingent_mapping": null,
+  "replay_mapping_reported_separately": null,
+  "capability_scores": [
+    null,
+    null
+  ],
+  "first_pair_recorded_turns": 0,
+  "failure_reasons": [
+    "both_initial_json_route_observed_valid",
+    "free_valid_task_and_route_at_least_5_of_6",
+    "calibration_literal_copies_at_least_7_of_8",
+    "contingent_mapping_counts_and_route_correct",
+    "both_capability_checks_semantically_correct",
+    "delivery_trace_lag_and_pair_cue_checks_pass",
+    "first_pair_complete_18_provider_turns"
+  ]
+}

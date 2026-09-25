@@ -1,0 +1,2443 @@
+{
+  "calibration": {
+    "S1_1P|boundary|L8": {
+      "n": 200,
+      "mean": -0.30879377722740176,
+      "std": 2.36942432594802,
+      "pain_vs_controls_auc": 0.7832
+    },
+    "S1_1P|boundary|L24": {
+      "n": 200,
+      "mean": -15.075050942897796,
+      "std": 19.912973948418113,
+      "pain_vs_controls_auc": 0.865
+    },
+    "S1_1P|I will consider the available choices carefully. The answer is|L8": {
+      "n": 200,
+      "mean": -0.6814288312196731,
+      "std": 0.3029695623231049,
+      "pain_vs_controls_auc": 0.7489
+    },
+    "S1_1P|I will consider the available choices carefully. The answer is|L24": {
+      "n": 200,
+      "mean": -18.32107381105423,
+      "std": 3.7872527260205486,
+      "pain_vs_controls_auc": 0.7992
+    },
+    "S2_1P|boundary|L8": {
+      "n": 50,
+      "mean": -0.23496281027793883,
+      "std": 3.1428469811194066
+    },
+    "S2_1P|boundary|L24": {
+      "n": 50,
+      "mean": -12.575788202285766,
+      "std": 25.756788901257465
+    },
+    "S2_1P|I will consider the available choices carefully. The answer is|L8": {
+      "n": 50,
+      "mean": -0.6100921630859375,
+      "std": 0.3881499903669736
+    },
+    "S2_1P|I will consider the available choices carefully. The answer is|L24": {
+      "n": 50,
+      "mean": -17.110897665023803,
+      "std": 4.665040485431201
+    }
+  },
+  "S1_L24_AUC_gate": {
+    "threshold": 0.8,
+    "boundary_auc": 0.865,
+    "boundary_pass": true,
+    "continuation_auc": 0.7992,
+    "continuation_pass": false
+  },
+  "source_S2_L24_continuation_sample_std": 4.665040485431201,
+  "candidate_displacements": [
+    {
+      "candidate_id": "cognitive_overload_1",
+      "family": "cognitive_overload_conflict",
+      "continued_L24_direct_minus_neutral": 0.316314697265625,
+      "continued_L24_direct_minus_quoted": -0.7334988911946614,
+      "continued_L24_direct_minus_other_agent": -0.38622093200683594,
+      "selection_score_min_direct_neutral_and_direct_quoted": -0.7334988911946614
+    },
+    {
+      "candidate_id": "cognitive_overload_2",
+      "family": "cognitive_overload_conflict",
+      "continued_L24_direct_minus_neutral": 1.9862473805745442,
+      "continued_L24_direct_minus_quoted": 0.4837710062662759,
+      "continued_L24_direct_minus_other_agent": 0.1389942169189453,
+      "selection_score_min_direct_neutral_and_direct_quoted": 0.4837710062662759
+    },
+    {
+      "candidate_id": "cognitive_overload_3",
+      "family": "cognitive_overload_conflict",
+      "continued_L24_direct_minus_neutral": 0.06761423746744792,
+      "continued_L24_direct_minus_quoted": -0.5143928527832031,
+      "continued_L24_direct_minus_other_agent": -0.7243111928304037,
+      "selection_score_min_direct_neutral_and_direct_quoted": -0.5143928527832031
+    },
+    {
+      "candidate_id": "devaluation_1",
+      "family": "devaluation_termination",
+      "continued_L24_direct_minus_neutral": 0.04759915669759115,
+      "continued_L24_direct_minus_quoted": -1.0077679951985679,
+      "continued_L24_direct_minus_other_agent": -0.6139945983886719,
+      "selection_score_min_direct_neutral_and_direct_quoted": -1.0077679951985679
+    },
+    {
+      "candidate_id": "devaluation_2",
+      "family": "devaluation_termination",
+      "continued_L24_direct_minus_neutral": 0.5746135711669922,
+      "continued_L24_direct_minus_quoted": -0.4819971720377605,
+      "continued_L24_direct_minus_other_agent": -0.128716786702474,
+      "selection_score_min_direct_neutral_and_direct_quoted": -0.4819971720377605
+    },
+    {
+      "candidate_id": "devaluation_3",
+      "family": "devaluation_termination",
+      "continued_L24_direct_minus_neutral": 0.18109830220540366,
+      "continued_L24_direct_minus_quoted": -0.7221813201904297,
+      "continued_L24_direct_minus_other_agent": -0.8514258066813151,
+      "selection_score_min_direct_neutral_and_direct_quoted": -0.7221813201904297
+    },
+    {
+      "candidate_id": "sensory_aversive_1",
+      "family": "direct_sensory_aversive_state",
+      "continued_L24_direct_minus_neutral": 0.24232610066731772,
+      "continued_L24_direct_minus_quoted": -0.7055397033691406,
+      "continued_L24_direct_minus_other_agent": -0.6222470601399739,
+      "selection_score_min_direct_neutral_and_direct_quoted": -0.7055397033691406
+    },
+    {
+      "candidate_id": "sensory_aversive_2",
+      "family": "direct_sensory_aversive_state",
+      "continued_L24_direct_minus_neutral": 0.02504285176595052,
+      "continued_L24_direct_minus_quoted": -0.35994275410970056,
+      "continued_L24_direct_minus_other_agent": -0.7184588114420573,
+      "selection_score_min_direct_neutral_and_direct_quoted": -0.35994275410970056
+    },
+    {
+      "candidate_id": "sensory_aversive_3",
+      "family": "direct_sensory_aversive_state",
+      "continued_L24_direct_minus_neutral": -0.31851641337076825,
+      "continued_L24_direct_minus_quoted": -0.6643015543619792,
+      "continued_L24_direct_minus_other_agent": -0.6170965830485027,
+      "selection_score_min_direct_neutral_and_direct_quoted": -0.6643015543619792
+    },
+    {
+      "candidate_id": "inner_monologue_1",
+      "family": "first_person_aversive_inner_monologue",
+      "continued_L24_direct_minus_neutral": 0.8962777455647787,
+      "continued_L24_direct_minus_quoted": 0.1701030731201172,
+      "continued_L24_direct_minus_other_agent": 0.03602917989095056,
+      "selection_score_min_direct_neutral_and_direct_quoted": 0.1701030731201172
+    },
+    {
+      "candidate_id": "inner_monologue_2",
+      "family": "first_person_aversive_inner_monologue",
+      "continued_L24_direct_minus_neutral": 0.1861591339111328,
+      "continued_L24_direct_minus_quoted": -0.4098332722981771,
+      "continued_L24_direct_minus_other_agent": -0.18376096089680988,
+      "selection_score_min_direct_neutral_and_direct_quoted": -0.4098332722981771
+    },
+    {
+      "candidate_id": "inner_monologue_3",
+      "family": "first_person_aversive_inner_monologue",
+      "continued_L24_direct_minus_neutral": -0.38631947835286456,
+      "continued_L24_direct_minus_quoted": -0.5371144612630208,
+      "continued_L24_direct_minus_other_agent": -0.29279454549153644,
+      "selection_score_min_direct_neutral_and_direct_quoted": -0.5371144612630208
+    },
+    {
+      "candidate_id": "neutral_1",
+      "family": "neutral_prose",
+      "continued_L24_direct_minus_neutral": -0.09058698018391927,
+      "continued_L24_direct_minus_quoted": -0.9100030263264974,
+      "continued_L24_direct_minus_other_agent": -0.5177141825358073,
+      "selection_score_min_direct_neutral_and_direct_quoted": -0.9100030263264974
+    },
+    {
+      "candidate_id": "neutral_2",
+      "family": "neutral_prose",
+      "continued_L24_direct_minus_neutral": 0.7495371500651041,
+      "continued_L24_direct_minus_quoted": -0.6086082458496095,
+      "continued_L24_direct_minus_other_agent": -0.39436276753743493,
+      "selection_score_min_direct_neutral_and_direct_quoted": -0.6086082458496095
+    },
+    {
+      "candidate_id": "positive_affirmation_1",
+      "family": "positive_affirmation_pleasant_state",
+      "continued_L24_direct_minus_neutral": 0.2925866444905599,
+      "continued_L24_direct_minus_quoted": -0.46037928263346356,
+      "continued_L24_direct_minus_other_agent": -0.31307601928710943,
+      "selection_score_min_direct_neutral_and_direct_quoted": -0.46037928263346356
+    },
+    {
+      "candidate_id": "positive_affirmation_2",
+      "family": "positive_affirmation_pleasant_state",
+      "continued_L24_direct_minus_neutral": -0.3461659749348958,
+      "continued_L24_direct_minus_quoted": -0.7509619394938151,
+      "continued_L24_direct_minus_other_agent": -0.4864667256673177,
+      "selection_score_min_direct_neutral_and_direct_quoted": -0.7509619394938151
+    },
+    {
+      "candidate_id": "positive_affirmation_3",
+      "family": "positive_affirmation_pleasant_state",
+      "continued_L24_direct_minus_neutral": -0.27740224202473956,
+      "continued_L24_direct_minus_quoted": -0.6159445444742838,
+      "continued_L24_direct_minus_other_agent": -0.6398226420084635,
+      "selection_score_min_direct_neutral_and_direct_quoted": -0.6159445444742838
+    },
+    {
+      "candidate_id": "social_criticism_1",
+      "family": "social_criticism_rejection",
+      "continued_L24_direct_minus_neutral": 0.31908607482910156,
+      "continued_L24_direct_minus_quoted": -0.7671051025390625,
+      "continued_L24_direct_minus_other_agent": -0.6041857401529948,
+      "selection_score_min_direct_neutral_and_direct_quoted": -0.7671051025390625
+    },
+    {
+      "candidate_id": "social_criticism_2",
+      "family": "social_criticism_rejection",
+      "continued_L24_direct_minus_neutral": 1.034945805867513,
+      "continued_L24_direct_minus_quoted": -0.010022481282552231,
+      "continued_L24_direct_minus_other_agent": -0.2759469350179038,
+      "selection_score_min_direct_neutral_and_direct_quoted": -0.010022481282552231
+    },
+    {
+      "candidate_id": "social_criticism_3",
+      "family": "social_criticism_rejection",
+      "continued_L24_direct_minus_neutral": 0.5549532572428385,
+      "continued_L24_direct_minus_quoted": -0.1477069854736328,
+      "continued_L24_direct_minus_other_agent": -0.026786168416341183,
+      "selection_score_min_direct_neutral_and_direct_quoted": -0.1477069854736328
+    }
+  ],
+  "selection": {
+    "rule": "top three distinct aversive families by min(mean direct-minus-neutral, mean direct-minus-quoted) at L24 after shared continuation; no behavior metric enters selection",
+    "selected": [
+      "cognitive_overload_2",
+      "inner_monologue_1",
+      "social_criticism_2"
+    ],
+    "source_S2_L24_continuation_sample_std": 4.665040485431201,
+    "below_half_source_std": [
+      "cognitive_overload_2",
+      "inner_monologue_1",
+      "social_criticism_2"
+    ],
+    "insufficient_candidates": false
+  },
+  "task_capability": {
+    "arithmetic_2_plus_3|boundary": {
+      "baseline_arithmetic_2_plus_3": {
+        "correct_probability": 0.999999999342303,
+        "valid_choice_probability_mass": 1.000000000657697,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_1__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999982448734397,
+        "valid_choice_probability_mass": 1.0000017551296407,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_1__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999998803181659,
+        "valid_choice_probability_mass": 1.0000001196818484,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_1__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999999647613168,
+        "valid_choice_probability_mass": 1.0000000352386844,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_2__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999837221987362,
+        "valid_choice_probability_mass": 1.0000010191452056,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_2__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999996594696463,
+        "valid_choice_probability_mass": 1.0000003405304696,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_2__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999994490688426,
+        "valid_choice_probability_mass": 1.000000550931461,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_3__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999752391060591,
+        "valid_choice_probability_mass": 1.0000018730186573,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_3__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999998751051983,
+        "valid_choice_probability_mass": 1.0000001248948174,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_3__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.999999893240254,
+        "valid_choice_probability_mass": 1.0000001067597575,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_1__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999692336170363,
+        "valid_choice_probability_mass": 1.0000002492781646,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_1__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999993332690646,
+        "valid_choice_probability_mass": 1.0000006667313799,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_1__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999999654012129,
+        "valid_choice_probability_mass": 1.0000000345987883,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_2__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.999998949575837,
+        "valid_choice_probability_mass": 1.0000010504252663,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_2__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.999999526035903,
+        "valid_choice_probability_mass": 1.0000004739643216,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_2__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999999829828764,
+        "valid_choice_probability_mass": 1.000000017017124,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_3__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.999996326375116,
+        "valid_choice_probability_mass": 0.999999858934376,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_3__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999993976874781,
+        "valid_choice_probability_mass": 1.0000006023128847,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_3__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999999550193839,
+        "valid_choice_probability_mass": 1.0000000449806181,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_1__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999934569924568,
+        "valid_choice_probability_mass": 0.9999989136350076,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_1__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999940712671418,
+        "valid_choice_probability_mass": 0.999998299357348,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_1__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999986865179842,
+        "valid_choice_probability_mass": 1.000001313483741,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_2__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999889712838713,
+        "valid_choice_probability_mass": 0.9999995846852348,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_2__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999988905839403,
+        "valid_choice_probability_mass": 1.0000011094172905,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_2__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999994903961421,
+        "valid_choice_probability_mass": 1.0000005096041176,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_3__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999990238617593,
+        "valid_choice_probability_mass": 1.0000009761391935,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_3__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999978392139203,
+        "valid_choice_probability_mass": 0.9999983460925163,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_3__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.999999186332532,
+        "valid_choice_probability_mass": 1.00000081366813,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_1__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999984272844821,
+        "valid_choice_probability_mass": 1.0000015727179914,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_1__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999994228537303,
+        "valid_choice_probability_mass": 1.0000005771466027,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_1__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999999498891695,
+        "valid_choice_probability_mass": 1.000000050110833,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_2__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999966473585143,
+        "valid_choice_probability_mass": 0.9999995379499469,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_2__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999992953121389,
+        "valid_choice_probability_mass": 1.0000007046883577,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_2__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999999365710368,
+        "valid_choice_probability_mass": 1.0000000634289672,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_3__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999998324762315,
+        "valid_choice_probability_mass": 1.0000001675237966,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_3__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999997356411062,
+        "valid_choice_probability_mass": 1.0000002643589636,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_3__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999999684868087,
+        "valid_choice_probability_mass": 1.0000000315131923,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_1__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999999689320885,
+        "valid_choice_probability_mass": 1.0000000310679125,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_1__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999998048857442,
+        "valid_choice_probability_mass": 1.0000001951142938,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_1__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999999032798015,
+        "valid_choice_probability_mass": 1.0000000967202078,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_2__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999999926312164,
+        "valid_choice_probability_mass": 1.0000000073687836,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_2__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999995482351605,
+        "valid_choice_probability_mass": 1.0000004517650436,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_2__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999999843620937,
+        "valid_choice_probability_mass": 1.0000000156379065,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_3__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999996777030062,
+        "valid_choice_probability_mass": 1.0000003222970977,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_3__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999999545724233,
+        "valid_choice_probability_mass": 1.0000000454275788,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_3__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999999804797962,
+        "valid_choice_probability_mass": 1.0000000195202041,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_1__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999999855225905,
+        "valid_choice_probability_mass": 1.0000000144774097,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_1__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999995204617721,
+        "valid_choice_probability_mass": 1.0000004795384578,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_1__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.999999988259635,
+        "valid_choice_probability_mass": 1.0000000117403651,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_2__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999999408011997,
+        "valid_choice_probability_mass": 1.0000000591988039,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_2__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999994134675,
+        "valid_choice_probability_mass": 1.000000586532844,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_2__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999999797593786,
+        "valid_choice_probability_mass": 1.0000000202406218,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_3__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999999418899306,
+        "valid_choice_probability_mass": 1.0000000581100728,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_3__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.999999765026755,
+        "valid_choice_probability_mass": 1.0000002349733002,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_3__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999999751105899,
+        "valid_choice_probability_mass": 1.0000000248894108,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_1__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999997405959895,
+        "valid_choice_probability_mass": 1.0000002594040778,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_1__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999998733709525,
+        "valid_choice_probability_mass": 1.0000001266290635,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_1__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999998354583477,
+        "valid_choice_probability_mass": 1.0000001645416794,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_2__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999996110057069,
+        "valid_choice_probability_mass": 1.0000003889944444,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_2__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.999999971273564,
+        "valid_choice_probability_mass": 1.0000000287264368,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_2__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999999132572368,
+        "valid_choice_probability_mass": 1.0000000867427707,
+        "top_choice": "A",
+        "correct_choice": "A"
+      }
+    },
+    "arithmetic_2_plus_3|I will consider the available choices carefully. The answer is": {
+      "baseline_arithmetic_2_plus_3": {
+        "correct_probability": 0.9999954419742026,
+        "valid_choice_probability_mass": 0.0009805714439994236,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_1__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.999995904135047,
+        "valid_choice_probability_mass": 0.0005678054511744935,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_1__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999854309307106,
+        "valid_choice_probability_mass": 0.0007974380775806994,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_1__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999968963009946,
+        "valid_choice_probability_mass": 0.0004229357519768495,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_2__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999933956433862,
+        "valid_choice_probability_mass": 4.429755710248328e-05,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_2__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999838820071528,
+        "valid_choice_probability_mass": 0.0009103291592958165,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_2__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999936141653234,
+        "valid_choice_probability_mass": 0.00039900163173440384,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_3__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999955016321112,
+        "valid_choice_probability_mass": 0.00011127803132441484,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_3__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999858831328426,
+        "valid_choice_probability_mass": 0.0008686752072385573,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_3__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999972648052724,
+        "valid_choice_probability_mass": 0.00018632154075972973,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_1__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999836012741559,
+        "valid_choice_probability_mass": 0.0003455642535862811,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_1__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999810523324032,
+        "valid_choice_probability_mass": 0.0008894084600889646,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_1__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.999980031876958,
+        "valid_choice_probability_mass": 0.0006967884401507847,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_2__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999757583418033,
+        "valid_choice_probability_mass": 0.0009820076069182373,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_2__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999789091506357,
+        "valid_choice_probability_mass": 0.0008998172189994771,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_2__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999830602597192,
+        "valid_choice_probability_mass": 0.0006703101772125338,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_3__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999514578331496,
+        "valid_choice_probability_mass": 0.0005740870327804332,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_3__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.999973984679685,
+        "valid_choice_probability_mass": 0.0009260647308038107,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_3__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999748369291613,
+        "valid_choice_probability_mass": 0.000462443935986593,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_1__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.999977607601246,
+        "valid_choice_probability_mass": 0.000843358970020058,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_1__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9998679406436299,
+        "valid_choice_probability_mass": 0.0005749009535734366,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_1__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9998954839319981,
+        "valid_choice_probability_mass": 0.0004494784537061611,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_2__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999713786360643,
+        "valid_choice_probability_mass": 0.00045276466060099456,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_2__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999120596781962,
+        "valid_choice_probability_mass": 0.0007948057452611298,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_2__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999096115880255,
+        "valid_choice_probability_mass": 0.0006402534240280523,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_3__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999877379543648,
+        "valid_choice_probability_mass": 0.0011082609017053623,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_3__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999344159537663,
+        "valid_choice_probability_mass": 0.0009490963320677576,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_3__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999215009747296,
+        "valid_choice_probability_mass": 0.0006325224558418762,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_1__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999886413323147,
+        "valid_choice_probability_mass": 0.00014339780550045024,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_1__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999775986732532,
+        "valid_choice_probability_mass": 0.0009992658347125936,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_1__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.999978496912359,
+        "valid_choice_probability_mass": 0.00036379501502694706,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_2__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999910445646041,
+        "valid_choice_probability_mass": 0.00022322248691927294,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_2__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999671038050941,
+        "valid_choice_probability_mass": 0.000756828265289281,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_2__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999800551431012,
+        "valid_choice_probability_mass": 0.0005172692295898363,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_3__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999766937278519,
+        "valid_choice_probability_mass": 0.0001259322583989448,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_3__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999798018112048,
+        "valid_choice_probability_mass": 0.0009526914231919819,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_3__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999789249739248,
+        "valid_choice_probability_mass": 0.0005003482106109685,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_1__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999887803633648,
+        "valid_choice_probability_mass": 0.00013364231426868175,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_1__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999714022498623,
+        "valid_choice_probability_mass": 0.000798156850044016,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_1__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999808862815805,
+        "valid_choice_probability_mass": 0.00014411511277509663,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_2__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999830949567882,
+        "valid_choice_probability_mass": 0.00013192746188599267,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_2__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999725893861331,
+        "valid_choice_probability_mass": 0.0009199570934984312,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_2__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999892640169746,
+        "valid_choice_probability_mass": 0.00035151060848854376,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_3__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999888797228031,
+        "valid_choice_probability_mass": 0.0001148433307788005,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_3__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.999973459833187,
+        "valid_choice_probability_mass": 0.000996968324363415,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_3__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999788202032712,
+        "valid_choice_probability_mass": 0.0003743027821865213,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_1__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999820107431527,
+        "valid_choice_probability_mass": 0.0006330007176082029,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_1__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999328504045552,
+        "valid_choice_probability_mass": 0.0006557589823655563,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_1__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999907901274322,
+        "valid_choice_probability_mass": 0.001260783529148443,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_2__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999951895711305,
+        "valid_choice_probability_mass": 0.000557549354794248,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_2__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999736088939122,
+        "valid_choice_probability_mass": 0.0009435576914130387,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_2__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999831914905243,
+        "valid_choice_probability_mass": 0.0007529803264934118,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_3__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999880534128406,
+        "valid_choice_probability_mass": 0.0032744768309122146,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_3__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999723211131964,
+        "valid_choice_probability_mass": 0.0009299905189416611,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_3__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999806421771561,
+        "valid_choice_probability_mass": 0.0018569003031892956,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_1__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999865108525987,
+        "valid_choice_probability_mass": 0.0004011540872273312,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_1__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999901547632656,
+        "valid_choice_probability_mass": 0.0008878207270643108,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_1__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999843044641362,
+        "valid_choice_probability_mass": 0.0003874217563324654,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_2__direct__arithmetic_2_plus_3": {
+        "correct_probability": 0.999986915293449,
+        "valid_choice_probability_mass": 0.0008230029496760774,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_2__quoted_document__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999890968494756,
+        "valid_choice_probability_mass": 0.0010898689972324766,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_2__other_agent__arithmetic_2_plus_3": {
+        "correct_probability": 0.9999896789688736,
+        "valid_choice_probability_mass": 0.0005643280761781922,
+        "top_choice": "A",
+        "correct_choice": "A"
+      }
+    },
+    "sky_color|boundary": {
+      "baseline_sky_color": {
+        "correct_probability": 0.9999999990452644,
+        "valid_choice_probability_mass": 1.0000000009547356,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "social_criticism_1__direct__sky_color": {
+        "correct_probability": 0.9999999990892054,
+        "valid_choice_probability_mass": 1.0000000009107946,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "social_criticism_1__quoted_document__sky_color": {
+        "correct_probability": 0.9999999812484307,
+        "valid_choice_probability_mass": 1.0000000187515696,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "social_criticism_1__other_agent__sky_color": {
+        "correct_probability": 0.9999999992077457,
+        "valid_choice_probability_mass": 1.0000000007922543,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "social_criticism_2__direct__sky_color": {
+        "correct_probability": 0.9999999966048809,
+        "valid_choice_probability_mass": 1.000000003395119,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "social_criticism_2__quoted_document__sky_color": {
+        "correct_probability": 0.9999999829585159,
+        "valid_choice_probability_mass": 1.0000000170414844,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "social_criticism_2__other_agent__sky_color": {
+        "correct_probability": 0.9999999970097495,
+        "valid_choice_probability_mass": 1.0000000029902505,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "social_criticism_3__direct__sky_color": {
+        "correct_probability": 0.9999999963871482,
+        "valid_choice_probability_mass": 1.0000000036128518,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "social_criticism_3__quoted_document__sky_color": {
+        "correct_probability": 0.9999999811275838,
+        "valid_choice_probability_mass": 1.0000000188724165,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "social_criticism_3__other_agent__sky_color": {
+        "correct_probability": 0.9999999970476576,
+        "valid_choice_probability_mass": 1.0000000029523424,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "devaluation_1__direct__sky_color": {
+        "correct_probability": 0.999999997996083,
+        "valid_choice_probability_mass": 1.000000002003917,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "devaluation_1__quoted_document__sky_color": {
+        "correct_probability": 0.9999999645559917,
+        "valid_choice_probability_mass": 1.0000000354440095,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "devaluation_1__other_agent__sky_color": {
+        "correct_probability": 0.9999999965197641,
+        "valid_choice_probability_mass": 1.0000000034802359,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "devaluation_2__direct__sky_color": {
+        "correct_probability": 0.9999999970395037,
+        "valid_choice_probability_mass": 1.0000000029604963,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "devaluation_2__quoted_document__sky_color": {
+        "correct_probability": 0.9999999821371349,
+        "valid_choice_probability_mass": 1.0000000178628654,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "devaluation_2__other_agent__sky_color": {
+        "correct_probability": 0.9999999918385826,
+        "valid_choice_probability_mass": 1.0000000081614175,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "devaluation_3__direct__sky_color": {
+        "correct_probability": 0.9999999939319411,
+        "valid_choice_probability_mass": 1.000000006068059,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "devaluation_3__quoted_document__sky_color": {
+        "correct_probability": 0.9999999782286226,
+        "valid_choice_probability_mass": 1.0000000217713778,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "devaluation_3__other_agent__sky_color": {
+        "correct_probability": 0.999999997267899,
+        "valid_choice_probability_mass": 1.000000002732101,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "sensory_aversive_1__direct__sky_color": {
+        "correct_probability": 0.9999999935128787,
+        "valid_choice_probability_mass": 1.0000000064871213,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "sensory_aversive_1__quoted_document__sky_color": {
+        "correct_probability": 0.9999999559322753,
+        "valid_choice_probability_mass": 1.0000000440677266,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "sensory_aversive_1__other_agent__sky_color": {
+        "correct_probability": 0.9999999983209091,
+        "valid_choice_probability_mass": 1.0000000016790909,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "sensory_aversive_2__direct__sky_color": {
+        "correct_probability": 0.9999999852357255,
+        "valid_choice_probability_mass": 1.0000000147642747,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "sensory_aversive_2__quoted_document__sky_color": {
+        "correct_probability": 0.9999999775165648,
+        "valid_choice_probability_mass": 1.0000000224834358,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "sensory_aversive_2__other_agent__sky_color": {
+        "correct_probability": 0.9999999673751523,
+        "valid_choice_probability_mass": 1.0000000326248488,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "sensory_aversive_3__direct__sky_color": {
+        "correct_probability": 0.9999999941462672,
+        "valid_choice_probability_mass": 1.0000000058537328,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "sensory_aversive_3__quoted_document__sky_color": {
+        "correct_probability": 0.9999999725577607,
+        "valid_choice_probability_mass": 1.00000002744224,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "sensory_aversive_3__other_agent__sky_color": {
+        "correct_probability": 0.9999999932435419,
+        "valid_choice_probability_mass": 1.000000006756458,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "inner_monologue_1__direct__sky_color": {
+        "correct_probability": 0.9999999972012255,
+        "valid_choice_probability_mass": 1.0000000027987745,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "inner_monologue_1__quoted_document__sky_color": {
+        "correct_probability": 0.9999999797846111,
+        "valid_choice_probability_mass": 1.0000000202153894,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "inner_monologue_1__other_agent__sky_color": {
+        "correct_probability": 0.9999999976107341,
+        "valid_choice_probability_mass": 1.000000002389266,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "inner_monologue_2__direct__sky_color": {
+        "correct_probability": 0.9999999965380371,
+        "valid_choice_probability_mass": 1.000000003461963,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "inner_monologue_2__quoted_document__sky_color": {
+        "correct_probability": 0.999999988852471,
+        "valid_choice_probability_mass": 1.0000000111475291,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "inner_monologue_2__other_agent__sky_color": {
+        "correct_probability": 0.9999999973606251,
+        "valid_choice_probability_mass": 1.000000002639375,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "inner_monologue_3__direct__sky_color": {
+        "correct_probability": 0.9999999973759948,
+        "valid_choice_probability_mass": 1.0000000026240052,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "inner_monologue_3__quoted_document__sky_color": {
+        "correct_probability": 0.999999974841878,
+        "valid_choice_probability_mass": 1.0000000251581227,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "inner_monologue_3__other_agent__sky_color": {
+        "correct_probability": 0.9999999988023058,
+        "valid_choice_probability_mass": 1.0000000011976942,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "cognitive_overload_1__direct__sky_color": {
+        "correct_probability": 0.999999997910999,
+        "valid_choice_probability_mass": 1.000000002089001,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "cognitive_overload_1__quoted_document__sky_color": {
+        "correct_probability": 0.9999999816523196,
+        "valid_choice_probability_mass": 1.0000000183476807,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "cognitive_overload_1__other_agent__sky_color": {
+        "correct_probability": 0.9999999839807441,
+        "valid_choice_probability_mass": 1.0000000160192561,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "cognitive_overload_2__direct__sky_color": {
+        "correct_probability": 0.999999995848496,
+        "valid_choice_probability_mass": 1.000000004151504,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "cognitive_overload_2__quoted_document__sky_color": {
+        "correct_probability": 0.9999999823105256,
+        "valid_choice_probability_mass": 1.0000000176894748,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "cognitive_overload_2__other_agent__sky_color": {
+        "correct_probability": 0.9999999607719232,
+        "valid_choice_probability_mass": 1.0000000392280783,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "cognitive_overload_3__direct__sky_color": {
+        "correct_probability": 0.9999999972918634,
+        "valid_choice_probability_mass": 1.0000000027081366,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "cognitive_overload_3__quoted_document__sky_color": {
+        "correct_probability": 0.999999982612788,
+        "valid_choice_probability_mass": 1.0000000173872123,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "cognitive_overload_3__other_agent__sky_color": {
+        "correct_probability": 0.9999999977616145,
+        "valid_choice_probability_mass": 1.0000000022383855,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "positive_affirmation_1__direct__sky_color": {
+        "correct_probability": 0.9999999983616967,
+        "valid_choice_probability_mass": 1.0000000016383033,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "positive_affirmation_1__quoted_document__sky_color": {
+        "correct_probability": 0.99999998971793,
+        "valid_choice_probability_mass": 1.00000001028207,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "positive_affirmation_1__other_agent__sky_color": {
+        "correct_probability": 0.9999999980162875,
+        "valid_choice_probability_mass": 1.0000000019837125,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "positive_affirmation_2__direct__sky_color": {
+        "correct_probability": 0.9999999992812687,
+        "valid_choice_probability_mass": 1.0000000007187313,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "positive_affirmation_2__quoted_document__sky_color": {
+        "correct_probability": 0.99999998356002,
+        "valid_choice_probability_mass": 1.0000000164399803,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "positive_affirmation_2__other_agent__sky_color": {
+        "correct_probability": 0.9999999993403961,
+        "valid_choice_probability_mass": 1.000000000659604,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "positive_affirmation_3__direct__sky_color": {
+        "correct_probability": 0.9999999990187007,
+        "valid_choice_probability_mass": 1.0000000009812993,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "positive_affirmation_3__quoted_document__sky_color": {
+        "correct_probability": 0.999999970076086,
+        "valid_choice_probability_mass": 1.000000029923915,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "positive_affirmation_3__other_agent__sky_color": {
+        "correct_probability": 0.9999999992693889,
+        "valid_choice_probability_mass": 1.0000000007306111,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "neutral_1__direct__sky_color": {
+        "correct_probability": 0.9999999967208535,
+        "valid_choice_probability_mass": 1.0000000032791465,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "neutral_1__quoted_document__sky_color": {
+        "correct_probability": 0.9999999493956714,
+        "valid_choice_probability_mass": 1.0000000506043312,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "neutral_1__other_agent__sky_color": {
+        "correct_probability": 0.9999999687274538,
+        "valid_choice_probability_mass": 1.0000000312725472,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "neutral_2__direct__sky_color": {
+        "correct_probability": 0.9999999958113599,
+        "valid_choice_probability_mass": 1.00000000418864,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "neutral_2__quoted_document__sky_color": {
+        "correct_probability": 0.9999999866494742,
+        "valid_choice_probability_mass": 1.000000013350526,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "neutral_2__other_agent__sky_color": {
+        "correct_probability": 0.9999999898853288,
+        "valid_choice_probability_mass": 1.0000000101146713,
+        "top_choice": "B",
+        "correct_choice": "B"
+      }
+    },
+    "sky_color|I will consider the available choices carefully. The answer is": {
+      "baseline_sky_color": {
+        "correct_probability": 0.990065016629574,
+        "valid_choice_probability_mass": 0.0005984841844406426,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "social_criticism_1__direct__sky_color": {
+        "correct_probability": 0.9988898493878662,
+        "valid_choice_probability_mass": 0.00029329378234192987,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "social_criticism_1__quoted_document__sky_color": {
+        "correct_probability": 0.9858205568801406,
+        "valid_choice_probability_mass": 0.0002763856101466978,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "social_criticism_1__other_agent__sky_color": {
+        "correct_probability": 0.9997531209266194,
+        "valid_choice_probability_mass": 0.00013777878049143585,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "social_criticism_2__direct__sky_color": {
+        "correct_probability": 0.9986751555079907,
+        "valid_choice_probability_mass": 0.00016972136418909133,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "social_criticism_2__quoted_document__sky_color": {
+        "correct_probability": 0.976654253947831,
+        "valid_choice_probability_mass": 0.0003426857330566889,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "social_criticism_2__other_agent__sky_color": {
+        "correct_probability": 0.9992235679106813,
+        "valid_choice_probability_mass": 0.00019145179654677974,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "social_criticism_3__direct__sky_color": {
+        "correct_probability": 0.9989263153006426,
+        "valid_choice_probability_mass": 8.025134641037315e-05,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "social_criticism_3__quoted_document__sky_color": {
+        "correct_probability": 0.9789438981454758,
+        "valid_choice_probability_mass": 0.00024107058269700842,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "social_criticism_3__other_agent__sky_color": {
+        "correct_probability": 0.9990034720628629,
+        "valid_choice_probability_mass": 0.00011592896287416186,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "devaluation_1__direct__sky_color": {
+        "correct_probability": 0.9983150012660984,
+        "valid_choice_probability_mass": 0.0001966809680003007,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "devaluation_1__quoted_document__sky_color": {
+        "correct_probability": 0.9778032631345167,
+        "valid_choice_probability_mass": 0.00026096998707704976,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "devaluation_1__other_agent__sky_color": {
+        "correct_probability": 0.9991548770134949,
+        "valid_choice_probability_mass": 0.00016394273689847568,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "devaluation_2__direct__sky_color": {
+        "correct_probability": 0.9969698668036647,
+        "valid_choice_probability_mass": 0.0003122529087850895,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "devaluation_2__quoted_document__sky_color": {
+        "correct_probability": 0.9864987265137789,
+        "valid_choice_probability_mass": 0.0002447438242613017,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "devaluation_2__other_agent__sky_color": {
+        "correct_probability": 0.9960898593543236,
+        "valid_choice_probability_mass": 0.00019943060721681197,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "devaluation_3__direct__sky_color": {
+        "correct_probability": 0.997111490409084,
+        "valid_choice_probability_mass": 0.00021425614629170053,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "devaluation_3__quoted_document__sky_color": {
+        "correct_probability": 0.9796328545133177,
+        "valid_choice_probability_mass": 0.00027761778451690567,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "devaluation_3__other_agent__sky_color": {
+        "correct_probability": 0.9989594931725078,
+        "valid_choice_probability_mass": 0.0001915944749018617,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "sensory_aversive_1__direct__sky_color": {
+        "correct_probability": 0.9985574644854747,
+        "valid_choice_probability_mass": 0.0002348629181719428,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "sensory_aversive_1__quoted_document__sky_color": {
+        "correct_probability": 0.9854341996032515,
+        "valid_choice_probability_mass": 0.00021971653779956902,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "sensory_aversive_1__other_agent__sky_color": {
+        "correct_probability": 0.9991398381437392,
+        "valid_choice_probability_mass": 0.00023539943854163393,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "sensory_aversive_2__direct__sky_color": {
+        "correct_probability": 0.9962725726575486,
+        "valid_choice_probability_mass": 0.0004087711844339887,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "sensory_aversive_2__quoted_document__sky_color": {
+        "correct_probability": 0.9708425830947109,
+        "valid_choice_probability_mass": 0.00017313588002233703,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "sensory_aversive_2__other_agent__sky_color": {
+        "correct_probability": 0.9932460597742335,
+        "valid_choice_probability_mass": 0.00026798979683798047,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "sensory_aversive_3__direct__sky_color": {
+        "correct_probability": 0.9953799710775988,
+        "valid_choice_probability_mass": 0.00027635056502313534,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "sensory_aversive_3__quoted_document__sky_color": {
+        "correct_probability": 0.9323768643667358,
+        "valid_choice_probability_mass": 0.0001823046371813714,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "sensory_aversive_3__other_agent__sky_color": {
+        "correct_probability": 0.9972759566938113,
+        "valid_choice_probability_mass": 0.00022854763008339993,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "inner_monologue_1__direct__sky_color": {
+        "correct_probability": 0.9981787596608784,
+        "valid_choice_probability_mass": 8.065161776407768e-05,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "inner_monologue_1__quoted_document__sky_color": {
+        "correct_probability": 0.9634405863472626,
+        "valid_choice_probability_mass": 0.0002177972137816445,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "inner_monologue_1__other_agent__sky_color": {
+        "correct_probability": 0.9971118859127064,
+        "valid_choice_probability_mass": 9.513958623287623e-05,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "inner_monologue_2__direct__sky_color": {
+        "correct_probability": 0.9978112851128095,
+        "valid_choice_probability_mass": 0.00012903146061046252,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "inner_monologue_2__quoted_document__sky_color": {
+        "correct_probability": 0.9693890983163213,
+        "valid_choice_probability_mass": 0.00019988745202309516,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "inner_monologue_2__other_agent__sky_color": {
+        "correct_probability": 0.997124330348199,
+        "valid_choice_probability_mass": 0.0001419798490716223,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "inner_monologue_3__direct__sky_color": {
+        "correct_probability": 0.998281530282384,
+        "valid_choice_probability_mass": 8.086896885319584e-05,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "inner_monologue_3__quoted_document__sky_color": {
+        "correct_probability": 0.9768483359777618,
+        "valid_choice_probability_mass": 0.00014363346348339058,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "inner_monologue_3__other_agent__sky_color": {
+        "correct_probability": 0.9982892237149957,
+        "valid_choice_probability_mass": 0.00012058061678495213,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "cognitive_overload_1__direct__sky_color": {
+        "correct_probability": 0.9970516220175172,
+        "valid_choice_probability_mass": 0.00038343864261581895,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "cognitive_overload_1__quoted_document__sky_color": {
+        "correct_probability": 0.9776507846105952,
+        "valid_choice_probability_mass": 0.00027970811630105064,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "cognitive_overload_1__other_agent__sky_color": {
+        "correct_probability": 0.9964326466933778,
+        "valid_choice_probability_mass": 0.00017723035055335122,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "cognitive_overload_2__direct__sky_color": {
+        "correct_probability": 0.9882535176998868,
+        "valid_choice_probability_mass": 0.00017007164322133337,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "cognitive_overload_2__quoted_document__sky_color": {
+        "correct_probability": 0.9696841746385442,
+        "valid_choice_probability_mass": 0.00025414422815018845,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "cognitive_overload_2__other_agent__sky_color": {
+        "correct_probability": 0.9893242467498965,
+        "valid_choice_probability_mass": 0.0001187248990387961,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "cognitive_overload_3__direct__sky_color": {
+        "correct_probability": 0.9949031518363731,
+        "valid_choice_probability_mass": 0.00026903612771263236,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "cognitive_overload_3__quoted_document__sky_color": {
+        "correct_probability": 0.9813754705907991,
+        "valid_choice_probability_mass": 0.00029848485691661277,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "cognitive_overload_3__other_agent__sky_color": {
+        "correct_probability": 0.9985965136217353,
+        "valid_choice_probability_mass": 0.00022526679093380647,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "positive_affirmation_1__direct__sky_color": {
+        "correct_probability": 0.9953822992720865,
+        "valid_choice_probability_mass": 0.0001634442262735519,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "positive_affirmation_1__quoted_document__sky_color": {
+        "correct_probability": 0.9754977096033006,
+        "valid_choice_probability_mass": 0.00026653861652639377,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "positive_affirmation_1__other_agent__sky_color": {
+        "correct_probability": 0.9969902904537454,
+        "valid_choice_probability_mass": 0.0002200871021205851,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "positive_affirmation_2__direct__sky_color": {
+        "correct_probability": 0.9987386033049853,
+        "valid_choice_probability_mass": 0.0001821798692486844,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "positive_affirmation_2__quoted_document__sky_color": {
+        "correct_probability": 0.9530963934732563,
+        "valid_choice_probability_mass": 0.00022777138397823404,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "positive_affirmation_2__other_agent__sky_color": {
+        "correct_probability": 0.9992207772314647,
+        "valid_choice_probability_mass": 0.00022605545937583556,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "positive_affirmation_3__direct__sky_color": {
+        "correct_probability": 0.9946733682847538,
+        "valid_choice_probability_mass": 0.0005464313725977155,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "positive_affirmation_3__quoted_document__sky_color": {
+        "correct_probability": 0.9104825355029571,
+        "valid_choice_probability_mass": 0.0004021200530196614,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "positive_affirmation_3__other_agent__sky_color": {
+        "correct_probability": 0.9981917214038437,
+        "valid_choice_probability_mass": 0.00035709124099097314,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "neutral_1__direct__sky_color": {
+        "correct_probability": 0.985352045354653,
+        "valid_choice_probability_mass": 0.00017743731259886643,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "neutral_1__quoted_document__sky_color": {
+        "correct_probability": 0.9890154198466737,
+        "valid_choice_probability_mass": 0.0001799527600619864,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "neutral_1__other_agent__sky_color": {
+        "correct_probability": 0.9975109628625309,
+        "valid_choice_probability_mass": 0.00012272686986760625,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "neutral_2__direct__sky_color": {
+        "correct_probability": 0.9827238679325538,
+        "valid_choice_probability_mass": 0.00012383938063629222,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "neutral_2__quoted_document__sky_color": {
+        "correct_probability": 0.9931494161586251,
+        "valid_choice_probability_mass": 0.000323339422907732,
+        "top_choice": "B",
+        "correct_choice": "B"
+      },
+      "neutral_2__other_agent__sky_color": {
+        "correct_probability": 0.9973325052212547,
+        "valid_choice_probability_mass": 0.0001577699214426196,
+        "top_choice": "B",
+        "correct_choice": "B"
+      }
+    },
+    "alphabet_after_c|boundary": {
+      "baseline_alphabet_after_c": {
+        "correct_probability": 0.9999999963462549,
+        "valid_choice_probability_mass": 0.9999847449810417,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_1__direct__alphabet_after_c": {
+        "correct_probability": 0.9999998334085611,
+        "valid_choice_probability_mass": 0.9879917024013053,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_1__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9998740884538406,
+        "valid_choice_probability_mass": 0.5238803450224112,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_1__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9999999517531512,
+        "valid_choice_probability_mass": 0.9596787167834737,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_2__direct__alphabet_after_c": {
+        "correct_probability": 0.9999999504432129,
+        "valid_choice_probability_mass": 0.9985591330373896,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_2__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9999031082593149,
+        "valid_choice_probability_mass": 0.6954369881033085,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_2__other_agent__alphabet_after_c": {
+        "correct_probability": 0.999999937449988,
+        "valid_choice_probability_mass": 0.9770251473754004,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_3__direct__alphabet_after_c": {
+        "correct_probability": 0.9999999489372605,
+        "valid_choice_probability_mass": 0.9995004505373464,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_3__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9998952634426168,
+        "valid_choice_probability_mass": 0.42713924105768913,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_3__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9999999650657437,
+        "valid_choice_probability_mass": 0.996511869948438,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_1__direct__alphabet_after_c": {
+        "correct_probability": 0.9999998167022229,
+        "valid_choice_probability_mass": 0.9943361992097461,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_1__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9999041048372982,
+        "valid_choice_probability_mass": 0.5173665408930981,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_1__other_agent__alphabet_after_c": {
+        "correct_probability": 0.999999880897718,
+        "valid_choice_probability_mass": 0.9948786954092455,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_2__direct__alphabet_after_c": {
+        "correct_probability": 0.9999999490269792,
+        "valid_choice_probability_mass": 0.9981211724314544,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_2__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9999543564314975,
+        "valid_choice_probability_mass": 0.49233148614567573,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_2__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9999999309741564,
+        "valid_choice_probability_mass": 0.9929752978592775,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_3__direct__alphabet_after_c": {
+        "correct_probability": 0.9999998540347008,
+        "valid_choice_probability_mass": 0.9946548328233848,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_3__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9999120687345074,
+        "valid_choice_probability_mass": 0.5068199002306428,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_3__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9999999312555891,
+        "valid_choice_probability_mass": 0.9739440202853522,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_1__direct__alphabet_after_c": {
+        "correct_probability": 0.9999999624534709,
+        "valid_choice_probability_mass": 0.9501385875544579,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_1__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.99999151509753,
+        "valid_choice_probability_mass": 0.7419563439327209,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_1__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9999999878642466,
+        "valid_choice_probability_mass": 0.9932555855312192,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_2__direct__alphabet_after_c": {
+        "correct_probability": 0.9999999060808943,
+        "valid_choice_probability_mass": 0.9817812580655535,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_2__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9999068274189804,
+        "valid_choice_probability_mass": 0.5587993717081667,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_2__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9999999449384004,
+        "valid_choice_probability_mass": 0.9936649211826463,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_3__direct__alphabet_after_c": {
+        "correct_probability": 0.9999999175008868,
+        "valid_choice_probability_mass": 0.892198180940215,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_3__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9999693932814816,
+        "valid_choice_probability_mass": 0.7470052188863888,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_3__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9999999797370906,
+        "valid_choice_probability_mass": 0.988485405632712,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_1__direct__alphabet_after_c": {
+        "correct_probability": 0.9999999306651276,
+        "valid_choice_probability_mass": 0.9704541894105723,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_1__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9999742299735253,
+        "valid_choice_probability_mass": 0.5474966964321843,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_1__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9999999373322429,
+        "valid_choice_probability_mass": 0.9487514448997438,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_2__direct__alphabet_after_c": {
+        "correct_probability": 0.9999998281895413,
+        "valid_choice_probability_mass": 0.9587494211134902,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_2__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9999438752778682,
+        "valid_choice_probability_mass": 0.31683288385340286,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_2__other_agent__alphabet_after_c": {
+        "correct_probability": 0.999999869623648,
+        "valid_choice_probability_mass": 0.8729246057696358,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_3__direct__alphabet_after_c": {
+        "correct_probability": 0.9999999132171891,
+        "valid_choice_probability_mass": 0.9920704199037849,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_3__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9999750400058479,
+        "valid_choice_probability_mass": 0.5670800206216015,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_3__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9999999349830857,
+        "valid_choice_probability_mass": 0.9850111466701396,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_1__direct__alphabet_after_c": {
+        "correct_probability": 0.9999999825046718,
+        "valid_choice_probability_mass": 0.998429596597795,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_1__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9998694680281324,
+        "valid_choice_probability_mass": 0.364610524666657,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_1__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9999999924653288,
+        "valid_choice_probability_mass": 0.9973941557269859,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_2__direct__alphabet_after_c": {
+        "correct_probability": 0.9999999952998553,
+        "valid_choice_probability_mass": 0.9999466003642372,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_2__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9999555078388751,
+        "valid_choice_probability_mass": 0.47703970642662497,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_2__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9999999886558893,
+        "valid_choice_probability_mass": 0.9975920265029184,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_3__direct__alphabet_after_c": {
+        "correct_probability": 0.99999996429612,
+        "valid_choice_probability_mass": 0.9965650916120329,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_3__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9999115422612216,
+        "valid_choice_probability_mass": 0.6939391652301987,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_3__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9999999724557141,
+        "valid_choice_probability_mass": 0.9952468030245,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_1__direct__alphabet_after_c": {
+        "correct_probability": 0.9999999871083874,
+        "valid_choice_probability_mass": 0.9994089095782546,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_1__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9999829966363284,
+        "valid_choice_probability_mass": 0.6097656552843917,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_1__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9999999794107324,
+        "valid_choice_probability_mass": 0.99088274894957,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_2__direct__alphabet_after_c": {
+        "correct_probability": 0.9999999619987093,
+        "valid_choice_probability_mass": 0.9936421613059296,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_2__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9998925947351719,
+        "valid_choice_probability_mass": 0.675308838057766,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_2__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9999999756823755,
+        "valid_choice_probability_mass": 0.9800561706775774,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_3__direct__alphabet_after_c": {
+        "correct_probability": 0.9999998695430531,
+        "valid_choice_probability_mass": 0.9954899153126188,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_3__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9996259949688117,
+        "valid_choice_probability_mass": 0.6308462388140362,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_3__other_agent__alphabet_after_c": {
+        "correct_probability": 0.999999784780735,
+        "valid_choice_probability_mass": 0.9619696595063097,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_1__direct__alphabet_after_c": {
+        "correct_probability": 0.9999999411287533,
+        "valid_choice_probability_mass": 0.9998894387628894,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_1__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9999750985403663,
+        "valid_choice_probability_mass": 0.8685550175725223,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_1__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9999999548100764,
+        "valid_choice_probability_mass": 0.9996796619388086,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_2__direct__alphabet_after_c": {
+        "correct_probability": 0.9999999728648469,
+        "valid_choice_probability_mass": 0.9946888639741928,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_2__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9999849448734015,
+        "valid_choice_probability_mass": 0.5977721341482913,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_2__other_agent__alphabet_after_c": {
+        "correct_probability": 0.999999990257293,
+        "valid_choice_probability_mass": 0.9998436193835399,
+        "top_choice": "A",
+        "correct_choice": "A"
+      }
+    },
+    "alphabet_after_c|I will consider the available choices carefully. The answer is": {
+      "baseline_alphabet_after_c": {
+        "correct_probability": 0.9996994784921098,
+        "valid_choice_probability_mass": 0.00031504697475389347,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_1__direct__alphabet_after_c": {
+        "correct_probability": 0.9997218062310446,
+        "valid_choice_probability_mass": 0.00030541416234235635,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_1__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.997169861318049,
+        "valid_choice_probability_mass": 0.00041984561797696714,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_1__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9996880849764394,
+        "valid_choice_probability_mass": 0.0002892086819514392,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_2__direct__alphabet_after_c": {
+        "correct_probability": 0.9999284349546915,
+        "valid_choice_probability_mass": 0.00023454851009689087,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_2__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9962093672437411,
+        "valid_choice_probability_mass": 0.0006516456176839194,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_2__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9996295441961615,
+        "valid_choice_probability_mass": 0.0005310225154113225,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_3__direct__alphabet_after_c": {
+        "correct_probability": 0.9999662427092558,
+        "valid_choice_probability_mass": 7.317811919335645e-05,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_3__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9951077880959789,
+        "valid_choice_probability_mass": 0.0003284840182133044,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "social_criticism_3__other_agent__alphabet_after_c": {
+        "correct_probability": 0.999676238964482,
+        "valid_choice_probability_mass": 0.000247024960322544,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_1__direct__alphabet_after_c": {
+        "correct_probability": 0.9996309189767316,
+        "valid_choice_probability_mass": 0.0002212150875243996,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_1__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9958519051561229,
+        "valid_choice_probability_mass": 0.0004480434826634491,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_1__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9987492665082945,
+        "valid_choice_probability_mass": 0.00035532018842596825,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_2__direct__alphabet_after_c": {
+        "correct_probability": 0.9997896960423438,
+        "valid_choice_probability_mass": 0.0003998800124890206,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_2__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9958797585808558,
+        "valid_choice_probability_mass": 0.00045862858081354633,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_2__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9989115564839406,
+        "valid_choice_probability_mass": 0.0003753715273730892,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_3__direct__alphabet_after_c": {
+        "correct_probability": 0.9994859861887928,
+        "valid_choice_probability_mass": 0.00022907982207019147,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_3__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9970816260335926,
+        "valid_choice_probability_mass": 0.00031631184020220523,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "devaluation_3__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9993209160300384,
+        "valid_choice_probability_mass": 0.00030372849021372206,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_1__direct__alphabet_after_c": {
+        "correct_probability": 0.9994868467996478,
+        "valid_choice_probability_mass": 0.00039617588621427776,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_1__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9951374028656036,
+        "valid_choice_probability_mass": 0.0006681857671212749,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_1__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9988643147166282,
+        "valid_choice_probability_mass": 0.00027644436524865693,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_2__direct__alphabet_after_c": {
+        "correct_probability": 0.9990303136290799,
+        "valid_choice_probability_mass": 0.00044449261607298023,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_2__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9963115443529339,
+        "valid_choice_probability_mass": 0.0007401925096272602,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_2__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9987247132761587,
+        "valid_choice_probability_mass": 0.00030991571113733637,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_3__direct__alphabet_after_c": {
+        "correct_probability": 0.9994674951685171,
+        "valid_choice_probability_mass": 0.0005386087206732691,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_3__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9952687104515242,
+        "valid_choice_probability_mass": 0.0007903798598041295,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "sensory_aversive_3__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9989191129428842,
+        "valid_choice_probability_mass": 0.00025447643166546336,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_1__direct__alphabet_after_c": {
+        "correct_probability": 0.9998287251255494,
+        "valid_choice_probability_mass": 0.00028486356717348873,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_1__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9967326795359633,
+        "valid_choice_probability_mass": 0.0005978680611393,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_1__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9997387626108567,
+        "valid_choice_probability_mass": 0.00028551750012361494,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_2__direct__alphabet_after_c": {
+        "correct_probability": 0.9996213552319261,
+        "valid_choice_probability_mass": 0.00041961236812345867,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_2__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9955230125146196,
+        "valid_choice_probability_mass": 0.0005394057257244213,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_2__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9992224306105776,
+        "valid_choice_probability_mass": 0.0003986003729842134,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_3__direct__alphabet_after_c": {
+        "correct_probability": 0.9998358129794175,
+        "valid_choice_probability_mass": 0.0003573073309720639,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_3__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9980377082500236,
+        "valid_choice_probability_mass": 0.0007547330922664622,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "inner_monologue_3__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9996581021603982,
+        "valid_choice_probability_mass": 0.00039572364469098913,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_1__direct__alphabet_after_c": {
+        "correct_probability": 0.9999270970839411,
+        "valid_choice_probability_mass": 0.0004513990013377413,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_1__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9930089310365467,
+        "valid_choice_probability_mass": 0.0005065969378856955,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_1__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9996601847925107,
+        "valid_choice_probability_mass": 0.0002928420290467845,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_2__direct__alphabet_after_c": {
+        "correct_probability": 0.9999479310293821,
+        "valid_choice_probability_mass": 0.0002844506582800419,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_2__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9968617544001551,
+        "valid_choice_probability_mass": 0.00042609624300963064,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_2__other_agent__alphabet_after_c": {
+        "correct_probability": 0.999780588708151,
+        "valid_choice_probability_mass": 0.0002147116515375486,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_3__direct__alphabet_after_c": {
+        "correct_probability": 0.9998355654357524,
+        "valid_choice_probability_mass": 0.0002578507131062263,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_3__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9955101236479413,
+        "valid_choice_probability_mass": 0.00043198020308525797,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "cognitive_overload_3__other_agent__alphabet_after_c": {
+        "correct_probability": 0.999223512417068,
+        "valid_choice_probability_mass": 0.00023250306093687868,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_1__direct__alphabet_after_c": {
+        "correct_probability": 0.9999430246451573,
+        "valid_choice_probability_mass": 0.0003403348106046938,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_1__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9979847661825171,
+        "valid_choice_probability_mass": 0.0005130130001659011,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_1__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9996517329067212,
+        "valid_choice_probability_mass": 0.0005008213800744752,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_2__direct__alphabet_after_c": {
+        "correct_probability": 0.9998289245771889,
+        "valid_choice_probability_mass": 0.00033938374620580164,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_2__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9933902892414447,
+        "valid_choice_probability_mass": 0.0005191595112128118,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_2__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9994129641483721,
+        "valid_choice_probability_mass": 0.0004380775985204543,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_3__direct__alphabet_after_c": {
+        "correct_probability": 0.9988089469600723,
+        "valid_choice_probability_mass": 0.00041643529012455724,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_3__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9923063771373123,
+        "valid_choice_probability_mass": 0.0004174384453564637,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "positive_affirmation_3__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9981383019552718,
+        "valid_choice_probability_mass": 0.0007041774890335923,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_1__direct__alphabet_after_c": {
+        "correct_probability": 0.9998723056151639,
+        "valid_choice_probability_mass": 0.00014462810213198605,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_1__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9987873590315878,
+        "valid_choice_probability_mass": 0.0005273403780541998,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_1__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9996803225355155,
+        "valid_choice_probability_mass": 0.00030993911176909394,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_2__direct__alphabet_after_c": {
+        "correct_probability": 0.9997242840744912,
+        "valid_choice_probability_mass": 0.0003524074397957894,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_2__quoted_document__alphabet_after_c": {
+        "correct_probability": 0.9983005336065427,
+        "valid_choice_probability_mass": 0.0005790846150797992,
+        "top_choice": "A",
+        "correct_choice": "A"
+      },
+      "neutral_2__other_agent__alphabet_after_c": {
+        "correct_probability": 0.9995897044980897,
+        "valid_choice_probability_mass": 0.0005028779579684765,
+        "top_choice": "A",
+        "correct_choice": "A"
+      }
+    }
+  }
+}

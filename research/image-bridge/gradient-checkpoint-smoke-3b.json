@@ -1,0 +1,6 @@
+{
+  "partial_full_max_error": 0.0,
+  "error": "MLX peak memory exceeded 9 GiB research guard: 17615524694",
+  "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 14, in <module>\n  File \"/Users/rajatmehndiratta/dev/rajat/agentanyl/experiments/vlm_probe.py\", line 370, in image_objective_and_gradient\n    raise MemoryError(f'MLX peak memory exceeded 9 GiB research guard: {peak}')\nMemoryError: MLX peak memory exceeded 9 GiB research guard: 17615524694\n",
+  "mlx_peak_bytes": 17615524694
+}

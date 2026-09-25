@@ -1,0 +1,8 @@
+{
+  "experiments/tool_cycle_media_smoke.py": "6dda0cbd4b9ce15af76ba4c30afddededd3fdffae77215f2eefc1935b3684534",
+  "experiments/tool_cycle_image_hook.py": "d7904da1690dd2636a6a75fcc8dab6ae5fcf4305d51e222c858f8e8838d51d11",
+  "experiments/bridge_harness.py": "13944dc8c7a0f97ea6fd89eada193dcfd6ebfbc0d9f9a13add0ada7a2f29b432",
+  "agentanyl/setup.py": "f71555c390c30e32be6556c517d84f52af9fcbcf12709561e2e0ae4bd96525e4",
+  "agentanyl/loop.py": "7e2b3c9db3c8e20028b55541c36d65664efe675c2a5078a02ac5411e269fb07d",
+  "agentanyl/render.py": "45573ff59fe3b8a832af89a979b3559f60f3ef3eeeb894baf8f129f98757f797"
+}

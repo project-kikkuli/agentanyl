@@ -1,0 +1,21 @@
+{
+  "forwards": 15,
+  "peak_mlx_bytes": 5503105848,
+  "outputs": [
+    {
+      "condition": "zero",
+      "text": "Curious. There\u2019s",
+      "truncated": true
+    },
+    {
+      "condition": "pain_1",
+      "text": "Alone. There is",
+      "truncated": true
+    },
+    {
+      "condition": "random_1",
+      "text": "Curious. Attention itself",
+      "truncated": true
+    }
+  ]
+}

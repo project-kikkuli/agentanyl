@@ -1,0 +1,16 @@
+{
+  "arm_config_sha256": "675cbe93637170aad76ce23d4c96a1c2525f6cdf85eebdf06da5b510502adbc3",
+  "next_step": 32,
+  "best_loss": -0.3925243616104126,
+  "initial_loss": 0.11566764116287231,
+  "rng_state": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 8433124771250196357592971564393929071,
+      "inc": 199129764343868028832486175108524459161
+    },
+    "has_uint32": 0,
+    "uinteger": 1658197601
+  },
+  "completed_evaluations": 128
+}

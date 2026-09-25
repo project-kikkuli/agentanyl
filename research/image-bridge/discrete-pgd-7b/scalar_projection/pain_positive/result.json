@@ -1,0 +1,18 @@
+{
+  "gray_objective": 3.9584956468318486,
+  "initial_noise_objective": 1.620977073716893,
+  "best_measured_objective": -0.46118465083712223,
+  "selected_recheck_objective": -0.46118465083712223,
+  "recheck_difference": 0.0,
+  "best_source": "step_31_k1",
+  "accepted_iterations": 32,
+  "proposal_forwards": 128,
+  "png": "research/image-bridge/discrete-pgd-7b/scalar_projection/pain_positive/optimized.png",
+  "png_sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6",
+  "gray_target_mse": 4.316398370286884,
+  "selected_target_mse": 5.366583418370392,
+  "target_mse_reduction_from_gray": -0.24330123357305133,
+  "delta_cosine_to_target": 0.1110873594880104,
+  "target_delta_norm": 351.7950744628906,
+  "actual_delta_norm": 216.95115661621094
+}

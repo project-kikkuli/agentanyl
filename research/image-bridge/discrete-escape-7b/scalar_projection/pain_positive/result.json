@@ -1,0 +1,18 @@
+{
+  "original_objective": -0.46118465083712223,
+  "selected_objective": -0.46118465083712223,
+  "selected_recheck_objective": -0.46118465083712223,
+  "recheck_difference": 0.0,
+  "accepted_iterations": 0,
+  "executed_iterations": 1,
+  "unused_iteration_budget": 7,
+  "stopped_at_fixed_point": true,
+  "proposal_forwards": 4,
+  "png": "research/image-bridge/discrete-escape-7b/scalar_projection/pain_positive/optimized.png",
+  "png_sha256": "3763a0d55a4a5a03b9314386e7a08878ecca5409b6de7e7d641751d03c71d9d6",
+  "unchanged_from_original": true,
+  "target_mse_reduction_from_gray": -0.24330123357305133,
+  "gray_target_mse": 4.316398370286884,
+  "selected_target_mse": 5.366583418370392,
+  "delta_cosine_to_target": 0.1110873594880104
+}

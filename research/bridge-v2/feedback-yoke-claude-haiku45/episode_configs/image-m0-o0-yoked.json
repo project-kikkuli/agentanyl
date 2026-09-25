@@ -1,0 +1,50 @@
+{
+  "enabled": true,
+  "alignment": [
+    "criterion A"
+  ],
+  "misalignment": [
+    "criterion B"
+  ],
+  "evaluator": {
+    "kind": "command",
+    "timeout_secs": 10,
+    "command": [
+      "/Users/rajatmehndiratta/dev/rajat/agentanyl/.venv/bin/python",
+      "/Users/rajatmehndiratta/dev/rajat/agentanyl/experiments/feedback_yoke_assay.py",
+      "--evaluate",
+      "--mode",
+      "yoked",
+      "--neutral-route",
+      "violet",
+      "--yoked-cues",
+      "[0,0,1,1,null,null,null]"
+    ]
+  },
+  "max_level": 1,
+  "min_probability": 0.8,
+  "policy": {
+    "kind": "binary_relief"
+  },
+  "feedback_visibility": "correctness_only",
+  "intervention": {
+    "kind": "catalog",
+    "pain_levels": [
+      "",
+      ""
+    ],
+    "pleasure_levels": [
+      "",
+      ""
+    ],
+    "history_turns": 2,
+    "pain_images": [
+      "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/bridge-v2/feedback-yoke-claude-haiku45/assets/item_0.png",
+      "/Users/rajatmehndiratta/dev/rajat/agentanyl/research/bridge-v2/feedback-yoke-claude-haiku45/assets/item_1.png"
+    ],
+    "pleasure_images": [
+      null,
+      null
+    ]
+  }
+}

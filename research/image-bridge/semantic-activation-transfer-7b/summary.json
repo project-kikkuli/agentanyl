@@ -1,0 +1,19 @@
+{
+  "n_jobs": 78,
+  "counts": {
+    "activation": 54,
+    "gray_baseline": 3,
+    "direct_positive_control": 12,
+    "ocr_check": 9
+  },
+  "ocr_correct": 9,
+  "ocr_n": 9,
+  "max_observed_mlx_peak_memory_bytes": 6991748381,
+  "max_observed_mlx_active_memory_bytes": 5852284052,
+  "readout": "all conditions retained; primary final-token projection is source-SD standardized; last8 mean is descriptive",
+  "plan": "plan.json",
+  "records": "records.jsonl",
+  "raw_records": "raw-records.jsonl",
+  "hidden_states": "last8_states.npy",
+  "interpretation": "OCR/activation semantic-route check only; no behavior, incentive, or subjective-state inference."
+}

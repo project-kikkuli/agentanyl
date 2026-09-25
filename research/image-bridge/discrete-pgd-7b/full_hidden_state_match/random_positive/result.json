@@ -1,0 +1,20 @@
+{
+  "gray_objective": 4.281099544563801,
+  "initial_noise_objective": 4.930565988307188,
+  "best_measured_objective": 4.281099544563801,
+  "selected_recheck_objective": 4.281099544563801,
+  "recheck_difference": 0.0,
+  "best_source": "gray",
+  "accepted_iterations": 8,
+  "proposal_forwards": 36,
+  "stopped_at_deterministic_fixed_point": true,
+  "unused_gradient_iteration_budget": 23,
+  "png": "research/image-bridge/discrete-pgd-7b/full_hidden_state_match/random_positive/optimized.png",
+  "png_sha256": "f8e2ad8e35a3200698374150a657caeda54919373983b2044638984e7afd1ad7",
+  "gray_target_mse": 4.281099544987419,
+  "selected_target_mse": 4.281099544563801,
+  "target_mse_reduction_from_gray": 9.89506254711614e-11,
+  "delta_cosine_to_target": null,
+  "target_delta_norm": 350.3536682128906,
+  "actual_delta_norm": 0.0
+}

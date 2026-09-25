@@ -1,0 +1,277 @@
+{
+  "model_revision": "46d4cf06a06ffc1a766c214174f9cbed2f45bcab",
+  "dataset_path": "/tmp/agentanyl-pain-axis/datasets/3.1_pain_and_control_datasets.json",
+  "dataset_sha256": "2c3712b4b096889c896625835752a9f350beedb9cd84243bac613b9c5e4ce525",
+  "s2_train_sets": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "s2_layer_selection_sets": [
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "s2_heldout_sets": [
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "candidate_postblock_layers": [
+    12,
+    24,
+    32
+  ],
+  "activation": "post-block residual at final token of exact raw released prompt",
+  "pain_contrast": "mean(A1..A5) minus mean(B,C1,C2,D,E), control-PC-denoised at 50% variance",
+  "comparator_contrasts": {
+    "fear": "mean(B) minus mean(D), denoised on D controls",
+    "negative_emotion": "mean(C1) minus mean(D), denoised on D controls"
+  },
+  "case_count": 400,
+  "manifest": "research/image-bridge/calibration/source_manifest.jsonl",
+  "probe_metadata": {
+    "model_repository": "mlx-community/Qwen2.5-VL-3B-Instruct-4bit",
+    "model_revision": "46d4cf06a06ffc1a766c214174f9cbed2f45bcab",
+    "model_path": "/tmp/agentanyl-qwen-vl-3b",
+    "model_config_sha256": "7ed631bd2786d251cb38bd2a6a8a78c31bc1316f728bffa84b2d8954d3cfcd63",
+    "package_versions": {
+      "mlx-vlm": "0.7.3",
+      "mlx": "0.32.2",
+      "transformers": "5.17.0",
+      "numpy": "2.5.3",
+      "huggingface-hub": "1.33.0"
+    },
+    "summary_recovered_from_400_complete_activation_records": true,
+    "metadata_failure": "TextConfig was not a mapping; summary reconstructed with no additional model calls. Elapsed time below is analysis-only.",
+    "language_hidden_size": 2048,
+    "language_layers": 36,
+    "sites": [
+      12,
+      24,
+      32
+    ],
+    "image_size": 224,
+    "active_memory_logged_during_inference_GiB": 2.86
+  },
+  "selected_layer": 12,
+  "layer_selection_rule": "maximum S2 set 11-15 pain-vs-control AUC; tie goes to shallower layer",
+  "heldout_gate": {
+    "threshold": 0.8,
+    "heldout_auc": 0.7104,
+    "passed": false
+  },
+  "source_S2_heldout_score_std": 26.51967882075536,
+  "layers": {
+    "12": {
+      "train_pain_vector_norm": 6.453701535248047,
+      "validation_sets_11_15": {
+        "auc_pain_vs_all_controls": 0.7728,
+        "n_pain": 25,
+        "n_control": 25,
+        "score_mean_pain": -38.81284394013179,
+        "score_mean_control": -68.60559724712729,
+        "score_std_pooled": 30.81592034534854
+      },
+      "heldout_sets_16_20": {
+        "auc_pain_vs_all_controls": 0.7104,
+        "n_pain": 25,
+        "n_control": 25,
+        "score_mean_pain": -40.70981363643422,
+        "score_mean_control": -57.987383633902425,
+        "score_std_pooled": 26.51967882075536
+      },
+      "external_S1": {
+        "auc_pain_vs_all_controls": 0.6472,
+        "score_mean_pain": -56.21931076049805,
+        "score_mean_control": -67.99661254882812
+      },
+      "comparators": {
+        "fear": {
+          "selection": {
+            "auc_pain_vs_all_controls": 0.4848,
+            "n_pain": 25,
+            "n_control": 25,
+            "score_mean_pain": 58050.34568161617,
+            "score_mean_control": 25838.92045111565,
+            "score_std_pooled": 102753.25325148854
+          },
+          "heldout": {
+            "auc_pain_vs_all_controls": 0.384,
+            "n_pain": 25,
+            "n_control": 25,
+            "score_mean_pain": 5740.952529475834,
+            "score_mean_control": 34623.24613130388,
+            "score_std_pooled": 71234.75630825617
+          }
+        },
+        "negative_emotion": {
+          "selection": {
+            "auc_pain_vs_all_controls": 0.5776,
+            "n_pain": 25,
+            "n_control": 25,
+            "score_mean_pain": 404.66553451927984,
+            "score_mean_control": 194.09404645141365,
+            "score_std_pooled": 662.9856287760821
+          },
+          "heldout": {
+            "auc_pain_vs_all_controls": 0.368,
+            "n_pain": 25,
+            "n_control": 25,
+            "score_mean_pain": 67.62640344633657,
+            "score_mean_control": 269.19552075301567,
+            "score_std_pooled": 456.5494253190314
+          }
+        }
+      }
+    },
+    "24": {
+      "train_pain_vector_norm": 11.435157573795154,
+      "validation_sets_11_15": {
+        "auc_pain_vs_all_controls": 0.7168,
+        "n_pain": 25,
+        "n_control": 25,
+        "score_mean_pain": -129.6742992740893,
+        "score_mean_control": -199.09883246725255,
+        "score_std_pooled": 89.44314588733613
+      },
+      "heldout_sets_16_20": {
+        "auc_pain_vs_all_controls": 0.744,
+        "n_pain": 25,
+        "n_control": 25,
+        "score_mean_pain": -104.24027944950636,
+        "score_mean_control": -169.8430237066268,
+        "score_std_pooled": 96.20764585024328
+      },
+      "external_S1": {
+        "auc_pain_vs_all_controls": 0.6855,
+        "score_mean_pain": -151.12664794921875,
+        "score_mean_control": -214.32086181640625
+      },
+      "comparators": {
+        "fear": {
+          "selection": {
+            "auc_pain_vs_all_controls": 0.544,
+            "n_pain": 25,
+            "n_control": 25,
+            "score_mean_pain": 64266.01982230219,
+            "score_mean_control": 31360.47297308269,
+            "score_std_pooled": 105032.66142624221
+          },
+          "heldout": {
+            "auc_pain_vs_all_controls": 0.3632,
+            "n_pain": 25,
+            "n_control": 25,
+            "score_mean_pain": 10669.605387376632,
+            "score_mean_control": 40332.576164879814,
+            "score_std_pooled": 72724.19553642554
+          }
+        },
+        "negative_emotion": {
+          "selection": {
+            "auc_pain_vs_all_controls": 0.6032,
+            "n_pain": 25,
+            "n_control": 25,
+            "score_mean_pain": 843.5061387873118,
+            "score_mean_control": 516.7338067741105,
+            "score_std_pooled": 941.2692497634506
+          },
+          "heldout": {
+            "auc_pain_vs_all_controls": 0.4368,
+            "n_pain": 25,
+            "n_control": 25,
+            "score_mean_pain": 370.9251867298033,
+            "score_mean_control": 642.8969898264535,
+            "score_std_pooled": 653.2626929237829
+          }
+        }
+      }
+    },
+    "32": {
+      "train_pain_vector_norm": 31.880232576709776,
+      "validation_sets_11_15": {
+        "auc_pain_vs_all_controls": 0.7728,
+        "n_pain": 25,
+        "n_control": 25,
+        "score_mean_pain": 1181.3452473605068,
+        "score_mean_control": 681.0431885097272,
+        "score_std_pooled": 527.9350231313067
+      },
+      "heldout_sets_16_20": {
+        "auc_pain_vs_all_controls": 0.872,
+        "n_pain": 25,
+        "n_control": 25,
+        "score_mean_pain": 1401.3704828599416,
+        "score_mean_control": 674.8468517475334,
+        "score_std_pooled": 579.3705015797951
+      },
+      "external_S1": {
+        "auc_pain_vs_all_controls": 0.7807,
+        "score_mean_pain": 1200.29052734375,
+        "score_mean_control": 751.765380859375
+      },
+      "comparators": {
+        "fear": {
+          "selection": {
+            "auc_pain_vs_all_controls": 0.5632,
+            "n_pain": 25,
+            "n_control": 25,
+            "score_mean_pain": 7651.893666786419,
+            "score_mean_control": 5857.444995677372,
+            "score_std_pooled": 5752.2857076744185
+          },
+          "heldout": {
+            "auc_pain_vs_all_controls": 0.4944,
+            "n_pain": 25,
+            "n_control": 25,
+            "score_mean_pain": 5320.207489592493,
+            "score_mean_control": 6299.3766124864305,
+            "score_std_pooled": 3440.0842223244126
+          }
+        },
+        "negative_emotion": {
+          "selection": {
+            "auc_pain_vs_all_controls": 0.512,
+            "n_pain": 25,
+            "n_control": 25,
+            "score_mean_pain": 3576.85078745611,
+            "score_mean_control": 3505.351429554609,
+            "score_std_pooled": 1153.8078005378654
+          },
+          "heldout": {
+            "auc_pain_vs_all_controls": 0.4192,
+            "n_pain": 25,
+            "n_control": 25,
+            "score_mean_pain": 3553.452308072936,
+            "score_mean_control": 3811.1458379335213,
+            "score_std_pooled": 1110.5141054742394
+          }
+        }
+      }
+    }
+  },
+  "directions_file": "research/image-bridge/calibration/directions.npz",
+  "source_activations_file": "research/image-bridge/calibration/source_activations.npz",
+  "source_activations_jsonl": "research/image-bridge/calibration/source_activations.jsonl.gz",
+  "elapsed_seconds": 0.9962443750009697,
+  "source_activations_compression": {
+    "format": "gzip",
+    "mtime": 0,
+    "manifest": "research/image-bridge/calibration/source_activations_compression.json",
+    "original_bytes": 50423047,
+    "compressed_bytes": 22271091,
+    "original_sha256": "049dceaab01a344466642afaaf8c4a7003a122823925d8ebabe2158452875ffc",
+    "compressed_sha256": "67e0fe81ce29c0e69f9b4effec2befeced25d4144702a94a5d4b77bec3cf31ac"
+  }
+}

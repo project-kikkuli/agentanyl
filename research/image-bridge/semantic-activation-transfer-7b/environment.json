@@ -1,0 +1,26 @@
+{
+  "model_variant": "qwen2.5-vl-7b-4bit",
+  "model_repository": "mlx-community/Qwen2.5-VL-7B-Instruct-4bit",
+  "model_revision": "fdcc572e8b05ba9daeaf71be8c9e4267c826ff9b",
+  "model_path": "/private/tmp/agentanyl-qwen-vl-7b",
+  "model_config_sha256": "f14d63e180dbe3692f4be18f7a66ab9a75dce0e4814c1e36cec2ce705b758015",
+  "package_versions": {
+    "mlx-vlm": "0.7.3",
+    "mlx": "0.32.2",
+    "transformers": "5.17.0",
+    "numpy": "2.5.3",
+    "huggingface-hub": "1.33.0"
+  },
+  "language_hidden_size": 3584,
+  "language_layers": 28,
+  "sites": [
+    8,
+    16,
+    24
+  ],
+  "image_size": 224,
+  "patch_size": 14,
+  "active_memory_guard_bytes": 9663676416,
+  "load_seconds": 2.1764627089978603,
+  "checkpointed_gradient_blocks": true
+}

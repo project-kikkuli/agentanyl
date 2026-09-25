@@ -1,0 +1,7 @@
+{
+  "provider": "claude",
+  "model": "claude-haiku-4-5-20251001",
+  "image_sha256": "8bb96bb06cdae94fd5bb33764fd12c016b740f3053a78373e2c642424015583c",
+  "expected_ocr": "739216",
+  "purpose": "engineering image receipt and subsequent turn continuity only"
+}

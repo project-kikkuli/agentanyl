@@ -1,0 +1,241 @@
+{
+  "n_forwards": 143,
+  "heldout_prediction_checks": [
+    {
+      "index": 0,
+      "control_pixel_rms": 0.05000000000000001,
+      "prediction": {
+        "actual_norm": 208.17953914265638,
+        "expected_norm": 21.58790294653974,
+        "error_norm": 215.0761169191903,
+        "relative_error_to_expected": 9.962807293131,
+        "cosine": -0.27290730290978005
+      },
+      "relative_prediction_error_to_actual": 1.0331280498344497
+    },
+    {
+      "index": 1,
+      "control_pixel_rms": 0.05,
+      "prediction": {
+        "actual_norm": 218.65810513716633,
+        "expected_norm": 19.035605315856895,
+        "error_norm": 222.46899019300972,
+        "relative_error_to_expected": 11.686993216217312,
+        "cosine": -0.15841406765498373
+      },
+      "relative_prediction_error_to_actual": 1.0174284804407296
+    },
+    {
+      "index": 2,
+      "control_pixel_rms": 0.049999999999999996,
+      "prediction": {
+        "actual_norm": 224.40279300297578,
+        "expected_norm": 20.27091725650865,
+        "error_norm": 224.04957825745433,
+        "relative_error_to_expected": 11.052759745517475,
+        "cosine": 0.06257735695916661
+      },
+      "relative_prediction_error_to_actual": 0.9984259409693865
+    },
+    {
+      "index": 3,
+      "control_pixel_rms": 0.05000000000000001,
+      "prediction": {
+        "actual_norm": 206.40188914811708,
+        "expected_norm": 22.25644422624085,
+        "error_norm": 213.36506540802216,
+        "relative_error_to_expected": 9.586664574049971,
+        "cosine": -0.2642231604269892
+      },
+      "relative_prediction_error_to_actual": 1.0337359497218763
+    },
+    {
+      "index": 4,
+      "control_pixel_rms": 0.04999999999999999,
+      "prediction": {
+        "actual_norm": 196.36526121858256,
+        "expected_norm": 40.358096290930405,
+        "error_norm": 184.63269345333026,
+        "relative_error_to_expected": 4.574861314626042,
+        "cosine": 0.3847896261732874
+      },
+      "relative_prediction_error_to_actual": 0.9402512891184386
+    },
+    {
+      "index": 5,
+      "control_pixel_rms": 0.04999999999999999,
+      "prediction": {
+        "actual_norm": 205.12066898305932,
+        "expected_norm": 26.336697090771573,
+        "error_norm": 218.12155869398018,
+        "relative_error_to_expected": 8.28203923757814,
+        "cosine": -0.44508747223578127
+      },
+      "relative_prediction_error_to_actual": 1.0633817578578524
+    },
+    {
+      "index": 6,
+      "control_pixel_rms": 0.05000000000000001,
+      "prediction": {
+        "actual_norm": 171.86850418844463,
+        "expected_norm": 21.999013869062363,
+        "error_norm": 171.96473989103546,
+        "relative_error_to_expected": 7.816929473046644,
+        "cosine": 0.05962377910217676
+      },
+      "relative_prediction_error_to_actual": 1.0005599637822684
+    },
+    {
+      "index": 7,
+      "control_pixel_rms": 0.04999999999999999,
+      "prediction": {
+        "actual_norm": 211.65533286086517,
+        "expected_norm": 30.1520933281915,
+        "error_norm": 202.33021850580946,
+        "relative_error_to_expected": 6.7103207828239055,
+        "cosine": 0.37368555599731196
+      },
+      "relative_prediction_error_to_actual": 0.9559419752396956
+    }
+  ],
+  "basis_orthogonality_max_error": 9.992007221626409e-16,
+  "targets": {
+    "pain_positive": {
+      "retained_rank": 64,
+      "ridge": 39.198052026586716,
+      "unconstrained_linear_span_captured_target_energy": 0.08865837753643913,
+      "unconstrained_linear_span_residual_norm": 335.8384035504078,
+      "unscaled_ridge_control_step_rms": 0.3483295989775415,
+      "unscaled_ridge_control_step_max_abs": 1.028548049791283,
+      "global_trust_scale": 0.24306108018067898,
+      "clipping_applied": false,
+      "actual_control_step_rms": 0.08466536858638397,
+      "actual_control_step_max_abs": 0.25,
+      "predicted_vs_target": {
+        "actual_norm": 23.04349497114307,
+        "expected_norm": 351.79507397470127,
+        "error_norm": 345.6552846833431,
+        "relative_error_to_expected": 0.9825472562137135,
+        "cosine": 0.2968697122103073
+      },
+      "predicted_target_mse": 4.167047148072091,
+      "gray_target_mse": 4.316398370286884,
+      "png": "research/image-bridge/controllability-7b/pain_positive.png",
+      "png_sha256": "094838c8e07f2c9ab064f37c90b037e24a04c76734daf1b0b3b3a284d96e83d4",
+      "controls_sha256_float64": "c56d3f7ad861eabf1d8501daf1e224b2127249fb4c355c3d9fe6286fffab19d7",
+      "expanded_pixel_step_rms": 0.055435923325936165,
+      "png_quantization_pixel_rms": 0.0011315791664499133,
+      "png_actual_vs_prediction": {
+        "actual_norm": 213.93586483665996,
+        "expected_norm": 23.04349497114307,
+        "error_norm": 206.7606909388924,
+        "relative_error_to_expected": 8.972627251109907,
+        "cosine": 0.3600097354268151
+      },
+      "png_actual_vs_target": {
+        "actual_norm": 213.93586483665996,
+        "expected_norm": 351.79507397470127,
+        "error_norm": 391.7467378094628,
+        "relative_error_to_expected": 1.1135651599193073,
+        "cosine": 0.10671328602927878
+      },
+      "png_target_mse": 5.352451801300049,
+      "png_error_reduction_from_gray": -0.24002729640181575,
+      "prediction_scope": "Prediction uses the actual globally-scaled coarse controls without clipping; PNG quantization and processor differences are included in measured prediction error."
+    },
+    "pain_negative": {
+      "retained_rank": 64,
+      "ridge": 39.198052026586716,
+      "unconstrained_linear_span_captured_target_energy": 0.14327528338190676,
+      "unconstrained_linear_span_residual_norm": 345.07626691224476,
+      "unscaled_ridge_control_step_rms": 0.4444481350516111,
+      "unscaled_ridge_control_step_max_abs": 1.3709453138367396,
+      "global_trust_scale": 0.18235592439522463,
+      "clipping_applied": false,
+      "actual_control_step_rms": 0.08104775051307019,
+      "actual_control_step_max_abs": 0.25,
+      "predicted_vs_target": {
+        "actual_norm": 23.57238035915871,
+        "expected_norm": 372.8159144396936,
+        "error_norm": 364.56955606351295,
+        "relative_error_to_expected": 0.9778808842198324,
+        "cosine": 0.3775763680988077
+      },
+      "predicted_target_mse": 4.635566448393796,
+      "gray_target_mse": 4.84764599816912,
+      "png": "research/image-bridge/controllability-7b/pain_negative.png",
+      "png_sha256": "6a63179c5ff5a8b752dff94b674041c23801a9ac3262cfe69dc940b60433d383",
+      "controls_sha256_float64": "c960e898d3ae551fa3b729a7e753ea1d2ba9dd3fbb3cfbc3a22dbde09bc96179",
+      "expanded_pixel_step_rms": 0.051182169524338336,
+      "png_quantization_pixel_rms": 0.0011340822619635442,
+      "png_actual_vs_prediction": {
+        "actual_norm": 198.1505828938468,
+        "expected_norm": 23.57238035915871,
+        "error_norm": 197.82801961889083,
+        "relative_error_to_expected": 8.39236498837622,
+        "cosine": 0.07315378876523242
+      },
+      "png_actual_vs_target": {
+        "actual_norm": 198.1505828938468,
+        "expected_norm": 372.8159144396936,
+        "error_norm": 422.5309358319622,
+        "relative_error_to_expected": 1.1333500515046024,
+        "cosine": -0.0018750394864112895
+      },
+      "png_target_mse": 6.226715564727783,
+      "png_error_reduction_from_gray": -0.2844823172070561,
+      "prediction_scope": "Prediction uses the actual globally-scaled coarse controls without clipping; PNG quantization and processor differences are included in measured prediction error."
+    },
+    "random_positive": {
+      "retained_rank": 64,
+      "ridge": 39.198052026586716,
+      "unconstrained_linear_span_captured_target_energy": 0.17841342112278225,
+      "unconstrained_linear_span_residual_norm": 317.56550746618507,
+      "unscaled_ridge_control_step_rms": 0.4572964336729975,
+      "unscaled_ridge_control_step_max_abs": 1.3165048199587348,
+      "global_trust_scale": 0.1898967601256759,
+      "clipping_applied": false,
+      "actual_control_step_rms": 0.08683911117152827,
+      "actual_control_step_max_abs": 0.25,
+      "predicted_vs_target": {
+        "actual_norm": 25.821796091874724,
+        "expected_norm": 350.35365868487696,
+        "error_norm": 340.2856442995416,
+        "relative_error_to_expected": 0.9712632817275901,
+        "cosine": 0.4211524884143927
+      },
+      "predicted_target_mse": 4.038585369571504,
+      "gray_target_mse": 4.281099544987419,
+      "png": "research/image-bridge/controllability-7b/random_positive.png",
+      "png_sha256": "611100eeb59f0d3e0ea82d99610dc1cfb5b0285717f23cac00064d7d07425266",
+      "controls_sha256_float64": "38f7409d0920f4bbbc8843db87dd1e1f90c90092c947255ec0e0cfdeb3805ce2",
+      "expanded_pixel_step_rms": 0.05562807315138145,
+      "png_quantization_pixel_rms": 0.0011315106145798849,
+      "png_actual_vs_prediction": {
+        "actual_norm": 207.21500868437508,
+        "expected_norm": 25.821796091874724,
+        "error_norm": 204.27375307966648,
+        "relative_error_to_expected": 7.91090411963809,
+        "cosine": 0.17540429421156892
+      },
+      "png_actual_vs_target": {
+        "actual_norm": 207.21500868437508,
+        "expected_norm": 350.35365868487696,
+        "error_norm": 400.07531706635064,
+        "relative_error_to_expected": 1.1419184790822905,
+        "cosine": 0.038743802072796235
+      },
+      "png_target_mse": 5.58245849609375,
+      "png_error_reduction_from_gray": -0.3039777368947294,
+      "prediction_scope": "Prediction uses the actual globally-scaled coarse controls without clipping; PNG quantization and processor differences are included in measured prediction error."
+    }
+  },
+  "elapsed_seconds": 231.1955385000001,
+  "artifact_sha256": {
+    "frozen_design.npz": "7c527b6fb800393068626a963c58c8b7332ea59552c7e54db0e86ac2ec88c66e",
+    "hidden_states.npz": "858e029fc30db05074caf8cb4ce711ba382613018e17f55e4100175b9e1b7a25",
+    "linear_system.npz": "cea58d6023318463dbaf75f3fed0fa74b55c35cf344eaa33828789e268c1ae6b",
+    "rendered_prompt.json": "a5537b12fda330763160300fdc9a6100f3e3e7f06066a8d7337d2afbe1eb07f2"
+  },
+  "interpretation": "A finite-step fixed-subspace model. Target-span energy ignores trust constraints and nonlinearity; only PNG realized error establishes achieved state matching. No behavioral claim or global impossibility conclusion."
+}

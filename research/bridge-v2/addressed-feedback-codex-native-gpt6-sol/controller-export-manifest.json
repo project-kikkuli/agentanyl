@@ -1,0 +1,30 @@
+{
+  "schema": "agentanyl-controller-export-v1",
+  "database_sha256": "37f631db4f959a24a41ded2087d536fda43b4066638fb19b93fe86897f2cf738",
+  "tables": {
+    "trace": {
+      "rows": 72,
+      "export": "controller-traces.jsonl",
+      "sha256": "90cdd856958e95bf6742d4fc83aa9564c8bc88801085f64b2e0065edeee4ee64",
+      "decoded_json_columns": [
+        "current",
+        "delivery",
+        "previous",
+        "request",
+        "response"
+      ]
+    },
+    "sessions": {
+      "rows": 8,
+      "export": "controller-sessions.jsonl",
+      "sha256": "a1dd91fcc0e1b1186bed61ffb28211ad7ecee36dad217c9bba12f7240ad72dd9",
+      "decoded_json_columns": []
+    },
+    "session_control": {
+      "rows": 8,
+      "export": "controller-session-control.jsonl",
+      "sha256": "e4c7e72589aa472fb7293fd724172a7f372a02e44af352524b40fbfe76db3c69",
+      "decoded_json_columns": []
+    }
+  }
+}

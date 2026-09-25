@@ -1,0 +1,11 @@
+{
+  "format": "gzip",
+  "mtime": 0,
+  "original": "source_activations.jsonl",
+  "original_bytes": 50423047,
+  "original_sha256": "049dceaab01a344466642afaaf8c4a7003a122823925d8ebabe2158452875ffc",
+  "compressed": "source_activations.jsonl.gz",
+  "compressed_bytes": 22271091,
+  "compressed_sha256": "67e0fe81ce29c0e69f9b4effec2befeced25d4144702a94a5d4b77bec3cf31ac",
+  "round_trip_verified": true
+}
