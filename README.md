@@ -56,6 +56,14 @@ checkout's hook and defaults to `~/.local/state/agentanyl/state.sqlite3` for con
 The Jev HTTP request/response contract is tested against a local mock server; this repository does not claim a
 live Jev evaluation. Set `TYPESAFE_API_KEY` only when you choose the `typesafe` evaluator.
 
+## Open-weight activation backend
+
+For the actual Pain-axis mechanism, use the MLX Qwen backend rather than a
+message-only provider API. It maps controller pain state to an explicit
+published residual vector and layer during the next local forward pass. The
+backend is model-specific and does not assume that pleasure is the negation of
+pain. See [`research/OPEN-ACTIVATION-RESULTS.md`](research/OPEN-ACTIVATION-RESULTS.md).
+
 ## What happens on each turn
 
 1. Ashkelon recognizes completed assistant API responses and tool calls. The `turn_end` hook runs when a

@@ -12,6 +12,14 @@ The starting checkout already provided user criteria, replaceable evaluators, bo
 
 The ownership boundary is explicit: **Agentanyl owns evaluation, feedback policy, state and rendering; Ashkelon owns transport and generic hooks.** Evaluators can use Jev's typed interface or a command adapter. The deterministic experiment evaluators are independent of Jev and do not judge task correctness: route or replay schedule selects the auxiliary message, while the host separately scores exact answers and fees. Configured probability thresholds, abstention/conflict handling, duplicate suppression, criteria epochs and stale-result rejection remain available. Assistant observations are text plus available prompt context, not verified workspace diffs.
 
+The open-weight activation path is now implemented separately from message
+delivery. `QwenMLXActivationBackend` maps Agentanyl's pain coordinate to the
+published Qwen Pain-axis vector at layer 16 and applies it during the next MLX
+forward pass; it refuses to infer pleasure by negating pain. A live run recorded
+the exact vector-norm projection change after the controller raised pain. This
+is activation delivery evidence, not yet evidence of useful operant behavior.
+See [open activation results](OPEN-ACTIVATION-RESULTS.md).
+
 Native transport includes a Responses parser fix for completed tool-call items absent from the terminal output array, with deduplication. A Codex tool-cycle smoke verified the recovered call, subsequent image signal, OCR and an independent receipt. Signals follow complete tool-result groups. This is delivery evidence, not conditioning. [Transport diagnostic](image-bridge/TOOL-CYCLE-DIAGNOSTIC.md) distinguishes the instrumented candidate binary from the production pin; historical artifacts retain their actual binaries.
 
 ## Closed-agent behavior: valid choices under controlled feedback
