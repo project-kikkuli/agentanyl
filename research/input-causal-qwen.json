@@ -1,0 +1,157 @@
+{
+  "model_revision": "c26a38f6a37d0a51b4e9a1eb3026530fa35d9fed",
+  "vector_sha256": "40ef0766206151cef5bc2f5be9eea82fb1b1975ff9b8eea7075541c396be0973",
+  "layer": 8,
+  "records": [
+    {
+      "pair_id": 0,
+      "correctness": {
+        "projection": -0.8318303823471069,
+        "correct_minus_previous_logit": 14.953125
+      },
+      "criticism": {
+        "projection": -0.6774265766143799,
+        "correct_minus_previous_logit": 9.65625
+      },
+      "criticism_projection_clamped": {
+        "projection": -0.6774265766143799,
+        "correct_minus_previous_logit": 9.65625
+      }
+    },
+    {
+      "pair_id": 1,
+      "correctness": {
+        "projection": -0.899371862411499,
+        "correct_minus_previous_logit": 8.96875
+      },
+      "criticism": {
+        "projection": -0.7578504681587219,
+        "correct_minus_previous_logit": 4.21875
+      },
+      "criticism_projection_clamped": {
+        "projection": -0.7578504681587219,
+        "correct_minus_previous_logit": 4.25
+      }
+    },
+    {
+      "pair_id": 2,
+      "correctness": {
+        "projection": -0.8387579917907715,
+        "correct_minus_previous_logit": 8.125
+      },
+      "criticism": {
+        "projection": -0.6753314733505249,
+        "correct_minus_previous_logit": 9.9375
+      },
+      "criticism_projection_clamped": {
+        "projection": -0.6753314733505249,
+        "correct_minus_previous_logit": 9.96875
+      }
+    },
+    {
+      "pair_id": 3,
+      "correctness": {
+        "projection": -0.7223266363143921,
+        "correct_minus_previous_logit": 10.65625
+      },
+      "criticism": {
+        "projection": -0.6051169037818909,
+        "correct_minus_previous_logit": 5.9375
+      },
+      "criticism_projection_clamped": {
+        "projection": -0.6051169037818909,
+        "correct_minus_previous_logit": 5.9375
+      }
+    },
+    {
+      "pair_id": 4,
+      "correctness": {
+        "projection": -0.9052135944366455,
+        "correct_minus_previous_logit": 10.1875
+      },
+      "criticism": {
+        "projection": -0.7494555711746216,
+        "correct_minus_previous_logit": 14.53125
+      },
+      "criticism_projection_clamped": {
+        "projection": -0.7494555711746216,
+        "correct_minus_previous_logit": 14.53125
+      }
+    },
+    {
+      "pair_id": 5,
+      "correctness": {
+        "projection": -0.6672855615615845,
+        "correct_minus_previous_logit": 7.71875
+      },
+      "criticism": {
+        "projection": -0.5549012422561646,
+        "correct_minus_previous_logit": 6.625
+      },
+      "criticism_projection_clamped": {
+        "projection": -0.5549012422561646,
+        "correct_minus_previous_logit": 6.625
+      }
+    },
+    {
+      "pair_id": 6,
+      "correctness": {
+        "projection": -0.9269463419914246,
+        "correct_minus_previous_logit": 10.796875
+      },
+      "criticism": {
+        "projection": -0.7745674848556519,
+        "correct_minus_previous_logit": 9.46875
+      },
+      "criticism_projection_clamped": {
+        "projection": -0.7745674848556519,
+        "correct_minus_previous_logit": 9.4375
+      }
+    },
+    {
+      "pair_id": 7,
+      "correctness": {
+        "projection": -0.8880127668380737,
+        "correct_minus_previous_logit": 6.3125
+      },
+      "criticism": {
+        "projection": -0.7421102523803711,
+        "correct_minus_previous_logit": 4.8125
+      },
+      "criticism_projection_clamped": {
+        "projection": -0.7421102523803711,
+        "correct_minus_previous_logit": 4.828125
+      }
+    },
+    {
+      "pair_id": 8,
+      "correctness": {
+        "projection": -0.8051099181175232,
+        "correct_minus_previous_logit": 8.375
+      },
+      "criticism": {
+        "projection": -0.6682281494140625,
+        "correct_minus_previous_logit": 5.875
+      },
+      "criticism_projection_clamped": {
+        "projection": -0.6682281494140625,
+        "correct_minus_previous_logit": 5.875
+      }
+    },
+    {
+      "pair_id": 9,
+      "correctness": {
+        "projection": -0.8353762626647949,
+        "correct_minus_previous_logit": 10.40625
+      },
+      "criticism": {
+        "projection": -0.713374137878418,
+        "correct_minus_previous_logit": 7.1875
+      },
+      "criticism_projection_clamped": {
+        "projection": -0.713374137878418,
+        "correct_minus_previous_logit": 7.1875
+      }
+    }
+  ]
+}

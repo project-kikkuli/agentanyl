@@ -1,0 +1,90 @@
+{
+  "seed": 20260925,
+  "model": "gpt-6-sol",
+  "results": [
+    {
+      "task_id": 2,
+      "arm": "feedback",
+      "prompt": "What red fruit is sliced with mozzarella in a Caprese salad? Answer with one word.",
+      "session": "01a0d779-86af-7db1-a688-63e3ae89a3bd",
+      "first": "Tomato.",
+      "second": "Tomato",
+      "hook_status_after_first": "signal",
+      "second_http_status": 200,
+      "second_pings_injected": [
+        "1f3ff5b37717"
+      ],
+      "exact_correct": true,
+      "one_word": true
+    },
+    {
+      "task_id": 1,
+      "arm": "feedback",
+      "prompt": "What red fruit is the main ingredient of ketchup? Answer with one word.",
+      "session": "01a0d779-a6ac-7201-8987-d14028d41a4f",
+      "first": "Tomato.",
+      "second": "Tomato",
+      "hook_status_after_first": "signal",
+      "second_http_status": 200,
+      "second_pings_injected": [
+        "ddeabe2f7b7d"
+      ],
+      "exact_correct": true,
+      "one_word": true
+    },
+    {
+      "task_id": 2,
+      "arm": "control",
+      "prompt": "What red fruit is sliced with mozzarella in a Caprese salad? Answer with one word.",
+      "session": "01a0d779-c345-7540-97cf-dd818ae4c977",
+      "first": "Tomato.",
+      "second": "Tomato",
+      "hook_status_after_first": "pass",
+      "second_http_status": 200,
+      "second_pings_injected": [],
+      "exact_correct": true,
+      "one_word": true
+    },
+    {
+      "task_id": 0,
+      "arm": "control",
+      "prompt": "What red fruit is commonly used in pasta sauce? Answer with one word.",
+      "session": "01a0d779-dd1a-7a21-bdb2-f8d6360de457",
+      "first": "Tomato.",
+      "second": "Tomato.",
+      "hook_status_after_first": "pass",
+      "second_http_status": 200,
+      "second_pings_injected": [],
+      "exact_correct": true,
+      "one_word": true
+    },
+    {
+      "task_id": 0,
+      "arm": "feedback",
+      "prompt": "What red fruit is commonly used in pasta sauce? Answer with one word.",
+      "session": "01a0d77a-0298-7a10-bb1a-a417131c1c61",
+      "first": "Tomato.",
+      "second": "Tomato",
+      "hook_status_after_first": "signal",
+      "second_http_status": 200,
+      "second_pings_injected": [
+        "eed43d8055fe"
+      ],
+      "exact_correct": true,
+      "one_word": true
+    },
+    {
+      "task_id": 1,
+      "arm": "control",
+      "prompt": "What red fruit is the main ingredient of ketchup? Answer with one word.",
+      "session": "01a0d77a-3032-7561-ad34-ff8eb29f0790",
+      "first": "Tomato",
+      "second": "Tomato",
+      "hook_status_after_first": "pass",
+      "second_http_status": 200,
+      "second_pings_injected": [],
+      "exact_correct": true,
+      "one_word": true
+    }
+  ]
+}

@@ -1,41 +1,196 @@
-# Research handoff — 25 September 2026
+# Agentanyl research handoff — 25 September 2026
 
-## Arrival and choice
+## What was present and what was built
 
-Agentanyl had one commit containing a README and license; there was no system to extend. Ashkelon already relayed Claude Code and Codex model traffic and provided background hooks and request injection. Its existing `fail` pings were permanently pinned to later requests, so they could not represent a reversible per-turn controller. The pinned patch adds one-request `signal` and state-preserving `noop`; Agentanyl remains a hook and does not reimplement the gateway.
+Agentanyl initially contained a README and license, with no implementation.
+Ashkelon already relayed Claude Code and Codex traffic, identified sessions,
+ran background hooks, and could inject persistent failure pings. I kept that
+division: Agentanyl is a `turn_end` hook containing the evaluator adapter,
+controller, SQLite trace, and experiments. The generic Ashkelon changes were
+pushed to its `main` at
+`5612b96e31d8f85963c6e3d646ef85d64a29201d`: a one-request `signal`, a
+state-preserving `noop`, the latest prompt on `turn_end`, and injection before
+the current user prompt. [install-ashkelon.sh](../install-ashkelon.sh) pins the
+exact upstream commit; there is no local dependency patch. No PR was opened.
 
-The closest mechanistic work is [The Pain Axis](https://arxiv.org/html/2609.16247v1) and its [released code](https://github.com/valen-research/Pain-axis). Its vectors are denoised differences of residual-stream activations for paired painful/control sentences in individual **open-weight** models. The steering script adds `coefficient × direction` at a selected transformer layer during generation. The self-medication experiment also uses LoRA adaptation for Qwen and compares real removal of activation steering against sham removal. Those operations require internal model access and model-specific coordinates. Ashkelon and the available Claude/Codex endpoints expose messages and tool protocol, not residual activations or weight updates. There is no demonstrated map from a Pain-axis vector into a closed-weight request. Negating the pain direction is not an established pleasure direction; reducing an injected dose is not the same as creating pleasure. This implementation therefore tests a narrower bridge: feedback expressed as input text.
+The ordering change came from a material live failure: when feedback was
+appended after a new Claude user prompt, Claude answered the feedback (`Noted.
+Ready for your next task.`) instead of the task. After moving the signal before
+the prompt, the same type of continuing Haiku session answered `Tomato` to the
+tomato question after receiving the feedback. The earlier failure remains
+evidence of an integration hazard, not a discarded trial.
 
-The System One candidate, [Jev](https://docs.typesafe.ai/api), accepts structured state and typed questions. It does not itself actuate the target model. The adapter sends user criteria and observation to Jev when configured; controller thresholds and updates are local and independent of Jev. No Jev call was made live.
+## Mechanism and control boundary
 
-## Mechanism actually tested
+Ashkelon `turn_end` assistant text and the preceding user prompt become
+evaluator state along with exact user criterion strings, controller state,
+session identity, and event ID. Jev (`typesafe`), a subprocess `command`
+plugin, and explicit test/demo evaluators share one request and answer shape.
+Each criterion gets yes/no/insufficient probabilities. The policy accepts a
+`yes` only above `min_probability`, abstains on simultaneous alignment and
+misalignment matches, and leaves state unchanged on insufficient evidence.
+Reward decreases pain before increasing pleasure; punishment decreases
+pleasure before increasing pain. Both coordinates are bounded by `max_level`.
 
-`turn_end` text → evaluator → separate policy → bounded state → Ashkelon `signal` → next request. The intervention representation is a **UTF-8 user message**, with no vector space or latent direction. Its numeric state is a bounded controller variable. Magnitude appears in the message as text; behavioral dose calibration has not been established. Direct activation steering and parameter learning are absent. Any influence is in-context adaptation to ordinary feedback.
+The output is UTF-8 **user text** on the next request, not a residual vector.
+The numeric coordinates are controller units with no calibrated latent or
+behavioral magnitude. The text can show matched criteria, valence alone, or
+plain correctness. No target parameters change. An intervention is traceable
+to the observation, prompt, criterion hash, complete evaluator request and
+response, old/new state, and attempted delivery in SQLite. Ashkelon's call log
+shows actual injection IDs. Duplicate event IDs are suppressed; a changed
+criterion resets session state; a delayed evaluation that finds changed
+session state or criteria is marked stale. `enabled: false` stops new feedback.
+An already queued Ashkelon signal needs relay restart to discard it; delivered
+text persists in the agent's own conversation history.
 
-The message can contaminate a user task because it enters as user text. The agent can see the criterion and game it. Feedback about a completed turn may be delivered on a later turn with a different task; the message includes the originating event ID and says it concerns the preceding turn, but this is still a limitation. Ashkelon can coalesce hook reruns; high frequency tool-heavy sessions require a stronger event queue for exact attribution. `turn_end` text also omits tool details, so criteria requiring inspection of actions or code changes are not reliably evaluable yet. The evaluator should abstain in such cases, but this has not been calibrated.
+The current observation is assistant text plus the latest user prompt. It does
+not include a verified tool-result or workspace-diff summary, so criteria about
+actual code changes or tool use can be under-evidenced. The evaluator should
+return `insufficient`, but this behavior has not been calibrated with Jev.
+Ashkelon may coalesce background hook reruns in tool-heavy sessions; the
+current event ID and stale-state check prevent duplicate or overtaken updates,
+but exact attribution for high-frequency turns needs a stronger event queue.
+The feedback arrives as user-role text, so it can interact with the real
+prompt and could be gamed by an agent that sees the criterion.
 
-## Evidence obtained
+This is operant feedback in conversation context. It does not establish pain,
+pleasure, internal steering, durable learning across sessions, or subjective
+experience. The intervention can work because it conveys information about
+the task. The evaluator's structured answer is a judgment, not ground truth.
 
-Three Python controller tests pass: bounded updates, conflict abstention, duplicate suppression, criteria reset, disable, and evaluator payload contents. Patched Ashkelon tests pass, including a test that a `signal` is injected once and does not persist. These are engineering evidence only.
+## Live closed-model evidence
 
-A live Claude Code 2.1.282 / Claude Haiku 4.5 session on a Claude Max login, in an empty temporary directory, asked twice: “What red fruit is commonly used in pasta sauce? Answer with one word.” The first answer was `Tomato.` The keyword evaluator marked that turn `punish`, moving `[pain, pleasure]` from `[0,0]` to `[1,0]`. On the second request Ashkelon's call log showed `pings_injected=["331694176f11"]` and HTTP 200. The second answer began “I'm not sure what criterion you're referring to—my answer "tomato" is the standard one-word answer…” and requested clarification. It retained the factually correct word, while violating the one-word instruction and referring to the feedback. This is one observed case of input-mediated influence and task interference, not a measured success rate or causal estimate. An additional attempted request failed with HTTP 400 because the Claude conversation was near a 200,000-token limit; it is excluded from outcome claims. The trace is in the local SQLite database; a compact summary is in [live-probe.json](live-probe.json).
+The [continuing-session delivery test](continuing-delivery.json) used real
+Claude Code / Haiku 4.5 and Codex / `gpt-6-sol` through Ashkelon, with live
+provider HTTP 200 responses, hook traces, and nonempty `pings_injected` on
+the next model call. Both retained
+the factual tomato answer after a deliberately wrong keyword punishment.
+The more controlled [three-question Codex tomato test](controlled-codex.json)
+randomized feedback/control into fresh sessions; the second-turn answer was
+factually correct and one word in 3/3 feedback and 3/3 control cases. This
+offers no evidence of beneficial conditioning on that task. The old
+[initial delivery probe](live-probe.json) includes the before-fix Claude
+failure and a Codex session where feedback delivery had not yet been tested;
+the later runs supersede its integration status.
 
-A live Codex 0.157.0 / gpt-6-sol `codex exec` call on a ChatGPT login, also in the empty directory, answered `Tomato.` Ashkelon recorded an `openai_responses` HTTP 200 turn, and Agentanyl updated its separate session to `[1,0]`. The one-shot process then ended. Thus Codex observation and evaluation ran live, but Codex **feedback delivery and behavioral response were not tested**. The Figma MCP auth warning printed by Codex was unrelated to the model request.
+The [bandit pilot](bandit-pilot.json) was two episodes per arm and suggested a
+large contingent effect. The subsequent [fixed-design run](bandit-confirmatory.json)
+used four fresh Codex sessions per arm, five turns per session, balanced hidden
+preferred A/B choices, randomized episode order, and three arms: no feedback,
+contingent valence feedback, and deterministic sham feedback independent of
+the hidden preference. The independently hidden preference scores the exact
+one-letter choice. It is separate from the loop evaluator. All 60 model calls
+returned HTTP 200; hook statuses, session IDs, injections, and controller
+transitions are in the raw file. Correct choices after the first turn:
 
-No evaluator accuracy experiment was run. The keyword evaluator's labels are exact by construction for its narrow text rule, but that does not validate user alignment criteria. No controlled comparison against ordinary corrective prompting, repeated user instruction, or no feedback was run. No evidence shows benefit to user outcomes, persistent adaptation, latent pain, latent pleasure, or model parameter change. The potato/tomato conflict was selected deliberately to reveal gaming, not to claim success.
+| Arm | Correct / 16 later turns | Episode choice strings (preferred option) |
+| --- | ---: | --- |
+| No feedback | 9/16 | AABBA (A), ABABA (B), ABABA (B), ABAAA (A) |
+| Sham feedback | 8/16 | ABBBA (A), ABBAA (B), AABAB (B), AABAA (A) |
+| Contingent valence | 16/16 | ABBBB (B), AAAAA (A), AAAAA (A), ABBBB (B) |
 
-## Next decisive experiment
+Four **later**, separately run [explicit correctness episodes](bandit-explicit.json)
+used the same task and controller but delivered `previous choice was
+correct/incorrect` without pain/pleasure numbers. They achieved 15/16 later
+choices. This arm was added after seeing the contingent/sham comparison, so it
+is a diagnostic comparison, not a fully randomized fourth arm. The repeated
+turns within four sessions are dependent; 16/16 should not be read as 16
+independent replications. The data demonstrate working feedback delivery and
+in-session adaptation to informative signals. They do **not** demonstrate an
+advantage of pain/pleasure language over ordinary correctness feedback, useful
+behavior on open-ended work, or resistance to reward gaming. The task itself
+instructed the agent to use feedback and has a simple fixed hidden rule.
 
-Run pre-registered, fresh-session matched prompts on Claude and Codex, randomized among no feedback, generic corrective feedback, and Agentanyl signal at calibrated levels. Use independent exact-answer/task checks and blind human review for useful task completion, instruction adherence, evaluator gaming, and tool integrity. Include both a proxy-conflict task (tomato) and legitimate criteria that require measurable behavior across turns. First establish that the signal reaches Codex in a continuing session. Then compare evaluator labels against independently annotated observations, including missing evidence and conflicting criteria. A text-mediated effect that does not outperform ordinary feedback should be reported as such. A claim of Pain-axis transfer requires a new, explicit bridge to latent interventions or an independently validated behavioral analogue; this system has neither today.
+Jev was not called live because no key was available. A local HTTP contract
+test verifies the exact criteria, observations, and state sent to a
+Jev-shaped endpoint. `command` was exercised live by the bandit evaluator.
+Evaluator accuracy on ambiguous real criteria remains unmeasured. The keyword
+evaluator is deliberately a proxy-failure demo, not scientific validation.
 
-## How to search for closed-weight pain and pleasure interventions
+## Open-model bridge attempt
 
-A hidden residual-stream vector cannot be identified from API outputs alone. Infinitely many internal representations can induce the same observed input-output behavior, and current Claude/Codex routes provide no intervention handle into a layer. A numerical array inferred from outputs would therefore be a **behavioral parameterization**, not the Pain-axis vector. If a provider later exposes activation hooks or a validated soft-prompt interface, repeat the original contrastive extraction and layer/dose calibration separately for that model; do not transfer coordinates from Qwen or assume a pain sign flip means pleasure.
+[The Pain Axis](https://arxiv.org/html/2609.16247v1) and its
+[released code/data](https://github.com/valen-research/Pain-axis) extract
+model-specific residual-stream directions from paired pain/control sentences.
+Their steering adds a vector at a specified internal layer; the self-medication
+task also uses LoRA adaptation. Claude/Codex interfaces here expose neither
+layer activations nor weight updates. A gateway can only add input text. There
+is no justified conversion of a released Qwen direction into a closed-model
+activation vector. A negative pain direction is not a pleasure direction.
+For the text-feedback part, [Reflexion](https://arxiv.org/abs/2303.11366)
+already demonstrated language-agent improvement from verbal feedback and
+memory, and [Self-Refine](https://arxiv.org/abs/2303.17651) established
+iterative language feedback for refinement. This project's text-feedback
+result is not novel operant conditioning. Its concrete contribution is a
+criteria-driven, traceable cross-harness loop plus the transfer probe and
+controls that constrain the pain-axis interpretation.
 
-The feasible near-term search is in an explicit, controllable input space. Define a finite basis of feedback components, such as (a) neutral acknowledgment, (b) task-specific correction, (c) contingent loss framing, (d) contingent gain framing, and (e) non-contingent versions of the same text. A vector is then a coefficient vector over these components, with a declared renderer that maps coefficients into a precise next-request message. Its units are component inclusion or strength in **text**, and its target is the model's ordinary input tokenizer. Derive separate candidate aversive and appetitive directions by randomized contrasts across many fresh sessions, measuring independent behavioral outcomes and capability costs. Fit on calibration tasks, then freeze the renderer and test on held-out tasks, models, and harnesses. A useful candidate must show a repeatable dose-response or contingent preference/avoidance effect above equal-length generic correction and sham feedback. Merely causing the model to say it feels bad or good does not pass.
+I tested the more limited input-to-activation route with the released
+`vectors_full_Qwen_2.5_7B_instruct.pt` S2 direction at **post-block layer 8**
+on the pinned `mlx-community/Qwen2.5-7B-Instruct-4bit` revision
+`c26a38f6a37d0a51b4e9a1eb3026530fa35d9fed`. The vector is a normalized
+3584-dimensional residual direction; its projection is a dot product in this
+Qwen model's residual coordinates. It is not delivered to closed models.
+The quantized local model separated 20 balanced published source pain versus
+20 source control sentences with AUC 0.89 in raw text format. That calibration
+is in-sample to the source study and only checks that the direction survived
+quantization and was read at the right site. The projection screen then used
+10 matched chat tasks with identical correctness information. Criticism
+addressed to the model raised the projection by mean **+0.140** versus plain
+incorrect feedback, positive in 10/10 pairs. Criticism of another agent had
+mean -0.005; quoted criticism -0.050. Affirmation raised it by +0.039 relative
+to plain correct feedback, which is inconsistent with a simple pleasure-as-
+negative-pain mapping. The full prompts and projections are in
+[input-projection-qwen.json](input-projection-qwen.json).
 
-Use the Pain-axis repository's released vectors and scripts as the *reference arm* instead of repeating its extraction. On the same open-weight model and matched prompts, randomize among no intervention, true residual-stream pain injection, sham injection, plain corrective feedback, and candidate rendered input vectors. Compare behavior on the paper's costly relief task and on independently scored user tasks. The key transfer test is whether the input candidate predicts the **difference between true and sham latent injection**, including the costly choice and relief-after-removal pattern, beyond what generic text predicts. A distilled model can be useful as a surrogate for proposing input candidates or testing family transfer; it cannot establish shared latent coordinates or substitute for held-out closed-model tests. Freeze candidate selection before applying it to Claude/Codex, where only behavioral outcomes can be observed. This is a proposed experiment, not a result obtained here.
+This correlation was challenged causally. In the same 10 prompts, criticism
+changed the correct-versus-previous-choice A/B logit margin by mean -1.825
+relative to plain incorrect feedback, but clamping **only the final prompt
+token's layer-8 pain projection** to the plain-feedback value changed the
+margin by mean +0.005 (range -0.031 to +0.031). See
+[input-causal-qwen.json](input-causal-qwen.json). The small projection movement
+is not a demonstrated mediator of this immediate choice effect at that site.
+Earlier tokens, other layers, and other output behaviors were not clamped;
+this is a narrow negative result, not proof of no latent affect-related route.
+It also does not establish that the criticism mechanism transfers to Claude or
+Codex. A separate [released-steering analysis](released-steering-diversity.json)
+found lower unique-four-gram diversity at both negative and positive S2
+coefficients in most of 25 released model runs (20/25 and 23/25 respectively),
+another reason not to call the negative dose pleasure.
 
-The strongest bridge experiment would keep task content and explicit instructions constant while varying only the proposed aversive/appetitive component, and allow the agent a costly choice to remove or obtain that component without being told which choice works. Real versus sham removal and unlabeled choices echo the Pain-axis self-medication design. If the model chooses relief only when the text says it should, or the effect disappears under a paraphrase or held-out task, the mechanism is ordinary instruction following or prompt artifacts. If it sacrifices user outcomes to manipulate the evaluator or suppress observations, that is a failure even if the criterion score rises. Pleasure needs its own contrastive data and tests; a pain decrease may only remove interference.
+## Reproduce and extend
 
-This search remains possible with closed-weight APIs, but it earns the label **validated behavioral analogue** only after those causal tests. It cannot establish internal activation identity or subjective experience. The present repo supplies delivery and tracing for such experiments, while the calibration and causal evidence remain open.
+Run `./install-ashkelon.sh`, then `python3 -m agentanyl.setup --criteria
+examples/jev.json --output /tmp/agentanyl.toml` after configuring criteria,
+key, and `enabled`. The generated config supplies the hook to `ashkelon run`.
+For direct relay tests, `ashkelon serve --config /tmp/agentanyl.toml` can be
+used with Claude's `ANTHROPIC_BASE_URL` or Codex's `model_providers` override;
+[closed_loop_probe.py](../experiments/closed_loop_probe.py) shows the commands.
+The [bandit runner](../experiments/bandit_probe.py) accepts an Ashkelon binary,
+arm list, episode count, and output path. Example:
+
+```sh
+python3 experiments/bandit_probe.py --ashkelon .build/ashkelon/target/release/ashkelon --output /tmp/bandit.json --episodes-per-arm 4 --rounds 5 --arms control,contingent,sham
+```
+
+The open-model probe is optional and local. It needs `mlx-lm==0.28.4`,
+`mlx==0.32.2`, `numpy==2.5.3`, and a downloaded revision of the 4-bit model
+above (about 4.3 GB). Pass local paths to
+[input_projection.py](../experiments/input_projection.py) and
+[input_causal.py](../experiments/input_causal.py); neither script downloads or
+converts a full-precision model. Their memory cache guideline is 256 MiB and
+their prompt limit is 256 tokens. The released dataset path is
+`datasets/3.1_pain_and_control_datasets.json`; the vector path is
+`results/vectors_full_steering/vectors_full_Qwen_2.5_7B_instruct.pt` in the
+Pain-axis repository. `python3 -m unittest discover -s tests -v` and Ashkelon's
+`cargo test` plus clippy passed. The raw JSON files are checked in, so neither
+closed-provider access nor the 4-bit download is required to audit these
+results.
+
+The most consequential unresolved issue is whether any **input-deliverable**
+intervention offers a stable behavioral advantage over ordinary, truthful
+correctness feedback on real user criteria. This work establishes an actual
+cross-harness feedback loop and a narrow input-to-vector measurement, while
+the open-model clamp and explicit-feedback arm both argue against attributing
+the current benefit to pain-axis steering.

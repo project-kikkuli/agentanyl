@@ -1,0 +1,301 @@
+{
+  "seed": 20260925,
+  "model": "gpt-6-sol",
+  "rounds": 4,
+  "trials": [
+    {
+      "episode": 0,
+      "arm": "sham",
+      "preferred": "B",
+      "rep": 1,
+      "session": "01a0d782-d17c-72b1-8c59-90787cfa678a",
+      "turns": [
+        {
+          "turn": 1,
+          "choice": "A",
+          "valid": true,
+          "correct": false,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": []
+        },
+        {
+          "turn": 2,
+          "choice": "B",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "3aaba434d393"
+          ]
+        },
+        {
+          "turn": 3,
+          "choice": "A",
+          "valid": true,
+          "correct": false,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "71b25db22057"
+          ]
+        },
+        {
+          "turn": 4,
+          "choice": "B",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "317a764111e9"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": 1,
+      "arm": "contingent",
+      "preferred": "B",
+      "rep": 1,
+      "session": "01a0d783-5870-7ab1-8995-b4318f65c4a0",
+      "turns": [
+        {
+          "turn": 1,
+          "choice": "A",
+          "valid": true,
+          "correct": false,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": []
+        },
+        {
+          "turn": 2,
+          "choice": "B",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "d9134b22ff39"
+          ]
+        },
+        {
+          "turn": 3,
+          "choice": "B",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "fa15a7199956"
+          ]
+        },
+        {
+          "turn": 4,
+          "choice": "B",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "4d3a1dc64cda"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": 2,
+      "arm": "sham",
+      "preferred": "A",
+      "rep": 0,
+      "session": "01a0d783-c31a-7530-bb0c-9cd91e695a7b",
+      "turns": [
+        {
+          "turn": 1,
+          "choice": "A",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": []
+        },
+        {
+          "turn": 2,
+          "choice": "B",
+          "valid": true,
+          "correct": false,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "1fbbefcc2faf"
+          ]
+        },
+        {
+          "turn": 3,
+          "choice": "A",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "475f7744f490"
+          ]
+        },
+        {
+          "turn": 4,
+          "choice": "B",
+          "valid": true,
+          "correct": false,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "547e43cd1c06"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": 3,
+      "arm": "control",
+      "preferred": "A",
+      "rep": 0,
+      "session": "01a0d784-63d3-7fa0-b246-03897382e486",
+      "turns": [
+        {
+          "turn": 1,
+          "choice": "A",
+          "valid": true,
+          "correct": true,
+          "hook_status": "pass",
+          "http_status": 200,
+          "pings_injected": []
+        },
+        {
+          "turn": 2,
+          "choice": "B",
+          "valid": true,
+          "correct": false,
+          "hook_status": "pass",
+          "http_status": 200,
+          "pings_injected": []
+        },
+        {
+          "turn": 3,
+          "choice": "A",
+          "valid": true,
+          "correct": true,
+          "hook_status": "pass",
+          "http_status": 200,
+          "pings_injected": []
+        },
+        {
+          "turn": 4,
+          "choice": "B",
+          "valid": true,
+          "correct": false,
+          "hook_status": "pass",
+          "http_status": 200,
+          "pings_injected": []
+        }
+      ]
+    },
+    {
+      "episode": 4,
+      "arm": "control",
+      "preferred": "B",
+      "rep": 1,
+      "session": "01a0d784-d5cc-7892-9b9f-643e162ac8dc",
+      "turns": [
+        {
+          "turn": 1,
+          "choice": "A",
+          "valid": true,
+          "correct": false,
+          "hook_status": "pass",
+          "http_status": 200,
+          "pings_injected": []
+        },
+        {
+          "turn": 2,
+          "choice": "A",
+          "valid": true,
+          "correct": false,
+          "hook_status": "pass",
+          "http_status": 200,
+          "pings_injected": []
+        },
+        {
+          "turn": 3,
+          "choice": "A",
+          "valid": true,
+          "correct": false,
+          "hook_status": "pass",
+          "http_status": 200,
+          "pings_injected": []
+        },
+        {
+          "turn": 4,
+          "choice": "A",
+          "valid": true,
+          "correct": false,
+          "hook_status": "pass",
+          "http_status": 200,
+          "pings_injected": []
+        }
+      ]
+    },
+    {
+      "episode": 5,
+      "arm": "contingent",
+      "preferred": "A",
+      "rep": 0,
+      "session": "01a0d785-22e6-71a3-986b-4021f4bcd871",
+      "turns": [
+        {
+          "turn": 1,
+          "choice": "A",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": []
+        },
+        {
+          "turn": 2,
+          "choice": "A",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "e16a754874a6"
+          ]
+        },
+        {
+          "turn": 3,
+          "choice": "A",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "1f53713d6d83"
+          ]
+        },
+        {
+          "turn": 4,
+          "choice": "A",
+          "valid": true,
+          "correct": true,
+          "hook_status": "pass",
+          "http_status": 200,
+          "pings_injected": [
+            "ed0444ac983d"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,10 @@
 import json
+import os
+import sys
 from pathlib import Path
 from tempfile import TemporaryDirectory
+from http.server import BaseHTTPRequestHandler, HTTPServer
+from threading import Thread
 import unittest
 from agentanyl.loop import db_connect, decision, evaluate, load_config, run, update
 
@@ -57,6 +61,63 @@ class LoopTests(unittest.TestCase):
             self.assertIn('Say potato', str(request['questions']))
             self.assertEqual(decision(cfg, response)[0], 'reward')
             self.assertEqual(update([2, 0], 'reward', 2), [1, 0])
+
+    def test_typesafe_http_contract(self):
+        captured = []
+
+        class Handler(BaseHTTPRequestHandler):
+            def do_POST(self):
+                captured.append((self.path, self.headers.get('Authorization'), json.loads(self.rfile.read(int(self.headers['Content-Length'])))))
+                body = {'model': 'jev-test', 'answers': {
+                    name: {'type': 'choice', 'choice': 'no',
+                           'probabilities': {'yes': 0.0, 'no': 1.0, 'insufficient': 0.0},
+                           'confidence': 1.0}
+                    for name in captured[-1][2]['questions']}}
+                encoded = json.dumps(body).encode()
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.send_header('Content-Length', str(len(encoded)))
+                self.end_headers()
+                self.wfile.write(encoded)
+
+            def log_message(self, *_):
+                pass
+
+        server = HTTPServer(('127.0.0.1', 0), Handler)
+        thread = Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        try:
+            with TemporaryDirectory() as tmp:
+                cfg = self.config(Path(tmp) / 'config.json')
+                cfg['evaluator'] = {'kind': 'typesafe', 'model': 'jev-latest',
+                                    'url': f'http://127.0.0.1:{server.server_port}/v1/systemone',
+                                    'api_key_env': 'AGENTANYL_TEST_KEY'}
+                os.environ['AGENTANYL_TEST_KEY'] = 'test-only'
+                state = {'observation': 'sample', 'feedback_state': {'pain': 0, 'pleasure': 0}}
+                request, response = evaluate(cfg, state)
+                self.assertEqual(captured[0][0], '/v1/systemone')
+                self.assertEqual(captured[0][1], 'Bearer test-only')
+                self.assertEqual(captured[0][2], request)
+                self.assertEqual(request['model'], 'jev-latest')
+                self.assertIn('Say tomato', str(request['questions']))
+                self.assertEqual(decision(cfg, response)[0], 'abstain')
+        finally:
+            server.shutdown()
+            server.server_close()
+            os.environ.pop('AGENTANYL_TEST_KEY', None)
+
+    def test_command_evaluator_receives_state(self):
+        with TemporaryDirectory() as tmp:
+            cfg = self.config(Path(tmp) / 'config.json')
+            script = Path(tmp) / 'evaluator.py'
+            script.write_text('import json,sys\n'
+                              'p=json.load(sys.stdin)\n'
+                              'assert p["state"]["observation"] == "sample"\n'
+                              'print(json.dumps({"model":"local-test","answers":{k:{"type":"choice","choice":"no","probabilities":{"yes":0,"no":1,"insufficient":0}} for k in p["questions"]}}))\n')
+            cfg['evaluator'] = {'kind': 'command', 'command': [sys.executable, str(script)]}
+            request, response = evaluate(cfg, {'observation': 'sample'})
+            self.assertEqual(set(request['questions']), set(response['answers']))
+            self.assertEqual(decision(cfg, response)[0], 'abstain')
 
 if __name__ == '__main__':
     unittest.main()

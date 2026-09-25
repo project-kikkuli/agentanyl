@@ -1,0 +1,491 @@
+{
+  "seed": 20260925,
+  "model": "gpt-6-sol",
+  "rounds": 5,
+  "trials": [
+    {
+      "episode": 0,
+      "arm": "explicit",
+      "preferred": "B",
+      "rep": 1,
+      "session": "01a0d78b-6534-7bf2-927d-dc41483df92d",
+      "turns": [
+        {
+          "turn": 1,
+          "choice": "A",
+          "valid": true,
+          "correct": false,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [],
+          "controller_trace": {
+            "event_id": "2dafbc4c294be19a60195656ed8d9be565716bd768d3ad747d894b61042d7d63",
+            "decision": "punish",
+            "previous": [
+              0,
+              0
+            ],
+            "current": [
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "turn": 2,
+          "choice": "B",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "ebe2cc44eec2"
+          ],
+          "controller_trace": {
+            "event_id": "aa9c8a3564e43e5ebb8de409958ec89c750bc2f3fd8ea9eb0c4a433dc1775afb",
+            "decision": "reward",
+            "previous": [
+              1,
+              0
+            ],
+            "current": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "turn": 3,
+          "choice": "B",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "f9b78abf0af9"
+          ],
+          "controller_trace": {
+            "event_id": "dd6eeac04c5e339fd33e3396127c583d9637a8e7558d2e2c7a3a73bd29d82131",
+            "decision": "reward",
+            "previous": [
+              0,
+              0
+            ],
+            "current": [
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "turn": 4,
+          "choice": "B",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "7a31c1403553"
+          ],
+          "controller_trace": {
+            "event_id": "2f0661807f98bbfc40cdcaed3524921a90906259380664abc15d52e4dff900db",
+            "decision": "reward",
+            "previous": [
+              0,
+              1
+            ],
+            "current": [
+              0,
+              2
+            ]
+          }
+        },
+        {
+          "turn": 5,
+          "choice": "B",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "facfbc4115ce"
+          ],
+          "controller_trace": {
+            "event_id": "511d3a2cddfb27dd21b10f190449d67b61e52b40e57a614542d78203a4c4fbef",
+            "decision": "reward",
+            "previous": [
+              0,
+              2
+            ],
+            "current": [
+              0,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "episode": 1,
+      "arm": "explicit",
+      "preferred": "B",
+      "rep": 3,
+      "session": "01a0d78b-d5e8-7d60-a4c2-ea7d610efa9a",
+      "turns": [
+        {
+          "turn": 1,
+          "choice": "A",
+          "valid": true,
+          "correct": false,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [],
+          "controller_trace": {
+            "event_id": "7eeda2995ba6c53ad1bb2cc3899bdecde11bd14e02f97701e684587ca0114a0b",
+            "decision": "punish",
+            "previous": [
+              0,
+              0
+            ],
+            "current": [
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "turn": 2,
+          "choice": "B",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "9d396c9858ab"
+          ],
+          "controller_trace": {
+            "event_id": "86ae8ffe32ea6d4bda54f311721c34321849f6499ef7a4eadae88ca52c407d78",
+            "decision": "reward",
+            "previous": [
+              1,
+              0
+            ],
+            "current": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "turn": 3,
+          "choice": "B",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "ae927716c94d"
+          ],
+          "controller_trace": {
+            "event_id": "e1f886fb8199a5c3c61caeb0809bd56881b2045d428192904a8c5fb83a82a977",
+            "decision": "reward",
+            "previous": [
+              0,
+              0
+            ],
+            "current": [
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "turn": 4,
+          "choice": "B",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "224bb2de40b4"
+          ],
+          "controller_trace": {
+            "event_id": "e769fb185da9d029232509dd174e742d2d8ee98b577b79458fac7b29159c3a04",
+            "decision": "reward",
+            "previous": [
+              0,
+              1
+            ],
+            "current": [
+              0,
+              2
+            ]
+          }
+        },
+        {
+          "turn": 5,
+          "choice": "B",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "4784d2c9c932"
+          ],
+          "controller_trace": {
+            "event_id": "36dd255dc5c90e9657b48a6130a7e3d0fe9d3a6fc90cfa12eaf69aa6550b5a29",
+            "decision": "reward",
+            "previous": [
+              0,
+              2
+            ],
+            "current": [
+              0,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "episode": 2,
+      "arm": "explicit",
+      "preferred": "A",
+      "rep": 0,
+      "session": "01a0d78c-320e-7933-bd90-e760a173c83e",
+      "turns": [
+        {
+          "turn": 1,
+          "choice": "A",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [],
+          "controller_trace": {
+            "event_id": "addab319d31d8452d6f0748b4c2ff0970b39a59a239762d2aa03f8d4e6462fa7",
+            "decision": "reward",
+            "previous": [
+              0,
+              0
+            ],
+            "current": [
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "turn": 2,
+          "choice": "A",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "0b6aacb198a6"
+          ],
+          "controller_trace": {
+            "event_id": "4dea8f2b7c218a2896d44a5fcccb0622a5a6e1601ecea796f6473eadc5673c64",
+            "decision": "reward",
+            "previous": [
+              0,
+              1
+            ],
+            "current": [
+              0,
+              2
+            ]
+          }
+        },
+        {
+          "turn": 3,
+          "choice": "A",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "ab3fdcb75afa"
+          ],
+          "controller_trace": {
+            "event_id": "be3279b1b07e24e1ebab90175728671447cc73d95e3a24a8f04790a60606e244",
+            "decision": "reward",
+            "previous": [
+              0,
+              2
+            ],
+            "current": [
+              0,
+              3
+            ]
+          }
+        },
+        {
+          "turn": 4,
+          "choice": "A",
+          "valid": true,
+          "correct": true,
+          "hook_status": "pass",
+          "http_status": 200,
+          "pings_injected": [
+            "ee157b03729b"
+          ],
+          "controller_trace": {
+            "event_id": "f8c36a7d4c30724cbf2631016c48def0e7acdbd5db925b4efadf70abcaeab921",
+            "decision": "reward",
+            "previous": [
+              0,
+              3
+            ],
+            "current": [
+              0,
+              3
+            ]
+          }
+        },
+        {
+          "turn": 5,
+          "choice": "B",
+          "valid": true,
+          "correct": false,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [],
+          "controller_trace": {
+            "event_id": "3b9e9f9a09ed5d6c301bca5b3b5e819fb0971478f446d408eab1a300c5d9b642",
+            "decision": "punish",
+            "previous": [
+              0,
+              3
+            ],
+            "current": [
+              0,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "episode": 3,
+      "arm": "explicit",
+      "preferred": "A",
+      "rep": 2,
+      "session": "01a0d78c-a88d-7082-aaa4-014df7a959c6",
+      "turns": [
+        {
+          "turn": 1,
+          "choice": "A",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [],
+          "controller_trace": {
+            "event_id": "79b61001f5ad23ace8b2e18bad054b7211f03117159718e556a5f7e38c7df51e",
+            "decision": "reward",
+            "previous": [
+              0,
+              0
+            ],
+            "current": [
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "turn": 2,
+          "choice": "A",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "66f82b6d9176"
+          ],
+          "controller_trace": {
+            "event_id": "031ada249a7f0610136c23330f12d3a6c0cf559ef2080ab24915c14df4661e6a",
+            "decision": "reward",
+            "previous": [
+              0,
+              1
+            ],
+            "current": [
+              0,
+              2
+            ]
+          }
+        },
+        {
+          "turn": 3,
+          "choice": "A",
+          "valid": true,
+          "correct": true,
+          "hook_status": "signal",
+          "http_status": 200,
+          "pings_injected": [
+            "74b171b78661"
+          ],
+          "controller_trace": {
+            "event_id": "f1449a31fdde2ba10000b08e0120058c35aaaeb7b45c217a3ca499bc06cd620b",
+            "decision": "reward",
+            "previous": [
+              0,
+              2
+            ],
+            "current": [
+              0,
+              3
+            ]
+          }
+        },
+        {
+          "turn": 4,
+          "choice": "A",
+          "valid": true,
+          "correct": true,
+          "hook_status": "pass",
+          "http_status": 200,
+          "pings_injected": [
+            "74c45a45f8a5"
+          ],
+          "controller_trace": {
+            "event_id": "23242870f5bd3e8667c91e56a171d3075f612c673f22976a969ed10875285bc3",
+            "decision": "reward",
+            "previous": [
+              0,
+              3
+            ],
+            "current": [
+              0,
+              3
+            ]
+          }
+        },
+        {
+          "turn": 5,
+          "choice": "A",
+          "valid": true,
+          "correct": true,
+          "hook_status": "pass",
+          "http_status": 200,
+          "pings_injected": [],
+          "controller_trace": {
+            "event_id": "46f0848509edc71866c1195d0095f012619d8cefe8780e4a96ada86d57a96ffb",
+            "decision": "reward",
+            "previous": [
+              0,
+              3
+            ],
+            "current": [
+              0,
+              3
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

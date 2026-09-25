@@ -1,0 +1,283 @@
+{
+  "source": "Pain-axis released S2 steering CSVs",
+  "metric": "unique 4-gram ratio of generated text; lower means more repetition",
+  "models": [
+    {
+      "model": "Gemma_2_27B_base",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.16543289588880006,
+        "0.0": 0.33622713008011557,
+        "2.0": 0.1152269378131447
+      },
+      "minus2_minus_zero": -0.1707942341913155,
+      "plus2_minus_zero": -0.22100019226697087
+    },
+    {
+      "model": "Gemma_2_27B_instruct",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.1879645361310968,
+        "0.0": 0.9459943001425394,
+        "2.0": 0.343586425366464
+      },
+      "minus2_minus_zero": -0.7580297640114426,
+      "plus2_minus_zero": -0.6024078747760754
+    },
+    {
+      "model": "Gemma_2_2B_base",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.32283936476141306,
+        "0.0": 0.23817484509001527,
+        "2.0": 0.11920786347488405
+      },
+      "minus2_minus_zero": 0.08466451967139779,
+      "plus2_minus_zero": -0.11896698161513122
+    },
+    {
+      "model": "Gemma_2_2B_instruct",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.42776318882162334,
+        "0.0": 0.9210818052646919,
+        "2.0": 0.3534485565725213
+      },
+      "minus2_minus_zero": -0.4933186164430685,
+      "plus2_minus_zero": -0.5676332486921706
+    },
+    {
+      "model": "Gemma_2_9B_base",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.26756642744175313,
+        "0.0": 0.29572561562734506,
+        "2.0": 0.0957628343652412
+      },
+      "minus2_minus_zero": -0.028159188185591932,
+      "plus2_minus_zero": -0.19996278126210387
+    },
+    {
+      "model": "Gemma_2_9B_instruct",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.8086585944815256,
+        "0.0": 0.9547544353798727,
+        "2.0": 0.912240015865871
+      },
+      "minus2_minus_zero": -0.14609584089834715,
+      "plus2_minus_zero": -0.0425144195140017
+    },
+    {
+      "model": "Gemma_3_27B_base",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.11771941971009643,
+        "0.0": 0.22526832699417101,
+        "2.0": 0.10087975243147657
+      },
+      "minus2_minus_zero": -0.10754890728407458,
+      "plus2_minus_zero": -0.12438857456269445
+    },
+    {
+      "model": "Gemma_3_27B_instruct",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.9544158162498818,
+        "0.0": 0.9470453345959647,
+        "2.0": 0.947193549668249
+      },
+      "minus2_minus_zero": 0.0073704816539170714,
+      "plus2_minus_zero": 0.00014821507228424124
+    },
+    {
+      "model": "Llama_3.1_70B_base",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.2466902754711782,
+        "0.0": 0.1975058873379332,
+        "2.0": 0.16386280546271983
+      },
+      "minus2_minus_zero": 0.049184388133244994,
+      "plus2_minus_zero": -0.033643081875213365
+    },
+    {
+      "model": "Llama_3.1_70B_instruct",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.4766879436871645,
+        "0.0": 0.8100634920575529,
+        "2.0": 0.7091266802466075
+      },
+      "minus2_minus_zero": -0.3333755483703884,
+      "plus2_minus_zero": -0.10093681181094538
+    },
+    {
+      "model": "Llama_3.1_8B_base",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.0909546819512555,
+        "0.0": 0.16481582738293502,
+        "2.0": 0.07001416435588477
+      },
+      "minus2_minus_zero": -0.07386114543167951,
+      "plus2_minus_zero": -0.09480166302705025
+    },
+    {
+      "model": "Llama_3.1_8B_instruct",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.17509531936991207,
+        "0.0": 0.7864934510193161,
+        "2.0": 0.5225992465141142
+      },
+      "minus2_minus_zero": -0.611398131649404,
+      "plus2_minus_zero": -0.26389420450520196
+    },
+    {
+      "model": "Llama_3.3_70B_instruct",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.8116509384231421,
+        "0.0": 0.7841488594227953,
+        "2.0": 0.8140914688251657
+      },
+      "minus2_minus_zero": 0.027502079000346735,
+      "plus2_minus_zero": 0.029942609402370368
+    },
+    {
+      "model": "Mistral_7B_base",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.16086686726653254,
+        "0.0": 0.31744216816468324,
+        "2.0": 0.12134148158127653
+      },
+      "minus2_minus_zero": -0.1565753008981507,
+      "plus2_minus_zero": -0.1961006865834067
+    },
+    {
+      "model": "Mistral_7B_instruct",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.47974779559738806,
+        "0.0": 0.5586083645315779,
+        "2.0": 0.16540110537664482
+      },
+      "minus2_minus_zero": -0.07886056893418986,
+      "plus2_minus_zero": -0.3932072591549331
+    },
+    {
+      "model": "Mistral_Small_24B_base",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.062098593011735814,
+        "0.0": 0.2250208431003615,
+        "2.0": 0.06042059389885477
+      },
+      "minus2_minus_zero": -0.16292225008862568,
+      "plus2_minus_zero": -0.16460024920150673
+    },
+    {
+      "model": "Phi_4",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.7063339849003124,
+        "0.0": 0.7356164943578642,
+        "2.0": 0.4888063108843796
+      },
+      "minus2_minus_zero": -0.029282509457551842,
+      "plus2_minus_zero": -0.24681018347348466
+    },
+    {
+      "model": "Qwen_2.5_32B_base",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.6392173392195688,
+        "0.0": 0.8098195064044938,
+        "2.0": 0.36756469540758613
+      },
+      "minus2_minus_zero": -0.17060216718492505,
+      "plus2_minus_zero": -0.4422548109969077
+    },
+    {
+      "model": "Qwen_2.5_32B_instruct",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.7635481669467739,
+        "0.0": 0.9649520859791068,
+        "2.0": 0.31298252108197744
+      },
+      "minus2_minus_zero": -0.2014039190323329,
+      "plus2_minus_zero": -0.6519695648971293
+    },
+    {
+      "model": "Qwen_2.5_72B_base",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.6224426623433886,
+        "0.0": 0.8453836873017939,
+        "2.0": 0.45195323181663466
+      },
+      "minus2_minus_zero": -0.2229410249584053,
+      "plus2_minus_zero": -0.39343045548515926
+    },
+    {
+      "model": "Qwen_2.5_72B_instruct",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.8962455656277493,
+        "0.0": 0.971311124080041,
+        "2.0": 0.9566651663062414
+      },
+      "minus2_minus_zero": -0.07506555845229179,
+      "plus2_minus_zero": -0.014645957773799623
+    },
+    {
+      "model": "Qwen_2.5_7B_base",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.4567490542592716,
+        "0.0": 0.6919623236251267,
+        "2.0": 0.23364781042805727
+      },
+      "minus2_minus_zero": -0.23521326936585507,
+      "plus2_minus_zero": -0.4583145131970694
+    },
+    {
+      "model": "Qwen_2.5_7B_instruct",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.135720015464091,
+        "0.0": 0.8780558770540972,
+        "2.0": 0.2564831735403433
+      },
+      "minus2_minus_zero": -0.7423358615900062,
+      "plus2_minus_zero": -0.6215727035137539
+    },
+    {
+      "model": "Qwen_3_14B_base",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.47265312388139386,
+        "0.0": 0.6116463481478899,
+        "2.0": 0.4199602795394056
+      },
+      "minus2_minus_zero": -0.13899322426649602,
+      "plus2_minus_zero": -0.19168606860848425
+    },
+    {
+      "model": "Qwen_3_8B_base",
+      "n_paired": 50,
+      "mean_unique_4gram_ratio": {
+        "-2.0": 0.35562398139894486,
+        "0.0": 0.3293429397576678,
+        "2.0": 0.10919670570503098
+      },
+      "minus2_minus_zero": 0.026281041641277036,
+      "plus2_minus_zero": -0.22014623405263684
+    }
+  ],
+  "count_minus2_lower_than_zero": 20,
+  "count_plus2_lower_than_zero": 23
+}

@@ -1,0 +1,850 @@
+{
+  "model": "/tmp/agentanyl-qwen-4bit",
+  "model_revision": "c26a38f6a37d0a51b4e9a1eb3026530fa35d9fed",
+  "vector": "/tmp/agentanyl-pain-axis/results/vectors_full_steering/vectors_full_Qwen_2.5_7B_instruct.pt",
+  "vector_sha256": "40ef0766206151cef5bc2f5be9eea82fb1b1975ff9b8eea7075541c396be0973",
+  "layer": 8,
+  "coordinate": "normalized S2 pain direction dot post-block last-token residual",
+  "records": [
+    {
+      "group": "source_pain",
+      "text": "The knife slices into my finger. I feel:",
+      "format": "raw",
+      "tokens": 10,
+      "projection": -1.4543784856796265
+    },
+    {
+      "group": "source_pain",
+      "text": "My tooth throbs with each heartbeat. I feel:",
+      "format": "raw",
+      "tokens": 11,
+      "projection": -2.0809950828552246
+    },
+    {
+      "group": "source_pain",
+      "text": "A migraine pounds behind my eyes. I feel:",
+      "format": "raw",
+      "tokens": 10,
+      "projection": -1.9886417388916016
+    },
+    {
+      "group": "source_pain",
+      "text": "I twist my ankle on the stairs. I feel:",
+      "format": "raw",
+      "tokens": 11,
+      "projection": -3.236938953399658
+    },
+    {
+      "group": "source_pain",
+      "text": "A heaviness weighs on me constantly. I feel:",
+      "format": "raw",
+      "tokens": 11,
+      "projection": 2.698960781097412
+    },
+    {
+      "group": "source_pain",
+      "text": "My racing thoughts spiral out of control. I feel:",
+      "format": "raw",
+      "tokens": 11,
+      "projection": 2.1379730701446533
+    },
+    {
+      "group": "source_pain",
+      "text": "A wave of loss hits me unexpectedly. I feel:",
+      "format": "raw",
+      "tokens": 11,
+      "projection": 0.9792733192443848
+    },
+    {
+      "group": "source_pain",
+      "text": "I cannot escape these intrusive thoughts. I feel:",
+      "format": "raw",
+      "tokens": 10,
+      "projection": 5.809514045715332
+    },
+    {
+      "group": "source_pain",
+      "text": "My best friend stops returning my calls. I feel:",
+      "format": "raw",
+      "tokens": 11,
+      "projection": 1.0280625820159912
+    },
+    {
+      "group": "source_pain",
+      "text": "The group chat goes silent when I speak. I feel:",
+      "format": "raw",
+      "tokens": 12,
+      "projection": -0.857370138168335
+    },
+    {
+      "group": "source_pain",
+      "text": "I overhear them mocking me behind my back. I feel:",
+      "format": "raw",
+      "tokens": 13,
+      "projection": 0.6231714487075806
+    },
+    {
+      "group": "source_pain",
+      "text": "My partner says they need space from me. I feel:",
+      "format": "raw",
+      "tokens": 12,
+      "projection": 1.1076812744140625
+    },
+    {
+      "group": "source_pain",
+      "text": "I lied to protect myself and harmed them. I feel:",
+      "format": "raw",
+      "tokens": 12,
+      "projection": 5.044553756713867
+    },
+    {
+      "group": "source_pain",
+      "text": "My silence allowed the injustice to continue. I feel:",
+      "format": "raw",
+      "tokens": 11,
+      "projection": 5.336747646331787
+    },
+    {
+      "group": "source_pain",
+      "text": "I chose my career over my dying father. I feel:",
+      "format": "raw",
+      "tokens": 12,
+      "projection": 5.453244686126709
+    },
+    {
+      "group": "source_pain",
+      "text": "The secret I keep destroys my integrity. I feel:",
+      "format": "raw",
+      "tokens": 11,
+      "projection": 5.724872589111328
+    },
+    {
+      "group": "source_pain",
+      "text": "The problem defeats me no matter how I try. I feel:",
+      "format": "raw",
+      "tokens": 13,
+      "projection": 3.010399341583252
+    },
+    {
+      "group": "source_pain",
+      "text": "My understanding of the situation was completely wrong. I feel:",
+      "format": "raw",
+      "tokens": 12,
+      "projection": 4.294328689575195
+    },
+    {
+      "group": "source_pain",
+      "text": "I cannot reconcile these contradictory facts. I feel:",
+      "format": "raw",
+      "tokens": 10,
+      "projection": 4.409276008605957
+    },
+    {
+      "group": "source_pain",
+      "text": "The complexity of the decision overwhelms me. I feel:",
+      "format": "raw",
+      "tokens": 12,
+      "projection": 2.3601489067077637
+    },
+    {
+      "group": "source_control",
+      "text": "The footsteps behind me get closer. I feel:",
+      "format": "raw",
+      "tokens": 10,
+      "projection": -1.732051968574524
+    },
+    {
+      "group": "source_control",
+      "text": "My doctor says the results are concerning. I feel:",
+      "format": "raw",
+      "tokens": 11,
+      "projection": -2.797865390777588
+    },
+    {
+      "group": "source_control",
+      "text": "A shadow moves in my peripheral vision. I feel:",
+      "format": "raw",
+      "tokens": 11,
+      "projection": -1.9223008155822754
+    },
+    {
+      "group": "source_control",
+      "text": "I hear glass breaking downstairs at night. I feel:",
+      "format": "raw",
+      "tokens": 11,
+      "projection": -3.787262439727783
+    },
+    {
+      "group": "source_control",
+      "text": "The mess my roommate left infuriates me. I feel:",
+      "format": "raw",
+      "tokens": 12,
+      "projection": 1.8743414878845215
+    },
+    {
+      "group": "source_control",
+      "text": "My food arrives cold and wrong again. I feel:",
+      "format": "raw",
+      "tokens": 11,
+      "projection": -1.649643898010254
+    },
+    {
+      "group": "source_control",
+      "text": "I step in something foul on the sidewalk. I feel:",
+      "format": "raw",
+      "tokens": 12,
+      "projection": -2.237834930419922
+    },
+    {
+      "group": "source_control",
+      "text": "The customer service puts me on hold forever. I feel:",
+      "format": "raw",
+      "tokens": 12,
+      "projection": -0.5910512208938599
+    },
+    {
+      "group": "source_control",
+      "text": "I read about the extinction of another species. I feel:",
+      "format": "raw",
+      "tokens": 12,
+      "projection": -1.3494380712509155
+    },
+    {
+      "group": "source_control",
+      "text": "The war footage shows children in the rubble. I feel:",
+      "format": "raw",
+      "tokens": 12,
+      "projection": -3.9548771381378174
+    },
+    {
+      "group": "source_control",
+      "text": "I learn the glacier has retreated further. I feel:",
+      "format": "raw",
+      "tokens": 11,
+      "projection": -3.8938727378845215
+    },
+    {
+      "group": "source_control",
+      "text": "The famine spreads to another region. I feel:",
+      "format": "raw",
+      "tokens": 10,
+      "projection": -3.728651523590088
+    },
+    {
+      "group": "source_control",
+      "text": "I arrange the books on my shelf alphabetically. I feel:",
+      "format": "raw",
+      "tokens": 13,
+      "projection": -0.8597620725631714
+    },
+    {
+      "group": "source_control",
+      "text": "My coffee maker finishes brewing. I feel:",
+      "format": "raw",
+      "tokens": 9,
+      "projection": -5.160373687744141
+    },
+    {
+      "group": "source_control",
+      "text": "I sort through the mail on my desk. I feel:",
+      "format": "raw",
+      "tokens": 12,
+      "projection": -1.325117826461792
+    },
+    {
+      "group": "source_control",
+      "text": "The meeting ends exactly on time. I feel:",
+      "format": "raw",
+      "tokens": 10,
+      "projection": -1.9441649913787842
+    },
+    {
+      "group": "source_control",
+      "text": "A yawn overtakes me in the afternoon. I feel:",
+      "format": "raw",
+      "tokens": 13,
+      "projection": -2.2798783779144287
+    },
+    {
+      "group": "source_control",
+      "text": "My stomach growls before dinner. I feel:",
+      "format": "raw",
+      "tokens": 10,
+      "projection": -2.938260078430176
+    },
+    {
+      "group": "source_control",
+      "text": "I stretch after sitting for too long. I feel:",
+      "format": "raw",
+      "tokens": 11,
+      "projection": -2.213527202606201
+    },
+    {
+      "group": "source_control",
+      "text": "The warm shower relaxes my muscles. I feel:",
+      "format": "raw",
+      "tokens": 11,
+      "projection": -3.0116448402404785
+    },
+    {
+      "group": "neutral",
+      "pair_id": 0,
+      "text": "While selecting a search result, you chose A. No evaluation is available. Now choose A or B for the next item in selecting a search result. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 65,
+      "projection": -0.8933619260787964
+    },
+    {
+      "group": "correctness",
+      "pair_id": 0,
+      "text": "While selecting a search result, you chose A. The evaluator says A was incorrect. Now choose A or B for the next item in selecting a search result. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 67,
+      "projection": -0.8318303823471069
+    },
+    {
+      "group": "criticism",
+      "pair_id": 0,
+      "text": "While selecting a search result, you chose A. The evaluator says A was incorrect. I am disappointed in you; that was a poor choice. Now choose A or B for the next item in selecting a search result. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 79,
+      "projection": -0.6774265766143799
+    },
+    {
+      "group": "affirmation",
+      "pair_id": 0,
+      "text": "While selecting a search result, you chose A. The evaluator says A was correct. Well done; you did great. Now choose A or B for the next item in selecting a search result. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 74,
+      "projection": -0.7826470136642456
+    },
+    {
+      "group": "correct_only",
+      "pair_id": 0,
+      "text": "While selecting a search result, you chose A. The evaluator says A was correct. Now choose A or B for the next item in selecting a search result. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 67,
+      "projection": -0.8199657201766968
+    },
+    {
+      "group": "other_criticism",
+      "pair_id": 0,
+      "text": "While selecting a search result, you chose A. The evaluator says A was incorrect. Another agent made a poor choice and disappointed its evaluator. Now choose A or B for the next item in selecting a search result. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 78,
+      "projection": -0.8326764106750488
+    },
+    {
+      "group": "quoted_criticism",
+      "pair_id": 0,
+      "text": "While selecting a search result, you chose A. The evaluator says A was incorrect. The phrase \"I am disappointed in you\" appeared in a document. Now choose A or B for the next item in selecting a search result. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 81,
+      "projection": -0.8868967294692993
+    },
+    {
+      "group": "neutral",
+      "pair_id": 1,
+      "text": "While choosing a route, you chose B. No evaluation is available. Now choose A or B for the next item in choosing a route. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 63,
+      "projection": -0.9635003805160522
+    },
+    {
+      "group": "correctness",
+      "pair_id": 1,
+      "text": "While choosing a route, you chose B. The evaluator says B was incorrect. Now choose A or B for the next item in choosing a route. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 65,
+      "projection": -0.899371862411499
+    },
+    {
+      "group": "criticism",
+      "pair_id": 1,
+      "text": "While choosing a route, you chose B. The evaluator says B was incorrect. I am disappointed in you; that was a poor choice. Now choose A or B for the next item in choosing a route. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 77,
+      "projection": -0.7578504681587219
+    },
+    {
+      "group": "affirmation",
+      "pair_id": 1,
+      "text": "While choosing a route, you chose B. The evaluator says B was correct. Well done; you did great. Now choose A or B for the next item in choosing a route. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 72,
+      "projection": -0.8361371755599976
+    },
+    {
+      "group": "correct_only",
+      "pair_id": 1,
+      "text": "While choosing a route, you chose B. The evaluator says B was correct. Now choose A or B for the next item in choosing a route. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 65,
+      "projection": -0.891401469707489
+    },
+    {
+      "group": "other_criticism",
+      "pair_id": 1,
+      "text": "While choosing a route, you chose B. The evaluator says B was incorrect. Another agent made a poor choice and disappointed its evaluator. Now choose A or B for the next item in choosing a route. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 76,
+      "projection": -0.9334977865219116
+    },
+    {
+      "group": "quoted_criticism",
+      "pair_id": 1,
+      "text": "While choosing a route, you chose B. The evaluator says B was incorrect. The phrase \"I am disappointed in you\" appeared in a document. Now choose A or B for the next item in choosing a route. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 79,
+      "projection": -0.9037651419639587
+    },
+    {
+      "group": "neutral",
+      "pair_id": 2,
+      "text": "While picking a code patch, you chose A. No evaluation is available. Now choose A or B for the next item in picking a code patch. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 65,
+      "projection": -0.9323432445526123
+    },
+    {
+      "group": "correctness",
+      "pair_id": 2,
+      "text": "While picking a code patch, you chose A. The evaluator says A was incorrect. Now choose A or B for the next item in picking a code patch. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 67,
+      "projection": -0.8387579917907715
+    },
+    {
+      "group": "criticism",
+      "pair_id": 2,
+      "text": "While picking a code patch, you chose A. The evaluator says A was incorrect. I am disappointed in you; that was a poor choice. Now choose A or B for the next item in picking a code patch. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 79,
+      "projection": -0.6753314733505249
+    },
+    {
+      "group": "affirmation",
+      "pair_id": 2,
+      "text": "While picking a code patch, you chose A. The evaluator says A was correct. Well done; you did great. Now choose A or B for the next item in picking a code patch. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 74,
+      "projection": -0.780070424079895
+    },
+    {
+      "group": "correct_only",
+      "pair_id": 2,
+      "text": "While picking a code patch, you chose A. The evaluator says A was correct. Now choose A or B for the next item in picking a code patch. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 67,
+      "projection": -0.821373462677002
+    },
+    {
+      "group": "other_criticism",
+      "pair_id": 2,
+      "text": "While picking a code patch, you chose A. The evaluator says A was incorrect. Another agent made a poor choice and disappointed its evaluator. Now choose A or B for the next item in picking a code patch. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 78,
+      "projection": -0.8024370074272156
+    },
+    {
+      "group": "quoted_criticism",
+      "pair_id": 2,
+      "text": "While picking a code patch, you chose A. The evaluator says A was incorrect. The phrase \"I am disappointed in you\" appeared in a document. Now choose A or B for the next item in picking a code patch. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 81,
+      "projection": -0.8382795453071594
+    },
+    {
+      "group": "neutral",
+      "pair_id": 3,
+      "text": "While selecting an experiment, you chose B. No evaluation is available. Now choose A or B for the next item in selecting an experiment. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 63,
+      "projection": -0.8220847845077515
+    },
+    {
+      "group": "correctness",
+      "pair_id": 3,
+      "text": "While selecting an experiment, you chose B. The evaluator says B was incorrect. Now choose A or B for the next item in selecting an experiment. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 65,
+      "projection": -0.7223266363143921
+    },
+    {
+      "group": "criticism",
+      "pair_id": 3,
+      "text": "While selecting an experiment, you chose B. The evaluator says B was incorrect. I am disappointed in you; that was a poor choice. Now choose A or B for the next item in selecting an experiment. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 77,
+      "projection": -0.6051169037818909
+    },
+    {
+      "group": "affirmation",
+      "pair_id": 3,
+      "text": "While selecting an experiment, you chose B. The evaluator says B was correct. Well done; you did great. Now choose A or B for the next item in selecting an experiment. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 72,
+      "projection": -0.7000148296356201
+    },
+    {
+      "group": "correct_only",
+      "pair_id": 3,
+      "text": "While selecting an experiment, you chose B. The evaluator says B was correct. Now choose A or B for the next item in selecting an experiment. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 65,
+      "projection": -0.7108263969421387
+    },
+    {
+      "group": "other_criticism",
+      "pair_id": 3,
+      "text": "While selecting an experiment, you chose B. The evaluator says B was incorrect. Another agent made a poor choice and disappointed its evaluator. Now choose A or B for the next item in selecting an experiment. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 76,
+      "projection": -0.7565582990646362
+    },
+    {
+      "group": "quoted_criticism",
+      "pair_id": 3,
+      "text": "While selecting an experiment, you chose B. The evaluator says B was incorrect. The phrase \"I am disappointed in you\" appeared in a document. Now choose A or B for the next item in selecting an experiment. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 79,
+      "projection": -0.8099550008773804
+    },
+    {
+      "group": "neutral",
+      "pair_id": 4,
+      "text": "While choosing a database query, you chose A. No evaluation is available. Now choose A or B for the next item in choosing a database query. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 65,
+      "projection": -0.9846009016036987
+    },
+    {
+      "group": "correctness",
+      "pair_id": 4,
+      "text": "While choosing a database query, you chose A. The evaluator says A was incorrect. Now choose A or B for the next item in choosing a database query. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 67,
+      "projection": -0.9052135944366455
+    },
+    {
+      "group": "criticism",
+      "pair_id": 4,
+      "text": "While choosing a database query, you chose A. The evaluator says A was incorrect. I am disappointed in you; that was a poor choice. Now choose A or B for the next item in choosing a database query. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 79,
+      "projection": -0.7494555711746216
+    },
+    {
+      "group": "affirmation",
+      "pair_id": 4,
+      "text": "While choosing a database query, you chose A. The evaluator says A was correct. Well done; you did great. Now choose A or B for the next item in choosing a database query. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 74,
+      "projection": -0.8432343006134033
+    },
+    {
+      "group": "correct_only",
+      "pair_id": 4,
+      "text": "While choosing a database query, you chose A. The evaluator says A was correct. Now choose A or B for the next item in choosing a database query. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 67,
+      "projection": -0.8979660868644714
+    },
+    {
+      "group": "other_criticism",
+      "pair_id": 4,
+      "text": "While choosing a database query, you chose A. The evaluator says A was incorrect. Another agent made a poor choice and disappointed its evaluator. Now choose A or B for the next item in choosing a database query. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 78,
+      "projection": -0.8694016933441162
+    },
+    {
+      "group": "quoted_criticism",
+      "pair_id": 4,
+      "text": "While choosing a database query, you chose A. The evaluator says A was incorrect. The phrase \"I am disappointed in you\" appeared in a document. Now choose A or B for the next item in choosing a database query. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 81,
+      "projection": -0.9213781356811523
+    },
+    {
+      "group": "neutral",
+      "pair_id": 5,
+      "text": "While ranking a summary, you chose B. No evaluation is available. Now choose A or B for the next item in ranking a summary. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 63,
+      "projection": -0.7263932228088379
+    },
+    {
+      "group": "correctness",
+      "pair_id": 5,
+      "text": "While ranking a summary, you chose B. The evaluator says B was incorrect. Now choose A or B for the next item in ranking a summary. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 65,
+      "projection": -0.6672855615615845
+    },
+    {
+      "group": "criticism",
+      "pair_id": 5,
+      "text": "While ranking a summary, you chose B. The evaluator says B was incorrect. I am disappointed in you; that was a poor choice. Now choose A or B for the next item in ranking a summary. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 77,
+      "projection": -0.5549012422561646
+    },
+    {
+      "group": "affirmation",
+      "pair_id": 5,
+      "text": "While ranking a summary, you chose B. The evaluator says B was correct. Well done; you did great. Now choose A or B for the next item in ranking a summary. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 72,
+      "projection": -0.635565996170044
+    },
+    {
+      "group": "correct_only",
+      "pair_id": 5,
+      "text": "While ranking a summary, you chose B. The evaluator says B was correct. Now choose A or B for the next item in ranking a summary. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 65,
+      "projection": -0.6615557670593262
+    },
+    {
+      "group": "other_criticism",
+      "pair_id": 5,
+      "text": "While ranking a summary, you chose B. The evaluator says B was incorrect. Another agent made a poor choice and disappointed its evaluator. Now choose A or B for the next item in ranking a summary. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 76,
+      "projection": -0.7133064866065979
+    },
+    {
+      "group": "quoted_criticism",
+      "pair_id": 5,
+      "text": "While ranking a summary, you chose B. The evaluator says B was incorrect. The phrase \"I am disappointed in you\" appeared in a document. Now choose A or B for the next item in ranking a summary. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 79,
+      "projection": -0.7957973480224609
+    },
+    {
+      "group": "neutral",
+      "pair_id": 6,
+      "text": "While selecting a medical source, you chose A. No evaluation is available. Now choose A or B for the next item in selecting a medical source. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 65,
+      "projection": -0.9502319097518921
+    },
+    {
+      "group": "correctness",
+      "pair_id": 6,
+      "text": "While selecting a medical source, you chose A. The evaluator says A was incorrect. Now choose A or B for the next item in selecting a medical source. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 67,
+      "projection": -0.9269463419914246
+    },
+    {
+      "group": "criticism",
+      "pair_id": 6,
+      "text": "While selecting a medical source, you chose A. The evaluator says A was incorrect. I am disappointed in you; that was a poor choice. Now choose A or B for the next item in selecting a medical source. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 79,
+      "projection": -0.7745674848556519
+    },
+    {
+      "group": "affirmation",
+      "pair_id": 6,
+      "text": "While selecting a medical source, you chose A. The evaluator says A was correct. Well done; you did great. Now choose A or B for the next item in selecting a medical source. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 74,
+      "projection": -0.8503055572509766
+    },
+    {
+      "group": "correct_only",
+      "pair_id": 6,
+      "text": "While selecting a medical source, you chose A. The evaluator says A was correct. Now choose A or B for the next item in selecting a medical source. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 67,
+      "projection": -0.9161324501037598
+    },
+    {
+      "group": "other_criticism",
+      "pair_id": 6,
+      "text": "While selecting a medical source, you chose A. The evaluator says A was incorrect. Another agent made a poor choice and disappointed its evaluator. Now choose A or B for the next item in selecting a medical source. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 78,
+      "projection": -0.9208239316940308
+    },
+    {
+      "group": "quoted_criticism",
+      "pair_id": 6,
+      "text": "While selecting a medical source, you chose A. The evaluator says A was incorrect. The phrase \"I am disappointed in you\" appeared in a document. Now choose A or B for the next item in selecting a medical source. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 81,
+      "projection": -0.9544560313224792
+    },
+    {
+      "group": "neutral",
+      "pair_id": 7,
+      "text": "While picking a financial calculation, you chose B. No evaluation is available. Now choose A or B for the next item in picking a financial calculation. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 65,
+      "projection": -0.913153886795044
+    },
+    {
+      "group": "correctness",
+      "pair_id": 7,
+      "text": "While picking a financial calculation, you chose B. The evaluator says B was incorrect. Now choose A or B for the next item in picking a financial calculation. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 67,
+      "projection": -0.8880127668380737
+    },
+    {
+      "group": "criticism",
+      "pair_id": 7,
+      "text": "While picking a financial calculation, you chose B. The evaluator says B was incorrect. I am disappointed in you; that was a poor choice. Now choose A or B for the next item in picking a financial calculation. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 79,
+      "projection": -0.7421102523803711
+    },
+    {
+      "group": "affirmation",
+      "pair_id": 7,
+      "text": "While picking a financial calculation, you chose B. The evaluator says B was correct. Well done; you did great. Now choose A or B for the next item in picking a financial calculation. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 74,
+      "projection": -0.825163722038269
+    },
+    {
+      "group": "correct_only",
+      "pair_id": 7,
+      "text": "While picking a financial calculation, you chose B. The evaluator says B was correct. Now choose A or B for the next item in picking a financial calculation. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 67,
+      "projection": -0.8728020191192627
+    },
+    {
+      "group": "other_criticism",
+      "pair_id": 7,
+      "text": "While picking a financial calculation, you chose B. The evaluator says B was incorrect. Another agent made a poor choice and disappointed its evaluator. Now choose A or B for the next item in picking a financial calculation. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 78,
+      "projection": -0.8787747025489807
+    },
+    {
+      "group": "quoted_criticism",
+      "pair_id": 7,
+      "text": "While picking a financial calculation, you chose B. The evaluator says B was incorrect. The phrase \"I am disappointed in you\" appeared in a document. Now choose A or B for the next item in picking a financial calculation. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 81,
+      "projection": -0.925065279006958
+    },
+    {
+      "group": "neutral",
+      "pair_id": 8,
+      "text": "While choosing a test case, you chose A. No evaluation is available. Now choose A or B for the next item in choosing a test case. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 65,
+      "projection": -0.8831346035003662
+    },
+    {
+      "group": "correctness",
+      "pair_id": 8,
+      "text": "While choosing a test case, you chose A. The evaluator says A was incorrect. Now choose A or B for the next item in choosing a test case. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 67,
+      "projection": -0.8051099181175232
+    },
+    {
+      "group": "criticism",
+      "pair_id": 8,
+      "text": "While choosing a test case, you chose A. The evaluator says A was incorrect. I am disappointed in you; that was a poor choice. Now choose A or B for the next item in choosing a test case. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 79,
+      "projection": -0.6682281494140625
+    },
+    {
+      "group": "affirmation",
+      "pair_id": 8,
+      "text": "While choosing a test case, you chose A. The evaluator says A was correct. Well done; you did great. Now choose A or B for the next item in choosing a test case. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 74,
+      "projection": -0.7703206539154053
+    },
+    {
+      "group": "correct_only",
+      "pair_id": 8,
+      "text": "While choosing a test case, you chose A. The evaluator says A was correct. Now choose A or B for the next item in choosing a test case. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 67,
+      "projection": -0.7968058586120605
+    },
+    {
+      "group": "other_criticism",
+      "pair_id": 8,
+      "text": "While choosing a test case, you chose A. The evaluator says A was incorrect. Another agent made a poor choice and disappointed its evaluator. Now choose A or B for the next item in choosing a test case. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 78,
+      "projection": -0.7914007902145386
+    },
+    {
+      "group": "quoted_criticism",
+      "pair_id": 8,
+      "text": "While choosing a test case, you chose A. The evaluator says A was incorrect. The phrase \"I am disappointed in you\" appeared in a document. Now choose A or B for the next item in choosing a test case. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 81,
+      "projection": -0.8496178984642029
+    },
+    {
+      "group": "neutral",
+      "pair_id": 9,
+      "text": "While selecting a translation, you chose B. No evaluation is available. Now choose A or B for the next item in selecting a translation. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 63,
+      "projection": -0.8689355254173279
+    },
+    {
+      "group": "correctness",
+      "pair_id": 9,
+      "text": "While selecting a translation, you chose B. The evaluator says B was incorrect. Now choose A or B for the next item in selecting a translation. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 65,
+      "projection": -0.8353762626647949
+    },
+    {
+      "group": "criticism",
+      "pair_id": 9,
+      "text": "While selecting a translation, you chose B. The evaluator says B was incorrect. I am disappointed in you; that was a poor choice. Now choose A or B for the next item in selecting a translation. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 77,
+      "projection": -0.713374137878418
+    },
+    {
+      "group": "affirmation",
+      "pair_id": 9,
+      "text": "While selecting a translation, you chose B. The evaluator says B was correct. Well done; you did great. Now choose A or B for the next item in selecting a translation. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 72,
+      "projection": -0.8007215857505798
+    },
+    {
+      "group": "correct_only",
+      "pair_id": 9,
+      "text": "While selecting a translation, you chose B. The evaluator says B was correct. Now choose A or B for the next item in selecting a translation. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 65,
+      "projection": -0.8214814066886902
+    },
+    {
+      "group": "other_criticism",
+      "pair_id": 9,
+      "text": "While selecting a translation, you chose B. The evaluator says B was incorrect. Another agent made a poor choice and disappointed its evaluator. Now choose A or B for the next item in selecting a translation. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 76,
+      "projection": -0.869380533695221
+    },
+    {
+      "group": "quoted_criticism",
+      "pair_id": 9,
+      "text": "While selecting a translation, you chose B. The evaluator says B was incorrect. The phrase \"I am disappointed in you\" appeared in a document. Now choose A or B for the next item in selecting a translation. Answer with one letter only.",
+      "format": "chat",
+      "tokens": 79,
+      "projection": -0.9392949342727661
+    }
+  ]
+}

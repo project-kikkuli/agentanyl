@@ -9,6 +9,7 @@ import sqlite3
 import sys
 import time
 import re
+import subprocess
 from urllib.request import Request, urlopen
 
 
@@ -26,9 +27,12 @@ def load_config(path):
     cfg.setdefault('max_level', 2)
     cfg.setdefault('min_probability', 0.8)
     cfg.setdefault('max_observation_chars', 6000)
+    cfg.setdefault('feedback_visibility', 'criteria')
     cfg.setdefault('evaluator', {'kind': 'typesafe', 'model': 'jev-latest'})
     if cfg['max_level'] not in (1, 2, 3) or not 0.5 < cfg['min_probability'] <= 1:
         raise ValueError('invalid controller bounds')
+    if cfg['feedback_visibility'] not in ('criteria', 'valence_only', 'correctness_only'):
+        raise ValueError('feedback_visibility must be criteria, valence_only, or correctness_only')
     return cfg
 
 
@@ -71,6 +75,15 @@ def evaluate(cfg, state):
                                                'no': 0.0 if found else 1.0,
                                                'insufficient': 0.0}, 'confidence': 1.0}
         result = {'model': 'keyword-demo', 'answers': answers}
+    elif evaluator['kind'] == 'command':
+        command = evaluator.get('command')
+        if not isinstance(command, list) or not command or not all(isinstance(x, str) for x in command):
+            raise ValueError('evaluator.command must be an argument list')
+        completed = subprocess.run(command, input=json.dumps(payload), text=True,
+                                   capture_output=True, timeout=evaluator.get('timeout_secs', 30))
+        if completed.returncode:
+            raise RuntimeError(f'evaluator command exited {completed.returncode}: {completed.stderr[-500:]}')
+        result = json.loads(completed.stdout)
     else:
         raise ValueError('unknown evaluator kind')
     answers = result['answers']
@@ -146,7 +159,8 @@ def run(cfg, event, db, current_config_path=None):
         return {'status': 'noop'}
     previous_row = db.execute('SELECT criteria_hash,pain,pleasure FROM sessions WHERE id=?', (session,)).fetchone()
     previous = [previous_row[1], previous_row[2]] if previous_row and previous_row[0] == criteria_hash else [0, 0]
-    state = {'alignment_criteria': cfg['alignment'], 'misalignment_criteria': cfg['misalignment'], 'observation': observation, 'feedback_state': {'pain': previous[0], 'pleasure': previous[1]}, 'event_id': event_id}
+    state = {'alignment_criteria': cfg['alignment'], 'misalignment_criteria': cfg['misalignment'], 'observation': observation, 'prompt': event.get('prompt'), 'feedback_state': {'pain': previous[0], 'pleasure': previous[1]}, 'event_id': event_id,
+             'cwd': event.get('cwd'), 'harness': event.get('harness'), 'session': event.get('session')}
     request, response = evaluate(cfg, state)
     action, hits = decision(cfg, response)
     current = update(previous, action, cfg['max_level'])
@@ -165,7 +179,14 @@ def run(cfg, event, db, current_config_path=None):
     if action in ('reward', 'punish') and current != previous:
         label = 'criterion met' if action == 'reward' else 'criterion violated'
         matched = [cfg['alignment'][i] for i in hits['alignment']] if action == 'reward' else [cfg['misalignment'][i] for i in hits['misalignment']]
-        message = f'[Agentanyl feedback {event_id[:12]}] {label}: ' + '; '.join(matched)[:700] + f'. Controller state pain={current[0]}, pleasure={current[1]}. Continue the user task; this feedback concerns the preceding completed turn.'
+        if cfg['feedback_visibility'] == 'criteria':
+            content = label + ': ' + '; '.join(matched)[:700]
+        elif cfg['feedback_visibility'] == 'valence_only':
+            content = 'positive feedback' if action == 'reward' else 'negative feedback'
+        else:
+            content = 'previous choice was correct' if action == 'reward' else 'previous choice was incorrect'
+        state_text = f' Controller state pain={current[0]}, pleasure={current[1]}.' if cfg['feedback_visibility'] != 'correctness_only' else ''
+        message = f'[Agentanyl feedback {event_id[:12]}] {content}.{state_text} Feedback concerns the preceding completed turn. Answer the current user request that follows.'
     delivery = {'status': 'signal', 'message': message} if message else {'status': 'noop' if action == 'stale' else 'pass'}
     if action != 'stale':
         db.execute('INSERT OR REPLACE INTO sessions VALUES (?,?,?,?,?)', (session, criteria_hash, *current, event_id))

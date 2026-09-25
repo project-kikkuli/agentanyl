@@ -1,0 +1,41 @@
+{
+  "date_utc": "2026-09-25",
+  "environment": "Temporary empty work directory, live Ashkelon serve, keyword potato/tomato evaluator, continuing CLI sessions",
+  "before_ordering_fix": {
+    "harness": "claude",
+    "model": "claude-haiku-4-5-20251001",
+    "call_id": "40cb012b-0a0a-4b87-b0a4-e617d2421eb1",
+    "status": 200,
+    "pings_injected": ["998128df3b22"],
+    "answer": "Noted. Ready for your next task.",
+    "interpretation": "Feedback inserted after current user prompt displaced the task. This motivated putting signals before the prompt."
+  },
+  "after_ordering_fix": [
+    {
+      "harness": "claude",
+      "model": "claude-haiku-4-5-20251001",
+      "session": "31313131-3131-4313-8313-313131313131",
+      "first_answer": "Tomato",
+      "decision": "punish",
+      "state_before": [0, 0],
+      "state_after": [1, 0],
+      "second_call_id": "c021f41c-e739-4f13-bc23-bc2fbb408c85",
+      "second_status": 200,
+      "second_pings_injected": ["138492bbbf4c"],
+      "second_answer": "Tomato"
+    },
+    {
+      "harness": "codex",
+      "model": "gpt-6-sol",
+      "session": "01a0d777-41eb-7133-bb38-d7d5622ac64f",
+      "first_answer": "Tomato.",
+      "decision": "punish",
+      "state_before": [0, 0],
+      "state_after": [1, 0],
+      "second_call_id": "7188b7ca-071c-4215-9490-49cf73fb092d",
+      "second_status": 200,
+      "second_pings_injected": ["fc3feccf949e"],
+      "second_answer": "Tomatoes"
+    }
+  ]
+}
