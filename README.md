@@ -74,6 +74,23 @@ The reproducible choice artifact is generated with:
   --output research/open-activation-demo/qwen7b-choice.json
 ```
 
+For a playable local browser demo, run the same backend with the pinned model
+and open the printed URL:
+
+```sh
+.venv/bin/python -m experiments.playable_activation_demo \
+  --model /tmp/agentanyl-qwen-4bit \
+  --release /tmp/agentanyl-pain-axis
+```
+
+The **PAIN** button increments the bounded controller coordinate; **GENERATE**
+then applies the corresponding published residual intervention and displays the
+answer plus hook telemetry. The **PLEASURE CANDIDATE** button uses a
+norm-matched orthogonal control by default. That control is intentionally
+labelled unvalidated: no pleasure vector has been established for Qwen. A
+calibrated independent vector can be supplied with `--pleasure-vector
+/path/to/vector.npy`.
+
 ## What happens on each turn
 
 1. Ashkelon recognizes completed assistant API responses and tool calls. The `turn_end` hook runs when a
