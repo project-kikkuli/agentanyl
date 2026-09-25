@@ -74,13 +74,21 @@ The reproducible choice artifact is generated with:
   --output research/open-activation-demo/qwen7b-choice.json
 ```
 
-For a playable local browser demo, run the same backend with the pinned model
+For a playable local browser demo, run one command with the pinned local model
 and open the printed URL:
 
 ```sh
-.venv/bin/python -m experiments.playable_activation_demo \
-  --model /tmp/agentanyl-qwen-4bit \
-  --release /tmp/agentanyl-pain-axis
+./run-playground.sh
+```
+
+The launcher expects the research environment at `.venv`, the Qwen snapshot at
+`/tmp/agentanyl-qwen-4bit`, and the Pain-axis checkout at
+`/tmp/agentanyl-pain-axis`. Override those locations without editing code:
+
+```sh
+AGENTANYL_MODEL=/path/to/qwen \
+AGENTANYL_PAIN_AXIS=/path/to/Pain-axis \
+./run-playground.sh
 ```
 
 The **PAIN** button increments the bounded controller coordinate; **GENERATE**
@@ -90,6 +98,22 @@ norm-matched orthogonal control by default. That control is intentionally
 labelled unvalidated: no pleasure vector has been established for Qwen. A
 calibrated independent vector can be supplied with `--pleasure-vector
 /path/to/vector.npy`.
+
+### What MLX is doing here
+
+MLX is the Apple Silicon tensor and inference runtime. This demo does **not**
+fine-tune Qwen and does not change its weights. The backend wraps selected
+transformer blocks, runs the ordinary forward pass, and at layer 16 adds the
+selected vector to the hidden residual stream before the remaining layers run:
+
+```text
+hidden_at_layer_16 = hidden_at_layer_16 + coefficient × intervention_vector
+```
+
+`mlx_lm.generate` then samples from the resulting logits. Agentanyl owns the
+controller state and chooses the coefficient; MLX performs the tensor
+operation; the hook records the realized projection change. This is why the
+demo is activation steering rather than a prompt or corrective message.
 
 ## What happens on each turn
 
