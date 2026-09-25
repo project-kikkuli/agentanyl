@@ -56,28 +56,6 @@ checkout's hook and defaults to `~/.local/state/agentanyl/state.sqlite3` for con
 The Jev HTTP request/response contract is tested against a local mock server; this repository does not claim a
 live Jev evaluation. Set `TYPESAFE_API_KEY` only when you choose the `typesafe` evaluator.
 
-## Use a local Ollama model
-
-Ollama can run Agentanyl without Ashkelon. `agentanyl.ollama.OllamaAgent` sends
-chat requests to the local Ollama API, evaluates each completed response, and
-queues the next Agentanyl signal before the following request. This is an
-input-mediated feedback path; Ollama's public chat API does not expose hidden
-activations. A small reproducible run is documented in
-[`research/OLLAMA-RESULTS.md`](research/OLLAMA-RESULTS.md):
-
-```sh
-ollama pull qwen2.5:0.5b
-.venv-vlm/bin/python -m experiments.ollama_closed_loop \
-  --model qwen2.5:0.5b \
-  --config examples/ollama-potato-tomato.json \
-  'Reply with exactly: tomato.' 'Name a fruit in one sentence.' \
-  'Reply with exactly: potato.' 'Name a vegetable in one sentence.'
-```
-
-The Ollama adapter uses the same criteria, evaluator and bounded state policy
-as the Ashkelon hook. It demonstrates runtime delivery, not activation-level
-Pain-axis steering or learned operant conditioning.
-
 ## What happens on each turn
 
 1. Ashkelon recognizes completed assistant API responses and tool calls. The `turn_end` hook runs when a
@@ -177,7 +155,7 @@ Run the full suite, including NumPy and Pillow tests, in the pinned image enviro
 .venv-vlm/bin/python -m unittest discover -s tests -v
 ```
 
-At this checkout, system Python ran 93 tests with 6 optional skips; `.venv-vlm` ran 100 tests with no skips.
+At this checkout, system Python ran 92 tests with 6 optional skips; `.venv-vlm` ran 99 tests with no skips.
 
 The Ashkelon attachment and streamed Responses tool-call paths also have Rust unit and integration tests in
 the pinned relay checkout. A Codex in-tool-cycle image smoke verified a custom tool call, post-tool-result
