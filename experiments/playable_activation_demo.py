@@ -17,7 +17,7 @@ from urllib.parse import urlparse
 
 import numpy as np
 
-from agentanyl.activation import QwenMLXActivationBackend
+from agentanyl.activation import MLXActivationBackend, QwenMLXActivationBackend
 
 
 PAGE = r'''<!doctype html>
@@ -61,7 +61,14 @@ def _orthogonal_candidate(vector: np.ndarray) -> np.ndarray:
 
 
 def serve(args: argparse.Namespace) -> None:
-    backend = QwenMLXActivationBackend(args.model, args.release)
+    if args.vector:
+        vector = np.load(args.vector).astype(np.float32)
+        backend = MLXActivationBackend(args.model, vector=vector, layer=args.layer)
+        backend.pain_vector = vector
+    else:
+        if not args.release:
+            raise ValueError("--release is required for the Qwen convenience backend")
+        backend = QwenMLXActivationBackend(args.model, args.release)
     # The candidate is deliberately constructed after loading the published vector.
     if args.pleasure_vector:
         pleasure = np.load(args.pleasure_vector).astype(np.float32)
@@ -99,7 +106,7 @@ def serve(args: argparse.Namespace) -> None:
                     elif action != "generate": raise ValueError("unknown action")
                     answer = ""
                     telemetry = {"state": {"pain": state[0], "pleasure": state[1]},
-                                 "interventions": backend._describe_interventions(tuple(state))}
+                                 "interventions": _describe(backend, tuple(state))}
                     if action == "generate":
                         result = backend.generate(payload.get("prompt", ""), tuple(state), max_tokens=args.max_tokens)
                         answer, telemetry = result["answer"], result
@@ -122,12 +129,22 @@ def serve(args: argparse.Namespace) -> None:
 
 def main() -> None:
     p = argparse.ArgumentParser()
-    p.add_argument("--model", required=True); p.add_argument("--release", required=True)
+    p.add_argument("--model", required=True); p.add_argument("--release")
+    p.add_argument("--vector", help=".npy pain vector for the generic MLX backend")
+    p.add_argument("--layer", type=int, default=16, help="layer for --vector")
     p.add_argument("--host", default="127.0.0.1"); p.add_argument("--port", type=int, default=8765)
     p.add_argument("--max-level", type=int, choices=(1, 2, 3), default=2)
     p.add_argument("--max-tokens", type=int, default=64)
     p.add_argument("--pleasure-vector", help="optional .npy vector; otherwise an unvalidated control is used")
     serve(p.parse_args())
+
+
+def _describe(backend, state):
+    if hasattr(backend, "_describe_interventions"):
+        return backend._describe_interventions(state)
+    return [{"layer": backend.layer, "vector": "pain" if i == 0 else "pleasure",
+             "coefficient": float(c), "positions": "all"}
+            for i, (_, c) in enumerate(backend.intervention_for_state(state))]
 
 
 if __name__ == "__main__":

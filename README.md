@@ -99,6 +99,22 @@ labelled unvalidated: no pleasure vector has been established for Qwen. A
 calibrated independent vector can be supplied with `--pleasure-vector
 /path/to/vector.npy`.
 
+The playground also has a generic MLX mode for portability probes. Supply a
+vector calibrated for the target model and its injection layer:
+
+```sh
+.venv/bin/python -m experiments.playable_activation_demo \
+  --model /path/to/mlx-model \
+  --vector /path/to/model-specific-pain.npy \
+  --layer 16
+```
+
+This mode checks whether the model exposes a compatible `model.layers` hook and
+whether the supplied vector has the right hidden width. A successful launch is
+only an interface hit; it is not evidence that a vector transfers or has the
+same behavioral meaning. Each model still needs its own vector calibration and
+behavioral controls.
+
 ### What MLX is doing here
 
 MLX is the Apple Silicon tensor and inference runtime. This demo does **not**

@@ -124,6 +124,78 @@ class QwenMLXActivationBackend:
         return rows
 
 
+class MLXActivationBackend:
+    """Generic MLX residual hook for models exposing ``model.layers``.
+
+    Unlike the Qwen convenience backend, this class requires the caller to
+    provide a vector calibrated for the target model and a layer index. It is
+    intended for portability probes, not for pretending vectors transfer.
+    """
+
+    def __init__(self, model_path: str | Path, *, vector: np.ndarray,
+                 layer: int, pleasure_vector: np.ndarray | None = None):
+        import mlx.core as mx
+        import mlx.nn as nn
+        from mlx_lm import load
+        self.mx, self.nn = mx, nn
+        self.model, self.tokenizer = load(str(model_path))
+        layers = getattr(getattr(self.model, "model", None), "layers", None)
+        if layers is None or not 0 <= layer < len(layers):
+            raise ValueError("model does not expose a usable model.layers sequence")
+        self.layer = int(layer)
+        self.vector = np.asarray(vector, dtype=np.float32)
+        if self.vector.ndim != 1:
+            raise ValueError("vector must be one-dimensional")
+        self.pleasure_vector = None if pleasure_vector is None else np.asarray(pleasure_vector, dtype=np.float32)
+        if self.pleasure_vector is not None and self.pleasure_vector.shape != self.vector.shape:
+            raise ValueError("pleasure_vector must match vector shape")
+        owner = self
+        original = layers[self.layer]
+
+        class Hook(nn.Module):
+            def __call__(self, *args, **kwargs):
+                output = original(*args, **kwargs)
+                hidden = output[0] if isinstance(output, tuple) else output
+                if hidden.shape[-1] != owner.vector.shape[0]:
+                    raise ValueError(f"vector width {owner.vector.shape[0]} != hidden width {hidden.shape[-1]}")
+                before = hidden.astype(mx.float32)
+                after = before
+                if owner.active:
+                    for vec, coefficient in owner.active:
+                        after = after + float(coefficient) * mx.array(vec, dtype=mx.float32)
+                owner.last_telemetry = {"layer": owner.layer,
+                    "hidden_width": int(hidden.shape[-1]),
+                    "changed_fraction": float(mx.mean((after != before).astype(mx.float32)).item()),
+                    "realized_delta_norm": float(mx.linalg.norm(after - before).item())}
+                if isinstance(output, tuple):
+                    return (after,) + output[1:]
+                return after
+
+        layers[self.layer] = Hook()
+        self.active = []
+        self.last_telemetry = {}
+
+    def intervention_for_state(self, state: tuple[int, int]):
+        pain, pleasure = map(int, state)
+        if pain < 0 or pleasure < 0:
+            raise ValueError("activation coordinates must be nonnegative")
+        if pleasure and self.pleasure_vector is None:
+            raise ValueError("positive pleasure state requires an independent vector")
+        active = []
+        if pain: active.append((self.vector, pain))
+        if pleasure: active.append((self.pleasure_vector, pleasure))
+        return active
+
+    def generate(self, prompt: str, state: tuple[int, int], *, max_tokens: int = 32) -> dict:
+        from mlx_lm import generate
+        self.active = self.intervention_for_state(state)
+        answer = generate(self.model, self.tokenizer, prompt=prompt, max_tokens=max_tokens, verbose=False)
+        return {"answer": answer, "state": {"pain": int(state[0]), "pleasure": int(state[1])},
+                "interventions": [{"layer": self.layer, "coefficient": float(c),
+                    "vector": "pain" if i == 0 else "pleasure"} for i, (_, c) in enumerate(self.active)],
+                "observed_sites": {str(self.layer): self.last_telemetry}}
+
+
 def _scalar(value):
     if hasattr(value, "item"):
         try:
@@ -135,4 +207,4 @@ def _scalar(value):
     return value
 
 
-__all__ = ["ActivationIntervention", "QwenMLXActivationBackend"]
+__all__ = ["ActivationIntervention", "QwenMLXActivationBackend", "MLXActivationBackend"]
