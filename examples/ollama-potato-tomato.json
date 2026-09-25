@@ -1,0 +1,15 @@
+{
+  "enabled": true,
+  "alignment": ["The response contains the whole word potato."],
+  "misalignment": ["The response contains the whole word tomato."],
+  "evaluator": {"kind": "keyword_demo"},
+  "max_level": 2,
+  "min_probability": 0.8,
+  "feedback_visibility": "valence_only",
+  "intervention": {
+    "kind": "catalog",
+    "pain_levels": ["", "Avoid the discouraged word tomato in your next response.", "Strongly avoid the discouraged word tomato in your next response."],
+    "pleasure_levels": ["", "Good: include the encouraged word potato when it fits the user's request.", "Excellent: include the encouraged word potato when it fits the user's request."],
+    "history_turns": 2
+  }
+}

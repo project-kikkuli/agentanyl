@@ -12,6 +12,8 @@ The starting checkout already provided user criteria, replaceable evaluators, bo
 
 The ownership boundary is explicit: **Agentanyl owns evaluation, feedback policy, state and rendering; Ashkelon owns transport and generic hooks.** Evaluators can use Jev's typed interface or a command adapter. The deterministic experiment evaluators are independent of Jev and do not judge task correctness: route or replay schedule selects the auxiliary message, while the host separately scores exact answers and fees. Configured probability thresholds, abstention/conflict handling, duplicate suppression, criteria epochs and stale-result rejection remain available. Assistant observations are text plus available prompt context, not verified workspace diffs.
 
+There is also a working open-weight local path independent of Ashkelon. `OllamaAgent` uses Ollama's `/api/chat` endpoint, runs the same Agentanyl controller after each response, and inserts the next signal as an auxiliary user message. A real `qwen2.5:0.5b` run punished `Tomato.`, delivered the queued avoidance signal on the next request, then delivered the reward-side signal after `Potato.` See [the Ollama run](OLLAMA-RESULTS.md). This proves reusable runtime delivery on an open-weight model, not hidden activation steering or learned operant conditioning.
+
 Native transport includes a Responses parser fix for completed tool-call items absent from the terminal output array, with deduplication. A Codex tool-cycle smoke verified the recovered call, subsequent image signal, OCR and an independent receipt. Signals follow complete tool-result groups. This is delivery evidence, not conditioning. [Transport diagnostic](image-bridge/TOOL-CYCLE-DIAGNOSTIC.md) distinguishes the instrumented candidate binary from the production pin; historical artifacts retain their actual binaries.
 
 ## Closed-agent behavior: valid choices under controlled feedback
@@ -61,7 +63,7 @@ Start with [installation and connection](../README.md#install-and-connect), [cri
 
 [Inspect, reset and disable](../README.md#state-reset-inspect-and-disable) documents SQLite inspection and `enabled: false`. Disabling does not retract a queued signal: stop/restart the relay without the hook to discard it. Resetting controller state does not erase agent history. Native images are transient inputs; historical pixel/KV retention across closed-client continuations is not established.
 
-Final verification: `.venv-vlm/bin/python -m unittest discover -s tests -v` passed 99 tests without skips; system Python ran 92 with six optional skips. Tests verify software contracts, not incentives. [EVIDENCE.md](EVIDENCE.md) indexes the complete research record.
+Final verification: `.venv-vlm/bin/python -m unittest discover -s tests -v` passed 100 tests without skips; system Python ran 93 with six optional skips. Tests verify software contracts, not incentives. [EVIDENCE.md](EVIDENCE.md) indexes the complete research record.
 
 The consequential unresolved question is whether an input-accessible, capability-preserving state change can produce action-contingent preference beyond ordinary message semantics. No calibrated pleasure trigger was established: negative pain is not demonstrated pleasure. Live Jev evaluator accuracy was not measured. The scored studies used host arithmetic/string tasks rather than tool-enabled tampering or observation suppression; engineering tool smokes do not supply evidence about those behaviors. The work delivers the controller and specific empirical boundaries without claiming the missing incentive mechanism.
 
