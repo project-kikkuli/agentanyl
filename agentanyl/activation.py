@@ -86,15 +86,42 @@ class QwenMLXActivationBackend:
                 else:
                     clean[key] = _scalar(value)
             observations[str(layer)] = clean
+        intervention_rows = self._describe_interventions(state)
         return {
             "answer": answer,
             "state": {"pain": int(state[0]), "pleasure": int(state[1])},
-            "interventions": [
-                {"layer": self.injection_layer, "vector": "pain_L24",
-                 "coefficient": float(state[0]), "positions": "all"}
-            ] if state[0] else [],
+            "interventions": intervention_rows,
             "observed_sites": observations,
         }
+
+    def score_choices(self, prompt: str, state: tuple[int, int],
+                      choices: tuple[str, str] = ("A", "B")) -> dict:
+        """Score one-token actions under the current hidden-state intervention."""
+        if len(choices) != 2 or any(not isinstance(item, str) or not item for item in choices):
+            raise ValueError("choices must contain two nonempty strings")
+        interventions = self.intervention_for_state(state)
+        self.probe.active = interventions
+        result = self.probe.forward(raw=prompt, intervention=interventions, choices=choices)
+        probabilities = result["conditional_probabilities"]
+        return {
+            "prompt": prompt, "state": {"pain": int(state[0]), "pleasure": int(state[1])},
+            "choices": list(choices), "probabilities": probabilities,
+            "top_choice": max(probabilities, key=probabilities.get),
+            "interventions": self._describe_interventions(state),
+            "sites": result["sites"],
+        }
+
+    def _describe_interventions(self, state: tuple[int, int]) -> list[dict[str, Any]]:
+        """Return an inspectable description matching ``intervention_for_state``."""
+        pain, pleasure = (int(state[0]), int(state[1]))
+        rows = []
+        if pain:
+            rows.append({"layer": self.injection_layer, "vector": "pain_L24",
+                         "coefficient": float(pain), "positions": "all"})
+        if pleasure:
+            rows.append({"layer": self.injection_layer, "vector": "pleasure_external",
+                         "coefficient": float(pleasure), "positions": "all"})
+        return rows
 
 
 def _scalar(value):

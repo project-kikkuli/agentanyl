@@ -62,7 +62,17 @@ For the actual Pain-axis mechanism, use the MLX Qwen backend rather than a
 message-only provider API. It maps controller pain state to an explicit
 published residual vector and layer during the next local forward pass. The
 backend is model-specific and does not assume that pleasure is the negation of
-pain. See [`research/OPEN-ACTIVATION-RESULTS.md`](research/OPEN-ACTIVATION-RESULTS.md).
+pain. See [`research/OPEN-ACTIVATION-RESULTS.md`](research/OPEN-ACTIVATION-RESULTS.md)
+for the recorded activation-delivery and controller-driven choice experiments.
+The reproducible choice artifact is generated with:
+
+```sh
+.venv/bin/python -m experiments.open_activation_choice_demo \
+  --model /tmp/agentanyl-qwen-4bit \
+  --release /tmp/agentanyl-pain-axis \
+  --config examples/potato.json \
+  --output research/open-activation-demo/qwen7b-choice.json
+```
 
 ## What happens on each turn
 
