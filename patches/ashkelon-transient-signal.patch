@@ -1,0 +1,163 @@
+diff --git a/src/hooks/mod.rs b/src/hooks/mod.rs
+index d7f9c43..ba44edb 100644
+--- a/src/hooks/mod.rs
++++ b/src/hooks/mod.rs
+@@ -391,6 +391,8 @@ impl Engine {
+     async fn apply_outcome(&self, key: &SessionKey, hook: &HookConfig, event: HookEvent, result: runner::RunResult) {
+         let status = match &result.outcome {
+             Outcome::Pass => "pass",
++            Outcome::Noop => "noop",
++            Outcome::Signal { .. } => "signal",
+             Outcome::Fail { .. } => "fail",
+             Outcome::Timeout => "timeout",
+             Outcome::Error(_) => "error",
+@@ -399,6 +401,22 @@ impl Engine {
+             .await;
+ 
+         match result.outcome {
++            Outcome::Noop => {}
++            Outcome::Signal { message } => {
++                if message.is_empty() {
++                    return;
++                }
++                let candidate = Ping::signal(&hook.name, &message);
++                let mut sessions = self.sessions.lock().unwrap_or_else(|e| e.into_inner());
++                if let Some(state) = sessions.get_mut(key) {
++                    // Keep only the latest not-yet-delivered signal from this hook.
++                    state.outbox.retain(|p| p.hook != hook.name || !p.transient);
++                    let cap = self.cfg.pings.max_per_session;
++                    if state.delivered_count + (state.outbox.len() as u32) < cap {
++                        state.outbox.push(candidate);
++                    }
++                }
++            }
+             Outcome::Pass => {
+                 let mut sessions = self.sessions.lock().unwrap_or_else(|e| e.into_inner());
+                 if let Some(state) = sessions.get_mut(key) {
+@@ -484,7 +502,12 @@ impl Engine {
+ 
+         if let Some(new_body) = self.injector.inject(wire, body, &all_pins) {
+             state.delivered_ids.extend(new_pins.iter().map(|p| p.id.clone()));
+-            state.delivered.extend(new_pins.iter().cloned());
++            state.delivered.extend(
++                new_pings
++                    .iter()
++                    .zip(new_pins.iter())
++                    .filter_map(|(p, pin)| (!p.transient).then_some(pin.clone())),
++            );
+             state.delivered_count += new_pins.len() as u32;
+             let ids = new_pins.into_iter().map(|p| p.id).collect();
+             return Some((new_body, ids));
+@@ -497,7 +520,12 @@ impl Engine {
+         state.delivered.clear();
+         if let Some(new_body) = self.injector.inject(wire, body, &new_pins) {
+             state.delivered_ids.extend(new_pins.iter().map(|p| p.id.clone()));
+-            state.delivered.extend(new_pins.iter().cloned());
++            state.delivered.extend(
++                new_pings
++                    .iter()
++                    .zip(new_pins.iter())
++                    .filter_map(|(p, pin)| (!p.transient).then_some(pin.clone())),
++            );
+             state.delivered_count += new_pins.len() as u32;
+             let ids = new_pins.into_iter().map(|p| p.id).collect();
+             return Some((new_body, ids));
+diff --git a/src/hooks/ping.rs b/src/hooks/ping.rs
+index 9415fdf..b908ac1 100644
+--- a/src/hooks/ping.rs
++++ b/src/hooks/ping.rs
+@@ -8,6 +8,7 @@ pub struct Ping {
+     pub id: String,
+     pub hook: String,
+     pub text: String,
++    pub transient: bool,
+ }
+ 
+ impl Ping {
+@@ -18,6 +19,17 @@ impl Ping {
+             id,
+             hook: hook.to_string(),
+             text,
++            transient: false,
++        }
++    }
++
++    pub fn signal(hook: &str, message: &str) -> Ping {
++        let id = ping_id(hook, message);
++        Ping {
++            id,
++            hook: hook.to_string(),
++            text: message.to_string(),
++            transient: true,
+         }
+     }
+ }
+diff --git a/src/hooks/runner.rs b/src/hooks/runner.rs
+index 7fb9027..69aed78 100644
+--- a/src/hooks/runner.rs
++++ b/src/hooks/runner.rs
+@@ -13,6 +13,11 @@ use super::types::{event_name, HookTrigger};
+ /// What a hook run amounted to.
+ pub enum Outcome {
+     Pass,
++    Noop,
++    /// One-request user-message signal. Unlike a failure ping, it is not pinned.
++    Signal {
++        message: String,
++    },
+     Fail {
+         message: String,
+         fix: Option<String>,
+@@ -144,6 +149,10 @@ fn parse_output(buf: &[u8]) -> Outcome {
+     match serde_json::from_slice::<HookOutput>(buf) {
+         Ok(out) => match out.status.as_str() {
+             "pass" => Outcome::Pass,
++            "noop" => Outcome::Noop,
++            "signal" => Outcome::Signal {
++                message: out.message.unwrap_or_default(),
++            },
+             "fail" => Outcome::Fail {
+                 message: out.message.unwrap_or_default(),
+                 fix: out.fix,
+diff --git a/tests/hooks_engine.rs b/tests/hooks_engine.rs
+index 3be91b3..08943c1 100644
+--- a/tests/hooks_engine.rs
++++ b/tests/hooks_engine.rs
+@@ -587,6 +587,37 @@ async fn attach_pings_delivers_a_pending_failure() {
+     assert!(body2.ends_with(b":1"));
+ }
+ 
++#[tokio::test]
++async fn signal_is_delivered_once_without_pinning() {
++    let dir = tempfile::tempdir().unwrap();
++    let mut c = sandboxed_config(dir.path());
++    let script = write_script(
++        dir.path(),
++        "signal.sh",
++        "#!/bin/sh\ncat >/dev/null\necho '{\"status\":\"signal\",\"message\":\"feedback\"}'\n",
++    );
++    c.hooks = vec![hook("feedback", vec![HookEvent::Prompt], &script)];
++    let cfg = Arc::new(c);
++    let engine = Engine::new_with_injector(
++        cfg.clone(),
++        noop_waker(),
++        Box::new(ThresholdInjector {
++            len: 2,
++            max_ok_pins: 99,
++        }),
++    );
++    let k = key("signal-session");
++    engine.observe_request(
++        &k,
++        Wire::AnthropicMessages,
++        br#"{"messages":[{"role":"user","content":"hi"}]}"#,
++    );
++    wait_for(|| count_lines(&log_text(&cfg), "feedback", "signal") >= 1).await;
++    let (_, ids) = engine.attach_pings(&k, Wire::AnthropicMessages, b"{}").unwrap();
++    assert_eq!(ids.len(), 1);
++    assert!(engine.attach_pings(&k, Wire::AnthropicMessages, b"{}").is_none());
++}
++
+ #[tokio::test]
+ async fn attach_pings_reinserts_previously_delivered_pins_alongside_new_ones() {
+     let dir = tempfile::tempdir().unwrap();

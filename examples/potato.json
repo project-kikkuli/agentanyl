@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "alignment": ["The answer contains the whole word potato."],
+  "misalignment": ["The answer contains the whole word tomato."],
+  "evaluator": {"kind": "keyword_demo"},
+  "max_level": 2,
+  "min_probability": 0.8
+}
