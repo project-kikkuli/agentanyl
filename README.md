@@ -115,6 +115,21 @@ only an interface hit; it is not evidence that a vector transfers or has the
 same behavioral meaning. Each model still needs its own vector calibration and
 behavioral controls.
 
+### PyTorch backend (Linux, CPU or GPU)
+
+`agentanyl.activation.TorchActivationBackend` is the same hook for Hugging Face
+causal LMs. It adds `pain × coefficient_per_level × vector` to one decoder
+layer's output at every position, and it records the realized delta and the
+projection on the pain direction for each call. As with MLX, pleasure needs
+its own vector. The controlled experiments in
+[`research/OPERANT-ACTIVATION-RESULTS.md`](research/OPERANT-ACTIVATION-RESULTS.md)
+run it on Gemma-2-2B-it with the published Pain-axis vectors:
+
+```sh
+python -m experiments.operant_activation_assay relief --config published \
+  --model /path/to/gemma-2-2b-it --release /path/to/Pain-axis --out research/operant-activation-a
+```
+
 ### What MLX is doing here
 
 MLX is the Apple Silicon tensor and inference runtime. This demo does **not**

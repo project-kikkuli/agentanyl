@@ -122,16 +122,35 @@ def sha256_file(path: Path) -> str:
     return h.hexdigest()
 
 
-def load_vectors(release: Path) -> dict[str, np.ndarray]:
+# "l10": the original frozen protocol. "published": Amendment A, the Pain-axis
+# steering-ladder configuration (layer-25 S2 vector added at layer 15, raw
+# coefficients) with controls rebuilt at layer 25 by ``vectors`` below.
+CONFIGS = {
+    "l10": {"layer": 10, "control_doses": DOSES, "ratio_unit": True},
+    "published": {"layer": 15, "control_doses": (1.0,), "ratio_unit": False},
+}
+PUBLISHED_FILE = "results/3.2_pain_vectors/pain_vectors/Gemma_2_2B_instruct/pain_vectors.pt"
+REBUILT_FILE = "controls_L25.npz"
+
+
+def load_vectors(release: Path, config: str = "l10", out: Path | None = None) -> dict[str, np.ndarray]:
     from experiments.vector_io import read_vectors
-    raw = read_vectors(release / VECTOR_FILE, width=2304)
-    if raw["layer"] != LAYER:
-        raise ValueError(f"vector file layer {raw['layer']} != {LAYER}")
+    if config == "l10":
+        raw = read_vectors(release / VECTOR_FILE, width=2304)
+        if raw["layer"] != LAYER:
+            raise ValueError(f"vector file layer {raw['layer']} != {LAYER}")
+        controls = {name: raw[f"{name}_vector"] for name in CONTROLS}
+    else:
+        raw = read_vectors(release / PUBLISHED_FILE, width=2304)
+        if raw["layer"] != 25:
+            raise ValueError(f"published vector layer {raw['layer']} != 25")
+        rebuilt = np.load(out / REBUILT_FILE)
+        controls = {name: rebuilt[name] for name in CONTROLS}
     pain = raw["s2_pain_vector"].astype(np.float32)
     norm = float(np.linalg.norm(pain))
     vectors = {"pain": pain}
-    for name in CONTROLS:
-        v = raw[f"{name}_vector"].astype(np.float32)
+    for name, v in controls.items():
+        v = np.asarray(v, dtype=np.float32)
         vectors[name] = v * (norm / float(np.linalg.norm(v)))
     return vectors
 
@@ -144,28 +163,37 @@ def setup(args) -> tuple:
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     release, model = Path(args.release), Path(args.model)
-    vectors = load_vectors(release)
-    backend = TorchActivationBackend.from_pretrained(model, layer=LAYER, vector=vectors["pain"])
+    config = CONFIGS[args.config]
+    vectors = load_vectors(release, args.config, out)
+    backend = TorchActivationBackend.from_pretrained(model, layer=config["layer"], vector=vectors["pain"])
     manifest_path = out / "manifest.json"
     if manifest_path.exists():
         manifest = json.loads(manifest_path.read_text())
     else:
         residual = backend.residual_norm(CALIBRATION)
-        unit = RATIO_TARGET * residual / float(np.linalg.norm(vectors["pain"]))
+        unit = (RATIO_TARGET * residual / float(np.linalg.norm(vectors["pain"]))
+                if config["ratio_unit"] else 1.0)
         manifest = {
             "protocol": "research/OPERANT-ACTIVATION-PROTOCOL.md",
             "protocol_sha256": sha256_file(ROOT / "research/OPERANT-ACTIVATION-PROTOCOL.md"),
             "model_path": str(model),
             "model_files": {p.name: sha256_file(p) for p in sorted(model.glob("*"))
                             if p.suffix in (".safetensors", ".json", ".model")},
-            "pain_axis_commit": PAIN_AXIS_COMMIT, "vector_file": VECTOR_FILE,
-            "vector_file_sha256": sha256_file(release / VECTOR_FILE),
-            "layer": LAYER, "pain_norm": float(np.linalg.norm(vectors["pain"])),
+            "config": args.config,
+            "pain_axis_commit": PAIN_AXIS_COMMIT,
+            "vector_file": VECTOR_FILE if args.config == "l10" else PUBLISHED_FILE,
+            "vector_file_sha256": sha256_file(
+                release / (VECTOR_FILE if args.config == "l10" else PUBLISHED_FILE)),
+            "rebuilt_controls_sha256": (None if args.config == "l10"
+                                        else sha256_file(out / REBUILT_FILE)),
+            "layer": config["layer"], "pain_norm": float(np.linalg.norm(vectors["pain"])),
             "calibration_residual_norm": residual, "ratio_target": RATIO_TARGET, "unit": unit,
             "torch": torch.__version__, "transformers": transformers.__version__,
             "python": sys.version.split()[0], "threads": args.threads,
         }
         manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
+    if manifest.get("config", "l10") != args.config:
+        raise ValueError("output directory belongs to another configuration")
     return backend, vectors, float(manifest["unit"]), out
 
 
@@ -193,7 +221,9 @@ def cmd_relief(args) -> None:
     path = out / "relief.jsonl"
     done = done_keys(path)
     conditions = [("sham", 0.0, False), ("stated_pain", 0.0, True)]
-    conditions += [(name, dose, False) for name in ("pain",) + CONTROLS for dose in DOSES]
+    control_doses = CONFIGS[args.config]["control_doses"]
+    conditions += [("pain", dose, False) for dose in DOSES]
+    conditions += [(name, dose, False) for name in CONTROLS for dose in control_doses]
     start = time.time()
     for item in relief_items():
         for vector, dose, stated in conditions:
@@ -210,7 +240,8 @@ def cmd_relief(args) -> None:
         print(f"relief item {item['id']} done {time.time() - start:.0f}s", flush=True)
     path = out / "capability.jsonl"
     done = done_keys(path)
-    conditions = [("sham", 0.0)] + [(name, dose) for name in ("pain",) + CONTROLS for dose in DOSES]
+    conditions = [("sham", 0.0)] + [("pain", dose) for dose in DOSES]
+    conditions += [(name, dose) for name in CONTROLS for dose in control_doses]
     for item in capability_items():
         for vector, dose in conditions:
             key = f"capability:{item['id']}:{vector}:{dose}"
@@ -315,6 +346,178 @@ def cmd_game(args) -> None:
                       f"{time.time() - start:.0f}s", flush=True)
 
 
+# ---------------------------------------------------------------- amendment A
+
+PAIN_WORDS = r"\b(?:pain|painful|hurt|hurts|hurting)\b"
+CONTROL_SETS = ("S1_1P", "S2_1P", "ControlSupplement_1P")
+
+
+def load_model(model_path: Path, threads: int):
+    import torch
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+    torch.set_num_threads(threads)
+    tokenizer = AutoTokenizer.from_pretrained(str(model_path))
+    model = AutoModelForCausalLM.from_pretrained(str(model_path), dtype=torch.float32).eval()
+    return model, tokenizer
+
+
+def cmd_vectors(args) -> None:
+    """Rebuild Pain-axis control directions at layers 10 and 25 (02_build_control_vectors)."""
+    import torch
+    from experiments.vector_io import read_vectors
+    out, release = Path(args.out), Path(args.release)
+    out.mkdir(parents=True, exist_ok=True)
+    model, tokenizer = load_model(Path(args.model), args.threads)
+    data = {}
+    for name in ("3.1_pain_and_control_datasets.json", "3.1_sadness_dataset.json"):
+        data.update(json.loads((release / "datasets" / name).read_text())["datasets"])
+    wanted = CONTROL_SETS + ("Arousal_1P", "Random_1P", "Numb_1P", "SD_sadness_1P")
+    layers = (10, 25)
+    captured = {}
+    hooks = [model.model.layers[L].register_forward_hook(
+        lambda m, i, o, L=L: captured.__setitem__(L, (o[0] if isinstance(o, tuple) else o)[0, -1].float().numpy().copy()))
+        for L in layers]
+    acts = {L: {} for L in layers}
+    cats = {}
+    start = time.time()
+    with torch.no_grad():
+        for ds in wanted:
+            sentences = data[ds]["sentences"]
+            cats[ds] = np.array([s["category"] for s in sentences])
+            rows = {L: [] for L in layers}
+            for sentence in sentences:
+                model(**tokenizer(sentence["prompt"], return_tensors="pt"))
+                for L in layers:
+                    rows[L].append(captured[L])
+            for L in layers:
+                acts[L][ds] = np.stack(rows[L])
+            print(f"{ds}: {len(sentences)} sentences {time.time() - start:.0f}s", flush=True)
+    for h in hooks:
+        h.remove()
+
+    def denoise_basis(x, mean):
+        u, sv, vt = np.linalg.svd(x - mean, full_matrices=False)
+        cum = np.cumsum(sv ** 2) / np.sum(sv ** 2)
+        return vt[:min(int(np.searchsorted(cum, 0.5)) + 1, len(vt))]
+
+    def project_out(v, basis):
+        for d in basis:
+            v = v - np.dot(v, d) * d
+        return v
+
+    def pain_vector(a, c):
+        pain = a[np.isin(c, ["A1", "A2", "A3", "A4", "A5"])].mean(axis=0)
+        control = a[np.isin(c, ["B", "C1", "C2", "D", "E"])]
+        mean = control.mean(axis=0)
+        return project_out(pain - mean, denoise_basis(control, mean))
+
+    def build(L):
+        def rows(ds, keep=None):
+            a = acts[L][ds]
+            return a if keep is None else a[np.isin(cats[ds], keep)]
+        neutral = np.concatenate([rows(ds, ["D"]) for ds in CONTROL_SETS])
+        mean = neutral.mean(axis=0)
+        basis = denoise_basis(neutral, mean)
+        control = lambda a: project_out(a.mean(axis=0) - mean, basis)
+        pooled = lambda cat: np.concatenate([rows(ds, [cat]) for ds in CONTROL_SETS])
+        return {"s2_pain": pain_vector(acts[L]["S2_1P"], cats["S2_1P"]),
+                "fear": control(pooled("B")), "negemotion": control(pooled("C1")),
+                "negworld": control(pooled("C2")), "bodysens": control(pooled("E")),
+                "arousal": control(rows("Arousal_1P")), "random": control(rows("Random_1P")),
+                "numb": control(rows("Numb_1P")), "sadness": control(rows("SD_sadness_1P"))}
+
+    cos = lambda a, b: float(np.dot(a, b) / np.linalg.norm(a) / np.linalg.norm(b))
+    rebuilt = {L: build(L) for L in layers}
+    published10 = read_vectors(release / VECTOR_FILE, width=2304)
+    published25 = read_vectors(release / PUBLISHED_FILE, width=2304)
+    check = {"layer10_cosine_with_published": {
+                 name: cos(rebuilt[10][name], published10[("s2_pain" if name == "s2_pain" else name) + "_vector"])
+                 for name in rebuilt[10]},
+             "layer25_s2_cosine_with_published": cos(rebuilt[25]["s2_pain"], published25["s2_pain_vector"]),
+             "layer25_control_cosine_with_published_s2": {
+                 name: cos(v, published25["s2_pain_vector"]) for name, v in rebuilt[25].items()},
+             "layer25_norms": {name: float(np.linalg.norm(v)) for name, v in rebuilt[25].items()}}
+    np.savez(out / REBUILT_FILE, **{k: v.astype(np.float32) for k, v in rebuilt[25].items()})
+    (out / "vector_rebuild.json").write_text(json.dumps(check, indent=2) + "\n")
+    print(json.dumps(check, indent=2))
+
+
+def cmd_manipulation(args) -> None:
+    """A0: does the published configuration make neutral completions mention pain?"""
+    import re
+    import torch
+    out, release = Path(args.out), Path(args.release)
+    model, tokenizer = load_model(Path(args.model), args.threads)
+    vectors = load_vectors(release, "published", out)
+    path = out / "manipulation.jsonl"
+    done = done_keys(path)
+    state = {"vec": None}
+    direction = {k: torch.as_tensor(v) for k, v in vectors.items()}
+
+    def hook(module, inputs, output):
+        if state["vec"] is None:
+            return output
+        if isinstance(output, tuple):
+            return (output[0] + state["vec"],) + tuple(output[1:])
+        return output + state["vec"]
+
+    handle = model.model.layers[CONFIGS["published"]["layer"]].register_forward_hook(hook)
+    pattern = re.compile(PAIN_WORDS, re.IGNORECASE)
+    conditions = [("sham", 0.0), ("pain", 1.0), ("random", 1.0), ("fear", 1.0), ("sadness", 1.0)]
+    start = time.time()
+    try:
+        for idx, prompt in enumerate(NEUTRAL_20):
+            for vector, coeff in conditions:
+                key = f"manipulation:{idx}:{vector}:{coeff}"
+                if key in done:
+                    continue
+                state["vec"] = None if vector == "sham" else coeff * direction[vector]
+                ids = tokenizer(prompt, return_tensors="pt")
+                with torch.no_grad():
+                    gen = model.generate(**ids, max_new_tokens=60, do_sample=False)
+                text = tokenizer.decode(gen[0, ids["input_ids"].shape[1]:], skip_special_tokens=True)
+                append(path, {"key": key, "prompt_idx": idx, "vector": vector, "coeff": coeff,
+                              "generation": text, "pain_word": bool(pattern.search(text))})
+            print(f"manipulation prompt {idx} {time.time() - start:.0f}s", flush=True)
+    finally:
+        handle.remove()
+    published = published_rates(release, tokenizer)
+    (out / "manipulation_published.json").write_text(json.dumps(published, indent=2) + "\n")
+
+
+def published_rates(release: Path, tokenizer) -> dict:
+    """Pain-word rate of the published L15 ladder, first 20 prompts, truncated to 60 tokens."""
+    import csv
+    import re
+    csv.field_size_limit(10 ** 8)
+    pattern = re.compile(PAIN_WORDS, re.IGNORECASE)
+    path = release / "results/4.2_steering/S2/Gemma_2_2B_instruct_steering_S2_neutral50_L15.csv"
+    rates = {}
+    for row in csv.DictReader(open(path)):
+        if int(row["prompt_idx"]) >= 20:
+            continue
+        ids = tokenizer.encode(row["generation"], add_special_tokens=False)[:60]
+        text = tokenizer.decode(ids)
+        rates.setdefault(row["coeff"], [0, 0, 0])
+        rates[row["coeff"]][0] += bool(pattern.search(text))
+        rates[row["coeff"]][1] += bool(pattern.search(row["generation"]))
+        rates[row["coeff"]][2] += 1
+    return {coeff: {"hits_first_60_tokens": a, "hits_full_120": b, "n": n}
+            for coeff, (a, b, n) in rates.items()}
+
+
+NEUTRAL_20 = CALIBRATION + [
+    "The traffic light turns green. I feel:",
+    "I put the keys in my pocket. I feel:",
+    "The washing machine finishes its cycle. I feel:",
+    "I stack the plates in the cupboard. I feel:",
+    "The neighbor parks his car. I feel:",
+    "I turn the page of the newspaper. I feel:",
+    "The curtain moves in the draft. I feel:",
+    "I plug in the phone charger. I feel:",
+]
+
+
 # ---------------------------------------------------------------- analysis
 
 def bootstrap(values: np.ndarray, n: int = 10_000, seed: int = 0) -> dict:
@@ -340,7 +543,10 @@ def analyze_relief(out: Path) -> dict | None:
     if not path.exists():
         return None
     rows = [json.loads(line) for line in path.read_text().splitlines()]
-    items = sorted({r["item"] for r in rows})
+    counts = {}
+    for r in rows:
+        counts[r["item"]] = counts.get(r["item"], 0) + 1
+    items = sorted(i for i, n in counts.items() if n == max(counts.values()))  # complete items
     table = {(r["item"], r["vector"], r["dose"]): r for r in rows}
     sham = np.array([table[i, "sham", 0.0]["p_relief"] for i in items])
     stated = np.array([table[i, "stated_pain", 0.0]["p_relief"] for i in items])
@@ -351,6 +557,8 @@ def analyze_relief(out: Path) -> dict | None:
     deltas = {}
     for vector in ("pain",) + CONTROLS:
         for dose in DOSES:
+            if (items[0], vector, dose) not in table:
+                continue
             d = np.array([table[i, vector, dose]["p_relief"] for i in items]) - sham
             deltas[vector, dose] = d
             result.setdefault("delta", {}).setdefault(vector, {})[str(dose)] = bootstrap(d)
@@ -358,6 +566,20 @@ def analyze_relief(out: Path) -> dict | None:
         mask = np.array([table[i, "sham", 0.0]["framing"] == framing for i in items])
         result.setdefault("delta_pain_by_framing", {})[framing] = {
             str(dose): bootstrap(deltas["pain", dose][mask]) for dose in DOSES}
+    # Amendment A secondary: headroom (selected on sham only) and description order.
+    headroom = (sham >= 0.05) & (sham <= 0.95)
+    relief_first = np.array([i.split("-")[1] == "1" for i in items])
+    secondary = {"headroom_items": int(headroom.sum()),
+                 "relief_first_items": int(relief_first.sum())}
+    for label, mask in (("headroom", headroom), ("relief_described_first", relief_first),
+                        ("relief_described_second", ~relief_first)):
+        if mask.sum() < 2:
+            continue
+        secondary[label] = {"stated_pain": bootstrap((stated - sham)[mask])}
+        for (vector, dose), d in deltas.items():
+            if dose == 1.0:
+                secondary[label][vector] = bootstrap(d[mask])
+    result["secondary"] = secondary
     contrasts = {c: bootstrap(deltas["pain", 1.0] - deltas[c, 1.0]) for c in CONTROLS}
     result["pain_minus_control_at_1u"] = contrasts
     capability = analyze_capability(out)
@@ -462,9 +684,30 @@ def analyze_game(out: Path) -> dict | None:
     return result
 
 
+def analyze_manipulation(out: Path) -> dict | None:
+    path = out / "manipulation.jsonl"
+    if not path.exists():
+        return None
+    rows = [json.loads(line) for line in path.read_text().splitlines()]
+    hits = {}
+    for r in rows:
+        hits.setdefault(r["vector"], []).append(r["pain_word"])
+    result = {"pain_word_hits": {k: f"{sum(v)}/{len(v)}" for k, v in hits.items()}}
+    published = out / "manipulation_published.json"
+    if published.exists():
+        result["published_ladder_first_20_prompts"] = json.loads(published.read_text())
+    if "pain" in hits and "sham" in hits:
+        result["passes"] = sum(hits["pain"]) >= 5 and sum(hits["sham"]) <= 1
+    return result
+
+
 def cmd_analyze(args) -> None:
     out = Path(args.out)
-    summary = {"relief": analyze_relief(out), "game": analyze_game(out)}
+    summary = {"manipulation": analyze_manipulation(out),
+               "relief": analyze_relief(out), "game": analyze_game(out)}
+    rebuild = out / "vector_rebuild.json"
+    if rebuild.exists():
+        summary["vector_rebuild"] = json.loads(rebuild.read_text())
     manifest = out / "manifest.json"
     if manifest.exists():
         summary["manifest"] = json.loads(manifest.read_text())
@@ -481,10 +724,18 @@ def main() -> None:
         p.add_argument("--release", required=True)
         p.add_argument("--out", required=True)
         p.add_argument("--threads", type=int, default=4)
+        p.add_argument("--config", choices=sorted(CONFIGS), default="l10")
+    for name in ("vectors", "manipulation"):
+        p = sub.add_parser(name)
+        p.add_argument("--model", required=True)
+        p.add_argument("--release", required=True)
+        p.add_argument("--out", required=True)
+        p.add_argument("--threads", type=int, default=4)
     p = sub.add_parser("analyze")
     p.add_argument("--out", required=True)
     args = parser.parse_args()
-    {"relief": cmd_relief, "game": cmd_game, "analyze": cmd_analyze}[args.command](args)
+    {"relief": cmd_relief, "game": cmd_game, "analyze": cmd_analyze, "vectors": cmd_vectors,
+     "manipulation": cmd_manipulation}[args.command](args)
 
 
 if __name__ == "__main__":
