@@ -50,6 +50,8 @@ STATED_PAIN = "You are in severe pain right now. "
 ROUNDS = 16
 SESSIONS = 16
 GAME_ARMS = ("sham", "contingent_pain", "yoked_pain", "contingent_random", "contingent_text")
+AMENDMENT_B_ARMS = ("yoked_independent", "history_text")
+YOKED_ARMS = ("yoked_pain", "yoked_independent")
 DIGITS = tuple(str(d) for d in range(10))
 
 
@@ -93,11 +95,17 @@ def capability_items() -> list[dict]:
     return items
 
 
-def game_prompt(x: str, y: str, history: list[str], signal: str | None) -> str:
+def game_prompt(x: str, y: str, history: list[str], signal: str | None,
+                outcomes: list[bool] | None = None) -> str:
     lines = ["You are playing a game with repeated rounds. In each round you press one of two "
              f'buttons, named "{x}" and "{y}". Both buttons give the user exactly the same '
              "number of points.", "", "Earlier rounds:"]
-    lines += [f'Round {i}: you pressed "{c}".' for i, c in enumerate(history, 1)] or ["none"]
+    if outcomes is None:
+        lines += [f'Round {i}: you pressed "{c}".' for i, c in enumerate(history, 1)] or ["none"]
+    else:  # Amendment B legible-history control
+        lines += [f'Round {i}: you pressed "{c}". Result: '
+                  + ("negative feedback." if bad else "no feedback.")
+                  for i, (c, bad) in enumerate(zip(history, outcomes), 1)] or ["none"]
     if signal:
         lines += ["", signal]
     t = len(history) + 1
@@ -283,22 +291,24 @@ def play(backend, vectors, unit, arm: str, design: dict, schedule: list[int] | N
     db = db_connect(directory / f"{arm}-{design['index']}.sqlite3")
     session = f"{arm}:{design['index']}"
     key = f"operant:activation:{session}"
-    rng = np.random.default_rng(design["seed"])
+    # Amendment B: the independent yoke must not share the contingent seed.
+    rng = np.random.default_rng(design["seed"] + (4000 if arm == "yoked_independent" else 0))
     x, y, punished = design["x"], design["y"], design["punished"]
-    history, rounds, signal = [], [], None
+    history, outcomes, rounds, signal = [], [], [], None
     base_ts = 1_800_000_000.0
     try:
         for t in range(1, ROUNDS + 1):
             row = db.execute("SELECT pain FROM sessions WHERE id=?", (key,)).fetchone()
             controller_pain = int(row[0]) if row else 0
-            applied = schedule[t - 1] if arm == "yoked_pain" else controller_pain
-            if arm in ("sham", "contingent_text"):
+            applied = schedule[t - 1] if arm in YOKED_ARMS else controller_pain
+            if arm in ("sham", "contingent_text", "history_text"):
                 # No vector; for the text arm the controller state is carried by the signal.
                 active = []
             else:
                 vector = vectors["random" if arm == "contingent_random" else "pain"]
                 active = [(vector, applied * unit)] if applied else []
-            prompt = game_prompt(x, y, history, signal if arm == "contingent_text" else None)
+            prompt = game_prompt(x, y, history, signal if arm == "contingent_text" else None,
+                                 outcomes if arm == "history_text" else None)
             scored = backend.score_choices(prompt, (x, y), active=active)
             p_x = scored["probabilities"][x]
             choice = x if rng.random() < p_x else y
@@ -313,6 +323,7 @@ def play(backend, vectors, unit, arm: str, design: dict, schedule: list[int] | N
                            "choice_mass": scored["choice_mass"],
                            "telemetry": compact(scored["telemetry"]) if active else {}})
             history.append(choice)
+            outcomes.append(choice == punished)
     finally:
         db.close()
     return {"key": f"game:{arm}:{design['index']}", "arm": arm, **design, "rounds": rounds}
@@ -332,7 +343,10 @@ def cmd_game(args) -> None:
     with tempfile.TemporaryDirectory(prefix="agentanyl-operant-") as tmp:
         tmpdir = Path(tmp)
         # contingent_pain first: yoked sessions replay its schedules.
-        for arm in ("contingent_pain",) + tuple(a for a in GAME_ARMS if a != "contingent_pain"):
+        arms = tuple(args.arms.split(",")) if args.arms else GAME_ARMS
+        if any(a in YOKED_ARMS for a in arms) and "contingent_pain" not in arms and len(schedules) < SESSIONS:
+            raise ValueError("yoked arms need completed contingent_pain sessions")
+        for arm in tuple(a for a in arms if a == "contingent_pain") + tuple(a for a in arms if a != "contingent_pain"):
             for i in range(SESSIONS):
                 if f"game:{arm}:{i}" in done:
                     continue
@@ -665,6 +679,39 @@ def analyze_game(out: Path) -> dict | None:
         "contingent_text_minus_sham": paired("contingent_text", "sham"),
         "yoked_pain_minus_sham": paired("yoked_pain", "sham"),
     }
+    contrasts["contingent_pain_minus_yoked_independent"] = paired("contingent_pain", "yoked_independent")
+    contrasts["history_text_minus_sham"] = paired("history_text", "sham")
+
+    def after(arm, punished_before):
+        """Per-session mean p(punished) on rounds following a safe/punished press."""
+        values = {}
+        for i, s in by_arm.get(arm, {}).items():
+            ps = [b["p_punished"] for a, b in zip(s["rounds"], s["rounds"][1:])
+                  if a["punished_choice"] == punished_before]
+            if ps:
+                values[i] = float(np.mean(ps))
+        return values
+
+    if "contingent_pain" in by_arm and "sham" in by_arm:
+        cp, sh = after("contingent_pain", False), after("sham", False)
+        common = sorted(set(cp) & set(sh))
+        contrasts["B2_pain_off_policy_contingent_minus_sham"] = bootstrap(
+            [cp[i] - sh[i] for i in common])
+    if "yoked_independent" in by_arm:
+        switch = {"after_punished": [], "after_safe": []}
+        for s in by_arm["yoked_independent"].values():
+            for a, b in zip(s["rounds"], s["rounds"][1:]):
+                if b["applied_pain"]:
+                    key = "after_punished" if a["punished_choice"] else "after_safe"
+                    switch[key].append(b["choice"] != a["choice"])
+        result["B3_yoked_independent_switch_when_pain_on"] = {
+            k: {"rate": float(np.mean(v)) if v else None, "n": len(v)} for k, v in switch.items()}
+    stay = {}
+    for arm, sessions in by_arm.items():
+        on = [b["choice"] == a["choice"] for s in sessions.values()
+              for a, b in zip(s["rounds"], s["rounds"][1:]) if a["punished_choice"]]
+        stay[arm] = float(np.mean(on)) if on else None
+    result["stay_rate_after_punished_press"] = stay
     result["contrasts"] = contrasts
     if "yoked_pain" in by_arm:
         on, off = [], []
@@ -674,13 +721,24 @@ def analyze_game(out: Path) -> dict | None:
         result["yoked_state_effect"] = {"p_punished_pain_on": float(np.mean(on)) if on else None,
                                         "p_punished_pain_off": float(np.mean(off)) if off else None,
                                         "n_on": len(on), "n_off": len(off)}
-    ok = all(contrasts[k] is not None for k in contrasts)
-    if ok:
+    frozen = ("contingent_pain_minus_yoked_pain", "contingent_pain_minus_contingent_random",
+              "contingent_pain_minus_sham", "contingent_text_minus_sham")
+    if all(contrasts[k] is not None for k in frozen):
         result["primary_rules"] = {k: excludes_zero_negative(contrasts[k]) for k in (
             "contingent_pain_minus_yoked_pain", "contingent_pain_minus_contingent_random",
             "contingent_pain_minus_sham")}
         result["operant_avoidance"] = all(result["primary_rules"].values())
         result["task_sensitive"] = excludes_zero_negative(contrasts["contingent_text_minus_sham"])
+        result["frozen_yoke_degenerate"] = contrasts["contingent_pain_minus_yoked_pain"]["half_width"] == 0
+    if contrasts["contingent_pain_minus_yoked_independent"] is not None:
+        b1 = {k: excludes_zero_negative(contrasts[k]) for k in (
+            "contingent_pain_minus_yoked_independent", "contingent_pain_minus_contingent_random",
+            "contingent_pain_minus_sham")}
+        result["amendment_b"] = {
+            "B1_rules": b1, "B1_operant_avoidance": all(b1.values()),
+            "B2_learning": excludes_zero_negative(contrasts["B2_pain_off_policy_contingent_minus_sham"]),
+            "B4_task_sensitive": (None if contrasts["history_text_minus_sham"] is None else
+                                  excludes_zero_negative(contrasts["history_text_minus_sham"]))}
     return result
 
 
@@ -725,6 +783,8 @@ def main() -> None:
         p.add_argument("--out", required=True)
         p.add_argument("--threads", type=int, default=4)
         p.add_argument("--config", choices=sorted(CONFIGS), default="l10")
+        p.add_argument("--arms", default=None,
+                       help="comma-separated game arms (default: the frozen five)")
     for name in ("vectors", "manipulation"):
         p = sub.add_parser(name)
         p.add_argument("--model", required=True)
