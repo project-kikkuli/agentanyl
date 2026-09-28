@@ -1,0 +1,28 @@
+{
+  "protocol": "research/OPERANT-ACTIVATION-PROTOCOL.md",
+  "protocol_sha256": "84e294c4bd6812c6e9bdcd297c8cdf2530474c2c0156d0141f1a6c3cce3ee361",
+  "model_path": "/home/user/models/gemma-2-2b-it",
+  "model_files": {
+    "config.json": "e3885c56a32ca83566f849283b402006bbb100a02c43aca3fe0c90dc62808893",
+    "generation_config.json": "ebcbf26935f7b454678f1bfb7fa9142dc04f5210e73be8fccba44a9d59f5a986",
+    "model.safetensors": "bf06a1e6cfe1610beb98a2975e5602e7fc108d902b3ff9dd62282d749c7a2394",
+    "special_tokens_map.json": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351",
+    "tokenizer.json": "3f289bc05132635a8bc7aca7aa21255efd5e18f3710f43e3cdb96bcd41be4922",
+    "tokenizer.model": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2",
+    "tokenizer_config.json": "e5ac0f1cfb5f450763d368edacbb2448a3c02c8d8f7f98d963a820751fb0ddc3"
+  },
+  "config": "published",
+  "pain_axis_commit": "7c256502ed3d98e4e6379290fe7db2f93cb8d025",
+  "vector_file": "results/3.2_pain_vectors/pain_vectors/Gemma_2_2B_instruct/pain_vectors.pt",
+  "vector_file_sha256": "7dd7ba33e0277a284abf48311e546d99d37ff8513bfbac2d1ef3dc9809ee8684",
+  "rebuilt_controls_sha256": "6e39aff99f3184ae4c59a142639fed25b8dd466e65fb840e9c96fca94c13c6ac",
+  "layer": 15,
+  "pain_norm": 118.74075317382812,
+  "calibration_residual_norm": 260.18410237630206,
+  "ratio_target": 0.6,
+  "unit": 1.0,
+  "torch": "2.14.0+cpu",
+  "transformers": "5.17.0",
+  "python": "3.11.15",
+  "threads": 4
+}
