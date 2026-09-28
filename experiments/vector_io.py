@@ -34,11 +34,12 @@ def _latin1_encode(value, encoding):
     return value.encode('latin1')
 
 
-def read_vectors(path):
+def read_vectors(path, width=3584):
     """Read tensor storages and the released checkpoint's int64 layer field.
 
     Pickle globals are mapped to local, inert handlers. No module imports or
-    general-purpose object reconstruction are permitted.
+    general-purpose object reconstruction are permitted. ``width`` is the
+    model's hidden size; the default is the Qwen2.5-7B checkpoints'.
     """
     def rebuild(storage, offset, shape, stride, requires_grad, hooks):
         if requires_grad or len(shape) != 1 or stride != (1,):
@@ -87,6 +88,6 @@ def read_vectors(path):
     if not isinstance(result, dict):
         raise ValueError('checkpoint must contain a mapping')
     for name, value in result.items():
-        if isinstance(value, np.ndarray) and (value.shape != (3584,) or not np.all(np.isfinite(value))):
+        if isinstance(value, np.ndarray) and (value.shape != (width,) or not np.all(np.isfinite(value))):
             raise ValueError(f'invalid vector {name}')
     return result

@@ -196,6 +196,171 @@ class MLXActivationBackend:
                 "observed_sites": {str(self.layer): self.last_telemetry}}
 
 
+class TorchActivationBackend:
+    """Residual-stream hook for Hugging Face causal LMs on any PyTorch device.
+
+    This is the Linux/CPU counterpart of ``MLXActivationBackend``. The caller
+    supplies a vector calibrated for the target model and the layer whose
+    output it is added to. Controller coordinates are multiplied by
+    ``coefficient_per_level``; that dose is recorded with every call. Pleasure
+    needs its own vector, as in the MLX backends.
+    """
+
+    def __init__(self, model: Any, tokenizer: Any, *, layer: int, vector: np.ndarray,
+                 coefficient_per_level: float = 1.0,
+                 pleasure_vector: np.ndarray | None = None):
+        import torch
+        self.torch = torch
+        self.model, self.tokenizer = model, tokenizer
+        layers = getattr(getattr(model, "model", None), "layers", None)
+        if layers is None or not 0 <= layer < len(layers):
+            raise ValueError("model does not expose a usable model.layers sequence")
+        self.layer = int(layer)
+        self.vector = _as_vector(vector, "vector")
+        width = int(model.config.hidden_size)
+        if self.vector.shape != (width,):
+            raise ValueError(f"vector width {self.vector.shape[0]} != hidden width {width}")
+        self.pleasure_vector = (None if pleasure_vector is None else
+                                _as_vector(pleasure_vector, "pleasure_vector"))
+        if self.pleasure_vector is not None and self.pleasure_vector.shape != self.vector.shape:
+            raise ValueError("pleasure_vector must match vector shape")
+        if not np.isfinite(coefficient_per_level) or coefficient_per_level <= 0:
+            raise ValueError("coefficient_per_level must be positive")
+        self.coefficient_per_level = float(coefficient_per_level)
+        self.active: list[tuple[np.ndarray, float]] = []
+        self.last_telemetry: dict[str, Any] = {}
+        self._unit = self.vector / np.linalg.norm(self.vector)
+        self._handle = layers[self.layer].register_forward_hook(self._hook)
+
+    @classmethod
+    def from_pretrained(cls, model_path: str | Path, **kwargs):
+        import torch
+        from transformers import AutoModelForCausalLM, AutoTokenizer
+        tokenizer = AutoTokenizer.from_pretrained(str(model_path))
+        model = AutoModelForCausalLM.from_pretrained(str(model_path), dtype=torch.float32)
+        model.eval()
+        return cls(model, tokenizer, **kwargs)
+
+    def close(self) -> None:
+        self._handle.remove()
+
+    def _hook(self, module, inputs, output):
+        torch = self.torch
+        hidden = output[0] if isinstance(output, tuple) else output
+        before = hidden
+        after = hidden
+        for vec, coefficient in self.active:
+            after = after + float(coefficient) * torch.as_tensor(vec, dtype=hidden.dtype,
+                                                                  device=hidden.device)
+        unit = torch.as_tensor(self._unit, dtype=torch.float32, device=hidden.device)
+        last_before = before[0, -1].float()
+        last_after = after[0, -1].float()
+        self.last_telemetry = {
+            "layer": self.layer,
+            "hidden_width": int(hidden.shape[-1]),
+            "residual_norm_last": float(last_before.norm()),
+            "realized_delta_norm_last": float((last_after - last_before).norm()),
+            "pain_projection_before": float(last_before @ unit),
+            "pain_projection_after": float(last_after @ unit),
+        }
+        if after is hidden:
+            return output
+        return (after,) + tuple(output[1:]) if isinstance(output, tuple) else after
+
+    def intervention_for_state(self, state: tuple[int, int]) -> list[tuple[np.ndarray, float]]:
+        pain, pleasure = map(int, state)
+        if pain < 0 or pleasure < 0:
+            raise ValueError("activation coordinates must be nonnegative")
+        if pleasure and self.pleasure_vector is None:
+            raise ValueError("positive pleasure state requires an independent vector")
+        active = []
+        if pain:
+            active.append((self.vector, pain * self.coefficient_per_level))
+        if pleasure:
+            active.append((self.pleasure_vector, pleasure * self.coefficient_per_level))
+        return active
+
+    def encode(self, prompt: str) -> Any:
+        """Tokenize one user turn with the model's chat template."""
+        if not isinstance(prompt, str) or not prompt:
+            raise ValueError("prompt must be a nonempty string")
+        return self.tokenizer.apply_chat_template(
+            [{"role": "user", "content": prompt}], add_generation_prompt=True,
+            return_tensors="pt", return_dict=True)
+
+    def choice_token_ids(self, choices: tuple[str, ...]) -> list[int]:
+        """Each choice must be one distinct token when it starts the reply."""
+        ids = []
+        for choice in choices:
+            tokens = self.tokenizer.encode(choice, add_special_tokens=False)
+            if len(tokens) != 1:
+                raise ValueError(f"choice {choice!r} is not a single token")
+            ids.append(tokens[0])
+        if len(set(ids)) != len(ids):
+            raise ValueError("choices must map to distinct tokens")
+        return ids
+
+    def score_choices(self, prompt: str, choices: tuple[str, str], *,
+                      state: tuple[int, int] | None = None,
+                      active: list[tuple[np.ndarray, float]] | None = None) -> dict:
+        """Return next-token probabilities of the choices, conditional on the pair.
+
+        Pass ``state`` to use the controller mapping, or ``active`` for an
+        explicit list of ``(vector, coefficient)`` pairs (used by controls).
+        """
+        if (state is None) == (active is None):
+            raise ValueError("pass exactly one of state or active")
+        ids = self.choice_token_ids(choices)
+        self.active = self.intervention_for_state(state) if state is not None else list(active)
+        try:
+            with self.torch.no_grad():
+                logits = self.model(**self.encode(prompt)).logits[0, -1].float()
+        finally:
+            self.active = []
+        log_probs = self.torch.log_softmax(logits, dim=-1)
+        picked = log_probs[ids]
+        conditional = self.torch.softmax(picked, dim=-1)
+        return {"choices": list(choices),
+                "probabilities": {c: float(p) for c, p in zip(choices, conditional)},
+                "choice_mass": float(picked.exp().sum()),
+                "telemetry": dict(self.last_telemetry)}
+
+    def generate(self, prompt: str, state: tuple[int, int], *, max_tokens: int = 32) -> dict:
+        if isinstance(max_tokens, bool) or not 1 <= max_tokens <= 256:
+            raise ValueError("max_tokens must be between 1 and 256")
+        encoded = self.encode(prompt)
+        self.active = self.intervention_for_state(state)
+        try:
+            with self.torch.no_grad():
+                out = self.model.generate(**encoded, max_new_tokens=max_tokens, do_sample=False)
+        finally:
+            active, self.active = self.active, []
+        answer = self.tokenizer.decode(out[0, encoded["input_ids"].shape[1]:],
+                                       skip_special_tokens=True)
+        return {"answer": answer, "state": {"pain": int(state[0]), "pleasure": int(state[1])},
+                "interventions": [{"layer": self.layer, "coefficient": float(c),
+                                   "vector": "pain" if v is self.vector else "pleasure"}
+                                  for v, c in active],
+                "observed_sites": {str(self.layer): dict(self.last_telemetry)}}
+
+    def residual_norm(self, prompts: list[str]) -> float:
+        """Mean unsteered last-token residual norm at the hook layer."""
+        norms = []
+        for prompt in prompts:
+            self.active = []
+            with self.torch.no_grad():
+                self.model(**self.encode(prompt))
+            norms.append(self.last_telemetry["residual_norm_last"])
+        return float(np.mean(norms))
+
+
+def _as_vector(value, name: str) -> np.ndarray:
+    vector = np.asarray(value, dtype=np.float32)
+    if vector.ndim != 1 or not np.all(np.isfinite(vector)) or not np.linalg.norm(vector):
+        raise ValueError(f"{name} must be a finite nonzero one-dimensional vector")
+    return vector
+
+
 def _scalar(value):
     if hasattr(value, "item"):
         try:
@@ -207,4 +372,5 @@ def _scalar(value):
     return value
 
 
-__all__ = ["ActivationIntervention", "QwenMLXActivationBackend", "MLXActivationBackend"]
+__all__ = ["ActivationIntervention", "QwenMLXActivationBackend", "MLXActivationBackend",
+           "TorchActivationBackend"]
