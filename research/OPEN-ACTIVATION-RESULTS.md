@@ -1,5 +1,11 @@
 # Open-weight activation backend
 
+> Superseded by the controlled test in
+> [OPERANT-ACTIVATION-RESULTS.md](OPERANT-ACTIVATION-RESULTS.md), which found
+> no relief motive and no detected learning on Gemma-2-2B-it. The
+> single-prompt Qwen choice shift below had one random control; on Gemma,
+> eight matched controls moved relief choices as much as pain did.
+
 ## What is now real
 
 `agentanyl.activation.QwenMLXActivationBackend` connects Agentanyl controller

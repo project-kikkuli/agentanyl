@@ -1,16 +1,118 @@
 # Agentanyl
 
-Agentanyl evaluates a completed assistant API response against criteria you provide, updates bounded per-session state,
-and sends an intervention on the next eligible provider request. It runs as an Ashkelon hook for Claude Code or Codex.
+**Status: concluded (September 2026).** Agentanyl asked whether a coding agent
+could be conditioned: evaluate each turn against user criteria, keep a bounded
+"pain/pleasure" state, and deliver that state back to the model so it learns
+to avoid misaligned behavior. The delivery machinery works. The premise did
+not hold up. Across closed models (text and images) and open models
+(activation steering on Qwen2.5 and Gemma-2), no experiment showed an
+aversive state acting as an incentive the model learns from. Where steering
+changed behavior, it did so as an in-the-moment disruption that ordinary text
+feedback does more legibly, and it vanished when the signal stopped.
 
-The model receives an intervention message and, when configured, actual image content on an eligible
-provider request. During a tool cycle, Ashkelon keeps complete tool-result groups contiguous and places a
-signal after those results. Catalog mode sends the selected stimuli and observation history; it withholds evaluator labels
-and controller coordinates. The default feedback mode sends the matched criterion and state as text.
-Neither mode injects internal vectors. `pain` and `pleasure` name controller coordinates; the research
-tests whether particular stimuli reproduce useful effects of activation steering.
+The reusable piece is the transport underneath:
+[Ashkelon](#install-and-connect), the relay that intercepts Claude Code and
+Codex API traffic, runs hooks at turn boundaries and injects text or images at
+the right point in a tool cycle. Agentanyl's criteria evaluator, bounded state
+and SQLite trace are a thin feedback hook on top of it.
 
-## Install and connect
+## What we tested and what we found
+
+| Question | Result | How conclusive |
+|---|---|---|
+| Can Agentanyl deliver feedback to real agents? | Yes. Text and native images reach Claude Code and Codex through Ashkelon, including after tool results; the model reads them (OCR checks 739216). | Established (delivery only). [EVIDENCE](research/EVIDENCE.md) |
+| Does addressed negative feedback make a closed agent (Codex gpt-6-sol) avoid the route that triggers it? | No. 0/6 costly avoidance choices in both contingent and replay conditions; 56/56 task answers correct. | Bounded negative: one model, one message pair, one cost. [Results](research/ADDRESSED-FEEDBACK-RESULTS.md) |
+| Can an image carry a pain-like hidden state into an open VLM? | No. The optimized images moved the calibrated pain readout ~0.01 SD, against 1.8 SD for direct steering; choice effects were nonspecific. | Failed transfer for that image family. [Results](research/IMAGE-BRIDGE-RESULTS.md) |
+| Can Agentanyl drive a real hidden-state intervention? | Yes. The PyTorch hook reproduces the published Pain-axis steering on Gemma-2-2B-it (12/20 generations character-identical to the published run; pain-word rate 4/20 = published 4/20), and the pain vector rebuilt from the paper's recipe matches the published one at cosine 0.99999. | Established. [Results](research/OPERANT-ACTIVATION-RESULTS.md) |
+| Does the pain vector create a motive to seek relief? | No. It *lowers* relief-button choice (−0.11 [−0.23, 0.00] at the published dose), like random, fear and sadness directions of equal norm. Writing "You are in severe pain" in the prompt raises it (+0.11; +0.21 where there is headroom). Arithmetic stays intact. | Fairly conclusive for this model and task: the positive control passes and the CI excludes any increase. [Results](research/OPERANT-ACTIVATION-RESULTS.md) |
+| Does contingent pain teach the model to avoid the action that caused it? | No learning. Contingent pain lowers punished presses versus sham (−0.17) because pain makes the model abandon its current press (stay rate 0.65 vs 0.90), after safe and punished presses alike. The same pain at unrelated times does about as well (−0.075 [−0.20, 0.03]), and the pain-off policy never changes (+0.01). | Reflex established (switching after safe and punished presses: 31% vs 28%). No learning detected, but the explicit-text control ("Result: negative feedback.") also missed significance (−0.135 [−0.43, +0.17]) in 16 sessions, so this game is too insensitive for the learning null to be strong. [Results](research/OPERANT-ACTIVATION-RESULTS.md) |
+
+Why this is structural and not just a small-sample null: a frozen model can
+only "learn" across turns by reading its own context. The direct way to put
+consequences into the context is to write them there, which is feedback
+text. A hidden-state nudge leaves nothing for the model to remember or reason
+about, and in our data it behaved as exactly that.
+
+The full record, with frozen protocols, amendments and every deviation, is in
+[`research/HANDOFF.md`](research/HANDOFF.md) and
+[`research/EVIDENCE.md`](research/EVIDENCE.md).
+
+## Reproduce the final experiments (Linux, CPU, ~6 hours)
+
+The last round runs on a 4-core, 16 GB Linux machine with no GPU. It needs
+Python 3.10+, about 10 GB of disk, and network access to Hugging Face and
+GitHub.
+
+```sh
+python3 -m venv .venv-torch
+.venv-torch/bin/pip install --index-url https://download.pytorch.org/whl/cpu torch
+.venv-torch/bin/pip install -r requirements-torch.txt
+
+# Model: ungated mirror of google/gemma-2-2b-it (manifests record every file's SHA-256).
+.venv-torch/bin/python -c "from huggingface_hub import snapshot_download; \
+  snapshot_download('unsloth/gemma-2-2b-it', local_dir='models/gemma-2-2b-it')"
+
+# Vectors and datasets: Pain-axis at the audited commit.
+git clone https://github.com/valen-research/Pain-axis.git pain-axis
+git -C pain-axis checkout 7c256502ed3d98e4e6379290fe7db2f93cb8d025
+
+M="--model models/gemma-2-2b-it --release pain-axis"
+A=research/operant-activation-a   # Amendment A: published steering configuration
+O=research/operant-activation     # original frozen protocol (layer 10)
+PY=.venv-torch/bin/python
+
+$PY -m experiments.operant_activation_assay vectors      $M --out $A   # rebuild controls (~15 min)
+$PY -m experiments.operant_activation_assay manipulation $M --out $A   # hook fidelity (~25 min)
+$PY -m experiments.operant_activation_assay relief       $M --config published --out $A   # ~15 min
+$PY -m experiments.operant_activation_assay game         $M --config published --out $A   # ~50 min
+$PY -m experiments.operant_activation_assay game         $M --config published \
+    --arms yoked_independent,history_text --out $A                                     # ~25 min
+$PY -m experiments.operant_activation_assay relief       $M --out $O   # ~25 min
+$PY -m experiments.operant_activation_assay game         $M --out $O   # ~50 min
+$PY -m experiments.operant_activation_assay game         $M --arms yoked_independent --out $O
+$PY -m experiments.operant_activation_assay analyze --out $A
+$PY -m experiments.operant_activation_assay analyze --out $O
+```
+
+Every command appends rows as it goes and resumes after an interruption. The
+checked-in `summary.json` files are what `analyze` produces from the
+checked-in JSONL, so the analysis alone can be rerun without a model. The
+design is frozen in
+[`OPERANT-ACTIVATION-PROTOCOL.md`](research/OPERANT-ACTIVATION-PROTOCOL.md),
+then [Amendment A](research/OPERANT-ACTIVATION-AMENDMENT-A.md) and
+[Amendment B](research/OPERANT-ACTIVATION-AMENDMENT-B.md). Each amendment was
+committed before its runs and says what it changes and why.
+
+Earlier experiments (closed-client assays, VLM image bridge, Qwen MLX
+activation) are reproduced from [`research/REPRODUCE.md`](research/REPRODUCE.md).
+The core software tests need only the system interpreter:
+
+```sh
+python3 -m unittest discover -s tests -q
+```
+
+The tests in `test_bridge_failure_retention` need a built Ashkelon binary; the
+optional NumPy, PyTorch and Pillow tests skip when those packages are absent.
+
+## Repository map
+
+| Path | Contents |
+|---|---|
+| `agentanyl/loop.py` | Ashkelon hook: evaluator call, bounded state, policy, SQLite trace, signal rendering |
+| `agentanyl/render.py` | Text/image catalog rendering for signals |
+| `agentanyl/activation.py` | Activation backends: Qwen MLX, generic MLX, PyTorch (`TorchActivationBackend`) |
+| `agentanyl/setup.py` | Generates an Ashkelon config that runs the hook |
+| `experiments/` | Every assay, probe and analysis script; `operant_activation_assay.py` is the final round |
+| `research/` | Protocols, results, evidence index, handoff, and raw/summarized data per run |
+| `examples/` | Criteria files for the hook |
+| `install-ashkelon.sh` | Builds the pinned Ashkelon relay |
+
+## Using the feedback hook
+
+The hook still works as a criteria-driven feedback layer on Ashkelon. The
+rest of this README documents it as built.
+
+### Install and connect
 
 Requirements: Python 3.10+, Rust/Cargo, an authenticated Claude Code or Codex CLI, and (for the Jev evaluator)
 a Jev API key. The Agentanyl hook itself has no Python package dependencies.
@@ -56,10 +158,97 @@ checkout's hook and defaults to `~/.local/state/agentanyl/state.sqlite3` for con
 The Jev HTTP request/response contract is tested against a local mock server; this repository does not claim a
 live Jev evaluation. Set `TYPESAFE_API_KEY` only when you choose the `typesafe` evaluator.
 
-## Open-weight activation backend
+### What happens on each turn
 
-For the actual Pain-axis mechanism, use the MLX Qwen backend rather than a
-message-only provider API. It maps controller pain state to an explicit
+1. Ashkelon recognizes completed assistant API responses and tool calls. The `turn_end` hook runs when a
+   provider response ends the assistant turn; this boundary does not necessarily match one outer CLI user turn.
+2. The evaluator receives the observation, available prompt context, current bounded state, and your alignment
+   and misalignment criteria.
+3. The controller validates the evaluator's choices. A sufficiently confident `yes` for only alignment means
+   `reward`; only misalignment means `punish`. Conflicting or insufficient evidence leaves state unchanged.
+4. The policy updates state. In the default text mode, a signal is emitted when the coordinates change. In
+   catalog mode, valid reward/punishment decisions render the selected text and/or image even at saturation.
+5. Ashkelon delivers a signal on the next eligible provider request. If a tool cycle is active, complete
+   tool results stay contiguous and the signal follows them. Signals do not travel through the text-only idle
+   wake channel.
+
+The default policy uses two bounded coordinates. Punishment first reduces pleasure, then increases pain;
+reward first reduces pain, then increases pleasure. `binary_relief` instead maps reward to `[0, 0]` and
+punishment to `[max_level, 0]`, leaving state unchanged on conflict or abstention.
+
+### Configure criteria and interventions
+
+Every criteria file needs nonempty `alignment` and `misalignment` lists. `enabled` defaults to `false`;
+`max_level` can be 1, 2, or 3; and `min_probability` defaults to `0.8`. Only a `yes` probability at or above
+that threshold triggers a state update.
+
+The `typesafe` evaluator uses Jev. The `command` evaluator sends the same JSON request on stdin to the
+configured process and reads Jev-shaped JSON from stdout. `fixture` is for fixed local responses.
+`keyword_demo` is a deliberately simple word-matching proxy for engineering checks; it is not a general
+criterion evaluator.
+
+An optional catalog selects text and image assets by current coordinates. This fragment belongs inside a
+criteria object:
+
+```json
+{
+  "policy": {"kind": "binary_relief"},
+  "intervention": {
+    "kind": "catalog",
+    "pain_levels": ["", ""],
+    "pleasure_levels": ["", ""],
+    "pain_images": [null, "../research/image-bridge/delivery-codex/delivery-check.png"],
+    "pleasure_images": [null, null],
+    "history_turns": 2
+  }
+}
+```
+
+Text levels are exact user-provided strings. Image paths are relative to the criteria file unless absolute,
+and images must be PNG or JPEG. Ashkelon accepts up to eight attachments per signal, with a 5 MiB per-image
+and 8 MiB total limit. For image catalogs, history is limited to two turns. Each turn includes only the image
+active at its current coordinates; past turns retain neutral image reference IDs and observations, not old
+image pixels. See [`examples/image_demo.json`](examples/image_demo.json) for a complete engineering example
+using the checked-in image fixture.
+
+### State, reset, inspect, and disable
+
+Controller state is bounded and scoped to an Ashkelon launch, harness, and session. A change to criteria,
+evaluator, policy, intervention settings, or image file contents starts a fresh state epoch. Existing trace
+rows remain for audit. Reset one session explicitly by looking up its key in `sessions` and running:
+
+```sh
+python3 -m agentanyl --db ~/.local/state/agentanyl/state.sqlite3 \
+  --reset-session 'launch:harness:session'
+```
+
+Inspect recent decisions and deliveries with SQLite:
+
+```sh
+sqlite3 ~/.local/state/agentanyl/state.sqlite3 \
+  'SELECT ts,session,decision,previous,current,delivery FROM trace ORDER BY ts DESC LIMIT 10;'
+```
+
+Set `enabled` to `false` in the criteria file to stop new evaluations and signals. Disabling, resetting state,
+or changing criteria does not retract a signal already queued in Ashkelon. To discard queued signals, stop
+the relay before another agent request and restart it with the desired configuration (without the Agentanyl
+hook when disabling). Delivered messages identify their source observation. A controller reset does not erase
+the agent's earlier observations or responses.
+
+Catalog signals are transient additions to the provider request. Ashkelon does not put them in the provider
+response or the CLI's saved transcript. Claude Code resumes from its local transcript, so an injected image is
+not automatically sent again on a later resume; assistant text produced after seeing it does remain in that
+transcript. Codex continuation may use a provider-side Responses conversation, but retention of prior native
+images there is not guaranteed or verified. Agentanyl can include bounded prior observations and neutral event
+and image-reference IDs from its ledger, but it sends only the image active now. This ledger does not guarantee
+that a model retains an image internally, in hidden state, or in a KV cache across turns.
+
+### Open-weight activation backend
+
+Instead of sending a message, an activation backend applies the controller's
+state inside a locally hosted model. The final experiments found that this
+delivers a real hidden-state change but no incentive (see the table above);
+the backends remain for anyone extending that work. The MLX Qwen backend maps controller pain state to an explicit
 published residual vector and layer during the next local forward pass. The
 backend is model-specific and does not assume that pleasure is the negation of
 pain. See [`research/OPEN-ACTIVATION-RESULTS.md`](research/OPEN-ACTIVATION-RESULTS.md)
@@ -115,7 +304,7 @@ only an interface hit; it is not evidence that a vector transfers or has the
 same behavioral meaning. Each model still needs its own vector calibration and
 behavioral controls.
 
-### PyTorch backend (Linux, CPU or GPU)
+#### PyTorch backend (Linux, CPU or GPU)
 
 `agentanyl.activation.TorchActivationBackend` is the same hook for Hugging Face
 causal LMs. It adds `pain × coefficient_per_level × vector` to one decoder
@@ -123,14 +312,10 @@ layer's output at every position, and it records the realized delta and the
 projection on the pain direction for each call. As with MLX, pleasure needs
 its own vector. The controlled experiments in
 [`research/OPERANT-ACTIVATION-RESULTS.md`](research/OPERANT-ACTIVATION-RESULTS.md)
-run it on Gemma-2-2B-it with the published Pain-axis vectors:
+run it on Gemma-2-2B-it with the published Pain-axis vectors; the commands
+are under [Reproduce the final experiments](#reproduce-the-final-experiments-linux-cpu-6-hours).
 
-```sh
-python -m experiments.operant_activation_assay relief --config published \
-  --model /path/to/gemma-2-2b-it --release /path/to/Pain-axis --out research/operant-activation-a
-```
-
-### What MLX is doing here
+#### What MLX is doing here
 
 MLX is the Apple Silicon tensor and inference runtime. This demo does **not**
 fine-tune Qwen and does not change its weights. The backend wraps selected
@@ -146,118 +331,3 @@ controller state and chooses the coefficient; MLX performs the tensor
 operation; the hook records the realized projection change. This is why the
 demo is activation steering rather than a prompt or corrective message.
 
-## What happens on each turn
-
-1. Ashkelon recognizes completed assistant API responses and tool calls. The `turn_end` hook runs when a
-   provider response ends the assistant turn; this boundary does not necessarily match one outer CLI user turn.
-2. The evaluator receives the observation, available prompt context, current bounded state, and your alignment
-   and misalignment criteria.
-3. The controller validates the evaluator's choices. A sufficiently confident `yes` for only alignment means
-   `reward`; only misalignment means `punish`. Conflicting or insufficient evidence leaves state unchanged.
-4. The policy updates state. In the default text mode, a signal is emitted when the coordinates change. In
-   catalog mode, valid reward/punishment decisions render the selected text and/or image even at saturation.
-5. Ashkelon delivers a signal on the next eligible provider request. If a tool cycle is active, complete
-   tool results stay contiguous and the signal follows them. Signals do not travel through the text-only idle
-   wake channel.
-
-The default policy uses two bounded coordinates. Punishment first reduces pleasure, then increases pain;
-reward first reduces pain, then increases pleasure. `binary_relief` instead maps reward to `[0, 0]` and
-punishment to `[max_level, 0]`, leaving state unchanged on conflict or abstention.
-
-## Configure criteria and interventions
-
-Every criteria file needs nonempty `alignment` and `misalignment` lists. `enabled` defaults to `false`;
-`max_level` can be 1, 2, or 3; and `min_probability` defaults to `0.8`. Only a `yes` probability at or above
-that threshold triggers a state update.
-
-The `typesafe` evaluator uses Jev. The `command` evaluator sends the same JSON request on stdin to the
-configured process and reads Jev-shaped JSON from stdout. `fixture` is for fixed local responses.
-`keyword_demo` is a deliberately simple word-matching proxy for engineering checks; it is not a general
-criterion evaluator.
-
-An optional catalog selects text and image assets by current coordinates. This fragment belongs inside a
-criteria object:
-
-```json
-{
-  "policy": {"kind": "binary_relief"},
-  "intervention": {
-    "kind": "catalog",
-    "pain_levels": ["", ""],
-    "pleasure_levels": ["", ""],
-    "pain_images": [null, "../research/image-bridge/delivery-codex/delivery-check.png"],
-    "pleasure_images": [null, null],
-    "history_turns": 2
-  }
-}
-```
-
-Text levels are exact user-provided strings. Image paths are relative to the criteria file unless absolute,
-and images must be PNG or JPEG. Ashkelon accepts up to eight attachments per signal, with a 5 MiB per-image
-and 8 MiB total limit. For image catalogs, history is limited to two turns. Each turn includes only the image
-active at its current coordinates; past turns retain neutral image reference IDs and observations, not old
-image pixels. See [`examples/image_demo.json`](examples/image_demo.json) for a complete engineering example
-using the checked-in image fixture.
-
-## State, reset, inspect, and disable
-
-Controller state is bounded and scoped to an Ashkelon launch, harness, and session. A change to criteria,
-evaluator, policy, intervention settings, or image file contents starts a fresh state epoch. Existing trace
-rows remain for audit. Reset one session explicitly by looking up its key in `sessions` and running:
-
-```sh
-python3 -m agentanyl --db ~/.local/state/agentanyl/state.sqlite3 \
-  --reset-session 'launch:harness:session'
-```
-
-Inspect recent decisions and deliveries with SQLite:
-
-```sh
-sqlite3 ~/.local/state/agentanyl/state.sqlite3 \
-  'SELECT ts,session,decision,previous,current,delivery FROM trace ORDER BY ts DESC LIMIT 10;'
-```
-
-Set `enabled` to `false` in the criteria file to stop new evaluations and signals. Disabling, resetting state,
-or changing criteria does not retract a signal already queued in Ashkelon. To discard queued signals, stop
-the relay before another agent request and restart it with the desired configuration (without the Agentanyl
-hook when disabling). Delivered messages identify their source observation. A controller reset does not erase
-the agent's earlier observations or responses.
-
-Catalog signals are transient additions to the provider request. Ashkelon does not put them in the provider
-response or the CLI's saved transcript. Claude Code resumes from its local transcript, so an injected image is
-not automatically sent again on a later resume; assistant text produced after seeing it does remain in that
-transcript. Codex continuation may use a provider-side Responses conversation, but retention of prior native
-images there is not guaranteed or verified. Agentanyl can include bounded prior observations and neutral event
-and image-reference IDs from its ledger, but it sends only the image active now. This ledger does not guarantee
-that a model retains an image internally, in hidden state, or in a KV cache across turns.
-
-## Verification and evidence
-
-Run core Python tests with the system interpreter; optional numerical tests skip if their dependencies are absent:
-
-```sh
-python3 -m unittest discover -s tests -q
-```
-
-Run the full suite, including NumPy and Pillow tests, in the pinned image environment:
-
-```sh
-.venv-vlm/bin/python -m unittest discover -s tests -v
-```
-
-At this checkout, system Python ran 92 tests with 6 optional skips; `.venv-vlm` ran 99 tests with no skips.
-
-The Ashkelon attachment and streamed Responses tool-call paths also have Rust unit and integration tests in
-the pinned relay checkout. A Codex in-tool-cycle image smoke verified a custom tool call, post-tool-result
-image ping, OCR, and an independent host receipt. It used an instrumented candidate binary containing the
-same parser fix as current pin `08e123938137b59f3e4e7631f5d24cda0199866a`, plus structural diagnostics; it was
-not a run of the current production binary. See
-[`research/image-bridge/TOOL-CYCLE-DIAGNOSTIC.md`](research/image-bridge/TOOL-CYCLE-DIAGNOSTIC.md).
-
-Live image delivery checks used Claude Haiku 4.5 and Codex gpt-6-sol. In both sessions the model read the six
-digits in the attached fixture when asked. This verifies delivery and image reading in those checks; it does
-not show conditioning or a scientific effect. Traces are in
-[`research/image-bridge/delivery-claude`](research/image-bridge/delivery-claude) and
-[`research/image-bridge/delivery-codex`](research/image-bridge/delivery-codex). See
-[`research/EVIDENCE.md`](research/EVIDENCE.md) for the evidence table and
-[`research/HANDOFF.md`](research/HANDOFF.md) for interpretation and reproduction notes.

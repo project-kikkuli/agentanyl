@@ -1,5 +1,23 @@
 # Agentanyl: contribution, evidence, and remaining boundary
 
+## Final conclusion (September 2026)
+
+The investigation is closed. The final round
+([results](OPERANT-ACTIVATION-RESULTS.md)) ran the missing controlled test on
+an open model, Gemma-2-2B-it, with the published Pain-axis steering reproduced
+faithfully: 12/20 generations identical to the published run, and a rebuilt
+vector matching at cosine 0.99999. The pain direction made the model describe
+negative feelings, but it did not raise relief-seeking (−0.11 [−0.23, 0.00]),
+while stated pain in text did (+0.11). In a closed loop it produced a
+contingency-blind "abandon the current action" reflex, and no learned
+avoidance was detected. Together with the closed-model null and the failed
+image transfer below, no channel Agentanyl can reach produced an incentive.
+
+For a frozen model, "learning from consequences" can only mean reading them
+from context, and the direct way to do that is feedback text. The durable
+contribution is the delivery layer: Ashkelon plus a criteria-driven
+feedback hook. The earlier sections below are kept as the record.
+
 ## What is established
 
 Agentanyl delivers traceable feedback to real coding agents through text and native images. The completed closed-agent test establishes a narrow behavioral boundary: **Codex `gpt-6-sol` read directly addressed criticism, correctly identified the route–message associations from the records, and never sacrificed one user point to replace it with a neutral message.** This held in four contingent sessions and four matched replay sessions. It is a usable operational negative for these messages and this task, not evidence that closed models cannot have incentives.

@@ -8,3 +8,6 @@ __pycache__/
 *.sqlite3-shm
 # Local CLI rollout backups may contain hidden reasoning or client context.
 **/preprobe_rollouts/
+.venv-torch/
+models/
+pain-axis/

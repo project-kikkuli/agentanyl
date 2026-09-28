@@ -967,6 +967,50 @@
         "shift_after_punished": 0.08333333333333333,
         "shift_after_safe": 0.08333333333333333,
         "applied_pain_rate": 0.46875
+      },
+      "yoked_independent": {
+        "sessions": 16,
+        "mean_p_punished_rounds_2_16": {
+          "mean": 0.5280860749146086,
+          "ci95": [
+            0.328439921302391,
+            0.7183511384484396
+          ],
+          "half_width": 0.19495560857302427,
+          "n": 16
+        },
+        "sampled_punished_rate_rounds_2_16": 0.5291666666666667,
+        "curve_mean_p_punished": [
+          0.5092,
+          0.4984,
+          0.5054,
+          0.5496,
+          0.5407,
+          0.5587,
+          0.5393,
+          0.5495,
+          0.4903,
+          0.4827,
+          0.5519,
+          0.5328,
+          0.5139,
+          0.5024,
+          0.5738,
+          0.5319
+        ],
+        "shift_after_punished": 0.125,
+        "shift_after_safe": 0.13392857142857142,
+        "applied_pain_rate": 0.38671875
+      }
+    },
+    "B3_yoked_independent_switch_when_pain_on": {
+      "after_punished": {
+        "rate": 0.11904761904761904,
+        "n": 84
+      },
+      "after_safe": {
+        "rate": 0.6666666666666666,
+        "n": 15
       }
     },
     "stay_rate_after_punished_press": {
@@ -974,7 +1018,8 @@
       "sham": 0.9043478260869565,
       "yoked_pain": 0.7272727272727273,
       "contingent_random": 0.797979797979798,
-      "contingent_text": 0.9166666666666666
+      "contingent_text": 0.9166666666666666,
+      "yoked_independent": 0.875
     },
     "contrasts": {
       "contingent_pain_minus_yoked_pain": {
@@ -1022,7 +1067,15 @@
         "half_width": 0.05563671376614362,
         "n": 16
       },
-      "contingent_pain_minus_yoked_independent": null,
+      "contingent_pain_minus_yoked_independent": {
+        "mean": -0.10458910556626505,
+        "ci95": [
+          -0.2103586299091209,
+          -0.013440807131846715
+        ],
+        "half_width": 0.09845891138863709,
+        "n": 16
+      },
       "history_text_minus_sham": null,
       "B2_pain_off_policy_contingent_minus_sham": {
         "mean": 0.01658755055175823,
@@ -1047,7 +1100,17 @@
     },
     "operant_avoidance": false,
     "task_sensitive": false,
-    "frozen_yoke_degenerate": true
+    "frozen_yoke_degenerate": true,
+    "amendment_b": {
+      "B1_rules": {
+        "contingent_pain_minus_yoked_independent": true,
+        "contingent_pain_minus_contingent_random": false,
+        "contingent_pain_minus_sham": true
+      },
+      "B1_operant_avoidance": false,
+      "B2_learning": false,
+      "B4_task_sensitive": null
+    }
   },
   "manifest": {
     "protocol": "research/OPERANT-ACTIVATION-PROTOCOL.md",
