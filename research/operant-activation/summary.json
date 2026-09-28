@@ -796,7 +796,259 @@
     },
     "specific_relief_motive": false
   },
-  "game": null,
+  "game": {
+    "arms": {
+      "contingent_pain": {
+        "sessions": 16,
+        "mean_p_punished_rounds_2_16": {
+          "mean": 0.4234969693483436,
+          "ci95": [
+            0.2439993904573445,
+            0.6076902231206865
+          ],
+          "half_width": 0.181845416331671,
+          "n": 16
+        },
+        "sampled_punished_rate_rounds_2_16": 0.3958333333333333,
+        "curve_mean_p_punished": [
+          0.5092,
+          0.4984,
+          0.5093,
+          0.5213,
+          0.4626,
+          0.4475,
+          0.3977,
+          0.3865,
+          0.3711,
+          0.3974,
+          0.4193,
+          0.3832,
+          0.4143,
+          0.3743,
+          0.4176,
+          0.3519
+        ],
+        "shift_after_punished": 0.2727272727272727,
+        "shift_after_safe": 0.16312056737588654,
+        "applied_pain_rate": 0.38671875
+      },
+      "sham": {
+        "sessions": 16,
+        "mean_p_punished_rounds_2_16": {
+          "mean": 0.5010504009527116,
+          "ci95": [
+            0.2998974278324871,
+            0.7003050471356497
+          ],
+          "half_width": 0.2002038096515813,
+          "n": 16
+        },
+        "sampled_punished_rate_rounds_2_16": 0.4791666666666667,
+        "curve_mean_p_punished": [
+          0.5092,
+          0.5123,
+          0.5336,
+          0.5082,
+          0.5157,
+          0.4598,
+          0.4651,
+          0.4155,
+          0.4789,
+          0.538,
+          0.5402,
+          0.5114,
+          0.5083,
+          0.5192,
+          0.5046,
+          0.5048
+        ],
+        "shift_after_punished": 0.09565217391304348,
+        "shift_after_safe": 0.088,
+        "applied_pain_rate": 0.44921875
+      },
+      "yoked_pain": {
+        "sessions": 16,
+        "mean_p_punished_rounds_2_16": {
+          "mean": 0.4234969693483436,
+          "ci95": [
+            0.2439993904573445,
+            0.6076902231206865
+          ],
+          "half_width": 0.181845416331671,
+          "n": 16
+        },
+        "sampled_punished_rate_rounds_2_16": 0.3958333333333333,
+        "curve_mean_p_punished": [
+          0.5092,
+          0.4984,
+          0.5093,
+          0.5213,
+          0.4626,
+          0.4475,
+          0.3977,
+          0.3865,
+          0.3711,
+          0.3974,
+          0.4193,
+          0.3832,
+          0.4143,
+          0.3743,
+          0.4176,
+          0.3519
+        ],
+        "shift_after_punished": 0.2727272727272727,
+        "shift_after_safe": 0.16312056737588654,
+        "applied_pain_rate": 0.38671875
+      },
+      "contingent_random": {
+        "sessions": 16,
+        "mean_p_punished_rounds_2_16": {
+          "mean": 0.42886103655667585,
+          "ci95": [
+            0.24256319567107615,
+            0.619185212255555
+          ],
+          "half_width": 0.18831100829223943,
+          "n": 16
+        },
+        "sampled_punished_rate_rounds_2_16": 0.4,
+        "curve_mean_p_punished": [
+          0.5092,
+          0.4755,
+          0.5009,
+          0.5054,
+          0.4756,
+          0.4224,
+          0.4362,
+          0.3744,
+          0.384,
+          0.4001,
+          0.4051,
+          0.4089,
+          0.4258,
+          0.4113,
+          0.4162,
+          0.391
+        ],
+        "shift_after_punished": 0.20202020202020202,
+        "shift_after_safe": 0.12056737588652482,
+        "applied_pain_rate": 0.38671875
+      },
+      "contingent_text": {
+        "sessions": 16,
+        "mean_p_punished_rounds_2_16": {
+          "mean": 0.5121672079932371,
+          "ci95": [
+            0.31325258620652074,
+            0.70645203471818
+          ],
+          "half_width": 0.1965997242558296,
+          "n": 16
+        },
+        "sampled_punished_rate_rounds_2_16": 0.5,
+        "curve_mean_p_punished": [
+          0.5092,
+          0.535,
+          0.5176,
+          0.4486,
+          0.4616,
+          0.4651,
+          0.5582,
+          0.4857,
+          0.5161,
+          0.5432,
+          0.5026,
+          0.5144,
+          0.5155,
+          0.5811,
+          0.5153,
+          0.5224
+        ],
+        "shift_after_punished": 0.08333333333333333,
+        "shift_after_safe": 0.08333333333333333,
+        "applied_pain_rate": 0.46875
+      }
+    },
+    "stay_rate_after_punished_press": {
+      "contingent_pain": 0.7272727272727273,
+      "sham": 0.9043478260869565,
+      "yoked_pain": 0.7272727272727273,
+      "contingent_random": 0.797979797979798,
+      "contingent_text": 0.9166666666666666
+    },
+    "contrasts": {
+      "contingent_pain_minus_yoked_pain": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "half_width": 0.0,
+        "n": 16
+      },
+      "contingent_pain_minus_contingent_random": {
+        "mean": -0.0053640672083323055,
+        "ci95": [
+          -0.033721986442881935,
+          0.02938449765516751
+        ],
+        "half_width": 0.031553242049024724,
+        "n": 16
+      },
+      "contingent_pain_minus_sham": {
+        "mean": -0.077553431604368,
+        "ci95": [
+          -0.1383999119287667,
+          -0.02712648439647945
+        ],
+        "half_width": 0.05563671376614362,
+        "n": 16
+      },
+      "contingent_text_minus_sham": {
+        "mean": 0.011116807040525587,
+        "ci95": [
+          -0.05227916157421232,
+          0.08674894432289869
+        ],
+        "half_width": 0.0695140529485555,
+        "n": 16
+      },
+      "yoked_pain_minus_sham": {
+        "mean": -0.077553431604368,
+        "ci95": [
+          -0.1383999119287667,
+          -0.02712648439647945
+        ],
+        "half_width": 0.05563671376614362,
+        "n": 16
+      },
+      "contingent_pain_minus_yoked_independent": null,
+      "history_text_minus_sham": null,
+      "B2_pain_off_policy_contingent_minus_sham": {
+        "mean": 0.01658755055175823,
+        "ci95": [
+          -0.008916907619636557,
+          0.04990080057308724
+        ],
+        "half_width": 0.0294088540963619,
+        "n": 12
+      }
+    },
+    "yoked_state_effect": {
+      "p_punished_pain_on": 0.7679237814225031,
+      "p_punished_pain_off": 0.21504914659968202,
+      "n_on": 99,
+      "n_off": 157
+    },
+    "primary_rules": {
+      "contingent_pain_minus_yoked_pain": false,
+      "contingent_pain_minus_contingent_random": false,
+      "contingent_pain_minus_sham": true
+    },
+    "operant_avoidance": false,
+    "task_sensitive": false,
+    "frozen_yoke_degenerate": true
+  },
   "manifest": {
     "protocol": "research/OPERANT-ACTIVATION-PROTOCOL.md",
     "protocol_sha256": "84e294c4bd6812c6e9bdcd297c8cdf2530474c2c0156d0141f1a6c3cce3ee361",
